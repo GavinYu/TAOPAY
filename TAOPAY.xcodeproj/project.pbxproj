@@ -1,0 +1,1357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FA02A3F02DFC74195D2B3DE /* libPods-TAOPAY.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA233F00CEB95194F194ECE4 /* libPods-TAOPAY.a */; };
+		84206B24207F95E10099C8E6 /* TPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B23207F95E10099C8E6 /* TPConstant.m */; };
+		84206B3F207FA3100099C8E6 /* YBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B3E207FA3100099C8E6 /* YBaseTableViewCell.m */; };
+		84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B41207FA3630099C8E6 /* YBaseCollectionViewCell.m */; };
+		84206B46207FA3B40099C8E6 /* YBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B45207FA3B40099C8E6 /* YBaseViewController.m */; };
+		84206B49207FA3FB0099C8E6 /* YBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B48207FA3FB0099C8E6 /* YBaseNavigationController.m */; };
+		84206B5A207FA5510099C8E6 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B58207FA5510099C8E6 /* HomepageViewController.m */; };
+		84206B5E207FA55B0099C8E6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B5D207FA55B0099C8E6 /* LoginViewController.m */; };
+		84206B61207FA5640099C8E6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B5F207FA5640099C8E6 /* RegisterViewController.m */; };
+		84206B65207FA8050099C8E6 /* TPViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B64207FA8050099C8E6 /* TPViewModel.m */; };
+		84206B68207FA82A0099C8E6 /* TPTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B67207FA82A0099C8E6 /* TPTableViewModel.m */; };
+		84206B6B207FA8510099C8E6 /* TPCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B6A207FA8510099C8E6 /* TPCollectionViewModel.m */; };
+		84206B742080DCB80099C8E6 /* YNavigationControllerStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B732080DCB80099C8E6 /* YNavigationControllerStack.m */; };
+		84206B782080E09F0099C8E6 /* YHTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B772080E09F0099C8E6 /* YHTTPService.m */; };
+		84206B7F2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B7E2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m */; };
+		84206B822080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B812080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.m */; };
+		84206B852080E4980099C8E6 /* YObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B842080E4980099C8E6 /* YObject.m */; };
+		84206B882080ECA60099C8E6 /* YReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B872080ECA60099C8E6 /* YReflection.m */; };
+		84206B8B2080EDB60099C8E6 /* YEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B8A2080EDB60099C8E6 /* YEXTRuntimeExtensions.m */; };
+		84206B8E2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B8D2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.m */; };
+		84206B912080F3080099C8E6 /* YHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B902080F3080099C8E6 /* YHTTPRequest.m */; };
+		84206B942080F37C0099C8E6 /* YURLParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B932080F37C0099C8E6 /* YURLParameters.m */; };
+		84206B972080F3DD0099C8E6 /* YKeyedSubscript.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B962080F3DD0099C8E6 /* YKeyedSubscript.m */; };
+		84206B9B2080FA200099C8E6 /* YHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B9A2080FA200099C8E6 /* YHTTPResponse.m */; };
+		84206B9F2080FC6D0099C8E6 /* TPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B9E2080FC6D0099C8E6 /* TPUser.m */; };
+		84206BA2208109630099C8E6 /* TPLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BA1208109630099C8E6 /* TPLoginViewModel.m */; };
+		84206BA5208189C40099C8E6 /* SAMKeychain+YUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BA4208189C40099C8E6 /* SAMKeychain+YUtil.m */; };
+		84206BA920818C6A0099C8E6 /* YNewFeatureViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BA820818C6A0099C8E6 /* YNewFeatureViewModel.m */; };
+		84206BAD2081960E0099C8E6 /* UIView+YExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BAC2081960E0099C8E6 /* UIView+YExtension.m */; };
+		84206BB320819C480099C8E6 /* TPRegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BB220819C480099C8E6 /* TPRegisterViewModel.m */; };
+		849EFAF220820EA400C37AC9 /* MainFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF120820EA400C37AC9 /* MainFrameViewController.m */; };
+		849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF420820ED500C37AC9 /* RootViewController.m */; };
+		849EFAF820820EFF00C37AC9 /* TPWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF720820EFF00C37AC9 /* TPWalletViewController.m */; };
+		849EFAFB20820F1200C37AC9 /* TPFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAFA20820F1200C37AC9 /* TPFriendViewController.m */; };
+		849EFAFE20820F2400C37AC9 /* TPChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAFD20820F2400C37AC9 /* TPChatViewController.m */; };
+		849EFB0220820FA500C37AC9 /* YScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB0120820FA500C37AC9 /* YScanCodeViewController.m */; };
+		849EFB0520821AA500C37AC9 /* YUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB0420821AA500C37AC9 /* YUtil.m */; };
+		849EFB092082412B00C37AC9 /* FBKVOController+YExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB082082412B00C37AC9 /* FBKVOController+YExtension.m */; };
+		849EFB0D208242A100C37AC9 /* NSString+YValid.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB0C208242A100C37AC9 /* NSString+YValid.m */; };
+		849EFB1220831FC500C37AC9 /* YNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB1120831FC500C37AC9 /* YNavigationBar.m */; };
+		849EFB1620839BE900C37AC9 /* TPWalletTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB1520839BE900C37AC9 /* TPWalletTableHeaderView.m */; };
+		849EFB1820839C0700C37AC9 /* TPWalletTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849EFB1720839C0700C37AC9 /* TPWalletTableHeaderView.xib */; };
+		84CD0B85207CEF140069AD9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B84207CEF140069AD9A /* AppDelegate.m */; };
+		84CD0B8B207CEF140069AD9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD0B89207CEF140069AD9A /* Main.storyboard */; };
+		84CD0B8D207CEF160069AD9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CD0B8C207CEF160069AD9A /* Assets.xcassets */; };
+		84CD0B90207CEF160069AD9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD0B8E207CEF160069AD9A /* LaunchScreen.storyboard */; };
+		84CD0B93207CEF160069AD9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B92207CEF160069AD9A /* main.m */; };
+		84CD0B9D207CEF160069AD9A /* TAOPAYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B9C207CEF160069AD9A /* TAOPAYTests.m */; };
+		84CD0BA8207CEF160069AD9A /* TAOPAYUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0BA7207CEF160069AD9A /* TAOPAYUITests.m */; };
+		84D661162084D70F00DF0F73 /* TPWalletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D661142084D70F00DF0F73 /* TPWalletCell.m */; };
+		84D661172084D70F00DF0F73 /* TPWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D661152084D70F00DF0F73 /* TPWalletCell.xib */; };
+		84D6611B208636FC00DF0F73 /* TPWalletCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66119208636FC00DF0F73 /* TPWalletCommonCell.m */; };
+		84D6611C208636FC00DF0F73 /* TPWalletCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D6611A208636FC00DF0F73 /* TPWalletCommonCell.xib */; };
+		84D661202086391500DF0F73 /* TPWalletTextNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D6611E2086391500DF0F73 /* TPWalletTextNumberCell.m */; };
+		84D661212086391500DF0F73 /* TPWalletTextNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D6611F2086391500DF0F73 /* TPWalletTextNumberCell.xib */; };
+		84D661252088DF3000DF0F73 /* TPWalletModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D661242088DF3000DF0F73 /* TPWalletModel.m */; };
+		84D661282088E1BB00DF0F73 /* TPWalletCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D661272088E1BB00DF0F73 /* TPWalletCommonModel.m */; };
+		84D6612B2088E2AA00DF0F73 /* TPWalletKeyValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D6612A2088E2AA00DF0F73 /* TPWalletKeyValueModel.m */; };
+		84D6612E208C181300DF0F73 /* TPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D6612D208C181300DF0F73 /* TPBaseViewController.m */; };
+		84D66132208C1A5A00DF0F73 /* TPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66131208C1A5A00DF0F73 /* TPTableViewController.m */; };
+		84D66136208C1B2800DF0F73 /* UIScrollView+YRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66135208C1B2800DF0F73 /* UIScrollView+YRefresh.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84CD0B99207CEF160069AD9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CD0B78207CEF140069AD9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CD0B7F207CEF140069AD9A;
+			remoteInfo = TAOPAY;
+		};
+		84CD0BA4207CEF160069AD9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CD0B78207CEF140069AD9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CD0B7F207CEF140069AD9A;
+			remoteInfo = TAOPAY;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5229563C6B8714A927656EF0 /* Pods-TAOPAY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAOPAY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY.debug.xcconfig"; sourceTree = "<group>"; };
+		595954A9C9467140A529FD5A /* Pods-TAOPAY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAOPAY.release.xcconfig"; path = "Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY.release.xcconfig"; sourceTree = "<group>"; };
+		84206B21207F956A0099C8E6 /* TPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPMacros.h; sourceTree = "<group>"; };
+		84206B22207F95E10099C8E6 /* TPConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConstant.h; sourceTree = "<group>"; };
+		84206B23207F95E10099C8E6 /* TPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPConstant.m; sourceTree = "<group>"; };
+		84206B25207F960A0099C8E6 /* TPURLConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPURLConfigure.h; sourceTree = "<group>"; };
+		84206B26207F96330099C8E6 /* TPConstInline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConstInline.h; sourceTree = "<group>"; };
+		84206B27207F96480099C8E6 /* TPConstEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConstEnum.h; sourceTree = "<group>"; };
+		84206B28207F96810099C8E6 /* TPConstBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConstBlock.h; sourceTree = "<group>"; };
+		84206B3D207FA3100099C8E6 /* YBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBaseTableViewCell.h; sourceTree = "<group>"; };
+		84206B3E207FA3100099C8E6 /* YBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBaseTableViewCell.m; sourceTree = "<group>"; };
+		84206B40207FA3630099C8E6 /* YBaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		84206B41207FA3630099C8E6 /* YBaseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		84206B44207FA3B40099C8E6 /* YBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBaseViewController.h; sourceTree = "<group>"; };
+		84206B45207FA3B40099C8E6 /* YBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBaseViewController.m; sourceTree = "<group>"; };
+		84206B47207FA3FB0099C8E6 /* YBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBaseNavigationController.h; sourceTree = "<group>"; };
+		84206B48207FA3FB0099C8E6 /* YBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBaseNavigationController.m; sourceTree = "<group>"; };
+		84206B57207FA5510099C8E6 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
+		84206B58207FA5510099C8E6 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
+		84206B5C207FA55A0099C8E6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		84206B5D207FA55B0099C8E6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		84206B5F207FA5640099C8E6 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		84206B60207FA5640099C8E6 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		84206B62207FA65D0099C8E6 /* YSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSingleton.h; sourceTree = "<group>"; };
+		84206B63207FA8050099C8E6 /* TPViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPViewModel.h; sourceTree = "<group>"; };
+		84206B64207FA8050099C8E6 /* TPViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPViewModel.m; sourceTree = "<group>"; };
+		84206B66207FA82A0099C8E6 /* TPTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPTableViewModel.h; sourceTree = "<group>"; };
+		84206B67207FA82A0099C8E6 /* TPTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPTableViewModel.m; sourceTree = "<group>"; };
+		84206B69207FA8510099C8E6 /* TPCollectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCollectionViewModel.h; sourceTree = "<group>"; };
+		84206B6A207FA8510099C8E6 /* TPCollectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCollectionViewModel.m; sourceTree = "<group>"; };
+		84206B70207FA8BC0099C8E6 /* TPNavigationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPNavigationProtocol.h; sourceTree = "<group>"; };
+		84206B712080DA4D0099C8E6 /* TPAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAppConfig.h; sourceTree = "<group>"; };
+		84206B722080DCB80099C8E6 /* YNavigationControllerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNavigationControllerStack.h; sourceTree = "<group>"; };
+		84206B732080DCB80099C8E6 /* YNavigationControllerStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YNavigationControllerStack.m; sourceTree = "<group>"; };
+		84206B762080E09F0099C8E6 /* YHTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTTPService.h; sourceTree = "<group>"; };
+		84206B772080E09F0099C8E6 /* YHTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTTPService.m; sourceTree = "<group>"; };
+		84206B7D2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+RACSupport.h"; sourceTree = "<group>"; };
+		84206B7E2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+RACSupport.m"; sourceTree = "<group>"; };
+		84206B802080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RACSignal+HTTPServiceAdditions.h"; sourceTree = "<group>"; };
+		84206B812080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+HTTPServiceAdditions.m"; sourceTree = "<group>"; };
+		84206B832080E4980099C8E6 /* YObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YObject.h; sourceTree = "<group>"; };
+		84206B842080E4980099C8E6 /* YObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YObject.m; sourceTree = "<group>"; };
+		84206B862080ECA60099C8E6 /* YReflection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YReflection.h; sourceTree = "<group>"; };
+		84206B872080ECA60099C8E6 /* YReflection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YReflection.m; sourceTree = "<group>"; };
+		84206B892080EDB60099C8E6 /* YEXTRuntimeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YEXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		84206B8A2080EDB60099C8E6 /* YEXTRuntimeExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YEXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		84206B8C2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RACSubscriber+AFProgressCallbacks.h"; sourceTree = "<group>"; };
+		84206B8D2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RACSubscriber+AFProgressCallbacks.m"; sourceTree = "<group>"; };
+		84206B8F2080F3080099C8E6 /* YHTTPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTTPRequest.h; sourceTree = "<group>"; };
+		84206B902080F3080099C8E6 /* YHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTTPRequest.m; sourceTree = "<group>"; };
+		84206B922080F37C0099C8E6 /* YURLParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YURLParameters.h; sourceTree = "<group>"; };
+		84206B932080F37C0099C8E6 /* YURLParameters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YURLParameters.m; sourceTree = "<group>"; };
+		84206B952080F3DD0099C8E6 /* YKeyedSubscript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKeyedSubscript.h; sourceTree = "<group>"; };
+		84206B962080F3DD0099C8E6 /* YKeyedSubscript.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKeyedSubscript.m; sourceTree = "<group>"; };
+		84206B982080F4AA0099C8E6 /* YHTTPServiceConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTTPServiceConstant.h; sourceTree = "<group>"; };
+		84206B992080FA200099C8E6 /* YHTTPResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHTTPResponse.h; sourceTree = "<group>"; };
+		84206B9A2080FA200099C8E6 /* YHTTPResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHTTPResponse.m; sourceTree = "<group>"; };
+		84206B9D2080FC6D0099C8E6 /* TPUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPUser.h; sourceTree = "<group>"; };
+		84206B9E2080FC6D0099C8E6 /* TPUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPUser.m; sourceTree = "<group>"; };
+		84206BA0208109630099C8E6 /* TPLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPLoginViewModel.h; sourceTree = "<group>"; };
+		84206BA1208109630099C8E6 /* TPLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPLoginViewModel.m; sourceTree = "<group>"; };
+		84206BA3208189C40099C8E6 /* SAMKeychain+YUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain+YUtil.h"; sourceTree = "<group>"; };
+		84206BA4208189C40099C8E6 /* SAMKeychain+YUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SAMKeychain+YUtil.m"; sourceTree = "<group>"; };
+		84206BA720818C6A0099C8E6 /* YNewFeatureViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNewFeatureViewModel.h; sourceTree = "<group>"; };
+		84206BA820818C6A0099C8E6 /* YNewFeatureViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YNewFeatureViewModel.m; sourceTree = "<group>"; };
+		84206BAB2081960E0099C8E6 /* UIView+YExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YExtension.h"; sourceTree = "<group>"; };
+		84206BAC2081960E0099C8E6 /* UIView+YExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YExtension.m"; sourceTree = "<group>"; };
+		84206BB120819C480099C8E6 /* TPRegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPRegisterViewModel.h; sourceTree = "<group>"; };
+		84206BB220819C480099C8E6 /* TPRegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPRegisterViewModel.m; sourceTree = "<group>"; };
+		849EFAF020820EA400C37AC9 /* MainFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFrameViewController.h; sourceTree = "<group>"; };
+		849EFAF120820EA400C37AC9 /* MainFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainFrameViewController.m; sourceTree = "<group>"; };
+		849EFAF320820ED500C37AC9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		849EFAF420820ED500C37AC9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		849EFAF620820EFF00C37AC9 /* TPWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletViewController.h; sourceTree = "<group>"; };
+		849EFAF720820EFF00C37AC9 /* TPWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletViewController.m; sourceTree = "<group>"; };
+		849EFAF920820F1200C37AC9 /* TPFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendViewController.h; sourceTree = "<group>"; };
+		849EFAFA20820F1200C37AC9 /* TPFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendViewController.m; sourceTree = "<group>"; };
+		849EFAFC20820F2400C37AC9 /* TPChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPChatViewController.h; sourceTree = "<group>"; };
+		849EFAFD20820F2400C37AC9 /* TPChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPChatViewController.m; sourceTree = "<group>"; };
+		849EFB0020820FA500C37AC9 /* YScanCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YScanCodeViewController.h; sourceTree = "<group>"; };
+		849EFB0120820FA500C37AC9 /* YScanCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YScanCodeViewController.m; sourceTree = "<group>"; };
+		849EFB0320821AA500C37AC9 /* YUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUtil.h; sourceTree = "<group>"; };
+		849EFB0420821AA500C37AC9 /* YUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUtil.m; sourceTree = "<group>"; };
+		849EFB072082412B00C37AC9 /* FBKVOController+YExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBKVOController+YExtension.h"; sourceTree = "<group>"; };
+		849EFB082082412B00C37AC9 /* FBKVOController+YExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBKVOController+YExtension.m"; sourceTree = "<group>"; };
+		849EFB0B208242A100C37AC9 /* NSString+YValid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YValid.h"; sourceTree = "<group>"; };
+		849EFB0C208242A100C37AC9 /* NSString+YValid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YValid.m"; sourceTree = "<group>"; };
+		849EFB1020831FC500C37AC9 /* YNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNavigationBar.h; sourceTree = "<group>"; };
+		849EFB1120831FC500C37AC9 /* YNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YNavigationBar.m; sourceTree = "<group>"; };
+		849EFB1420839BE900C37AC9 /* TPWalletTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletTableHeaderView.h; sourceTree = "<group>"; };
+		849EFB1520839BE900C37AC9 /* TPWalletTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTableHeaderView.m; sourceTree = "<group>"; };
+		849EFB1720839C0700C37AC9 /* TPWalletTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletTableHeaderView.xib; sourceTree = "<group>"; };
+		84CD0B80207CEF140069AD9A /* TAOPAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAOPAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CD0B83207CEF140069AD9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84CD0B84207CEF140069AD9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84CD0B8A207CEF140069AD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84CD0B8C207CEF160069AD9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84CD0B8F207CEF160069AD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84CD0B91207CEF160069AD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CD0B92207CEF160069AD9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84CD0B98207CEF160069AD9A /* TAOPAYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TAOPAYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CD0B9C207CEF160069AD9A /* TAOPAYTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAOPAYTests.m; sourceTree = "<group>"; };
+		84CD0B9E207CEF160069AD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CD0BA3207CEF160069AD9A /* TAOPAYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TAOPAYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CD0BA7207CEF160069AD9A /* TAOPAYUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAOPAYUITests.m; sourceTree = "<group>"; };
+		84CD0BA9207CEF160069AD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D661132084D70F00DF0F73 /* TPWalletCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletCell.h; sourceTree = "<group>"; };
+		84D661142084D70F00DF0F73 /* TPWalletCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletCell.m; sourceTree = "<group>"; };
+		84D661152084D70F00DF0F73 /* TPWalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletCell.xib; sourceTree = "<group>"; };
+		84D66118208636FC00DF0F73 /* TPWalletCommonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletCommonCell.h; sourceTree = "<group>"; };
+		84D66119208636FC00DF0F73 /* TPWalletCommonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletCommonCell.m; sourceTree = "<group>"; };
+		84D6611A208636FC00DF0F73 /* TPWalletCommonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletCommonCell.xib; sourceTree = "<group>"; };
+		84D6611D2086391500DF0F73 /* TPWalletTextNumberCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletTextNumberCell.h; sourceTree = "<group>"; };
+		84D6611E2086391500DF0F73 /* TPWalletTextNumberCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTextNumberCell.m; sourceTree = "<group>"; };
+		84D6611F2086391500DF0F73 /* TPWalletTextNumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletTextNumberCell.xib; sourceTree = "<group>"; };
+		84D661232088DF3000DF0F73 /* TPWalletModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletModel.h; sourceTree = "<group>"; };
+		84D661242088DF3000DF0F73 /* TPWalletModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletModel.m; sourceTree = "<group>"; };
+		84D661262088E1BB00DF0F73 /* TPWalletCommonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletCommonModel.h; sourceTree = "<group>"; };
+		84D661272088E1BB00DF0F73 /* TPWalletCommonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletCommonModel.m; sourceTree = "<group>"; };
+		84D661292088E2AA00DF0F73 /* TPWalletKeyValueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletKeyValueModel.h; sourceTree = "<group>"; };
+		84D6612A2088E2AA00DF0F73 /* TPWalletKeyValueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletKeyValueModel.m; sourceTree = "<group>"; };
+		84D6612C208C181300DF0F73 /* TPBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPBaseViewController.h; sourceTree = "<group>"; };
+		84D6612D208C181300DF0F73 /* TPBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPBaseViewController.m; sourceTree = "<group>"; };
+		84D66130208C1A5A00DF0F73 /* TPTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPTableViewController.h; sourceTree = "<group>"; };
+		84D66131208C1A5A00DF0F73 /* TPTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPTableViewController.m; sourceTree = "<group>"; };
+		84D66134208C1B2800DF0F73 /* UIScrollView+YRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YRefresh.h"; sourceTree = "<group>"; };
+		84D66135208C1B2800DF0F73 /* UIScrollView+YRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YRefresh.m"; sourceTree = "<group>"; };
+		FA233F00CEB95194F194ECE4 /* libPods-TAOPAY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TAOPAY.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84CD0B7D207CEF140069AD9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FA02A3F02DFC74195D2B3DE /* libPods-TAOPAY.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CD0B95207CEF160069AD9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CD0BA0207CEF160069AD9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84206B1B207F94A00099C8E6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84206B3C207F988C0099C8E6 /* Category */,
+				84206B35207F988C0099C8E6 /* Helper */,
+				84206B3A207F988C0099C8E6 /* Manager */,
+				84206B36207F988C0099C8E6 /* Protocol */,
+				84206B3B207F988C0099C8E6 /* Router */,
+				84206B39207F988C0099C8E6 /* Service */,
+				84206B37207F988C0099C8E6 /* Singleton */,
+				84206B38207F988C0099C8E6 /* Util */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		84206B1C207F94A00099C8E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84206BA620818C430099C8E6 /* NewFeature */,
+				84206B31207F975C0099C8E6 /* BaseClass */,
+				84206B33207F975C0099C8E6 /* Homepage */,
+				84206B32207F975C0099C8E6 /* Login */,
+				84206B34207F975C0099C8E6 /* Register */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84206B1D207F94A00099C8E6 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				84206B21207F956A0099C8E6 /* TPMacros.h */,
+				84206B22207F95E10099C8E6 /* TPConstant.h */,
+				84206B23207F95E10099C8E6 /* TPConstant.m */,
+				84206B25207F960A0099C8E6 /* TPURLConfigure.h */,
+				84206B26207F96330099C8E6 /* TPConstInline.h */,
+				84206B27207F96480099C8E6 /* TPConstEnum.h */,
+				84206B28207F96810099C8E6 /* TPConstBlock.h */,
+				84206B712080DA4D0099C8E6 /* TPAppConfig.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		84206B1E207F94A00099C8E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84D661222088DEC500DF0F73 /* Wallet */,
+				84206B9C2080FC590099C8E6 /* User */,
+				84206B30207F97520099C8E6 /* BaseClass */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84206B1F207F94A00099C8E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				849EFB1320839B7200C37AC9 /* Wallet */,
+				849EFB0E20831F7500C37AC9 /* Common */,
+				84206B2E207F97450099C8E6 /* BaseClass */,
+				84206B2D207F97450099C8E6 /* Homepage */,
+				84206B2C207F97450099C8E6 /* Login */,
+				84206B2F207F97450099C8E6 /* Register */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84206B20207F94A10099C8E6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849EFAFF20820F5500C37AC9 /* ScanCode */,
+				849EFAEC20820E7900C37AC9 /* Chat */,
+				849EFAED20820E7A00C37AC9 /* Friend */,
+				849EFAEF20820E7A00C37AC9 /* MainFrame */,
+				849EFAEE20820E7A00C37AC9 /* Wallet */,
+				84206B43207FA3980099C8E6 /* BaseClass */,
+				84206B2A207F96C60099C8E6 /* Homepage */,
+				84206B29207F96C60099C8E6 /* Login */,
+				84206B2B207F96C60099C8E6 /* Register */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		84206B29207F96C60099C8E6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84206B5C207FA55A0099C8E6 /* LoginViewController.h */,
+				84206B5D207FA55B0099C8E6 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84206B2A207F96C60099C8E6 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				84206B57207FA5510099C8E6 /* HomepageViewController.h */,
+				84206B58207FA5510099C8E6 /* HomepageViewController.m */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		84206B2B207F96C60099C8E6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				84206B60207FA5640099C8E6 /* RegisterViewController.h */,
+				84206B5F207FA5640099C8E6 /* RegisterViewController.m */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		84206B2C207F97450099C8E6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84206B2D207F97450099C8E6 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		84206B2E207F97450099C8E6 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				84206B3D207FA3100099C8E6 /* YBaseTableViewCell.h */,
+				84206B3E207FA3100099C8E6 /* YBaseTableViewCell.m */,
+				84206B40207FA3630099C8E6 /* YBaseCollectionViewCell.h */,
+				84206B41207FA3630099C8E6 /* YBaseCollectionViewCell.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		84206B2F207F97450099C8E6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		84206B30207F97520099C8E6 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				84206B832080E4980099C8E6 /* YObject.h */,
+				84206B842080E4980099C8E6 /* YObject.m */,
+				84206B862080ECA60099C8E6 /* YReflection.h */,
+				84206B872080ECA60099C8E6 /* YReflection.m */,
+				84206B892080EDB60099C8E6 /* YEXTRuntimeExtensions.h */,
+				84206B8A2080EDB60099C8E6 /* YEXTRuntimeExtensions.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		84206B31207F975C0099C8E6 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				84206B63207FA8050099C8E6 /* TPViewModel.h */,
+				84206B64207FA8050099C8E6 /* TPViewModel.m */,
+				84206B66207FA82A0099C8E6 /* TPTableViewModel.h */,
+				84206B67207FA82A0099C8E6 /* TPTableViewModel.m */,
+				84206B69207FA8510099C8E6 /* TPCollectionViewModel.h */,
+				84206B6A207FA8510099C8E6 /* TPCollectionViewModel.m */,
+				84206B70207FA8BC0099C8E6 /* TPNavigationProtocol.h */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		84206B32207F975C0099C8E6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84206BA0208109630099C8E6 /* TPLoginViewModel.h */,
+				84206BA1208109630099C8E6 /* TPLoginViewModel.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84206B33207F975C0099C8E6 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		84206B34207F975C0099C8E6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				84206BB120819C480099C8E6 /* TPRegisterViewModel.h */,
+				84206BB220819C480099C8E6 /* TPRegisterViewModel.m */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		84206B35207F988C0099C8E6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		84206B36207F988C0099C8E6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		84206B37207F988C0099C8E6 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				84206B62207FA65D0099C8E6 /* YSingleton.h */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		84206B38207F988C0099C8E6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				84206BA3208189C40099C8E6 /* SAMKeychain+YUtil.h */,
+				84206BA4208189C40099C8E6 /* SAMKeychain+YUtil.m */,
+				849EFB0320821AA500C37AC9 /* YUtil.h */,
+				849EFB0420821AA500C37AC9 /* YUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		84206B39207F988C0099C8E6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				84206B7C2080E1340099C8E6 /* BaseModel */,
+				84206B792080E1340099C8E6 /* Constant */,
+				84206B7A2080E1340099C8E6 /* Extension */,
+				84206B7B2080E1340099C8E6 /* Request */,
+				84206B762080E09F0099C8E6 /* YHTTPService.h */,
+				84206B772080E09F0099C8E6 /* YHTTPService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		84206B3A207F988C0099C8E6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		84206B3B207F988C0099C8E6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		84206B3C207F988C0099C8E6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				84D66133208C1B0000DF0F73 /* UIScrollView */,
+				849EFB0A2082428100C37AC9 /* NSString */,
+				849EFB062082410300C37AC9 /* FBKVO */,
+				84206BAA208195E60099C8E6 /* UIView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		84206B43207FA3980099C8E6 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				84D6612F208C1A1D00DF0F73 /* TableViewController */,
+				84206B44207FA3B40099C8E6 /* YBaseViewController.h */,
+				84206B45207FA3B40099C8E6 /* YBaseViewController.m */,
+				84206B47207FA3FB0099C8E6 /* YBaseNavigationController.h */,
+				84206B48207FA3FB0099C8E6 /* YBaseNavigationController.m */,
+				84206B722080DCB80099C8E6 /* YNavigationControllerStack.h */,
+				84206B732080DCB80099C8E6 /* YNavigationControllerStack.m */,
+				84D6612C208C181300DF0F73 /* TPBaseViewController.h */,
+				84D6612D208C181300DF0F73 /* TPBaseViewController.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		84206B792080E1340099C8E6 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				84206B982080F4AA0099C8E6 /* YHTTPServiceConstant.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		84206B7A2080E1340099C8E6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84206B7D2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.h */,
+				84206B7E2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m */,
+				84206B802080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.h */,
+				84206B812080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.m */,
+				84206B8C2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.h */,
+				84206B8D2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		84206B7B2080E1340099C8E6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				84206B8F2080F3080099C8E6 /* YHTTPRequest.h */,
+				84206B902080F3080099C8E6 /* YHTTPRequest.m */,
+				84206B922080F37C0099C8E6 /* YURLParameters.h */,
+				84206B932080F37C0099C8E6 /* YURLParameters.m */,
+				84206B952080F3DD0099C8E6 /* YKeyedSubscript.h */,
+				84206B962080F3DD0099C8E6 /* YKeyedSubscript.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		84206B7C2080E1340099C8E6 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				84206B992080FA200099C8E6 /* YHTTPResponse.h */,
+				84206B9A2080FA200099C8E6 /* YHTTPResponse.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		84206B9C2080FC590099C8E6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				84206B9D2080FC6D0099C8E6 /* TPUser.h */,
+				84206B9E2080FC6D0099C8E6 /* TPUser.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		84206BA620818C430099C8E6 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				84206BA720818C6A0099C8E6 /* YNewFeatureViewModel.h */,
+				84206BA820818C6A0099C8E6 /* YNewFeatureViewModel.m */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		84206BAA208195E60099C8E6 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				84206BAB2081960E0099C8E6 /* UIView+YExtension.h */,
+				84206BAC2081960E0099C8E6 /* UIView+YExtension.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		849EFAEC20820E7900C37AC9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				849EFAFC20820F2400C37AC9 /* TPChatViewController.h */,
+				849EFAFD20820F2400C37AC9 /* TPChatViewController.m */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		849EFAED20820E7A00C37AC9 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				849EFAF920820F1200C37AC9 /* TPFriendViewController.h */,
+				849EFAFA20820F1200C37AC9 /* TPFriendViewController.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		849EFAEE20820E7A00C37AC9 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				849EFAF620820EFF00C37AC9 /* TPWalletViewController.h */,
+				849EFAF720820EFF00C37AC9 /* TPWalletViewController.m */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		849EFAEF20820E7A00C37AC9 /* MainFrame */ = {
+			isa = PBXGroup;
+			children = (
+				849EFAF320820ED500C37AC9 /* RootViewController.h */,
+				849EFAF420820ED500C37AC9 /* RootViewController.m */,
+				849EFAF020820EA400C37AC9 /* MainFrameViewController.h */,
+				849EFAF120820EA400C37AC9 /* MainFrameViewController.m */,
+			);
+			path = MainFrame;
+			sourceTree = "<group>";
+		};
+		849EFAFF20820F5500C37AC9 /* ScanCode */ = {
+			isa = PBXGroup;
+			children = (
+				849EFB0020820FA500C37AC9 /* YScanCodeViewController.h */,
+				849EFB0120820FA500C37AC9 /* YScanCodeViewController.m */,
+			);
+			path = ScanCode;
+			sourceTree = "<group>";
+		};
+		849EFB062082410300C37AC9 /* FBKVO */ = {
+			isa = PBXGroup;
+			children = (
+				849EFB072082412B00C37AC9 /* FBKVOController+YExtension.h */,
+				849EFB082082412B00C37AC9 /* FBKVOController+YExtension.m */,
+			);
+			path = FBKVO;
+			sourceTree = "<group>";
+		};
+		849EFB0A2082428100C37AC9 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				849EFB0B208242A100C37AC9 /* NSString+YValid.h */,
+				849EFB0C208242A100C37AC9 /* NSString+YValid.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		849EFB0E20831F7500C37AC9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				849EFB0F20831FA500C37AC9 /* NavigationBar */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		849EFB0F20831FA500C37AC9 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				849EFB1020831FC500C37AC9 /* YNavigationBar.h */,
+				849EFB1120831FC500C37AC9 /* YNavigationBar.m */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		849EFB1320839B7200C37AC9 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				849EFB1420839BE900C37AC9 /* TPWalletTableHeaderView.h */,
+				849EFB1520839BE900C37AC9 /* TPWalletTableHeaderView.m */,
+				849EFB1720839C0700C37AC9 /* TPWalletTableHeaderView.xib */,
+				84D661132084D70F00DF0F73 /* TPWalletCell.h */,
+				84D661142084D70F00DF0F73 /* TPWalletCell.m */,
+				84D661152084D70F00DF0F73 /* TPWalletCell.xib */,
+				84D66118208636FC00DF0F73 /* TPWalletCommonCell.h */,
+				84D66119208636FC00DF0F73 /* TPWalletCommonCell.m */,
+				84D6611A208636FC00DF0F73 /* TPWalletCommonCell.xib */,
+				84D6611D2086391500DF0F73 /* TPWalletTextNumberCell.h */,
+				84D6611E2086391500DF0F73 /* TPWalletTextNumberCell.m */,
+				84D6611F2086391500DF0F73 /* TPWalletTextNumberCell.xib */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		84CD0B77207CEF140069AD9A = {
+			isa = PBXGroup;
+			children = (
+				84CD0B82207CEF140069AD9A /* TAOPAY */,
+				84CD0B9B207CEF160069AD9A /* TAOPAYTests */,
+				84CD0BA6207CEF160069AD9A /* TAOPAYUITests */,
+				84CD0B81207CEF140069AD9A /* Products */,
+				DE8C5FD550B5E8043641AE32 /* Pods */,
+				95457B523949C418A0C6393D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84CD0B81207CEF140069AD9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84CD0B80207CEF140069AD9A /* TAOPAY.app */,
+				84CD0B98207CEF160069AD9A /* TAOPAYTests.xctest */,
+				84CD0BA3207CEF160069AD9A /* TAOPAYUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84CD0B82207CEF140069AD9A /* TAOPAY */ = {
+			isa = PBXGroup;
+			children = (
+				84206B1E207F94A00099C8E6 /* Model */,
+				84206B1F207F94A00099C8E6 /* View */,
+				84206B20207F94A10099C8E6 /* ViewController */,
+				84206B1C207F94A00099C8E6 /* ViewModel */,
+				84206B1B207F94A00099C8E6 /* Utils */,
+				84206B1D207F94A00099C8E6 /* Macros */,
+				84CD0B83207CEF140069AD9A /* AppDelegate.h */,
+				84CD0B84207CEF140069AD9A /* AppDelegate.m */,
+				84CD0B89207CEF140069AD9A /* Main.storyboard */,
+				84CD0B8C207CEF160069AD9A /* Assets.xcassets */,
+				84CD0B8E207CEF160069AD9A /* LaunchScreen.storyboard */,
+				84CD0B91207CEF160069AD9A /* Info.plist */,
+				84CD0B92207CEF160069AD9A /* main.m */,
+			);
+			path = TAOPAY;
+			sourceTree = "<group>";
+		};
+		84CD0B9B207CEF160069AD9A /* TAOPAYTests */ = {
+			isa = PBXGroup;
+			children = (
+				84CD0B9C207CEF160069AD9A /* TAOPAYTests.m */,
+				84CD0B9E207CEF160069AD9A /* Info.plist */,
+			);
+			path = TAOPAYTests;
+			sourceTree = "<group>";
+		};
+		84CD0BA6207CEF160069AD9A /* TAOPAYUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84CD0BA7207CEF160069AD9A /* TAOPAYUITests.m */,
+				84CD0BA9207CEF160069AD9A /* Info.plist */,
+			);
+			path = TAOPAYUITests;
+			sourceTree = "<group>";
+		};
+		84D661222088DEC500DF0F73 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				84D661232088DF3000DF0F73 /* TPWalletModel.h */,
+				84D661242088DF3000DF0F73 /* TPWalletModel.m */,
+				84D661262088E1BB00DF0F73 /* TPWalletCommonModel.h */,
+				84D661272088E1BB00DF0F73 /* TPWalletCommonModel.m */,
+				84D661292088E2AA00DF0F73 /* TPWalletKeyValueModel.h */,
+				84D6612A2088E2AA00DF0F73 /* TPWalletKeyValueModel.m */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		84D6612F208C1A1D00DF0F73 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84D66130208C1A5A00DF0F73 /* TPTableViewController.h */,
+				84D66131208C1A5A00DF0F73 /* TPTableViewController.m */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		84D66133208C1B0000DF0F73 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				84D66134208C1B2800DF0F73 /* UIScrollView+YRefresh.h */,
+				84D66135208C1B2800DF0F73 /* UIScrollView+YRefresh.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		95457B523949C418A0C6393D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA233F00CEB95194F194ECE4 /* libPods-TAOPAY.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE8C5FD550B5E8043641AE32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5229563C6B8714A927656EF0 /* Pods-TAOPAY.debug.xcconfig */,
+				595954A9C9467140A529FD5A /* Pods-TAOPAY.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84CD0B7F207CEF140069AD9A /* TAOPAY */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CD0BAC207CEF160069AD9A /* Build configuration list for PBXNativeTarget "TAOPAY" */;
+			buildPhases = (
+				48EF39E997359395EAB031DE /* [CP] Check Pods Manifest.lock */,
+				84CD0B7C207CEF140069AD9A /* Sources */,
+				84CD0B7D207CEF140069AD9A /* Frameworks */,
+				84CD0B7E207CEF140069AD9A /* Resources */,
+				C17561C3D7C272A8315DBDD4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TAOPAY;
+			productName = TAOPAY;
+			productReference = 84CD0B80207CEF140069AD9A /* TAOPAY.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84CD0B97207CEF160069AD9A /* TAOPAYTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CD0BAF207CEF160069AD9A /* Build configuration list for PBXNativeTarget "TAOPAYTests" */;
+			buildPhases = (
+				84CD0B94207CEF160069AD9A /* Sources */,
+				84CD0B95207CEF160069AD9A /* Frameworks */,
+				84CD0B96207CEF160069AD9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CD0B9A207CEF160069AD9A /* PBXTargetDependency */,
+			);
+			name = TAOPAYTests;
+			productName = TAOPAYTests;
+			productReference = 84CD0B98207CEF160069AD9A /* TAOPAYTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84CD0BA2207CEF160069AD9A /* TAOPAYUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CD0BB2207CEF160069AD9A /* Build configuration list for PBXNativeTarget "TAOPAYUITests" */;
+			buildPhases = (
+				84CD0B9F207CEF160069AD9A /* Sources */,
+				84CD0BA0207CEF160069AD9A /* Frameworks */,
+				84CD0BA1207CEF160069AD9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CD0BA5207CEF160069AD9A /* PBXTargetDependency */,
+			);
+			name = TAOPAYUITests;
+			productName = TAOPAYUITests;
+			productReference = 84CD0BA3207CEF160069AD9A /* TAOPAYUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84CD0B78207CEF140069AD9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = TAOPAY;
+				TargetAttributes = {
+					84CD0B7F207CEF140069AD9A = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					84CD0B97207CEF160069AD9A = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 84CD0B7F207CEF140069AD9A;
+					};
+					84CD0BA2207CEF160069AD9A = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 84CD0B7F207CEF140069AD9A;
+					};
+				};
+			};
+			buildConfigurationList = 84CD0B7B207CEF140069AD9A /* Build configuration list for PBXProject "TAOPAY" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84CD0B77207CEF140069AD9A;
+			productRefGroup = 84CD0B81207CEF140069AD9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84CD0B7F207CEF140069AD9A /* TAOPAY */,
+				84CD0B97207CEF160069AD9A /* TAOPAYTests */,
+				84CD0BA2207CEF160069AD9A /* TAOPAYUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84CD0B7E207CEF140069AD9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CD0B90207CEF160069AD9A /* LaunchScreen.storyboard in Resources */,
+				849EFB1820839C0700C37AC9 /* TPWalletTableHeaderView.xib in Resources */,
+				84D661212086391500DF0F73 /* TPWalletTextNumberCell.xib in Resources */,
+				84CD0B8D207CEF160069AD9A /* Assets.xcassets in Resources */,
+				84D6611C208636FC00DF0F73 /* TPWalletCommonCell.xib in Resources */,
+				84D661172084D70F00DF0F73 /* TPWalletCell.xib in Resources */,
+				84CD0B8B207CEF140069AD9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CD0B96207CEF160069AD9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CD0BA1207CEF160069AD9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48EF39E997359395EAB031DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TAOPAY-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C17561C3D7C272A8315DBDD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84CD0B7C207CEF140069AD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84206B882080ECA60099C8E6 /* YReflection.m in Sources */,
+				84D661162084D70F00DF0F73 /* TPWalletCell.m in Sources */,
+				84206B852080E4980099C8E6 /* YObject.m in Sources */,
+				84206B7F2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m in Sources */,
+				84206B912080F3080099C8E6 /* YHTTPRequest.m in Sources */,
+				84206B6B207FA8510099C8E6 /* TPCollectionViewModel.m in Sources */,
+				84206B61207FA5640099C8E6 /* RegisterViewController.m in Sources */,
+				84206B68207FA82A0099C8E6 /* TPTableViewModel.m in Sources */,
+				84206B5A207FA5510099C8E6 /* HomepageViewController.m in Sources */,
+				849EFB0D208242A100C37AC9 /* NSString+YValid.m in Sources */,
+				84206BAD2081960E0099C8E6 /* UIView+YExtension.m in Sources */,
+				849EFAF220820EA400C37AC9 /* MainFrameViewController.m in Sources */,
+				849EFAFB20820F1200C37AC9 /* TPFriendViewController.m in Sources */,
+				84206B9B2080FA200099C8E6 /* YHTTPResponse.m in Sources */,
+				84206BA5208189C40099C8E6 /* SAMKeychain+YUtil.m in Sources */,
+				84D661282088E1BB00DF0F73 /* TPWalletCommonModel.m in Sources */,
+				84CD0B93207CEF160069AD9A /* main.m in Sources */,
+				84206B49207FA3FB0099C8E6 /* YBaseNavigationController.m in Sources */,
+				84D6611B208636FC00DF0F73 /* TPWalletCommonCell.m in Sources */,
+				84206B942080F37C0099C8E6 /* YURLParameters.m in Sources */,
+				849EFAF820820EFF00C37AC9 /* TPWalletViewController.m in Sources */,
+				84CD0B85207CEF140069AD9A /* AppDelegate.m in Sources */,
+				84206BA2208109630099C8E6 /* TPLoginViewModel.m in Sources */,
+				84D661252088DF3000DF0F73 /* TPWalletModel.m in Sources */,
+				849EFB1220831FC500C37AC9 /* YNavigationBar.m in Sources */,
+				84D66132208C1A5A00DF0F73 /* TPTableViewController.m in Sources */,
+				84206B8E2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.m in Sources */,
+				84206B822080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.m in Sources */,
+				84206B5E207FA55B0099C8E6 /* LoginViewController.m in Sources */,
+				84206B3F207FA3100099C8E6 /* YBaseTableViewCell.m in Sources */,
+				84206BB320819C480099C8E6 /* TPRegisterViewModel.m in Sources */,
+				849EFAFE20820F2400C37AC9 /* TPChatViewController.m in Sources */,
+				849EFB0220820FA500C37AC9 /* YScanCodeViewController.m in Sources */,
+				84206B8B2080EDB60099C8E6 /* YEXTRuntimeExtensions.m in Sources */,
+				849EFB1620839BE900C37AC9 /* TPWalletTableHeaderView.m in Sources */,
+				84D661202086391500DF0F73 /* TPWalletTextNumberCell.m in Sources */,
+				84206B742080DCB80099C8E6 /* YNavigationControllerStack.m in Sources */,
+				84D6612E208C181300DF0F73 /* TPBaseViewController.m in Sources */,
+				84206B782080E09F0099C8E6 /* YHTTPService.m in Sources */,
+				84206B972080F3DD0099C8E6 /* YKeyedSubscript.m in Sources */,
+				84D6612B2088E2AA00DF0F73 /* TPWalletKeyValueModel.m in Sources */,
+				84206B65207FA8050099C8E6 /* TPViewModel.m in Sources */,
+				84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */,
+				84206B24207F95E10099C8E6 /* TPConstant.m in Sources */,
+				849EFB092082412B00C37AC9 /* FBKVOController+YExtension.m in Sources */,
+				84D66136208C1B2800DF0F73 /* UIScrollView+YRefresh.m in Sources */,
+				849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */,
+				84206BA920818C6A0099C8E6 /* YNewFeatureViewModel.m in Sources */,
+				84206B9F2080FC6D0099C8E6 /* TPUser.m in Sources */,
+				84206B46207FA3B40099C8E6 /* YBaseViewController.m in Sources */,
+				849EFB0520821AA500C37AC9 /* YUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CD0B94207CEF160069AD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CD0B9D207CEF160069AD9A /* TAOPAYTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CD0B9F207CEF160069AD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CD0BA8207CEF160069AD9A /* TAOPAYUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84CD0B9A207CEF160069AD9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CD0B7F207CEF140069AD9A /* TAOPAY */;
+			targetProxy = 84CD0B99207CEF160069AD9A /* PBXContainerItemProxy */;
+		};
+		84CD0BA5207CEF160069AD9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CD0B7F207CEF140069AD9A /* TAOPAY */;
+			targetProxy = 84CD0BA4207CEF160069AD9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84CD0B89207CEF140069AD9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CD0B8A207CEF140069AD9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84CD0B8E207CEF160069AD9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CD0B8F207CEF160069AD9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84CD0BAA207CEF160069AD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84CD0BAB207CEF160069AD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84CD0BAD207CEF160069AD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5229563C6B8714A927656EF0 /* Pods-TAOPAY.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7K57RY5M6B;
+				INFOPLIST_FILE = TAOPAY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TAOPAY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84CD0BAE207CEF160069AD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 595954A9C9467140A529FD5A /* Pods-TAOPAY.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7K57RY5M6B;
+				INFOPLIST_FILE = TAOPAY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TAOPAY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84CD0BB0207CEF160069AD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH8E9398Q9;
+				INFOPLIST_FILE = TAOPAYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TAOPAY.app/TAOPAY";
+			};
+			name = Debug;
+		};
+		84CD0BB1207CEF160069AD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH8E9398Q9;
+				INFOPLIST_FILE = TAOPAYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TAOPAY.app/TAOPAY";
+			};
+			name = Release;
+		};
+		84CD0BB3207CEF160069AD9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH8E9398Q9;
+				INFOPLIST_FILE = TAOPAYUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TAOPAY;
+			};
+			name = Debug;
+		};
+		84CD0BB4207CEF160069AD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RH8E9398Q9;
+				INFOPLIST_FILE = TAOPAYUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TAOPAY;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84CD0B7B207CEF140069AD9A /* Build configuration list for PBXProject "TAOPAY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CD0BAA207CEF160069AD9A /* Debug */,
+				84CD0BAB207CEF160069AD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CD0BAC207CEF160069AD9A /* Build configuration list for PBXNativeTarget "TAOPAY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CD0BAD207CEF160069AD9A /* Debug */,
+				84CD0BAE207CEF160069AD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CD0BAF207CEF160069AD9A /* Build configuration list for PBXNativeTarget "TAOPAYTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CD0BB0207CEF160069AD9A /* Debug */,
+				84CD0BB1207CEF160069AD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CD0BB2207CEF160069AD9A /* Build configuration list for PBXNativeTarget "TAOPAYUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CD0BB3207CEF160069AD9A /* Debug */,
+				84CD0BB4207CEF160069AD9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84CD0B78207CEF140069AD9A /* Project object */;
+}

@@ -1,0 +1,6 @@
+module Pods_TAOPAY [system] {
+  umbrella header "Pods-TAOPAY-umbrella.h"
+
+  export *
+  module * { export * }
+}
