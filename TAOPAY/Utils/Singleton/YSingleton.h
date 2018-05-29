@@ -12,11 +12,11 @@
 // 帮助实现单例设计模式
 
 // .h文件的实现
-#define YNCSingletonH(methodName) + (instancetype)shared##methodName;
+#define YSingletonH(methodName) + (instancetype)shared##methodName;
 
 // .m文件的实现
 #if __has_feature(objc_arc) // 是ARC
-#define YNCSingletonM(methodName) \
+#define YSingletonM(methodName) \
 static id _instace = nil; \
 + (id)allocWithZone:(struct _NSZone *)zone \
 { \
@@ -54,7 +54,7 @@ return _instace; \
 
 #else // 不是ARC
 
-#define YNCSingletonM(methodName) \
+#define YSingletonM(methodName) \
 static id _instace = nil; \
 + (id)allocWithZone:(struct _NSZone *)zone \
 { \

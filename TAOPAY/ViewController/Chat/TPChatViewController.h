@@ -6,8 +6,8 @@
 //  Copyright © 2018年 TAOPAY. All rights reserved.
 //
 
-#import "YBaseViewController.h"
+#import "TPBaseViewController.h"
 
-@interface TPChatViewController : YBaseViewController
+@interface TPChatViewController : TPBaseViewController
 
 @end

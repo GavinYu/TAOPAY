@@ -8,9 +8,14 @@
 
 #import "YBaseTableViewCell.h"
 
+@class TPCardOperateViewModel;
+
 typedef void(^TPClickCellButtonsBlock)(UIButton *sender);
 
 @interface TPWalletTextNumberCell : YBaseTableViewCell
 
 @property (nonatomic, copy) TPClickCellButtonsBlock cellButtonBlock;
+
+@property (strong, nonatomic) TPCardOperateViewModel *viewModel;
+
 @end

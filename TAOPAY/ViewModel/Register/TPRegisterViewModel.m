@@ -43,22 +43,40 @@
 
 - (void)registerSuccess:(void(^)(id json))success
                 failure:(void (^)(NSError *error))failure {
-    /// 发起请求 模拟网络请求
-    [SVProgressHUD showWithStatus:@"登录中..."];
+    [SVProgressHUD showWithStatus:@"注册中..."];
     @weakify(self);
-    [[YHTTPService sharedInstance] requestRegisterWithPhoneNumber:self.mobilePhone authCode:self.verifyCode success:^(YHTTPResponse *response) {
+    [[YHTTPService sharedInstance] requestRegisterWithPhoneNumber:self.mobilePhone authCode:self.verifyCode password:self.password success:^(YHTTPResponse *response) {
+        [SVProgressHUD dismiss];
         @strongify(self);
         if (response.code == YHTTPResponseCodeSuccess) {
             self.token = response.parsedResult[TPTokenKey];
-            success(@(YES));
+            [YUtil saveUserDefaultInfo:self.token forKey:YHTTPRequestTokenKey];
+            [YUtil saveUserDefaultInfo:[NSNumber numberWithBool:YES] forKey:TPIsHaveRegisterKey];
+            success(@YES);
+        } else {
+            [SVProgressHUD showErrorWithStatus:response.message];
         }
     } failure:^(NSString *msg) {
         [SVProgressHUD showErrorWithStatus:msg];
     }];
 }
 
-- (BOOL)validLogin {
-    return (YStringIsNotEmpty(self.mobilePhone) && YStringIsNotEmpty(self.verifyCode));
+- (void)getAuthCodeSuccess:(void(^)(id json))success
+                   failure:(void (^)(NSError *error))failure {
+    [[YHTTPService sharedInstance] requestAuthCodeWithPhoneNumber:self.mobilePhone success:^(YHTTPResponse *response) {
+        [SVProgressHUD dismiss];
+        if (response.code == YHTTPResponseCodeSuccess) {
+            success(@(YES));
+        } else {
+            [SVProgressHUD showErrorWithStatus:response.message];
+        }
+    } failure:^(NSString *msg) {
+        [SVProgressHUD showErrorWithStatus:msg];
+    }];
+}
+
+- (BOOL)validRegister {
+    return (YStringIsNotEmpty(self.mobilePhone) && YStringIsNotEmpty(self.verifyCode) && YStringIsNotEmpty(self.password));
 }
 
 - (BOOL)validAuthCode {

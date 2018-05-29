@@ -29,4 +29,10 @@ NSString *const YViewModelUtilKey = @"YViewModelUtilKey";
 /// 传递webView Request的key：例如 webView request...
 NSString *const YViewModelRequestKey = @"YViewModelRequestKey";
 
+
+//MARK: -- 相关的KEY
+NSString *const TPIsHaveRegisterKey = @"TPIsHaveRegisterKey";
+NSString *const TPAppEverLaunchKey = @"TPAppEverLaunchKey";
+NSString *const TPAppFirstLaunchKey = @"TPAppFirstLaunchKey";
+
 @end

@@ -31,6 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
     
 }
 
+// 以下 MVVM使用的场景，如果使用MVC的请自行ignore
+#pragma mark - bind data
+- (void)bindViewModel:(id)viewModel {
+   
+}
+
 @end
 
 NS_ASSUME_NONNULL_END

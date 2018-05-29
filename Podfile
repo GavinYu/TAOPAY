@@ -1,6 +1,8 @@
 target "TAOPAY" do 
 platform :ios, ‘10.0’
 
+#加载GIF图片
+pod 'SDWebImage'
 #网络请求
 pod 'AFNetworking'
 #适配
@@ -28,5 +30,9 @@ pod 'MGJRouter'
 pod 'SAMKeychain'
 # 加密
 pod 'CocoaSecurity'
+# UI block
+pod 'BlocksKit'
+# 轮播图
+pod 'SDCycleScrollView'
 
 end

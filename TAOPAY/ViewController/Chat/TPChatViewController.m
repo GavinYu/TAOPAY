@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view bringSubviewToFront:self.navigationView];
+    self.navigationView.title = @"聊天";
 }
 
 - (void)didReceiveMemoryWarning {

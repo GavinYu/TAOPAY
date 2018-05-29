@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "YReactiveView.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YBaseTableViewCell : UITableViewCell
+@interface YBaseTableViewCell : UITableViewCell <YReactiveView>
 
 /**
  *  初始化Cell

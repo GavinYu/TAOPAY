@@ -10,6 +10,7 @@
 
 @interface TPWalletCommonModel : YObject
 
+@property (nonatomic, copy) NSString *icon;
 @property (nonatomic, copy) NSString *mainTitle;
 @property (nonatomic, copy) NSString *subTitle;
 

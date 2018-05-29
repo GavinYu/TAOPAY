@@ -15,6 +15,8 @@
 #import "NSString+YValid.h"
 #import "YHTTPService.h"
 #import "TPConstant.h"
+#import "UITableView+YExtension.h"
+#import "YLocationManager.h"
 
 //第三方库头文件
 #import <ReactiveCocoa/ReactiveCocoa.h>
@@ -22,5 +24,10 @@
 #import <Masonry/Masonry.h>
 #import <KVOController/FBKVOController.h>
 #import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
+#import <YYKit/YYKit.h>
+#import <SDWebImage/UIImage+GIF.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>
+
 
 #endif /* TPAppConfig_h */

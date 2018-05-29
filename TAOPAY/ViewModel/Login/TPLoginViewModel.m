@@ -48,8 +48,7 @@
     }];
 }
 
-- (void)loginSuccess:(void (^)(id))success failure:(void (^)(NSError *))failure{
-    /// 发起请求 模拟网络请求
+- (void)loginSuccess:(void (^)(id json))success failure:(void (^)(NSError *))failure{
     [SVProgressHUD showWithStatus:@"登录中..."];
     @weakify(self);
     [[YHTTPService sharedInstance] requestLoginWithPhoneNumber:self.mobilePhone password:self.password success:^(YHTTPResponse *response) {
@@ -57,14 +56,20 @@
         
         @strongify(self);
         if (response.code == YHTTPResponseCodeSuccess) {
-            self.token = response.parsedResult[@"token"];
+            self.token = response.parsedResult[TPTokenKey];
             [YUtil saveUserDefaultInfo:self.mobilePhone forKey:TPLoginPhoneKey];
+            [YUtil saveUserDefaultInfo:self.token forKey:YHTTPRequestTokenKey];
+            [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult];
+            success(@YES);
+        } else {
+            [SVProgressHUD showErrorWithStatus:response.message];
         }
     } failure:^(NSString *msg) {
         [SVProgressHUD showErrorWithStatus:msg];
     }];
 }
 
+//MARK: -- Setter validLogin
 - (BOOL)validLogin {
     return (YStringIsNotEmpty(self.mobilePhone) && YStringIsNotEmpty(self.password));
 }

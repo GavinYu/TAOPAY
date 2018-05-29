@@ -41,6 +41,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="iconImageView" destination="r3m-sn-02N" id="w5N-FF-So6"/>
                 <outlet property="mainTitleLabel" destination="6tM-yW-PQN" id="3zd-bz-voc"/>
                 <outlet property="subTitleLabel" destination="udh-Ua-2pU" id="2Pg-s0-cBT"/>
             </connections>

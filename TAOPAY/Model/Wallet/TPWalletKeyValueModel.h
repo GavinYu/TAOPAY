@@ -13,5 +13,6 @@
 @property (nonatomic, copy) NSString *key;
 @property (nonatomic, copy) NSString *value;
 @property (nonatomic, assign) BOOL isHaveImage;
+@property (nonatomic, copy) NSString *textFieldPlaceholder;
 
 @end

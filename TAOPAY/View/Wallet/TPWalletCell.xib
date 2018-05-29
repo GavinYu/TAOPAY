@@ -20,11 +20,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22r-8d-zJO">
-                        <rect key="frame" x="25" y="12" width="30" height="19"/>
+                        <rect key="frame" x="20" y="12" width="30" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqU-dF-WL6">
-                        <rect key="frame" x="65" y="13" width="245" height="17"/>
+                        <rect key="frame" x="62" y="14" width="245" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.16862745100000001" green="0.18039215689999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,7 +37,7 @@
                 <outlet property="contentLabel" destination="EqU-dF-WL6" id="e6L-9u-5Xl"/>
                 <outlet property="iconImageView" destination="22r-8d-zJO" id="09i-Xu-o5r"/>
             </connections>
-            <point key="canvasLocation" x="55.5" y="53.5"/>
+            <point key="canvasLocation" x="-111" y="11"/>
         </tableViewCell>
     </objects>
 </document>

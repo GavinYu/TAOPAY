@@ -11,13 +11,13 @@
 #import "TPMacros.h"
 #import "TPConstInline.h"
 #import <YYKit/YYKit.h>
-#import "TPURLConfigure.h"
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #import <AFNetworking/AFNetworking.h>
+#import "YUtil.h"
 
 @interface YHTTPService ()
-/// currentLoginUser
-@property (nonatomic, readwrite, strong) TPUser *currentUser;
+
+
 @end
 
 @implementation YHTTPService
@@ -49,7 +49,7 @@ static id service_ = nil;
   return self;
 }
 
-/// config service
+//MARK: --  config service
 - (void)_configHTTPService{
   AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
 #if DEBUG
@@ -76,8 +76,7 @@ static id service_ = nil;
 //
 //  self.securityPolicy = securityPolicy;
   /// 支持解析
-  self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
-                                                    @"text/json",
+  self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",                                        @"text/json",
                                                     @"text/javascript",
                                                     @"text/html",
                                                     @"text/plain",
@@ -106,9 +105,10 @@ static id service_ = nil;
 //MARK: -- 注册接口
 - (NSURLSessionDataTask *)requestRegisterWithPhoneNumber:(NSString *)phoneNumber
                                                 authCode:(NSString *)code
+                                                password:(NSString *)pwd
                                                  success:(void (^)(YHTTPResponse *response))success
                                                  failure:(void (^)(NSString *msg))failure {
-  NSDictionary *dic = @{@"phone":phoneNumber, @"code":code};
+    NSDictionary *dic = @{@"phone":phoneNumber, @"code":code, @"password":pwd};
   NSURLSessionDataTask *task =  [self POST:RegisterRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
   } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
     YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
@@ -121,13 +121,13 @@ static id service_ = nil;
   return task;
 }
 
-//登录接口
+//MARK: -- 登录接口
 - (NSURLSessionDataTask *)requestLoginWithPhoneNumber:(NSString *)phoneNumber
                                              password:(NSString *)password
                                               success:(void (^)(YHTTPResponse *response))success
                                               failure:(void (^)(NSString *msg))failure {
   NSDictionary *dic = @{@"phone":phoneNumber, @"password":password};
-  NSURLSessionDataTask *task =  [self POST:RegisterRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+  NSURLSessionDataTask *task =  [self POST:LoginRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
   } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
     YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
     success(response);
@@ -139,12 +139,12 @@ static id service_ = nil;
   return task;
 }
 
-//验证码接口
+//MARK: -- 验证码接口
 - (NSURLSessionDataTask *)requestAuthCodeWithPhoneNumber:(NSString *)phoneNumber
                                                  success:(void (^)(YHTTPResponse *response))success
                                                  failure:(void (^)(NSString *msg))failure {
   NSDictionary *dic = @{@"phone":phoneNumber};
-  NSURLSessionDataTask *task =  [self POST:RegisterRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+  NSURLSessionDataTask *task =  [self POST:SMSRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
   } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
     YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
     success(response);
@@ -154,6 +154,179 @@ static id service_ = nil;
   }];
   
   return task;
+}
+
+//MARK: -- 获取个人信息接口
+- (NSURLSessionDataTask *)requestGetUserInfoSuccess:(void (^)(YHTTPResponse *response))success
+                                            failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey]};
+    NSURLSessionDataTask *task =  [self POST:UserInfoRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"][@"info"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//MARK: -- 获取明细列表接口
+- (NSURLSessionDataTask *)requestBalanceDetailSuccess:(void (^)(YHTTPResponse *response))success
+                                              failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey]};
+    NSURLSessionDataTask *task =  [self POST:BalanceDetailRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+//MARK: -- 获取充值tn号接口
+- (NSURLSessionDataTask *)requestBalanceRechargeWithAmount:(NSString *)amount
+                                                   success:(void (^)(YHTTPResponse *response))success
+                                                   failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"amount":amount};
+    NSURLSessionDataTask *task =  [self POST:BalanceRechargeRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//MARK: -- 转账接口
+- (NSURLSessionDataTask *)requestBalanceTransferWithAmount:(NSString *)amount
+                                                cardNumber:(NSString *)cardNum
+                                              transferType:(NSString *)type
+                                                   success:(void (^)(YHTTPResponse *response))success
+                                                   failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"amount":amount, @"cardNum":cardNum, @"type":type};
+    NSURLSessionDataTask *task =  [self POST:BalanceTransferRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//MARK: -- 查询支付结果接口
+- (NSURLSessionDataTask *)requestBalanceQueryWithOrderId:(NSString *)orderId
+                                                    type:(NSString *)type
+                                                 success:(void (^)(YHTTPResponse *response))success
+                                                 failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"orderId":orderId, @"type":type};
+    NSURLSessionDataTask *task =  [self POST:BalanceQueryRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//修改用户昵称接口
+- (NSURLSessionDataTask *)requestUserUpdateNick:(NSString *)nickName
+                                        success:(void (^)(YHTTPResponse *response))success
+                                        failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"nick":nickName};
+    NSURLSessionDataTask *task =  [self POST:UserUpdateNickRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"][@"info"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+/***************--------商城相关接口------------*************************************/
+//MARK: -- 商城首页接口
+- (NSURLSessionDataTask *)requestShopMainWithLatitude:(NSString *)lat
+                                            longitude:(NSString *)lon
+                                                 page:(NSString *)page
+                                              success:(void (^)(YHTTPResponse *response))success
+                                              failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey],@"lng":lon, @"lat":lat,@"page":page, @"size":TPRequestPageSize};
+    NSURLSessionDataTask *task =  [self POST:ShopMainRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//MARK: -- 商城首页接口
+- (NSURLSessionDataTask *)requestShopListWithLatitude:(NSString *)lat
+                                            longitude:(NSString *)lon
+                                                  cat:(NSString *)cat
+                                                 cat2:(NSString *)cat2
+                                                 page:(NSString *)page
+                                              success:(void (^)(YHTTPResponse *response))success
+                                              failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey],@"lng":lon, @"lat":lat,@"cat":cat, @"cat2":cat2,@"page":page, @"size":TPRequestPageSize};
+    NSURLSessionDataTask *task =  [self POST:ShopMainRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//商品列表接口
+- (NSURLSessionDataTask *)requestShopGoodsWithCat:(NSString *)cat
+                                             cat2:(NSString *)cat2
+                                             page:(NSString *)page
+                                          success:(void (^)(YHTTPResponse *response))success
+                                          failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey],@"cat":cat, @"cat2":cat2,@"page":page, @"size":TPRequestPageSize};
+    NSURLSessionDataTask *task =  [self POST:ShopGoodsRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+/***************--------商城相关接口------------*************************************/
+
+//MARK: -- lazyload area
+//MARK: -- lazyload
+- (TPUser *)currentUser {
+    if (!_currentUser) {
+        _currentUser = TPUser.new;
+    }
+    
+    return _currentUser;
 }
 
 @end

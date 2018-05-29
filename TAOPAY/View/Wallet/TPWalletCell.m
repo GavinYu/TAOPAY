@@ -13,6 +13,8 @@
 @interface TPWalletCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+/// viewModle
+@property (nonatomic, readwrite, strong) TPWalletModel *viewModel;
 
 @end
 
@@ -37,7 +39,7 @@
     TPWalletCell *cell = [tableView dequeueReusableCellWithIdentifier:celleIdentifier];
     if (!cell){
         cell = [[[NSBundle mainBundle] loadNibNamed:@"TPWalletCell" owner:self options:nil] firstObject];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     return cell;

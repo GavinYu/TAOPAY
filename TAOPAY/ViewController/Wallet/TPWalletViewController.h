@@ -6,8 +6,8 @@
 //  Copyright © 2018年 TAOPAY. All rights reserved.
 //
 
-#import "YBaseViewController.h"
+#import "TPTableViewController.h"
 
-@interface TPWalletViewController : YBaseViewController
+@interface TPWalletViewController : TPTableViewController
 
 @end

@@ -26,15 +26,15 @@
     [UIViewController attemptRotationToDeviceOrientation];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.fd_viewControllerBasedNavigationBarAppearanceEnabled = NO;
-    self.navigationController.navigationBarHidden = YES;
+    self.fd_prefersNavigationBarHidden = YES;
     // Do any additional setup after loading the view.
-#ifdef __IPHONE_11_0
-    /// ignore adjust scroll 64
-    self.automaticallyAdjustsScrollViewInsets = YES;
-#else
-    /// ignore adjust scroll 64
-    self.automaticallyAdjustsScrollViewInsets = NO;
-#endif
+//#ifdef __IPHONE_11_0
+//    /// ignore adjust scroll 64
+//    self.automaticallyAdjustsScrollViewInsets = YES;
+//#else
+//    /// ignore adjust scroll 64
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+//#endif
 
     self.extendedLayoutIncludesOpaqueBars = YES;
 }

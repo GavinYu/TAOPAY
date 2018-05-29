@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4FA02A3F02DFC74195D2B3DE /* libPods-TAOPAY.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA233F00CEB95194F194ECE4 /* libPods-TAOPAY.a */; };
+		8418BF6420B2F7D000D057EB /* TPShoppingTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF6320B2F7D000D057EB /* TPShoppingTableHeaderView.m */; };
+		8418BF6620B2F7E300D057EB /* TPShoppingTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8418BF6520B2F7E300D057EB /* TPShoppingTableHeaderView.xib */; };
+		8418BF6A20B2FE9400D057EB /* TPShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF6820B2FE9400D057EB /* TPShopCell.m */; };
+		8418BF6B20B2FE9400D057EB /* TPShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8418BF6920B2FE9400D057EB /* TPShopCell.xib */; };
+		8418BF6F20B3034F00D057EB /* TPGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF6D20B3034F00D057EB /* TPGoodsCell.m */; };
+		8418BF7020B3034F00D057EB /* TPGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8418BF6E20B3034F00D057EB /* TPGoodsCell.xib */; };
+		8418BF7920B4512C00D057EB /* YLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF7820B4512C00D057EB /* YLocationManager.m */; };
+		8418BF7C20B4522800D057EB /* YLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF7B20B4522800D057EB /* YLocationModel.m */; };
+		8418BF8020B4576D00D057EB /* TPShopHomepageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF7F20B4576D00D057EB /* TPShopHomepageModel.m */; };
+		8418BF8320B457AD00D057EB /* TPBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF8220B457AD00D057EB /* TPBannerModel.m */; };
+		8418BF8620B4588000D057EB /* TPGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF8520B4588000D057EB /* TPGoodsModel.m */; };
+		8418BF8A20B45AF100D057EB /* TPShopMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF8920B45AF100D057EB /* TPShopMainViewModel.m */; };
+		8418BF8D20B5959C00D057EB /* TPGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF8C20B5959C00D057EB /* TPGoodsViewModel.m */; };
+		8418BF9120B7085A00D057EB /* TPGoodsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9020B7085A00D057EB /* TPGoodsList.m */; };
+		8418BF9420B7091800D057EB /* TPShopGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9320B7091800D057EB /* TPShopGoodsModel.m */; };
+		8418BF9720B709E800D057EB /* TPGoodsCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9620B709E700D057EB /* TPGoodsCategoryModel.m */; };
+		8418BF9B20B96D0800D057EB /* TPShopList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9A20B96D0800D057EB /* TPShopList.m */; };
+		8418BF9E20B96D2C00D057EB /* TPShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9D20B96D2C00D057EB /* TPShopModel.m */; };
+		8418BFA120BADEDC00D057EB /* UINavigationController+TPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BFA020BADEDC00D057EB /* UINavigationController+TPExtend.m */; };
 		84206B24207F95E10099C8E6 /* TPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B23207F95E10099C8E6 /* TPConstant.m */; };
 		84206B3F207FA3100099C8E6 /* YBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B3E207FA3100099C8E6 /* YBaseTableViewCell.m */; };
 		84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B41207FA3630099C8E6 /* YBaseCollectionViewCell.m */; };
@@ -37,6 +56,22 @@
 		84206BA920818C6A0099C8E6 /* YNewFeatureViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BA820818C6A0099C8E6 /* YNewFeatureViewModel.m */; };
 		84206BAD2081960E0099C8E6 /* UIView+YExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BAC2081960E0099C8E6 /* UIView+YExtension.m */; };
 		84206BB320819C480099C8E6 /* TPRegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BB220819C480099C8E6 /* TPRegisterViewModel.m */; };
+		8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.mm */; };
+		8451DE13208C90630059E73A /* TPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE12208C90630059E73A /* TPTabBarViewController.m */; };
+		8451DE1C2096B1280059E73A /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8451DE1B2096B1280059E73A /* libPaymentControl.a */; };
+		8451DE2F2096CACB0059E73A /* TPCardOperateViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE2E2096CACB0059E73A /* TPCardOperateViewModel.m */; };
+		846ECCD2209D4CDF006D6D23 /* bg_detour_ball@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCD1209D4CDE006D6D23 /* bg_detour_ball@2x.gif */; };
+		846ECCD5209DA78E006D6D23 /* TPWalletTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCD4209DA78E006D6D23 /* TPWalletTableFooterView.m */; };
+		846ECCD7209DA7AD006D6D23 /* TPWalletTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCD6209DA7AC006D6D23 /* TPWalletTableFooterView.xib */; };
+		846ECCDA209E8EDC006D6D23 /* TPUPPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCD9209E8EDC006D6D23 /* TPUPPayManager.m */; };
+		846ECCE2209E9215006D6D23 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCE0209E9215006D6D23 /* RSA.m */; };
+		846ECCE6209E92A8006D6D23 /* public_test.key in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCE4209E92A8006D6D23 /* public_test.key */; };
+		846ECCE7209E92A8006D6D23 /* public_product.key in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCE5209E92A8006D6D23 /* public_product.key */; };
+		846ECCF1209F03B3006D6D23 /* TPFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCEF209F03B3006D6D23 /* TPFriendCell.m */; };
+		846ECCF2209F03B3006D6D23 /* TPFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCF0209F03B3006D6D23 /* TPFriendCell.xib */; };
+		846ECCF6209F051C006D6D23 /* TPFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCF5209F051C006D6D23 /* TPFriendModel.m */; };
+		846ECCFA209F06C4006D6D23 /* TPFriendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCF9209F06C4006D6D23 /* TPFriendViewModel.m */; };
+		846ECCFD209F18D4006D6D23 /* TPHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCFC209F18D4006D6D23 /* TPHomepageViewModel.m */; };
 		849EFAF220820EA400C37AC9 /* MainFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF120820EA400C37AC9 /* MainFrameViewController.m */; };
 		849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF420820ED500C37AC9 /* RootViewController.m */; };
 		849EFAF820820EFF00C37AC9 /* TPWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF720820EFF00C37AC9 /* TPWalletViewController.m */; };
@@ -49,6 +84,8 @@
 		849EFB1220831FC500C37AC9 /* YNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB1120831FC500C37AC9 /* YNavigationBar.m */; };
 		849EFB1620839BE900C37AC9 /* TPWalletTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB1520839BE900C37AC9 /* TPWalletTableHeaderView.m */; };
 		849EFB1820839C0700C37AC9 /* TPWalletTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849EFB1720839C0700C37AC9 /* TPWalletTableHeaderView.xib */; };
+		84B12A2F20A32E7D00ECC925 /* TPBalanceDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B12A2E20A32E7D00ECC925 /* TPBalanceDetailModel.m */; };
+		84B12A3220A32F0100ECC925 /* TPBalanceDetailItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B12A3120A32F0100ECC925 /* TPBalanceDetailItemModel.m */; };
 		84CD0B85207CEF140069AD9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B84207CEF140069AD9A /* AppDelegate.m */; };
 		84CD0B8B207CEF140069AD9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD0B89207CEF140069AD9A /* Main.storyboard */; };
 		84CD0B8D207CEF160069AD9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CD0B8C207CEF160069AD9A /* Assets.xcassets */; };
@@ -56,6 +93,7 @@
 		84CD0B93207CEF160069AD9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B92207CEF160069AD9A /* main.m */; };
 		84CD0B9D207CEF160069AD9A /* TAOPAYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B9C207CEF160069AD9A /* TAOPAYTests.m */; };
 		84CD0BA8207CEF160069AD9A /* TAOPAYUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0BA7207CEF160069AD9A /* TAOPAYUITests.m */; };
+		84D1285720AB0D0B005178B4 /* TPRechargeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1285620AB0D0B005178B4 /* TPRechargeModel.m */; };
 		84D661162084D70F00DF0F73 /* TPWalletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D661142084D70F00DF0F73 /* TPWalletCell.m */; };
 		84D661172084D70F00DF0F73 /* TPWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D661152084D70F00DF0F73 /* TPWalletCell.xib */; };
 		84D6611B208636FC00DF0F73 /* TPWalletCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66119208636FC00DF0F73 /* TPWalletCommonCell.m */; };
@@ -68,6 +106,10 @@
 		84D6612E208C181300DF0F73 /* TPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D6612D208C181300DF0F73 /* TPBaseViewController.m */; };
 		84D66132208C1A5A00DF0F73 /* TPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66131208C1A5A00DF0F73 /* TPTableViewController.m */; };
 		84D66136208C1B2800DF0F73 /* UIScrollView+YRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66135208C1B2800DF0F73 /* UIScrollView+YRefresh.m */; };
+		84D66139208C281700DF0F73 /* TPLoginNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66138208C281700DF0F73 /* TPLoginNavigationView.m */; };
+		84D6613B208C283400DF0F73 /* TPLoginNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D6613A208C283400DF0F73 /* TPLoginNavigationView.xib */; };
+		84D6613F208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D6613E208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m */; };
+		84D66146208C415100DF0F73 /* UITableView+YExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66145208C415100DF0F73 /* UITableView+YExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +132,41 @@
 /* Begin PBXFileReference section */
 		5229563C6B8714A927656EF0 /* Pods-TAOPAY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAOPAY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY.debug.xcconfig"; sourceTree = "<group>"; };
 		595954A9C9467140A529FD5A /* Pods-TAOPAY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAOPAY.release.xcconfig"; path = "Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY.release.xcconfig"; sourceTree = "<group>"; };
+		8418BF6220B2F7D000D057EB /* TPShoppingTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingTableHeaderView.h; sourceTree = "<group>"; };
+		8418BF6320B2F7D000D057EB /* TPShoppingTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingTableHeaderView.m; sourceTree = "<group>"; };
+		8418BF6520B2F7E300D057EB /* TPShoppingTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShoppingTableHeaderView.xib; sourceTree = "<group>"; };
+		8418BF6720B2FE9400D057EB /* TPShopCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopCell.h; sourceTree = "<group>"; };
+		8418BF6820B2FE9400D057EB /* TPShopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopCell.m; sourceTree = "<group>"; };
+		8418BF6920B2FE9400D057EB /* TPShopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShopCell.xib; sourceTree = "<group>"; };
+		8418BF6C20B3034F00D057EB /* TPGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsCell.h; sourceTree = "<group>"; };
+		8418BF6D20B3034F00D057EB /* TPGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsCell.m; sourceTree = "<group>"; };
+		8418BF6E20B3034F00D057EB /* TPGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPGoodsCell.xib; sourceTree = "<group>"; };
+		8418BF7720B4512C00D057EB /* YLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLocationManager.h; sourceTree = "<group>"; };
+		8418BF7820B4512C00D057EB /* YLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLocationManager.m; sourceTree = "<group>"; };
+		8418BF7A20B4522800D057EB /* YLocationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLocationModel.h; sourceTree = "<group>"; };
+		8418BF7B20B4522800D057EB /* YLocationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLocationModel.m; sourceTree = "<group>"; };
+		8418BF7E20B4576D00D057EB /* TPShopHomepageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopHomepageModel.h; sourceTree = "<group>"; };
+		8418BF7F20B4576D00D057EB /* TPShopHomepageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopHomepageModel.m; sourceTree = "<group>"; };
+		8418BF8120B457AD00D057EB /* TPBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPBannerModel.h; sourceTree = "<group>"; };
+		8418BF8220B457AD00D057EB /* TPBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPBannerModel.m; sourceTree = "<group>"; };
+		8418BF8420B4588000D057EB /* TPGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsModel.h; sourceTree = "<group>"; };
+		8418BF8520B4588000D057EB /* TPGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsModel.m; sourceTree = "<group>"; };
+		8418BF8820B45AF100D057EB /* TPShopMainViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopMainViewModel.h; sourceTree = "<group>"; };
+		8418BF8920B45AF100D057EB /* TPShopMainViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopMainViewModel.m; sourceTree = "<group>"; };
+		8418BF8B20B5959C00D057EB /* TPGoodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsViewModel.h; sourceTree = "<group>"; };
+		8418BF8C20B5959C00D057EB /* TPGoodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsViewModel.m; sourceTree = "<group>"; };
+		8418BF8F20B7085A00D057EB /* TPGoodsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsList.h; sourceTree = "<group>"; };
+		8418BF9020B7085A00D057EB /* TPGoodsList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsList.m; sourceTree = "<group>"; };
+		8418BF9220B7091800D057EB /* TPShopGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopGoodsModel.h; sourceTree = "<group>"; };
+		8418BF9320B7091800D057EB /* TPShopGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopGoodsModel.m; sourceTree = "<group>"; };
+		8418BF9520B709E700D057EB /* TPGoodsCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsCategoryModel.h; sourceTree = "<group>"; };
+		8418BF9620B709E700D057EB /* TPGoodsCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsCategoryModel.m; sourceTree = "<group>"; };
+		8418BF9920B96D0800D057EB /* TPShopList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopList.h; sourceTree = "<group>"; };
+		8418BF9A20B96D0800D057EB /* TPShopList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopList.m; sourceTree = "<group>"; };
+		8418BF9C20B96D2C00D057EB /* TPShopModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopModel.h; sourceTree = "<group>"; };
+		8418BF9D20B96D2C00D057EB /* TPShopModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopModel.m; sourceTree = "<group>"; };
+		8418BF9F20BADEDC00D057EB /* UINavigationController+TPExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TPExtend.h"; sourceTree = "<group>"; };
+		8418BFA020BADEDC00D057EB /* UINavigationController+TPExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TPExtend.m"; sourceTree = "<group>"; };
 		84206B21207F956A0099C8E6 /* TPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPMacros.h; sourceTree = "<group>"; };
 		84206B22207F95E10099C8E6 /* TPConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConstant.h; sourceTree = "<group>"; };
 		84206B23207F95E10099C8E6 /* TPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPConstant.m; sourceTree = "<group>"; };
@@ -157,6 +234,36 @@
 		84206BAC2081960E0099C8E6 /* UIView+YExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YExtension.m"; sourceTree = "<group>"; };
 		84206BB120819C480099C8E6 /* TPRegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPRegisterViewModel.h; sourceTree = "<group>"; };
 		84206BB220819C480099C8E6 /* TPRegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPRegisterViewModel.m; sourceTree = "<group>"; };
+		8451DE0C208C693D0059E73A /* YReactiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YReactiveView.h; sourceTree = "<group>"; };
+		8451DE0D208C8ECB0059E73A /* TPCardOperateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCardOperateViewController.h; sourceTree = "<group>"; };
+		8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TPCardOperateViewController.mm; sourceTree = "<group>"; };
+		8451DE11208C90630059E73A /* TPTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPTabBarViewController.h; sourceTree = "<group>"; };
+		8451DE12208C90630059E73A /* TPTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPTabBarViewController.m; sourceTree = "<group>"; };
+		8451DE172096B1270059E73A /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
+		8451DE182096B1270059E73A /* UPAPayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPAPayPlugin.h; sourceTree = "<group>"; };
+		8451DE192096B1270059E73A /* UPAPayPluginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPAPayPluginDelegate.h; sourceTree = "<group>"; };
+		8451DE1B2096B1280059E73A /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
+		8451DE2D2096CACB0059E73A /* TPCardOperateViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCardOperateViewModel.h; sourceTree = "<group>"; };
+		8451DE2E2096CACB0059E73A /* TPCardOperateViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCardOperateViewModel.m; sourceTree = "<group>"; };
+		846ECCD1209D4CDE006D6D23 /* bg_detour_ball@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "bg_detour_ball@2x.gif"; sourceTree = "<group>"; };
+		846ECCD3209DA78E006D6D23 /* TPWalletTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletTableFooterView.h; sourceTree = "<group>"; };
+		846ECCD4209DA78E006D6D23 /* TPWalletTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTableFooterView.m; sourceTree = "<group>"; };
+		846ECCD6209DA7AC006D6D23 /* TPWalletTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletTableFooterView.xib; sourceTree = "<group>"; };
+		846ECCD8209E8EDC006D6D23 /* TPUPPayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPUPPayManager.h; sourceTree = "<group>"; };
+		846ECCD9209E8EDC006D6D23 /* TPUPPayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPUPPayManager.m; sourceTree = "<group>"; };
+		846ECCE0209E9215006D6D23 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		846ECCE1209E9215006D6D23 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		846ECCE4209E92A8006D6D23 /* public_test.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_test.key; sourceTree = "<group>"; };
+		846ECCE5209E92A8006D6D23 /* public_product.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_product.key; sourceTree = "<group>"; };
+		846ECCEE209F03B3006D6D23 /* TPFriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendCell.h; sourceTree = "<group>"; };
+		846ECCEF209F03B3006D6D23 /* TPFriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendCell.m; sourceTree = "<group>"; };
+		846ECCF0209F03B3006D6D23 /* TPFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPFriendCell.xib; sourceTree = "<group>"; };
+		846ECCF4209F051C006D6D23 /* TPFriendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendModel.h; sourceTree = "<group>"; };
+		846ECCF5209F051C006D6D23 /* TPFriendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendModel.m; sourceTree = "<group>"; };
+		846ECCF8209F06C4006D6D23 /* TPFriendViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendViewModel.h; sourceTree = "<group>"; };
+		846ECCF9209F06C4006D6D23 /* TPFriendViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendViewModel.m; sourceTree = "<group>"; };
+		846ECCFB209F18D4006D6D23 /* TPHomepageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPHomepageViewModel.h; sourceTree = "<group>"; };
+		846ECCFC209F18D4006D6D23 /* TPHomepageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPHomepageViewModel.m; sourceTree = "<group>"; };
 		849EFAF020820EA400C37AC9 /* MainFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFrameViewController.h; sourceTree = "<group>"; };
 		849EFAF120820EA400C37AC9 /* MainFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainFrameViewController.m; sourceTree = "<group>"; };
 		849EFAF320820ED500C37AC9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -180,6 +287,10 @@
 		849EFB1420839BE900C37AC9 /* TPWalletTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletTableHeaderView.h; sourceTree = "<group>"; };
 		849EFB1520839BE900C37AC9 /* TPWalletTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTableHeaderView.m; sourceTree = "<group>"; };
 		849EFB1720839C0700C37AC9 /* TPWalletTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletTableHeaderView.xib; sourceTree = "<group>"; };
+		84B12A2D20A32E7D00ECC925 /* TPBalanceDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPBalanceDetailModel.h; sourceTree = "<group>"; };
+		84B12A2E20A32E7D00ECC925 /* TPBalanceDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPBalanceDetailModel.m; sourceTree = "<group>"; };
+		84B12A3020A32F0100ECC925 /* TPBalanceDetailItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPBalanceDetailItemModel.h; sourceTree = "<group>"; };
+		84B12A3120A32F0100ECC925 /* TPBalanceDetailItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPBalanceDetailItemModel.m; sourceTree = "<group>"; };
 		84CD0B80207CEF140069AD9A /* TAOPAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAOPAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD0B83207CEF140069AD9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84CD0B84207CEF140069AD9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,6 +305,8 @@
 		84CD0BA3207CEF160069AD9A /* TAOPAYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TAOPAYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD0BA7207CEF160069AD9A /* TAOPAYUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAOPAYUITests.m; sourceTree = "<group>"; };
 		84CD0BA9207CEF160069AD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D1285520AB0D0B005178B4 /* TPRechargeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPRechargeModel.h; sourceTree = "<group>"; };
+		84D1285620AB0D0B005178B4 /* TPRechargeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPRechargeModel.m; sourceTree = "<group>"; };
 		84D661132084D70F00DF0F73 /* TPWalletCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletCell.h; sourceTree = "<group>"; };
 		84D661142084D70F00DF0F73 /* TPWalletCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletCell.m; sourceTree = "<group>"; };
 		84D661152084D70F00DF0F73 /* TPWalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletCell.xib; sourceTree = "<group>"; };
@@ -215,6 +328,13 @@
 		84D66131208C1A5A00DF0F73 /* TPTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPTableViewController.m; sourceTree = "<group>"; };
 		84D66134208C1B2800DF0F73 /* UIScrollView+YRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YRefresh.h"; sourceTree = "<group>"; };
 		84D66135208C1B2800DF0F73 /* UIScrollView+YRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YRefresh.m"; sourceTree = "<group>"; };
+		84D66137208C281700DF0F73 /* TPLoginNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPLoginNavigationView.h; sourceTree = "<group>"; };
+		84D66138208C281700DF0F73 /* TPLoginNavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPLoginNavigationView.m; sourceTree = "<group>"; };
+		84D6613A208C283400DF0F73 /* TPLoginNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPLoginNavigationView.xib; sourceTree = "<group>"; };
+		84D6613D208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletTableHeaderViewModel.h; sourceTree = "<group>"; };
+		84D6613E208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTableHeaderViewModel.m; sourceTree = "<group>"; };
+		84D66144208C415100DF0F73 /* UITableView+YExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+YExtension.h"; sourceTree = "<group>"; };
+		84D66145208C415100DF0F73 /* UITableView+YExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+YExtension.m"; sourceTree = "<group>"; };
 		FA233F00CEB95194F194ECE4 /* libPods-TAOPAY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TAOPAY.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -223,6 +343,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451DE1C2096B1280059E73A /* libPaymentControl.a in Frameworks */,
 				4FA02A3F02DFC74195D2B3DE /* libPods-TAOPAY.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +365,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8418BF6120B2F72A00D057EB /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				8418BF6220B2F7D000D057EB /* TPShoppingTableHeaderView.h */,
+				8418BF6320B2F7D000D057EB /* TPShoppingTableHeaderView.m */,
+				8418BF6520B2F7E300D057EB /* TPShoppingTableHeaderView.xib */,
+				8418BF6720B2FE9400D057EB /* TPShopCell.h */,
+				8418BF6820B2FE9400D057EB /* TPShopCell.m */,
+				8418BF6920B2FE9400D057EB /* TPShopCell.xib */,
+				8418BF6C20B3034F00D057EB /* TPGoodsCell.h */,
+				8418BF6D20B3034F00D057EB /* TPGoodsCell.m */,
+				8418BF6E20B3034F00D057EB /* TPGoodsCell.xib */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		8418BF7120B4501200D057EB /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				8418BF9820B96CF300D057EB /* ShopList */,
+				8418BF8E20B7082700D057EB /* GoodsList */,
+				8418BF7D20B4574600D057EB /* Homepage */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		8418BF7620B4510900D057EB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				8418BF7720B4512C00D057EB /* YLocationManager.h */,
+				8418BF7820B4512C00D057EB /* YLocationManager.m */,
+				8418BF7A20B4522800D057EB /* YLocationModel.h */,
+				8418BF7B20B4522800D057EB /* YLocationModel.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		8418BF7D20B4574600D057EB /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				8418BF7E20B4576D00D057EB /* TPShopHomepageModel.h */,
+				8418BF7F20B4576D00D057EB /* TPShopHomepageModel.m */,
+				8418BF8120B457AD00D057EB /* TPBannerModel.h */,
+				8418BF8220B457AD00D057EB /* TPBannerModel.m */,
+				8418BF8420B4588000D057EB /* TPGoodsModel.h */,
+				8418BF8520B4588000D057EB /* TPGoodsModel.m */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		8418BF8720B45AC500D057EB /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				8418BF8820B45AF100D057EB /* TPShopMainViewModel.h */,
+				8418BF8920B45AF100D057EB /* TPShopMainViewModel.m */,
+				8418BF8B20B5959C00D057EB /* TPGoodsViewModel.h */,
+				8418BF8C20B5959C00D057EB /* TPGoodsViewModel.m */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		8418BF8E20B7082700D057EB /* GoodsList */ = {
+			isa = PBXGroup;
+			children = (
+				8418BF8F20B7085A00D057EB /* TPGoodsList.h */,
+				8418BF9020B7085A00D057EB /* TPGoodsList.m */,
+				8418BF9220B7091800D057EB /* TPShopGoodsModel.h */,
+				8418BF9320B7091800D057EB /* TPShopGoodsModel.m */,
+				8418BF9520B709E700D057EB /* TPGoodsCategoryModel.h */,
+				8418BF9620B709E700D057EB /* TPGoodsCategoryModel.m */,
+			);
+			path = GoodsList;
+			sourceTree = "<group>";
+		};
+		8418BF9820B96CF300D057EB /* ShopList */ = {
+			isa = PBXGroup;
+			children = (
+				8418BF9920B96D0800D057EB /* TPShopList.h */,
+				8418BF9A20B96D0800D057EB /* TPShopList.m */,
+				8418BF9C20B96D2C00D057EB /* TPShopModel.h */,
+				8418BF9D20B96D2C00D057EB /* TPShopModel.m */,
+			);
+			path = ShopList;
+			sourceTree = "<group>";
+		};
 		84206B1B207F94A00099C8E6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +468,8 @@
 		84206B1C207F94A00099C8E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				846ECCF7209F067D006D6D23 /* Friend */,
+				84D6613C208C3B8C00DF0F73 /* Wallet */,
 				84206BA620818C430099C8E6 /* NewFeature */,
 				84206B31207F975C0099C8E6 /* BaseClass */,
 				84206B33207F975C0099C8E6 /* Homepage */,
@@ -289,6 +497,8 @@
 		84206B1E207F94A00099C8E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8418BF7120B4501200D057EB /* Shop */,
+				846ECCF3209F04F3006D6D23 /* Friend */,
 				84D661222088DEC500DF0F73 /* Wallet */,
 				84206B9C2080FC590099C8E6 /* User */,
 				84206B30207F97520099C8E6 /* BaseClass */,
@@ -299,6 +509,7 @@
 		84206B1F207F94A00099C8E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				846ECCE8209EF358006D6D23 /* Friend */,
 				849EFB1320839B7200C37AC9 /* Wallet */,
 				849EFB0E20831F7500C37AC9 /* Common */,
 				84206B2E207F97450099C8E6 /* BaseClass */,
@@ -312,6 +523,7 @@
 		84206B20207F94A10099C8E6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8451DE10208C90330059E73A /* TabBar */,
 				849EFAFF20820F5500C37AC9 /* ScanCode */,
 				849EFAEC20820E7900C37AC9 /* Chat */,
 				849EFAED20820E7A00C37AC9 /* Friend */,
@@ -362,6 +574,7 @@
 		84206B2D207F97450099C8E6 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				8418BF6120B2F72A00D057EB /* Shopping */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -423,6 +636,9 @@
 		84206B33207F975C0099C8E6 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				8418BF8720B45AC500D057EB /* Shop */,
+				846ECCFB209F18D4006D6D23 /* TPHomepageViewModel.h */,
+				846ECCFC209F18D4006D6D23 /* TPHomepageViewModel.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -446,6 +662,7 @@
 		84206B36207F988C0099C8E6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				8451DE0B208C69080059E73A /* Base */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -485,6 +702,9 @@
 		84206B3A207F988C0099C8E6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8418BF7620B4510900D057EB /* Location */,
+				846ECCD8209E8EDC006D6D23 /* TPUPPayManager.h */,
+				846ECCD9209E8EDC006D6D23 /* TPUPPayManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -499,6 +719,7 @@
 		84206B3C207F988C0099C8E6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				84D66140208C403100DF0F73 /* UITableView */,
 				84D66133208C1B0000DF0F73 /* UIScrollView */,
 				849EFB0A2082428100C37AC9 /* NSString */,
 				849EFB062082410300C37AC9 /* FBKVO */,
@@ -519,6 +740,8 @@
 				84206B732080DCB80099C8E6 /* YNavigationControllerStack.m */,
 				84D6612C208C181300DF0F73 /* TPBaseViewController.h */,
 				84D6612D208C181300DF0F73 /* TPBaseViewController.m */,
+				8418BF9F20BADEDC00D057EB /* UINavigationController+TPExtend.h */,
+				8418BFA020BADEDC00D057EB /* UINavigationController+TPExtend.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -593,6 +816,122 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		8451DE0B208C69080059E73A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8451DE0C208C693D0059E73A /* YReactiveView.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8451DE10208C90330059E73A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8451DE11208C90630059E73A /* TPTabBarViewController.h */,
+				8451DE12208C90630059E73A /* TPTabBarViewController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8451DE142096AF4E0059E73A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCDF209E9215006D6D23 /* RSA */,
+				8451DE152096B1160059E73A /* UPPaymentControl */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		8451DE152096B1160059E73A /* UPPaymentControl */ = {
+			isa = PBXGroup;
+			children = (
+				8451DE162096B1270059E73A /* inc */,
+				8451DE1A2096B1280059E73A /* libs */,
+			);
+			path = UPPaymentControl;
+			sourceTree = "<group>";
+		};
+		8451DE162096B1270059E73A /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				8451DE172096B1270059E73A /* UPPaymentControl.h */,
+				8451DE182096B1270059E73A /* UPAPayPlugin.h */,
+				8451DE192096B1270059E73A /* UPAPayPluginDelegate.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		8451DE1A2096B1280059E73A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				8451DE1B2096B1280059E73A /* libPaymentControl.a */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		846ECCCF209D4CBC006D6D23 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCE3209E92A8006D6D23 /* Keys */,
+				846ECCD0209D4CBC006D6D23 /* Images */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		846ECCD0209D4CBC006D6D23 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCD1209D4CDE006D6D23 /* bg_detour_ball@2x.gif */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		846ECCDF209E9215006D6D23 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCE0209E9215006D6D23 /* RSA.m */,
+				846ECCE1209E9215006D6D23 /* RSA.h */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		846ECCE3209E92A8006D6D23 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCE4209E92A8006D6D23 /* public_test.key */,
+				846ECCE5209E92A8006D6D23 /* public_product.key */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		846ECCE8209EF358006D6D23 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCEE209F03B3006D6D23 /* TPFriendCell.h */,
+				846ECCEF209F03B3006D6D23 /* TPFriendCell.m */,
+				846ECCF0209F03B3006D6D23 /* TPFriendCell.xib */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		846ECCF3209F04F3006D6D23 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCF4209F051C006D6D23 /* TPFriendModel.h */,
+				846ECCF5209F051C006D6D23 /* TPFriendModel.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		846ECCF7209F067D006D6D23 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				846ECCF8209F06C4006D6D23 /* TPFriendViewModel.h */,
+				846ECCF9209F06C4006D6D23 /* TPFriendViewModel.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
 		849EFAEC20820E7900C37AC9 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +955,8 @@
 			children = (
 				849EFAF620820EFF00C37AC9 /* TPWalletViewController.h */,
 				849EFAF720820EFF00C37AC9 /* TPWalletViewController.m */,
+				8451DE0D208C8ECB0059E73A /* TPCardOperateViewController.h */,
+				8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.mm */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -671,6 +1012,9 @@
 			children = (
 				849EFB1020831FC500C37AC9 /* YNavigationBar.h */,
 				849EFB1120831FC500C37AC9 /* YNavigationBar.m */,
+				84D66137208C281700DF0F73 /* TPLoginNavigationView.h */,
+				84D66138208C281700DF0F73 /* TPLoginNavigationView.m */,
+				84D6613A208C283400DF0F73 /* TPLoginNavigationView.xib */,
 			);
 			path = NavigationBar;
 			sourceTree = "<group>";
@@ -690,6 +1034,9 @@
 				84D6611D2086391500DF0F73 /* TPWalletTextNumberCell.h */,
 				84D6611E2086391500DF0F73 /* TPWalletTextNumberCell.m */,
 				84D6611F2086391500DF0F73 /* TPWalletTextNumberCell.xib */,
+				846ECCD3209DA78E006D6D23 /* TPWalletTableFooterView.h */,
+				846ECCD4209DA78E006D6D23 /* TPWalletTableFooterView.m */,
+				846ECCD6209DA7AC006D6D23 /* TPWalletTableFooterView.xib */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -719,12 +1066,14 @@
 		84CD0B82207CEF140069AD9A /* TAOPAY */ = {
 			isa = PBXGroup;
 			children = (
+				8451DE142096AF4E0059E73A /* Vendor */,
 				84206B1E207F94A00099C8E6 /* Model */,
 				84206B1F207F94A00099C8E6 /* View */,
 				84206B20207F94A10099C8E6 /* ViewController */,
 				84206B1C207F94A00099C8E6 /* ViewModel */,
 				84206B1B207F94A00099C8E6 /* Utils */,
 				84206B1D207F94A00099C8E6 /* Macros */,
+				846ECCCF209D4CBC006D6D23 /* Resource */,
 				84CD0B83207CEF140069AD9A /* AppDelegate.h */,
 				84CD0B84207CEF140069AD9A /* AppDelegate.m */,
 				84CD0B89207CEF140069AD9A /* Main.storyboard */,
@@ -763,6 +1112,12 @@
 				84D661272088E1BB00DF0F73 /* TPWalletCommonModel.m */,
 				84D661292088E2AA00DF0F73 /* TPWalletKeyValueModel.h */,
 				84D6612A2088E2AA00DF0F73 /* TPWalletKeyValueModel.m */,
+				84B12A2D20A32E7D00ECC925 /* TPBalanceDetailModel.h */,
+				84B12A2E20A32E7D00ECC925 /* TPBalanceDetailModel.m */,
+				84B12A3020A32F0100ECC925 /* TPBalanceDetailItemModel.h */,
+				84B12A3120A32F0100ECC925 /* TPBalanceDetailItemModel.m */,
+				84D1285520AB0D0B005178B4 /* TPRechargeModel.h */,
+				84D1285620AB0D0B005178B4 /* TPRechargeModel.m */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -783,6 +1138,26 @@
 				84D66135208C1B2800DF0F73 /* UIScrollView+YRefresh.m */,
 			);
 			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		84D6613C208C3B8C00DF0F73 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				84D6613D208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.h */,
+				84D6613E208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m */,
+				8451DE2D2096CACB0059E73A /* TPCardOperateViewModel.h */,
+				8451DE2E2096CACB0059E73A /* TPCardOperateViewModel.m */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		84D66140208C403100DF0F73 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				84D66144208C415100DF0F73 /* UITableView+YExtension.h */,
+				84D66145208C415100DF0F73 /* UITableView+YExtension.m */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		95457B523949C418A0C6393D /* Frameworks */ = {
@@ -907,10 +1282,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8418BF7020B3034F00D057EB /* TPGoodsCell.xib in Resources */,
+				8418BF6620B2F7E300D057EB /* TPShoppingTableHeaderView.xib in Resources */,
 				84CD0B90207CEF160069AD9A /* LaunchScreen.storyboard in Resources */,
+				846ECCD7209DA7AD006D6D23 /* TPWalletTableFooterView.xib in Resources */,
+				846ECCD2209D4CDF006D6D23 /* bg_detour_ball@2x.gif in Resources */,
 				849EFB1820839C0700C37AC9 /* TPWalletTableHeaderView.xib in Resources */,
+				846ECCE7209E92A8006D6D23 /* public_product.key in Resources */,
+				84D6613B208C283400DF0F73 /* TPLoginNavigationView.xib in Resources */,
 				84D661212086391500DF0F73 /* TPWalletTextNumberCell.xib in Resources */,
 				84CD0B8D207CEF160069AD9A /* Assets.xcassets in Resources */,
+				8418BF6B20B2FE9400D057EB /* TPShopCell.xib in Resources */,
+				846ECCE6209E92A8006D6D23 /* public_test.key in Resources */,
+				846ECCF2209F03B3006D6D23 /* TPFriendCell.xib in Resources */,
 				84D6611C208636FC00DF0F73 /* TPWalletCommonCell.xib in Resources */,
 				84D661172084D70F00DF0F73 /* TPWalletCell.xib in Resources */,
 				84CD0B8B207CEF140069AD9A /* Main.storyboard in Resources */,
@@ -982,19 +1366,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				84206B882080ECA60099C8E6 /* YReflection.m in Sources */,
+				846ECCF1209F03B3006D6D23 /* TPFriendCell.m in Sources */,
+				8418BF7920B4512C00D057EB /* YLocationManager.m in Sources */,
 				84D661162084D70F00DF0F73 /* TPWalletCell.m in Sources */,
+				8418BF9120B7085A00D057EB /* TPGoodsList.m in Sources */,
 				84206B852080E4980099C8E6 /* YObject.m in Sources */,
 				84206B7F2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m in Sources */,
+				8418BF8020B4576D00D057EB /* TPShopHomepageModel.m in Sources */,
 				84206B912080F3080099C8E6 /* YHTTPRequest.m in Sources */,
+				846ECCFD209F18D4006D6D23 /* TPHomepageViewModel.m in Sources */,
 				84206B6B207FA8510099C8E6 /* TPCollectionViewModel.m in Sources */,
+				8418BF9B20B96D0800D057EB /* TPShopList.m in Sources */,
+				846ECCE2209E9215006D6D23 /* RSA.m in Sources */,
+				8418BF6A20B2FE9400D057EB /* TPShopCell.m in Sources */,
 				84206B61207FA5640099C8E6 /* RegisterViewController.m in Sources */,
 				84206B68207FA82A0099C8E6 /* TPTableViewModel.m in Sources */,
+				84D6613F208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m in Sources */,
 				84206B5A207FA5510099C8E6 /* HomepageViewController.m in Sources */,
 				849EFB0D208242A100C37AC9 /* NSString+YValid.m in Sources */,
 				84206BAD2081960E0099C8E6 /* UIView+YExtension.m in Sources */,
 				849EFAF220820EA400C37AC9 /* MainFrameViewController.m in Sources */,
 				849EFAFB20820F1200C37AC9 /* TPFriendViewController.m in Sources */,
 				84206B9B2080FA200099C8E6 /* YHTTPResponse.m in Sources */,
+				846ECCDA209E8EDC006D6D23 /* TPUPPayManager.m in Sources */,
 				84206BA5208189C40099C8E6 /* SAMKeychain+YUtil.m in Sources */,
 				84D661282088E1BB00DF0F73 /* TPWalletCommonModel.m in Sources */,
 				84CD0B93207CEF160069AD9A /* main.m in Sources */,
@@ -1006,7 +1400,10 @@
 				84206BA2208109630099C8E6 /* TPLoginViewModel.m in Sources */,
 				84D661252088DF3000DF0F73 /* TPWalletModel.m in Sources */,
 				849EFB1220831FC500C37AC9 /* YNavigationBar.m in Sources */,
+				8451DE13208C90630059E73A /* TPTabBarViewController.m in Sources */,
 				84D66132208C1A5A00DF0F73 /* TPTableViewController.m in Sources */,
+				84B12A2F20A32E7D00ECC925 /* TPBalanceDetailModel.m in Sources */,
+				84D66139208C281700DF0F73 /* TPLoginNavigationView.m in Sources */,
 				84206B8E2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				84206B822080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.m in Sources */,
 				84206B5E207FA55B0099C8E6 /* LoginViewController.m in Sources */,
@@ -1015,23 +1412,42 @@
 				849EFAFE20820F2400C37AC9 /* TPChatViewController.m in Sources */,
 				849EFB0220820FA500C37AC9 /* YScanCodeViewController.m in Sources */,
 				84206B8B2080EDB60099C8E6 /* YEXTRuntimeExtensions.m in Sources */,
+				846ECCD5209DA78E006D6D23 /* TPWalletTableFooterView.m in Sources */,
 				849EFB1620839BE900C37AC9 /* TPWalletTableHeaderView.m in Sources */,
 				84D661202086391500DF0F73 /* TPWalletTextNumberCell.m in Sources */,
 				84206B742080DCB80099C8E6 /* YNavigationControllerStack.m in Sources */,
 				84D6612E208C181300DF0F73 /* TPBaseViewController.m in Sources */,
 				84206B782080E09F0099C8E6 /* YHTTPService.m in Sources */,
+				8418BF8320B457AD00D057EB /* TPBannerModel.m in Sources */,
+				84D66146208C415100DF0F73 /* UITableView+YExtension.m in Sources */,
 				84206B972080F3DD0099C8E6 /* YKeyedSubscript.m in Sources */,
+				84D1285720AB0D0B005178B4 /* TPRechargeModel.m in Sources */,
+				8418BF9E20B96D2C00D057EB /* TPShopModel.m in Sources */,
 				84D6612B2088E2AA00DF0F73 /* TPWalletKeyValueModel.m in Sources */,
+				8451DE2F2096CACB0059E73A /* TPCardOperateViewModel.m in Sources */,
 				84206B65207FA8050099C8E6 /* TPViewModel.m in Sources */,
 				84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */,
+				8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.mm in Sources */,
 				84206B24207F95E10099C8E6 /* TPConstant.m in Sources */,
 				849EFB092082412B00C37AC9 /* FBKVOController+YExtension.m in Sources */,
+				8418BF6420B2F7D000D057EB /* TPShoppingTableHeaderView.m in Sources */,
+				8418BF9720B709E800D057EB /* TPGoodsCategoryModel.m in Sources */,
+				8418BF8A20B45AF100D057EB /* TPShopMainViewModel.m in Sources */,
+				8418BF8620B4588000D057EB /* TPGoodsModel.m in Sources */,
+				8418BF8D20B5959C00D057EB /* TPGoodsViewModel.m in Sources */,
 				84D66136208C1B2800DF0F73 /* UIScrollView+YRefresh.m in Sources */,
 				849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */,
+				8418BFA120BADEDC00D057EB /* UINavigationController+TPExtend.m in Sources */,
+				8418BF6F20B3034F00D057EB /* TPGoodsCell.m in Sources */,
+				846ECCF6209F051C006D6D23 /* TPFriendModel.m in Sources */,
 				84206BA920818C6A0099C8E6 /* YNewFeatureViewModel.m in Sources */,
+				846ECCFA209F06C4006D6D23 /* TPFriendViewModel.m in Sources */,
 				84206B9F2080FC6D0099C8E6 /* TPUser.m in Sources */,
 				84206B46207FA3B40099C8E6 /* YBaseViewController.m in Sources */,
 				849EFB0520821AA500C37AC9 /* YUtil.m in Sources */,
+				8418BF7C20B4522800D057EB /* YLocationModel.m in Sources */,
+				84B12A3220A32F0100ECC925 /* TPBalanceDetailItemModel.m in Sources */,
+				8418BF9420B7091800D057EB /* TPShopGoodsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,6 +1626,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TAOPAY/Vendor/UPPaymentControl/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TAOPAY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1230,6 +1650,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TAOPAY/Vendor/UPPaymentControl/libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TAOPAY;
 				PRODUCT_NAME = "$(TARGET_NAME)";

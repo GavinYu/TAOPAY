@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "YReactiveView.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YBaseCollectionViewCell : UICollectionViewCell
+@interface YBaseCollectionViewCell : UICollectionViewCell <YReactiveView>
 
 /**
  *  初始化Cell

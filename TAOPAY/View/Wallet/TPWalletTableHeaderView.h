@@ -10,16 +10,24 @@
 
 #import "TPMacros.h"
 
-typedef NS_ENUM(NSUInteger, WTButtonEvent) {
-    WTButtonEventBalanceDetail = BASETAG,
-    WTButtonEventWriteUsername,
-    WTButtonEventAddBankCard
+@class TPWalletTableHeaderViewModel;
+
+typedef NS_ENUM(NSUInteger, TPButtonEvent) {
+    TPButtonEventBalanceDetail = BASETAG,
+    TPButtonEventWriteUsername,
+    TPButtonEventAddBankCard
 };
 
-typedef void(^WTClickWalletTableHeaderViewButtonEventBlock)(WTButtonEvent buttonEvent);
+typedef void(^TPClickWalletTableHeaderViewButtonEventBlock)(TPButtonEvent buttonEvent);
 
 @interface TPWalletTableHeaderView : UIView
 
-@property (nonatomic, copy) WTClickWalletTableHeaderViewButtonEventBlock clickButtonBlock;
+@property (nonatomic, copy) TPClickWalletTableHeaderViewButtonEventBlock clickButtonBlock;
+
+@property (nonatomic, strong) TPWalletTableHeaderViewModel *viewModel;
+
++ (TPWalletTableHeaderView *)instanceWalletTableHeaderView;
+
+
 
 @end

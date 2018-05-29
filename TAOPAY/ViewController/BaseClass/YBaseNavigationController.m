@@ -8,6 +8,10 @@
 
 #import "YBaseNavigationController.h"
 
+#import "TPAppConfig.h"
+#import "TPTabBarViewController.h"
+#import "RootViewController.h"
+
 @interface YBaseNavigationController ()
 
 @end
@@ -17,7 +21,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationBarHidden = YES;
+    [self configNavigationRootController];
+}
+
+- (void)configNavigationRootController {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TPBaseViewController *rootViewController;
+    NSString *controllerIdentifier;
+    NSString *token = [YUtil getUserDefaultInfo:YHTTPRequestTokenKey];
+    if (!YObjectIsNil(token) && !YStringIsEmpty(token)){
+        controllerIdentifier = NSStringFromClass([TPTabBarViewController class]);
+    } else {
+        controllerIdentifier = NSStringFromClass([RootViewController class]);
+    }
+    
+    rootViewController = [storyboard instantiateViewControllerWithIdentifier:controllerIdentifier];
+    
+    self.viewControllers = @[rootViewController];
+    
 }
 
 - (void)didReceiveMemoryWarning {

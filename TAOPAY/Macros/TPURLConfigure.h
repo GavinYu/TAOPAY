@@ -14,5 +14,24 @@
 #define RegisterRequst  @"api/register"
 #define LoginRequst  @"api/login"
 #define SMSRequst  @"api/sms"
+#define UserInfoRequst  @"api/user/info"
+#define BalanceDetailRequst @"api/balance/detail"
+#define BalanceRechargeRequst @"api/balance/recharge"
+#define BalanceTransferRequst @"api/balance/transfer"
+#define BalanceQueryRequst @"api/balance/query"
+#define UserUpdateNickRequst @"api/user/updateNick"
+
+//商城相关的接口
+#define ShopMainRequst @"api/shop/main"
+#define ShopGoodsRequst @"api/shop/goods"
+
+
+//请求相关的常量
+#define TPRequestPageSize @"10"
+
+//MARK: -- 银联支付配置
+#define kMode_Development             @"01"
+#define kURL_TN_Normal                @"http://101.231.204.84:8091/sim/getacptn"
+#define kURL_TN_Configure             @"http://101.231.204.84:8091/sim/app.jsp?user=123456789"
 
 #endif /* TPURLConfigure_h */

@@ -84,6 +84,8 @@
 #define TABBARHEIGHT 49
 #endif
 
+#define TPTABBARHEIGHT 67
+
 // weakSelf
 #ifndef WS
 #define WS(weakSelf)  __weak __typeof(self) weakSelf = self
@@ -199,7 +201,7 @@
 #define TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_2 [UIColor whiteColor]
 
 /// 整个应用的视图的背景色 BackgroundColor
-#define TP_MAIN_BACKGROUNDCOLOR [UIColor colorFroYexString:@"#EFEFF4"]
+#define TP_MAIN_BACKGROUNDCOLOR UICOLOR_FROM_HEXRGB(0xf5f4f9)
 /// 整个应用的分割线颜色
 #define TP_MAIN_LINE_COLOR_1 UICOLOR_FROM_HEXRGB(0xD9D8D9)
 /// 整个应用的边框颜色
@@ -207,14 +209,8 @@
 /// 文字颜色
 /// #56585f
 #define TP_MAIN_BACKGROUND_COLOR_1 UICOLOR_FROM_HEXRGB(0xc30d23)
-/// #9CA1B2
-#define Y_MAIN_TEXT_COLOR_2 [UIColor colorFroYexString:@"#20DB1F"]
-/// #FE583E
-#define Y_MAIN_TEXT_COLOR_3 [UIColor colorFroYexString:@"#FE583E"]
-/// #0ECCCA
-#define Y_MAIN_TEXT_COLOR_4 [UIColor colorFroYexString:@"#0ECCCA"]
-/// #3C3E44
-#define Y_MAIN_TEXT_COLOR_5 [UIColor colorFroYexString:@"#3C3E44"]
+/// TableView HeaderView title color
+#define TP_TABLE_HEADER_TITLE_COLOR UICOLOR_FROM_HEXRGB(0xa4a4a4)
 
 /// ---- YYWebImage Option
 /// 手动设置image
@@ -223,6 +219,10 @@
 /// 自动设置Image
 #define YWebImageOptionAutomatic (YYWebImageOptionAllowInvalidSSLCertificates|YYWebImageOptionAllowBackgroundTask|YYWebImageOptionSetImageWithFadeAnimation)
 
+//充值最大额度
+#define TPRECHARGEMAX   500.00
+//可用额度
+#define TPUSELIMITMAX   500.00
 
 /*--------------------------- Add by GavinYu End ----------------------------*/
 

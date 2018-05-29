@@ -9,12 +9,76 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAOPAY/ViewController/Login/LoginViewController.m"
-            timestampString = "545467440.090664"
+            filePath = "TAOPAY/Utils/Service/YHTTPService.m"
+            timestampString = "549297120.678407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "-requestBalanceRechargeWithAmount:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/Utils/Service/YHTTPService.m"
+            timestampString = "549297120.678488"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "-requestBalanceRechargeWithAmount:success:failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[YHTTPService requestBalanceRechargeWithAmount:success:failure:]"
+                  moduleName = "TAOPAY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/Utils/Service/YHTTPService.m"
+                  timestampString = "549296731.859664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__65-[YHTTPService requestBalanceRechargeWithAmount:success:failure:]_block_invoke"
+                  moduleName = "TAOPAY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/Utils/Service/YHTTPService.m"
+                  timestampString = "549296731.863373"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/View/Wallet/TPWalletTextNumberCell.m"
+            timestampString = "548260464.255182"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-textFieldValueDidChanged:"
             landmarkType = "7">
          </BreakpointContent>
@@ -25,13 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAOPAY/ViewModel/Login/TPLoginViewModel.m"
-            timestampString = "545467440.091158"
+            filePath = "TAOPAY/View/Common/NavigationBar/TPLoginNavigationView.m"
+            timestampString = "549297120.678741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-validLogin"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-setNavigationType:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAOPAY/ViewController/Login/LoginViewController.m"
-            timestampString = "545467440.091236"
+            filePath = "TAOPAY/ViewController/Wallet/TPWalletViewController.m"
+            timestampString = "549297120.678854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-textFieldValueDidChanged:"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/FDFullscreenPopGesture/FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"
-            timestampString = "545466386.712666"
+            filePath = "TAOPAY/ViewController/BaseClass/TableViewController/TPTableViewController.m"
+            timestampString = "549297120.678956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "-fd_setupViewControllerBasedNavigationBarAppearanceIfNeeded:"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-_su_setupSubViews"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +137,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAOPAY/ViewController/BaseClass/YBaseViewController.m"
-            timestampString = "545467440.091772"
+            filePath = "TAOPAY/ViewController/BaseClass/TableViewController/TPTableViewController.m"
+            timestampString = "549297120.679045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +153,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAOPAY/ViewController/Login/LoginViewController.m"
-            timestampString = "545467440.091851"
+            filePath = "TAOPAY/ViewController/BaseClass/TableViewController/TPTableViewController.m"
+            timestampString = "549297120.6791281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-clickLoginButton:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Wallet/TPWalletViewController.m"
+            timestampString = "549297120.6792099"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Wallet/TPWalletViewController.m"
+            timestampString = "549297120.679292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

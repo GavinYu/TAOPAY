@@ -8,6 +8,8 @@
 
 #import "YBaseTableViewCell.h"
 
-@interface TPWalletCell : YBaseTableViewCell
+#import "YReactiveView.h"
+
+@interface TPWalletCell : YBaseTableViewCell <YReactiveView>
 
 @end

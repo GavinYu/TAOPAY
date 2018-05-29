@@ -17,6 +17,12 @@ typedef NS_ENUM(NSUInteger, TPTabBarItemTagType) {
   TPTabBarItemTagTypeWallet,          /// 钱包
 };
 
+//导航栏类型
+typedef NS_ENUM(NSInteger, TPNavigationType) {
+    TPNavigationTypeBlack,
+    TPNavigationTypeWhite
+};
+
 
 /// 切换根控制器类型
 typedef NS_ENUM(NSUInteger, TPSwitchRootViewControllerFromType) {

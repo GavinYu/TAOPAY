@@ -30,4 +30,13 @@ FOUNDATION_EXTERN NSString *const YViewModelUtilKey;
 /// 传递webView Request的key：例如 webView request...
 FOUNDATION_EXTERN NSString *const YViewModelRequestKey;
 
+//相关的KEY
+//表示是否注册过App
+FOUNDATION_EXTERN NSString *const TPIsHaveRegisterKey;
+//表示每次运行App
+FOUNDATION_EXTERN NSString *const TPAppEverLaunchKey;
+//表示是否是第一次运行App
+FOUNDATION_EXTERN NSString *const TPAppFirstLaunchKey;
+
+
 @end

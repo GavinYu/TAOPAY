@@ -8,6 +8,10 @@
 
 #import "YBaseTableViewCell.h"
 
+@class TPCardOperateViewModel;
+
 @interface TPWalletCommonCell : YBaseTableViewCell
+
+@property (nonatomic, strong) TPCardOperateViewModel *cardOperateViewModel;
 
 @end
