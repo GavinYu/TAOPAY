@@ -10,10 +10,14 @@
 
 #import "TPConstBlock.h"
 
+@class TPUser;
+
 @interface TPViewModel : NSObject
+
 
 @property (nonatomic, strong) NSURLSessionTask *sessinTask;
 @property (nonatomic, copy) NSString *token;
+@property (nonatomic, strong) TPUser *user;
 /// Initialization method. This is the preferred way to create a new view model.
 ///
 /// params   - The parameters to be passed to view model.

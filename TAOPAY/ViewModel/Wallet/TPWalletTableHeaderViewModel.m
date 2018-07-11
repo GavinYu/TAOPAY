@@ -19,6 +19,7 @@
         @strongify(self);
         if (response.code == YHTTPResponseCodeSuccess) {
             [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult];
+            self.user = [TPUser modelWithDictionary:response.parsedResult];
             success(@YES);
         } else {
             [SVProgressHUD showErrorWithStatus:response.message];
@@ -33,7 +34,8 @@
     // 子类重载
     [[YHTTPService sharedInstance] requestGetUserInfoSuccess:^(YHTTPResponse *response) {
         if (response.code == YHTTPResponseCodeSuccess) {
-            [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult];
+            [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult[@"info"]];
+            self.user = [TPUser modelWithDictionary:response.parsedResult[@"info"]];
             success(@YES);
         } else {
             [YUtil removeUserDefaultInfo:YHTTPRequestTokenKey];

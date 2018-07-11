@@ -11,7 +11,7 @@
 @implementation FBKVOController (YExtension)
 - (void)y_observe:(id)object keyPath:(NSString *)keyPath block:(FBKVONotificationBlock)block
 {
-    [self observe:object keyPath:keyPath options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew block:block];
+    [self observe:object keyPath:keyPath options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld block:block];
 }
 
 - (void)y_observe:(id)object keyPath:(NSString *)keyPath action:(SEL)action

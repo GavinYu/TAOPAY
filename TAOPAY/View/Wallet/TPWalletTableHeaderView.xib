@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -141,12 +141,17 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="accountMoneyLabel" destination="Vvv-xU-mTk" id="tO1-nC-ybN"/>
+                <outlet property="addCardButton" destination="FK4-VE-RHk" id="oHp-Rc-GDA"/>
                 <outlet property="balanceLabel" destination="HeX-7n-QSa" id="jVl-8z-JgZ"/>
                 <outlet property="bgCardImageView" destination="qNA-7i-YSh" id="KCn-3f-oQ5"/>
                 <outlet property="cardNumberLabel" destination="IbD-Iz-2Iw" id="PFS-KZ-M7t"/>
                 <outlet property="checkCodeLabel" destination="I9v-1N-p2s" id="PB7-Ph-iO1"/>
                 <outlet property="dateLabel" destination="iA1-jQ-UQt" id="ysD-2G-Wwu"/>
+                <outlet property="detailButton" destination="uJ3-a4-44r" id="8AT-8g-HNp"/>
                 <outlet property="tipsLabel" destination="4c2-Mh-OBO" id="CVx-8g-Hn0"/>
+                <outlet property="unionpayButton" destination="PDG-xB-P2U" id="Zue-LB-C7R"/>
+                <outlet property="vipButton" destination="OHx-H0-SNA" id="s3l-s1-03P"/>
                 <outlet property="writeButton" destination="apR-s9-Ifo" id="uuR-Nn-a0x"/>
             </connections>
             <point key="canvasLocation" x="140.5" y="-188"/>

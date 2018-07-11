@@ -10,7 +10,7 @@
 
 @interface TPShopGoodsModel : YObject
 //商品ID
-@property (copy, nonatomic) NSString *id;
+@property (copy, nonatomic) NSString *goodsID;
 //商品名称
 @property (copy, nonatomic) NSString *name;
 //商品价格

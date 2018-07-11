@@ -8,6 +8,24 @@
 
 #import "TPGoodsViewModel.h"
 
+#import "TPGoodsModel.h"
+
+@interface TPGoodsViewModel ()
+/// 商品模型
+@property (nonatomic, readwrite, strong) TPGoodsModel *goods;
+@property (readwrite, copy, nonatomic) NSString *goodsID;
+
+@end
+
 @implementation TPGoodsViewModel
+
+- (instancetype)initWithGoods:(TPGoodsModel *)goods {
+    if (self = [super init]) {
+        self.goods = goods;
+        self.goodsID = goods.goodsID;
+    }
+    
+    return self;
+}
 
 @end

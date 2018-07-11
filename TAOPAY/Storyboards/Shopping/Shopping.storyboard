@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shopping Homepage View Controller-->
+        <scene sceneID="ChT-xg-gp8">
+            <objects>
+                <viewController storyboardIdentifier="TPShoppingHomepageViewController" id="Os9-r2-7ep" customClass="TPShoppingHomepageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OWa-5i-ueA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SXV-vL-Aoc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjT-hH-Ypz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481" y="596"/>
+        </scene>
+        <!--Shop List View Controller-->
+        <scene sceneID="sFc-Ln-fFD">
+            <objects>
+                <viewController storyboardIdentifier="TPShopListViewController" id="b2d-Ct-Kyc" customClass="TPShopListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CcT-PK-tvK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="w71-PM-4Y4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BHi-Il-BHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="596"/>
+        </scene>
+        <!--Goods List View Controller-->
+        <scene sceneID="DNC-PI-sFk">
+            <objects>
+                <viewController storyboardIdentifier="TPGoodsListViewController" id="Tc5-g7-uDv" customClass="TPGoodsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DAL-Md-624">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NmK-sG-Nzz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcJ-3A-C8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="596"/>
+        </scene>
+        <!--Goods Details View Controller-->
+        <scene sceneID="1dx-bp-bkI">
+            <objects>
+                <viewController storyboardIdentifier="TPGoodsDetailsViewController" id="3C4-k7-Iiy" customClass="TPGoodsDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UoU-uz-Pkg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fcL-4c-Bk1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzQ-dD-m1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="596"/>
+        </scene>
+        <!--Shopping Cart View Controller-->
+        <scene sceneID="gdW-et-cuz">
+            <objects>
+                <viewController storyboardIdentifier="TPShoppingCartViewController" id="0Q4-ij-Jzi" customClass="TPShoppingCartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nd5-Nz-ih2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lsT-vc-K6w"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7d-Ac-5wX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2663" y="591"/>
+        </scene>
+        <!--Pay View Controller-->
+        <scene sceneID="tGT-pa-OKe">
+            <objects>
+                <viewController storyboardIdentifier="TPPayViewController" id="NX0-UO-sey" customClass="TPPayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7CP-k8-YFp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="K1s-yf-q2w"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51y-78-i3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3449" y="601"/>
+        </scene>
+    </scenes>
+</document>

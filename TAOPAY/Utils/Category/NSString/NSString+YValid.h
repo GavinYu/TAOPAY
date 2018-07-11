@@ -26,4 +26,5 @@
 
 /// 字符串为字母或者数字
 + (BOOL)y_isValidCharacterOrNumber:(NSString *)str;
+
 @end

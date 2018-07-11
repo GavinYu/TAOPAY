@@ -16,10 +16,6 @@
 #import "TPCardOperateViewModel.h"
 #import "TPWalletTableHeaderViewModel.h"
 
-//// 全局变量
-static UIStatusBarStyle style_ = UIStatusBarStyleDefault;
-static BOOL statusBarHidden_ = NO;
-
 @interface TPWalletViewController ()
 
 @property (nonatomic, strong) TPWalletTableHeaderView *myTableHeaderView;
@@ -38,7 +34,7 @@ static BOOL statusBarHidden_ = NO;
     [super viewDidLoad];
     [self configDataSource];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"钱包";
+    [self configNavigationBar];
     // create subViews
     [self setupSubViews];
     
@@ -49,9 +45,15 @@ static BOOL statusBarHidden_ = NO;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationView.isShowBackButton = NO;
+}
 
-    
+//MARK: -- 设置导航栏
+- (void)configNavigationBar {
+    self.navigationView.title = TPLocalizedString(@"tabbar_wallet");
+    self.navigationView.isShowBackButton = NO;
+    self.navigationView.isShowNavRightButtons = YES;
+    self.navigationView.isShowDownArrowImage = NO;
+    [self.view addSubview:self.navigationView];
 }
 
 //MARK: -- lazyload dataArray
@@ -67,17 +69,17 @@ static BOOL statusBarHidden_ = NO;
 - (void)configDataSource {
     TPWalletModel *item0 = [TPWalletModel new];
     item0.icon = @"icon_recharge";
-    item0.content = @"充值";
+    item0.content = TPLocalizedString(@"wallet_recharge");
     [self.dataArray addObject:item0];
     
     TPWalletModel *item1 = [TPWalletModel new];
     item1.icon = @"icon_withdraw";
-    item1.content = @"提现";
+    item1.content = TPLocalizedString(@"wallet_withdraw");
     [self.dataArray addObject:item1];
     
     TPWalletModel *item2 = [TPWalletModel new];
     item2.icon = @"icon_transfer";
-    item2.content = @"转账";
+    item2.content = TPLocalizedString(@"wallet_transfer");
     [self.dataArray addObject:item2];
 }
 
@@ -91,14 +93,14 @@ static BOOL statusBarHidden_ = NO;
     [self.tableView y_registerNibCell:[TPWalletCell class]];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TPWalletTableHeaderView class]) bundle:nil] forHeaderFooterViewReuseIdentifier:NSStringFromClass([TPWalletTableHeaderView class])];
     @weakify(self);
-    [self.tableView mh_addHeaderRefresh:^(MJRefreshNormalHeader *header) {
-        @strongify(self);
-        [self.headerViewModel loadUserInfoSuccess:^(id json) {
-            //TODO: --
-            [self tableViewDidTriggerHeaderRefresh];
-            
-        } failure:nil];
-    }];
+//    [self.tableView mh_addHeaderRefresh:^(MJRefreshNormalHeader *header) {
+//        @strongify(self);
+//        [self.headerViewModel loadUserInfoSuccess:^(id json) {
+//            //TODO: --
+//            [self tableViewDidTriggerHeaderRefresh];
+//            
+//        } failure:nil];
+//    }];
 }
 //MARK: -- 设置tableview headerview
 - (void)setupTableHeaderView {
@@ -115,24 +117,24 @@ static BOOL statusBarHidden_ = NO;
             case TPButtonEventWriteUsername:
             {
                 //TODO:
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"填写户名" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:TPLocalizedString(@"wallet_write_username") message:nil preferredStyle:UIAlertControllerStyleAlert];
                 [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
                     textField.placeholder = @"请输入户名";
                 }];
                 //确定按钮
-                [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [alertController addAction:[UIAlertAction actionWithTitle:TPLocalizedString(@"wallet_sure") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     //TODO:
                     self.headerViewModel.nickName = alertController.textFields.firstObject.text;
                     [self.headerViewModel userUpdateNickSuccess:^(id json) {
                         //TODO:
                         if ([json boolValue]) {
-                            [SVProgressHUD showSuccessWithStatus:@"修改户名成功"];
+                            [SVProgressHUD showSuccessWithStatus:TPLocalizedString(@"person_center_modify_succeed")];
                         }
                     } failure:nil];
                     
                 }]];
                 //取消按钮
-                [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [alertController addAction:[UIAlertAction actionWithTitle:TPLocalizedString(@"wallet_cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                     //TODO:
                     
                 }]];

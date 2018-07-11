@@ -71,14 +71,14 @@ YSingletonM(LocationManager)
                        if (placemarks.count > 0) {
                            _currentPlacemark = [placemarks firstObject];
                            
-                           //                           for (CLPlacemark *place in placemarks) {
-                           //                               DLog(@"name,%@",place.name);                       // 位置名
-                           //                               DLog(@"thoroughfare,%@",place.thoroughfare);       // 街道
-                           //                               DLog(@"subThoroughfare,%@",place.subThoroughfare); // 子街道
-                           //                               DLog(@"locality,%@",place.locality);               // 市
-                           //                               DLog(@"subLocality,%@",place.subLocality);         // 区
-                           //                               DLog(@"country,%@",place.country);                 // 国家
-                           //                           }
+//                                                      for (CLPlacemark *place in placemarks) {
+//                                                          DLog(@"name,%@",place.name);                       // 位置名
+//                                                          DLog(@"thoroughfare,%@",place.thoroughfare);       // 街道
+//                                                          DLog(@"subThoroughfare,%@",place.subThoroughfare); // 子街道
+//                                                          DLog(@"locality,%@",place.locality);               // 市
+//                                                          DLog(@"subLocality,%@",place.subLocality);         // 区
+//                                                          DLog(@"country,%@",place.country);                 // 国家
+//                                                      }
                        }
                        
                        [manager stopUpdatingLocation];

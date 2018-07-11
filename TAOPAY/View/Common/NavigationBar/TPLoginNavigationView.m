@@ -14,6 +14,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIImageView *downarrowImageView;
+@property (weak, nonatomic) IBOutlet UIButton *downarrowButton;
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
+@property (weak, nonatomic) IBOutlet UIButton *personCenterButton;
 
 @end
 
@@ -29,8 +34,7 @@
 
 //MARK: -- instance LoginNavigationView
 + (TPLoginNavigationView *)instanceLoginNavigationView {
-    NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"TPLoginNavigationView" owner:nil options:nil];
-    return [nibView objectAtIndex:0];
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
 }
 
 - (void)awakeFromNib {
@@ -57,6 +61,8 @@
     if (_clickBackHandler) {
         _clickBackHandler(sender);
     }
+}
+- (IBAction)clickDownarrowButton:(UIButton *)sender {
 }
 
 - (void)setTitle:(NSString *)title {
@@ -86,13 +92,31 @@
     }
 }
 
+- (void)setIsShowNavRightButtons:(BOOL)isShowNavRightButtons {
+    _isShowNavRightButtons = isShowNavRightButtons;
+    
+    self.homeButton.hidden = !_isShowNavRightButtons;
+    self.personCenterButton.hidden = !_isShowNavRightButtons;
+    self.searchButton.hidden = !_isShowNavRightButtons;
+    
+}
+
+- (void)setIsShowDownArrowImage:(BOOL)isShowDownArrowImage {
+    _isShowDownArrowImage = isShowDownArrowImage;
+    
+    self.downarrowImageView.hidden = !_isShowDownArrowImage;
+    self.downarrowButton.hidden = !_isShowDownArrowImage;
+}
+
 - (void)setNavigationType:(TPNavigationType)navigationType {
     if (navigationType == TPNavigationTypeBlack) {
         self.backgroundColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1;
+        self.titleLabel.textColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_2;
         self.logoImageView.hidden = YES;
         [self.backButton setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
     } else {
         self.backgroundColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_2;
+        self.titleLabel.textColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1;
         self.logoImageView.hidden = NO;
         [self.backButton setImage:[UIImage imageNamed:@"icon_loginNavbar_back"] forState:UIControlStateNormal];
     }

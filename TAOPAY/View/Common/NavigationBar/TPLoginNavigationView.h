@@ -25,6 +25,9 @@ typedef void(^TPClickBackButtonHandler)(UIButton *sender);
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, assign) BOOL isShowBackButton;
 @property (nonatomic, assign) TPNavigationType navigationType;
+@property (nonatomic, assign) BOOL isShowNavRightButtons;
+@property (nonatomic, assign) BOOL isShowDownArrowImage;
+
 
 + (TPLoginNavigationView *)instanceLoginNavigationView;
 

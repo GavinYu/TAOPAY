@@ -1,0 +1,99 @@
+/* 
+  Localizable.strings
+  TAOPAY
+
+  Created by admin on 2018/6/13.
+  Copyright © 2018年 TAOPAY. All rights reserved.
+*/
+//chinese
+"app_name" = "淘易付";
+
+//注册、登录、个人中心
+"person_center_register" = "注册";
+"person_center_login" = "登录";
+"person_center_phone" = "手机号";
+"person_center_phone_format_wrong" = "手机号为空或者格式不正确";
+"person_center_input_phone" = "请输入手机号";
+"person_center_password" = "密    码";
+"person_center_password_empty" = "密码不能为空";
+"person_center_input_password" = "请输入密码";
+"person_center_find_password" = "找回密码";
+"person_center_login_tips" = "点击'登录'代表您已同意";
+"person_center_user_protocol_login" = "《软件服务协议》";
+"person_center_free_apply" = "————————————免费申请注册————————————";
+"person_center_free_register_message" = "免费注册";
+"person_center_code" = "验证码";
+"person_center_input_code" = "请输入验证码";
+"person_center_get_code" = "获取验证码";
+"person_center_code_empty" = "验证码不能为空";
+"person_center_enter" = "进入";
+"person_center_enter_tips" = "点击'进入'代表您已同意";
+"person_center_other_login" = "————————————其他登录方式————————————";
+"person_center_password_login" = "密码登录";
+"person_center_resend" = "重新发送";
+"person_center_resend_after" = "后重新发送";
+"person_center_modify_nickname" = "修改昵称";
+"person_center_input_nickname" = "请输入昵称";
+"person_center_nickname_input_error" = "输入昵称不符合规范";
+"person_center_nickname_limit" = "2-40个字符，可由中英文、数字、'_'组成";
+"person_center_modify_succeed" = "修改成功";
+
+//导航栏
+"navigation_title" = "东方润园";
+"tabbar_homepage" = "首页";
+"tabbar_homepage" = "好友";
+"tabbar_homepage" = "聊天";
+"tabbar_homepage" = "钱包";
+
+//首页
+"homepage_integral" = "积分";
+"homepage_apply" = "申请";
+"homepage_shopping" = "精品购物";
+"homepage_near_shop" = "附近店铺";
+"homepage_addressbook" = "通讯录";
+"homepage_scan_tips" = "将二维码/条码放入框内，即可自动扫描";
+
+//钱包
+"wallet_recharge" = "充值";
+"wallet_withdraw" = "提现";
+"wallet_transfer" = "转账";
+"wallet_account_balance" = "账户余额(元)";
+"wallet_write_tips" = "您已开通会员积分卡，请填写户名提交完成";
+"wallet_write_username" = "填写户名";
+"wallet_club_card" = "会员卡";
+"wallet_union_card" = "银联卡";
+"wallet_add_bank_card" = "添加银行卡";
+"wallet_recharge_tips" = "该卡本次最多充值500.00元";
+"wallet_money" = "金额";
+"wallet_input_money" = "请输入充值金额";
+"wallet_carnumber" = "卡号：";
+"wallet_xinhan_bank" = "新韩银行";
+"wallet_end_number" = "尾号8972";
+"wallet_enable_limit" = "可用额度500.00元";
+"wallet_input_withdraw_money" = "请输入提现金额";
+"wallet_input_recharge_money" = "请输入充值金额";
+"wallet_input_transfer_cardnumber" = "请输入转账卡号";
+"wallet_input_transfer_money" = "请输入转账金额";
+"wallet_transfer_succeed" = "转账成功";
+"wallet_taoyifu_club_card" = "淘易付会员卡";
+"wallet_integral_transfer_tips" = "积分实时转入对方账户，无法退回";
+"wallet_other_carnumber" = "对方卡号";
+"wallet_input_other_cardnumber" = "请输入对方会员卡号";
+"wallet_next_step" = "下一步";
+"wallet_transfer_money" = "转账金额";
+"wallet_create_order_failed" = "创建订单失败";
+"wallet_tips" = "提示";
+"wallet_install_pay_control_tips" = "完成购买需要安装银联支付控件，是否安装？";
+"wallet_sure" = "确定";
+"wallet_cancel" = "取消";
+"wallet_pay_result" = "支付结果通知";
+"wallet_pay_successed" = "支付成功！";
+"wallet_pay_failed" = "支付失败！";
+"wallet_cancel_pay" = "用户取消了支付";
+"wallet_back" = "返回";
+"wallet_save" = "保存";
+"wallet_detail" = "明细";
+"wallet_operate_type" = "操作类型：";
+"wallet_operate_time" = "操作时间：";
+"wallet_detail_money" = "金额：";
+"wallet_detail_describe" = "描述：";

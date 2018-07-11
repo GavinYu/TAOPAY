@@ -10,4 +10,17 @@
 
 @implementation TPGoodsModel
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"company_id":@"company_id",
+             @"goodsID":@"id",
+             @"name":@"name",
+             @"info":@"info",
+             @"price":@"price",
+             @"originPrice":@"originPrice",
+             @"image":@"image",
+             @"orderCount":@"orderCount",
+             @"distance":@"distance"
+             };
+}
+
 @end

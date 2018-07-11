@@ -8,6 +8,7 @@
 
 #import "TPTabBarViewController.h"
 
+#import "YBaseNavigationController.h"
 #import "HomepageViewController.h"
 #import "TPFriendViewController.h"
 #import "TPWalletViewController.h"
@@ -28,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.fd_prefersNavigationBarHidden = YES;
     self.delegate = self;
     [self configTabBarViewController];
 }
@@ -38,14 +40,24 @@
     //首页
     UIViewController *homepageViewController=[mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([HomepageViewController class])];
     
+    YBaseNavigationController *homepageNavController = [[YBaseNavigationController alloc] initWithRootViewController:homepageViewController];
+    
     //好友
     UIViewController *friendViewController=[mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPFriendViewController class])];
+    
+    YBaseNavigationController *friendNavController = [[YBaseNavigationController alloc] initWithRootViewController:friendViewController];
+    
     //聊天
     UIViewController *chatViewController=[mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPChatViewController class])];
+    
+    YBaseNavigationController *chatNavController = [[YBaseNavigationController alloc] initWithRootViewController:chatViewController];
+    
     //钱包
     UIViewController *walletViewController=[mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPWalletViewController class])];
     
-    [self setViewControllers:@[homepageViewController, friendViewController, chatViewController, walletViewController]];
+    YBaseNavigationController *walletNavController = [[YBaseNavigationController alloc] initWithRootViewController:walletViewController];
+    
+    [self setViewControllers:@[homepageNavController, friendNavController, chatNavController, walletNavController]];
     
     [self configTabBarItems];
 }
@@ -72,7 +84,7 @@
     NSArray *tabBarItemImages = @[@"btn_home", @"btn_friend", @"btn_chat", @"btn_wallet"];
     
     // tab 标题
-    NSArray *tabBarItemTitles = @[@"首页", @"好友", @"聊天" , @"钱包"];
+    NSArray *tabBarItemTitles = @[TPLocalizedString(@"tabbar_homepage"), TPLocalizedString(@"tabbar_friend"), TPLocalizedString(@"tabbar_chat") , TPLocalizedString(@"tabbar_wallet")];
     
     NSInteger index = 0;
     for (RDVTabBarItem *tabItem in [[self tabBar] items]) {

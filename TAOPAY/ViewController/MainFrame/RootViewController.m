@@ -12,6 +12,8 @@
 #import "TPAppConfig.h"
 
 @interface RootViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -20,11 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.navigationView.hidden = YES;
 //    self.navigationType = TPNavigationTypeBlack;
-    
+    self.navigationView.hidden = YES;
 }
-
+//MARK: -- 初始化子视图
+- (void)initSubViews {
+    [self.registerButton setTitle:TPLocalizedString(@"person_center_register") forState:UIControlStateNormal];
+    [self.loginButton setTitle:TPLocalizedString(@"person_center_login") forState:UIControlStateNormal];
+}
+//MARK: -- 验证是否已经登录
 - (void)isLogin {
     NSString *token = [YUtil getUserDefaultInfo:YHTTPRequestTokenKey];
     if (!YObjectIsNil(token) && !YStringIsEmpty(token)){
@@ -41,7 +47,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -52,7 +58,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    self.navigationController.navigationBarHidden = NO;
+//    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icon_loginNavbar_downArrow.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icon_loginNavbar_downArrow@2x.png",
       "scale" : "2x"
     },
     {

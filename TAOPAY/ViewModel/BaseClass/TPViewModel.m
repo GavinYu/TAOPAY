@@ -9,6 +9,7 @@
 #import "TPViewModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "TPConstant.h"
+#import "TPUser.h"
 
 @interface TPViewModel ()
 /// The `params` parameter in `-initWithServices:params` method.
@@ -31,4 +32,13 @@
          failure:(void (^)(NSError *error))failure {
     // 子类重载
 }
+
+- (TPUser *)user {
+    if (!_user) {
+        _user = TPUser.new;
+    }
+    
+    return _user;
+}
+
 @end

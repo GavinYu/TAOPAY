@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy) NSString *icon;
 @property (nonatomic, copy) NSString *content;
+@property (nonatomic, copy) NSString *type;
 
 @end

@@ -19,6 +19,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (nonatomic, strong) TPLoginViewModel *loginViewModel;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *acountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
+@property (weak, nonatomic) IBOutlet UIButton *findPwdButton;
+@property (weak, nonatomic) IBOutlet UILabel *loginTipLabel;
+@property (weak, nonatomic) IBOutlet UIButton *serviceProtocolButton;
+@property (weak, nonatomic) IBOutlet UILabel *applyLabel;
+@property (weak, nonatomic) IBOutlet UIButton *freeButton;
 
 @end
 
@@ -49,16 +56,32 @@
 
 #pragma mark 设置导航栏
 - (void)addNavigationBar {
-    self.navigationItem.title = @"登录";
-    self.navigationType = TPNavigationTypeBlack;
+    self.navigationView.title = TPLocalizedString(@"person_center_login");
+    self.navigationView.navigationType = TPNavigationTypeBlack;
+    self.navigationView.isShowBackButton = YES;
+    self.navigationView.isShowNavRightButtons = NO;
+    self.navigationView.isShowDownArrowImage = NO;
+    
+    [self.view addSubview:self.navigationView];
 }
 //MARK: -- 初始化子视图
 - (void)initSubView {
     [self addNavigationBar];
+    
+    self.acountLabel.text = TPLocalizedString(@"person_center_phone");
+    self.phoneNumberTextField.placeholder = TPLocalizedString(@"person_center_input_phone");
+    self.passwordLabel.text = TPLocalizedString(@"person_center_password");
+    self.passwordTextField.placeholder = TPLocalizedString(@"person_center_input_password");
+    [self.findPwdButton setTitle:TPLocalizedString(@"person_center_find_password") forState:UIControlStateNormal];
+    [self.loginButton setTitle:TPLocalizedString(@"person_center_login") forState:UIControlStateNormal];
+    self.loginTipLabel.text = TPLocalizedString(@"person_center_login_tips");
+    [self.serviceProtocolButton setTitle:TPLocalizedString(@"person_center_user_protocol_login") forState:UIControlStateNormal];
+    self.applyLabel.text = TPLocalizedString(@"person_center_free_apply");
+    [self.freeButton setTitle:TPLocalizedString(@"person_center_free_register_message") forState:UIControlStateNormal];
+    
     /// 添加事件
     [self.phoneNumberTextField addTarget:self action:@selector(textFieldValueDidChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.passwordTextField addTarget:self action:@selector(textFieldValueDidChanged:) forControlEvents:UIControlEventEditingChanged];
-    
     
 }
 //MARK: -- 进入按钮事件
@@ -66,7 +89,7 @@
     /// 数据验证的在Controller中处理 否则的话 viewModel 中就引用了 view了
     /// 验证手机号码 正确的手机号码
     if (![NSString y_isValidMobile:self.phoneNumberTextField.text]){
-        [SVProgressHUD showWithStatus:@"请输入正确的手机号码"];
+        [SVProgressHUD showWithStatus:TPLocalizedString(@"person_center_phone_format_wrong")];
         return;
     }
 
@@ -112,6 +135,9 @@
     [self.navigationController pushViewController:registerController animated:YES];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

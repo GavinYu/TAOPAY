@@ -10,4 +10,10 @@
 
 @implementation TPGoodsCategoryModel
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"categoryID":@"id",
+             @"name":@"name"
+             };
+}
+
 @end

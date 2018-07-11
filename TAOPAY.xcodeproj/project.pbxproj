@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		4FA02A3F02DFC74195D2B3DE /* libPods-TAOPAY.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA233F00CEB95194F194ECE4 /* libPods-TAOPAY.a */; };
+		840E9C9620C2940C002F8602 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840E9C9520C2940C002F8602 /* Shopping.storyboard */; };
+		840E9C9E20C296DA002F8602 /* TPCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9C9D20C296DA002F8602 /* TPCollectionViewController.m */; };
+		840E9CA120C29788002F8602 /* TPGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CA020C29788002F8602 /* TPGoodsListViewController.m */; };
+		840E9CA420C297B1002F8602 /* TPShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CA320C297B1002F8602 /* TPShopListViewController.m */; };
+		840E9CA720C2987A002F8602 /* TPGoodsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CA620C2987A002F8602 /* TPGoodsDetailsViewController.m */; };
+		840E9CAA20C29AE7002F8602 /* TPShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CA920C29AE7002F8602 /* TPShoppingCartViewController.m */; };
+		840E9CAD20C29B1F002F8602 /* TPPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CAC20C29B1F002F8602 /* TPPayViewController.m */; };
+		840E9CB020C29BFD002F8602 /* TPShoppingHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CAF20C29BFD002F8602 /* TPShoppingHomepageViewController.m */; };
+		840E9CB420C2A777002F8602 /* TPStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CB220C2A777002F8602 /* TPStoreCell.m */; };
+		840E9CB520C2A777002F8602 /* TPStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E9CB320C2A777002F8602 /* TPStoreCell.xib */; };
+		840E9CB920C2AA61002F8602 /* TPGoodsDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CB720C2AA61002F8602 /* TPGoodsDetailsCell.m */; };
+		840E9CBA20C2AA61002F8602 /* TPGoodsDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E9CB820C2AA61002F8602 /* TPGoodsDetailsCell.xib */; };
+		840E9CBE20C2AE7D002F8602 /* TPShoppingCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CBC20C2AE7D002F8602 /* TPShoppingCartCell.m */; };
+		840E9CBF20C2AE7D002F8602 /* TPShoppingCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E9CBD20C2AE7D002F8602 /* TPShoppingCartCell.xib */; };
+		840E9CC520C2B01E002F8602 /* TPShippingAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CC320C2B01E002F8602 /* TPShippingAddressCell.m */; };
+		840E9CC620C2B01E002F8602 /* TPShippingAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E9CC420C2B01E002F8602 /* TPShippingAddressCell.xib */; };
+		840E9CCA20C2B2AE002F8602 /* TPPersonCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CC920C2B2AE002F8602 /* TPPersonCenterViewController.m */; };
+		840E9CCE20C2B33D002F8602 /* TPShippingAddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CCD20C2B33D002F8602 /* TPShippingAddressListViewController.m */; };
+		840E9CD220C2B3B0002F8602 /* TPEditShippingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CD020C2B3B0002F8602 /* TPEditShippingAddressViewController.m */; };
+		840E9CD320C2B3B0002F8602 /* TPEditShippingAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E9CD120C2B3B0002F8602 /* TPEditShippingAddressViewController.xib */; };
+		840E9CDA20C39AD2002F8602 /* TPPublicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CD920C39AD2002F8602 /* TPPublicViewModel.m */; };
+		840E9CDD20C39B87002F8602 /* TPWebPublicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E9CDC20C39B87002F8602 /* TPWebPublicViewModel.m */; };
 		8418BF6420B2F7D000D057EB /* TPShoppingTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF6320B2F7D000D057EB /* TPShoppingTableHeaderView.m */; };
 		8418BF6620B2F7E300D057EB /* TPShoppingTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8418BF6520B2F7E300D057EB /* TPShoppingTableHeaderView.xib */; };
 		8418BF6A20B2FE9400D057EB /* TPShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF6820B2FE9400D057EB /* TPShopCell.m */; };
@@ -21,12 +43,25 @@
 		8418BF8620B4588000D057EB /* TPGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF8520B4588000D057EB /* TPGoodsModel.m */; };
 		8418BF8A20B45AF100D057EB /* TPShopMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF8920B45AF100D057EB /* TPShopMainViewModel.m */; };
 		8418BF8D20B5959C00D057EB /* TPGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF8C20B5959C00D057EB /* TPGoodsViewModel.m */; };
-		8418BF9120B7085A00D057EB /* TPGoodsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9020B7085A00D057EB /* TPGoodsList.m */; };
 		8418BF9420B7091800D057EB /* TPShopGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9320B7091800D057EB /* TPShopGoodsModel.m */; };
 		8418BF9720B709E800D057EB /* TPGoodsCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9620B709E700D057EB /* TPGoodsCategoryModel.m */; };
-		8418BF9B20B96D0800D057EB /* TPShopList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9A20B96D0800D057EB /* TPShopList.m */; };
 		8418BF9E20B96D2C00D057EB /* TPShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BF9D20B96D2C00D057EB /* TPShopModel.m */; };
 		8418BFA120BADEDC00D057EB /* UINavigationController+TPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BFA020BADEDC00D057EB /* UINavigationController+TPExtend.m */; };
+		8418BFA520BED75200D057EB /* TPGoodsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BFA420BED75200D057EB /* TPGoodsInfoModel.m */; };
+		8418BFA920C039F500D057EB /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418BFA820C039F400D057EB /* DLSlideView.m */; };
+		841DD6C920CB6BD00018D27E /* PersonCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6C820CB6BD00018D27E /* PersonCenter.storyboard */; };
+		841DD6CD20CB6CD00018D27E /* TPSafeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD6CC20CB6CD00018D27E /* TPSafeCenterViewController.m */; };
+		841DD6D520CB9BCC0018D27E /* TPShippingAddressTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD6D420CB9BCC0018D27E /* TPShippingAddressTableFooterView.m */; };
+		841DD6D720CB9BED0018D27E /* TPShippingAddressTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6D620CB9BED0018D27E /* TPShippingAddressTableFooterView.xib */; };
+		841DD6DA20CBBDBB0018D27E /* TPAddNewAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD6D920CBBDBB0018D27E /* TPAddNewAddressView.m */; };
+		841DD6DC20CBBDD00018D27E /* TPAddNewAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6DB20CBBDD00018D27E /* TPAddNewAddressView.xib */; };
+		841DD6DF20CBE3270018D27E /* TPAreaListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD6DE20CBE3270018D27E /* TPAreaListView.m */; };
+		841DD6E120CBE33D0018D27E /* TPAreaListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6E020CBE33D0018D27E /* TPAreaListView.xib */; };
+		841DD6E420CBE3C00018D27E /* TPAreaListTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD6E320CBE3C00018D27E /* TPAreaListTableHeaderView.m */; };
+		841DD6E620CBE3D60018D27E /* TPAreaListTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6E520CBE3D60018D27E /* TPAreaListTableHeaderView.xib */; };
+		841DD6EE20D14E860018D27E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6F020D14E860018D27E /* Localizable.strings */; };
+		841DD6FC20D29B870018D27E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6FB20D29B850018D27E /* Info.plist */; };
+		841DD70920D2A5FF0018D27E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841DD70B20D2A5FF0018D27E /* InfoPlist.strings */; };
 		84206B24207F95E10099C8E6 /* TPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B23207F95E10099C8E6 /* TPConstant.m */; };
 		84206B3F207FA3100099C8E6 /* YBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B3E207FA3100099C8E6 /* YBaseTableViewCell.m */; };
 		84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B41207FA3630099C8E6 /* YBaseCollectionViewCell.m */; };
@@ -60,6 +95,13 @@
 		8451DE13208C90630059E73A /* TPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE12208C90630059E73A /* TPTabBarViewController.m */; };
 		8451DE1C2096B1280059E73A /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8451DE1B2096B1280059E73A /* libPaymentControl.a */; };
 		8451DE2F2096CACB0059E73A /* TPCardOperateViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE2E2096CACB0059E73A /* TPCardOperateViewModel.m */; };
+		8453D3D820F225C10002B955 /* YSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453D3D720F225C10002B955 /* YSliderView.m */; };
+		8453D3DA20F226430002B955 /* YSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8453D3D920F226430002B955 /* YSliderView.xib */; };
+		8453D3DE20F381620002B955 /* TPShopHomepageCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453D3DC20F381620002B955 /* TPShopHomepageCollectionReusableView.m */; };
+		8453D3DF20F381620002B955 /* TPShopHomepageCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8453D3DD20F381620002B955 /* TPShopHomepageCollectionReusableView.xib */; };
+		8453D3E320F423CC0002B955 /* TPOrderInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453D3E220F423CB0002B955 /* TPOrderInfoModel.m */; };
+		8453D3E620F4D8D30002B955 /* TPReceiveAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453D3E520F4D8D30002B955 /* TPReceiveAddressView.m */; };
+		8453D3E820F4D8E10002B955 /* TPReceiveAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8453D3E720F4D8E10002B955 /* TPReceiveAddressView.xib */; };
 		846ECCD2209D4CDF006D6D23 /* bg_detour_ball@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCD1209D4CDE006D6D23 /* bg_detour_ball@2x.gif */; };
 		846ECCD5209DA78E006D6D23 /* TPWalletTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCD4209DA78E006D6D23 /* TPWalletTableFooterView.m */; };
 		846ECCD7209DA7AD006D6D23 /* TPWalletTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCD6209DA7AC006D6D23 /* TPWalletTableFooterView.xib */; };
@@ -72,6 +114,33 @@
 		846ECCF6209F051C006D6D23 /* TPFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCF5209F051C006D6D23 /* TPFriendModel.m */; };
 		846ECCFA209F06C4006D6D23 /* TPFriendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCF9209F06C4006D6D23 /* TPFriendViewModel.m */; };
 		846ECCFD209F18D4006D6D23 /* TPHomepageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCFC209F18D4006D6D23 /* TPHomepageViewModel.m */; };
+		84797F8520DF308300FC1C02 /* TPGoodsDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797F8420DF308300FC1C02 /* TPGoodsDetailBottomView.m */; };
+		84797F8720DF309500FC1C02 /* TPGoodsDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797F8620DF309500FC1C02 /* TPGoodsDetailBottomView.xib */; };
+		84797F8A20DF35FC00FC1C02 /* TPGoodsDetailTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797F8920DF35FC00FC1C02 /* TPGoodsDetailTopToolView.m */; };
+		84797F8C20DF360D00FC1C02 /* TPGoodsDetailTopToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797F8B20DF360D00FC1C02 /* TPGoodsDetailTopToolView.xib */; };
+		84797F8F20E1164300FC1C02 /* TPShopListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797F8E20E1164200FC1C02 /* TPShopListViewModel.m */; };
+		84797F9220E8D3F700FC1C02 /* TPShopItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797F9120E8D3F700FC1C02 /* TPShopItemViewModel.m */; };
+		84797F9520E8DFA300FC1C02 /* TPGoodsDetailTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797F9420E8DFA300FC1C02 /* TPGoodsDetailTableHeaderView.m */; };
+		84797F9720E8DFB700FC1C02 /* TPGoodsDetailTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797F9620E8DFB700FC1C02 /* TPGoodsDetailTableHeaderView.xib */; };
+		84797F9B20EA46A200FC1C02 /* TPGoodsDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797F9920EA46A200FC1C02 /* TPGoodsDetailInfoCell.m */; };
+		84797F9C20EA46A200FC1C02 /* TPGoodsDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797F9A20EA46A200FC1C02 /* TPGoodsDetailInfoCell.xib */; };
+		84797F9F20EB9A7100FC1C02 /* TPShoppingPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797F9E20EB9A7100FC1C02 /* TPShoppingPayViewController.m */; };
+		84797FA220EB9B4C00FC1C02 /* TPShoppingCartViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797FA120EB9B4C00FC1C02 /* TPShoppingCartViewModel.m */; };
+		84797FA520EB9FFB00FC1C02 /* TPCartGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797FA420EB9FFB00FC1C02 /* TPCartGoodsViewModel.m */; };
+		84797FA820EBA38600FC1C02 /* TPShoppingCartBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797FA720EBA38600FC1C02 /* TPShoppingCartBottomView.m */; };
+		84797FAA20EBA39B00FC1C02 /* TPShoppingCartBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797FA920EBA39B00FC1C02 /* TPShoppingCartBottomView.xib */; };
+		84797FAE20EE67F500FC1C02 /* TPShoppingPayGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797FAC20EE67F500FC1C02 /* TPShoppingPayGoodsCell.m */; };
+		84797FAF20EE67F500FC1C02 /* TPShoppingPayGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797FAD20EE67F500FC1C02 /* TPShoppingPayGoodsCell.xib */; };
+		84797FB320F048B500FC1C02 /* TPPayWayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797FB120F048B500FC1C02 /* TPPayWayCell.m */; };
+		84797FB420F048B500FC1C02 /* TPPayWayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797FB220F048B500FC1C02 /* TPPayWayCell.xib */; };
+		84797FB920F0638C00FC1C02 /* TPAddressListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797FB820F0638C00FC1C02 /* TPAddressListViewModel.m */; };
+		84797FBC20F09BE000FC1C02 /* TPPayWayBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84797FBB20F09BE000FC1C02 /* TPPayWayBottomView.m */; };
+		84797FBE20F09C0200FC1C02 /* TPPayWayBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84797FBD20F09C0100FC1C02 /* TPPayWayBottomView.xib */; };
+		8499D4A020C3F9F400927526 /* TPGoodsDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499D49F20C3F9F300927526 /* TPGoodsDetailsViewModel.m */; };
+		8499D4A820C42EF900927526 /* TPShopGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499D4A720C42EF900927526 /* TPShopGoodsViewModel.m */; };
+		8499D4AB20C4313E00927526 /* TPShopGoodsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499D4AA20C4313E00927526 /* TPShopGoodsListViewModel.m */; };
+		8499D4AE20C4321300927526 /* TPGoodsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499D4AD20C4321300927526 /* TPGoodsListModel.m */; };
+		8499D4B120C4325D00927526 /* TPShopListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499D4B020C4325D00927526 /* TPShopListModel.m */; };
 		849EFAF220820EA400C37AC9 /* MainFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF120820EA400C37AC9 /* MainFrameViewController.m */; };
 		849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF420820ED500C37AC9 /* RootViewController.m */; };
 		849EFAF820820EFF00C37AC9 /* TPWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFAF720820EFF00C37AC9 /* TPWalletViewController.m */; };
@@ -94,6 +163,15 @@
 		84CD0B9D207CEF160069AD9A /* TAOPAYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B9C207CEF160069AD9A /* TAOPAYTests.m */; };
 		84CD0BA8207CEF160069AD9A /* TAOPAYUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0BA7207CEF160069AD9A /* TAOPAYUITests.m */; };
 		84D1285720AB0D0B005178B4 /* TPRechargeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1285620AB0D0B005178B4 /* TPRechargeModel.m */; };
+		84D5E79420CAD9DF00BBA8E5 /* TPAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E79320CAD9DF00BBA8E5 /* TPAddressModel.m */; };
+		84D5E79720CADB1400BBA8E5 /* TPAddressListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E79620CADB1400BBA8E5 /* TPAddressListModel.m */; };
+		84D5E79A20CADB7500BBA8E5 /* TPAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E79920CADB7500BBA8E5 /* TPAreaModel.m */; };
+		84D5E79D20CADBD300BBA8E5 /* TPAreaListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E79C20CADBD300BBA8E5 /* TPAreaListModel.m */; };
+		84D5E7A120CADC8300BBA8E5 /* TPShoppingCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E7A020CADC8300BBA8E5 /* TPShoppingCartModel.m */; };
+		84D5E7A420CADCCC00BBA8E5 /* TPShoppingCartGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E7A320CADCCC00BBA8E5 /* TPShoppingCartGoodsModel.m */; };
+		84D5E7A820CB57D300BBA8E5 /* TPOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E7A720CB57D300BBA8E5 /* TPOrderListViewController.m */; };
+		84D5E7AB20CB595500BBA8E5 /* NSString+YConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E7AA20CB595500BBA8E5 /* NSString+YConvert.m */; };
+		84D5E7AF20CB5CF100BBA8E5 /* TPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5E7AE20CB5CF100BBA8E5 /* TPSettingViewController.m */; };
 		84D661162084D70F00DF0F73 /* TPWalletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D661142084D70F00DF0F73 /* TPWalletCell.m */; };
 		84D661172084D70F00DF0F73 /* TPWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D661152084D70F00DF0F73 /* TPWalletCell.xib */; };
 		84D6611B208636FC00DF0F73 /* TPWalletCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D66119208636FC00DF0F73 /* TPWalletCommonCell.m */; };
@@ -132,6 +210,44 @@
 /* Begin PBXFileReference section */
 		5229563C6B8714A927656EF0 /* Pods-TAOPAY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAOPAY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY.debug.xcconfig"; sourceTree = "<group>"; };
 		595954A9C9467140A529FD5A /* Pods-TAOPAY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAOPAY.release.xcconfig"; path = "Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY.release.xcconfig"; sourceTree = "<group>"; };
+		840E9C9520C2940C002F8602 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		840E9C9C20C296DA002F8602 /* TPCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCollectionViewController.h; sourceTree = "<group>"; };
+		840E9C9D20C296DA002F8602 /* TPCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCollectionViewController.m; sourceTree = "<group>"; };
+		840E9C9F20C29788002F8602 /* TPGoodsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsListViewController.h; sourceTree = "<group>"; };
+		840E9CA020C29788002F8602 /* TPGoodsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsListViewController.m; sourceTree = "<group>"; };
+		840E9CA220C297B1002F8602 /* TPShopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopListViewController.h; sourceTree = "<group>"; };
+		840E9CA320C297B1002F8602 /* TPShopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopListViewController.m; sourceTree = "<group>"; };
+		840E9CA520C2987A002F8602 /* TPGoodsDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsDetailsViewController.h; sourceTree = "<group>"; };
+		840E9CA620C2987A002F8602 /* TPGoodsDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsDetailsViewController.m; sourceTree = "<group>"; };
+		840E9CA820C29AE7002F8602 /* TPShoppingCartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingCartViewController.h; sourceTree = "<group>"; };
+		840E9CA920C29AE7002F8602 /* TPShoppingCartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingCartViewController.m; sourceTree = "<group>"; };
+		840E9CAB20C29B1F002F8602 /* TPPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPayViewController.h; sourceTree = "<group>"; };
+		840E9CAC20C29B1F002F8602 /* TPPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPayViewController.m; sourceTree = "<group>"; };
+		840E9CAE20C29BFD002F8602 /* TPShoppingHomepageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingHomepageViewController.h; sourceTree = "<group>"; };
+		840E9CAF20C29BFD002F8602 /* TPShoppingHomepageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingHomepageViewController.m; sourceTree = "<group>"; };
+		840E9CB120C2A777002F8602 /* TPStoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPStoreCell.h; sourceTree = "<group>"; };
+		840E9CB220C2A777002F8602 /* TPStoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPStoreCell.m; sourceTree = "<group>"; };
+		840E9CB320C2A777002F8602 /* TPStoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPStoreCell.xib; sourceTree = "<group>"; };
+		840E9CB620C2AA61002F8602 /* TPGoodsDetailsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsDetailsCell.h; sourceTree = "<group>"; };
+		840E9CB720C2AA61002F8602 /* TPGoodsDetailsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsDetailsCell.m; sourceTree = "<group>"; };
+		840E9CB820C2AA61002F8602 /* TPGoodsDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPGoodsDetailsCell.xib; sourceTree = "<group>"; };
+		840E9CBB20C2AE7D002F8602 /* TPShoppingCartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingCartCell.h; sourceTree = "<group>"; };
+		840E9CBC20C2AE7D002F8602 /* TPShoppingCartCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingCartCell.m; sourceTree = "<group>"; };
+		840E9CBD20C2AE7D002F8602 /* TPShoppingCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShoppingCartCell.xib; sourceTree = "<group>"; };
+		840E9CC220C2B01E002F8602 /* TPShippingAddressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShippingAddressCell.h; sourceTree = "<group>"; };
+		840E9CC320C2B01E002F8602 /* TPShippingAddressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShippingAddressCell.m; sourceTree = "<group>"; };
+		840E9CC420C2B01E002F8602 /* TPShippingAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShippingAddressCell.xib; sourceTree = "<group>"; };
+		840E9CC820C2B2AE002F8602 /* TPPersonCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPersonCenterViewController.h; sourceTree = "<group>"; };
+		840E9CC920C2B2AE002F8602 /* TPPersonCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPersonCenterViewController.m; sourceTree = "<group>"; };
+		840E9CCC20C2B33D002F8602 /* TPShippingAddressListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShippingAddressListViewController.h; sourceTree = "<group>"; };
+		840E9CCD20C2B33D002F8602 /* TPShippingAddressListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShippingAddressListViewController.m; sourceTree = "<group>"; };
+		840E9CCF20C2B3B0002F8602 /* TPEditShippingAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPEditShippingAddressViewController.h; sourceTree = "<group>"; };
+		840E9CD020C2B3B0002F8602 /* TPEditShippingAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPEditShippingAddressViewController.m; sourceTree = "<group>"; };
+		840E9CD120C2B3B0002F8602 /* TPEditShippingAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPEditShippingAddressViewController.xib; sourceTree = "<group>"; };
+		840E9CD820C39AD2002F8602 /* TPPublicViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPublicViewModel.h; sourceTree = "<group>"; };
+		840E9CD920C39AD2002F8602 /* TPPublicViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPublicViewModel.m; sourceTree = "<group>"; };
+		840E9CDB20C39B87002F8602 /* TPWebPublicViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWebPublicViewModel.h; sourceTree = "<group>"; };
+		840E9CDC20C39B87002F8602 /* TPWebPublicViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWebPublicViewModel.m; sourceTree = "<group>"; };
 		8418BF6220B2F7D000D057EB /* TPShoppingTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingTableHeaderView.h; sourceTree = "<group>"; };
 		8418BF6320B2F7D000D057EB /* TPShoppingTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingTableHeaderView.m; sourceTree = "<group>"; };
 		8418BF6520B2F7E300D057EB /* TPShoppingTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShoppingTableHeaderView.xib; sourceTree = "<group>"; };
@@ -155,18 +271,44 @@
 		8418BF8920B45AF100D057EB /* TPShopMainViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopMainViewModel.m; sourceTree = "<group>"; };
 		8418BF8B20B5959C00D057EB /* TPGoodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsViewModel.h; sourceTree = "<group>"; };
 		8418BF8C20B5959C00D057EB /* TPGoodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsViewModel.m; sourceTree = "<group>"; };
-		8418BF8F20B7085A00D057EB /* TPGoodsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsList.h; sourceTree = "<group>"; };
-		8418BF9020B7085A00D057EB /* TPGoodsList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsList.m; sourceTree = "<group>"; };
 		8418BF9220B7091800D057EB /* TPShopGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopGoodsModel.h; sourceTree = "<group>"; };
 		8418BF9320B7091800D057EB /* TPShopGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopGoodsModel.m; sourceTree = "<group>"; };
 		8418BF9520B709E700D057EB /* TPGoodsCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsCategoryModel.h; sourceTree = "<group>"; };
 		8418BF9620B709E700D057EB /* TPGoodsCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsCategoryModel.m; sourceTree = "<group>"; };
-		8418BF9920B96D0800D057EB /* TPShopList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopList.h; sourceTree = "<group>"; };
-		8418BF9A20B96D0800D057EB /* TPShopList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopList.m; sourceTree = "<group>"; };
 		8418BF9C20B96D2C00D057EB /* TPShopModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopModel.h; sourceTree = "<group>"; };
 		8418BF9D20B96D2C00D057EB /* TPShopModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopModel.m; sourceTree = "<group>"; };
 		8418BF9F20BADEDC00D057EB /* UINavigationController+TPExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TPExtend.h"; sourceTree = "<group>"; };
 		8418BFA020BADEDC00D057EB /* UINavigationController+TPExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TPExtend.m"; sourceTree = "<group>"; };
+		8418BFA320BED75200D057EB /* TPGoodsInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsInfoModel.h; sourceTree = "<group>"; };
+		8418BFA420BED75200D057EB /* TPGoodsInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsInfoModel.m; sourceTree = "<group>"; };
+		8418BFA720C039F400D057EB /* DLSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlideView.h; sourceTree = "<group>"; };
+		8418BFA820C039F400D057EB /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
+		841DD6C820CB6BD00018D27E /* PersonCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonCenter.storyboard; sourceTree = "<group>"; };
+		841DD6CB20CB6CCF0018D27E /* TPSafeCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSafeCenterViewController.h; sourceTree = "<group>"; };
+		841DD6CC20CB6CD00018D27E /* TPSafeCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSafeCenterViewController.m; sourceTree = "<group>"; };
+		841DD6D320CB9BCC0018D27E /* TPShippingAddressTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShippingAddressTableFooterView.h; sourceTree = "<group>"; };
+		841DD6D420CB9BCC0018D27E /* TPShippingAddressTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShippingAddressTableFooterView.m; sourceTree = "<group>"; };
+		841DD6D620CB9BED0018D27E /* TPShippingAddressTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShippingAddressTableFooterView.xib; sourceTree = "<group>"; };
+		841DD6D820CBBDBB0018D27E /* TPAddNewAddressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAddNewAddressView.h; sourceTree = "<group>"; };
+		841DD6D920CBBDBB0018D27E /* TPAddNewAddressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAddNewAddressView.m; sourceTree = "<group>"; };
+		841DD6DB20CBBDD00018D27E /* TPAddNewAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPAddNewAddressView.xib; sourceTree = "<group>"; };
+		841DD6DD20CBE3270018D27E /* TPAreaListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAreaListView.h; sourceTree = "<group>"; };
+		841DD6DE20CBE3270018D27E /* TPAreaListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAreaListView.m; sourceTree = "<group>"; };
+		841DD6E020CBE33D0018D27E /* TPAreaListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPAreaListView.xib; sourceTree = "<group>"; };
+		841DD6E220CBE3C00018D27E /* TPAreaListTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAreaListTableHeaderView.h; sourceTree = "<group>"; };
+		841DD6E320CBE3C00018D27E /* TPAreaListTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAreaListTableHeaderView.m; sourceTree = "<group>"; };
+		841DD6E520CBE3D60018D27E /* TPAreaListTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPAreaListTableHeaderView.xib; sourceTree = "<group>"; };
+		841DD6EA20D14E5E0018D27E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		841DD6EB20D14E5F0018D27E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		841DD6EC20D14E6A0018D27E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		841DD6ED20D14E6A0018D27E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		841DD6EF20D14E860018D27E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		841DD6F120D14E8A0018D27E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		841DD6FB20D29B850018D27E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841DD70420D2A2B00018D27E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		841DD70A20D2A5FF0018D27E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		841DD70C20D2A6010018D27E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		841DD70D20D2A6040018D27E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84206B21207F956A0099C8E6 /* TPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPMacros.h; sourceTree = "<group>"; };
 		84206B22207F95E10099C8E6 /* TPConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConstant.h; sourceTree = "<group>"; };
 		84206B23207F95E10099C8E6 /* TPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPConstant.m; sourceTree = "<group>"; };
@@ -245,6 +387,17 @@
 		8451DE1B2096B1280059E73A /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
 		8451DE2D2096CACB0059E73A /* TPCardOperateViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCardOperateViewModel.h; sourceTree = "<group>"; };
 		8451DE2E2096CACB0059E73A /* TPCardOperateViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCardOperateViewModel.m; sourceTree = "<group>"; };
+		8453D3D620F225C10002B955 /* YSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSliderView.h; sourceTree = "<group>"; };
+		8453D3D720F225C10002B955 /* YSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSliderView.m; sourceTree = "<group>"; };
+		8453D3D920F226430002B955 /* YSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YSliderView.xib; sourceTree = "<group>"; };
+		8453D3DB20F381620002B955 /* TPShopHomepageCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopHomepageCollectionReusableView.h; sourceTree = "<group>"; };
+		8453D3DC20F381620002B955 /* TPShopHomepageCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopHomepageCollectionReusableView.m; sourceTree = "<group>"; };
+		8453D3DD20F381620002B955 /* TPShopHomepageCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShopHomepageCollectionReusableView.xib; sourceTree = "<group>"; };
+		8453D3E120F423CB0002B955 /* TPOrderInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderInfoModel.h; sourceTree = "<group>"; };
+		8453D3E220F423CB0002B955 /* TPOrderInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderInfoModel.m; sourceTree = "<group>"; };
+		8453D3E420F4D8D30002B955 /* TPReceiveAddressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPReceiveAddressView.h; sourceTree = "<group>"; };
+		8453D3E520F4D8D30002B955 /* TPReceiveAddressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPReceiveAddressView.m; sourceTree = "<group>"; };
+		8453D3E720F4D8E10002B955 /* TPReceiveAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPReceiveAddressView.xib; sourceTree = "<group>"; };
 		846ECCD1209D4CDE006D6D23 /* bg_detour_ball@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "bg_detour_ball@2x.gif"; sourceTree = "<group>"; };
 		846ECCD3209DA78E006D6D23 /* TPWalletTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletTableFooterView.h; sourceTree = "<group>"; };
 		846ECCD4209DA78E006D6D23 /* TPWalletTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTableFooterView.m; sourceTree = "<group>"; };
@@ -264,6 +417,53 @@
 		846ECCF9209F06C4006D6D23 /* TPFriendViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendViewModel.m; sourceTree = "<group>"; };
 		846ECCFB209F18D4006D6D23 /* TPHomepageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPHomepageViewModel.h; sourceTree = "<group>"; };
 		846ECCFC209F18D4006D6D23 /* TPHomepageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPHomepageViewModel.m; sourceTree = "<group>"; };
+		84797F8320DF308300FC1C02 /* TPGoodsDetailBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsDetailBottomView.h; sourceTree = "<group>"; };
+		84797F8420DF308300FC1C02 /* TPGoodsDetailBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsDetailBottomView.m; sourceTree = "<group>"; };
+		84797F8620DF309500FC1C02 /* TPGoodsDetailBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPGoodsDetailBottomView.xib; sourceTree = "<group>"; };
+		84797F8820DF35FC00FC1C02 /* TPGoodsDetailTopToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsDetailTopToolView.h; sourceTree = "<group>"; };
+		84797F8920DF35FC00FC1C02 /* TPGoodsDetailTopToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsDetailTopToolView.m; sourceTree = "<group>"; };
+		84797F8B20DF360D00FC1C02 /* TPGoodsDetailTopToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPGoodsDetailTopToolView.xib; sourceTree = "<group>"; };
+		84797F8D20E1164200FC1C02 /* TPShopListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopListViewModel.h; sourceTree = "<group>"; };
+		84797F8E20E1164200FC1C02 /* TPShopListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopListViewModel.m; sourceTree = "<group>"; };
+		84797F9020E8D3F700FC1C02 /* TPShopItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopItemViewModel.h; sourceTree = "<group>"; };
+		84797F9120E8D3F700FC1C02 /* TPShopItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopItemViewModel.m; sourceTree = "<group>"; };
+		84797F9320E8DFA300FC1C02 /* TPGoodsDetailTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsDetailTableHeaderView.h; sourceTree = "<group>"; };
+		84797F9420E8DFA300FC1C02 /* TPGoodsDetailTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsDetailTableHeaderView.m; sourceTree = "<group>"; };
+		84797F9620E8DFB700FC1C02 /* TPGoodsDetailTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPGoodsDetailTableHeaderView.xib; sourceTree = "<group>"; };
+		84797F9820EA46A200FC1C02 /* TPGoodsDetailInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsDetailInfoCell.h; sourceTree = "<group>"; };
+		84797F9920EA46A200FC1C02 /* TPGoodsDetailInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsDetailInfoCell.m; sourceTree = "<group>"; };
+		84797F9A20EA46A200FC1C02 /* TPGoodsDetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPGoodsDetailInfoCell.xib; sourceTree = "<group>"; };
+		84797F9D20EB9A7100FC1C02 /* TPShoppingPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingPayViewController.h; sourceTree = "<group>"; };
+		84797F9E20EB9A7100FC1C02 /* TPShoppingPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingPayViewController.m; sourceTree = "<group>"; };
+		84797FA020EB9B4C00FC1C02 /* TPShoppingCartViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingCartViewModel.h; sourceTree = "<group>"; };
+		84797FA120EB9B4C00FC1C02 /* TPShoppingCartViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingCartViewModel.m; sourceTree = "<group>"; };
+		84797FA320EB9FFB00FC1C02 /* TPCartGoodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCartGoodsViewModel.h; sourceTree = "<group>"; };
+		84797FA420EB9FFB00FC1C02 /* TPCartGoodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCartGoodsViewModel.m; sourceTree = "<group>"; };
+		84797FA620EBA38600FC1C02 /* TPShoppingCartBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingCartBottomView.h; sourceTree = "<group>"; };
+		84797FA720EBA38600FC1C02 /* TPShoppingCartBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingCartBottomView.m; sourceTree = "<group>"; };
+		84797FA920EBA39B00FC1C02 /* TPShoppingCartBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShoppingCartBottomView.xib; sourceTree = "<group>"; };
+		84797FAB20EE67F500FC1C02 /* TPShoppingPayGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingPayGoodsCell.h; sourceTree = "<group>"; };
+		84797FAC20EE67F500FC1C02 /* TPShoppingPayGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingPayGoodsCell.m; sourceTree = "<group>"; };
+		84797FAD20EE67F500FC1C02 /* TPShoppingPayGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPShoppingPayGoodsCell.xib; sourceTree = "<group>"; };
+		84797FB020F048B500FC1C02 /* TPPayWayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPayWayCell.h; sourceTree = "<group>"; };
+		84797FB120F048B500FC1C02 /* TPPayWayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPayWayCell.m; sourceTree = "<group>"; };
+		84797FB220F048B500FC1C02 /* TPPayWayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPPayWayCell.xib; sourceTree = "<group>"; };
+		84797FB720F0638C00FC1C02 /* TPAddressListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAddressListViewModel.h; sourceTree = "<group>"; };
+		84797FB820F0638C00FC1C02 /* TPAddressListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAddressListViewModel.m; sourceTree = "<group>"; };
+		84797FBA20F09BE000FC1C02 /* TPPayWayBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPayWayBottomView.h; sourceTree = "<group>"; };
+		84797FBB20F09BE000FC1C02 /* TPPayWayBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPayWayBottomView.m; sourceTree = "<group>"; };
+		84797FBD20F09C0100FC1C02 /* TPPayWayBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPPayWayBottomView.xib; sourceTree = "<group>"; };
+		8499D49D20C3CEBE00927526 /* TPInline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPInline.h; sourceTree = "<group>"; };
+		8499D49E20C3F9F300927526 /* TPGoodsDetailsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsDetailsViewModel.h; sourceTree = "<group>"; };
+		8499D49F20C3F9F300927526 /* TPGoodsDetailsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsDetailsViewModel.m; sourceTree = "<group>"; };
+		8499D4A620C42EF900927526 /* TPShopGoodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopGoodsViewModel.h; sourceTree = "<group>"; };
+		8499D4A720C42EF900927526 /* TPShopGoodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopGoodsViewModel.m; sourceTree = "<group>"; };
+		8499D4A920C4313E00927526 /* TPShopGoodsListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopGoodsListViewModel.h; sourceTree = "<group>"; };
+		8499D4AA20C4313E00927526 /* TPShopGoodsListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopGoodsListViewModel.m; sourceTree = "<group>"; };
+		8499D4AC20C4321300927526 /* TPGoodsListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPGoodsListModel.h; sourceTree = "<group>"; };
+		8499D4AD20C4321300927526 /* TPGoodsListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPGoodsListModel.m; sourceTree = "<group>"; };
+		8499D4AF20C4325D00927526 /* TPShopListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShopListModel.h; sourceTree = "<group>"; };
+		8499D4B020C4325D00927526 /* TPShopListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShopListModel.m; sourceTree = "<group>"; };
 		849EFAF020820EA400C37AC9 /* MainFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFrameViewController.h; sourceTree = "<group>"; };
 		849EFAF120820EA400C37AC9 /* MainFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainFrameViewController.m; sourceTree = "<group>"; };
 		849EFAF320820ED500C37AC9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -297,7 +497,6 @@
 		84CD0B8A207CEF140069AD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84CD0B8C207CEF160069AD9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CD0B8F207CEF160069AD9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		84CD0B91207CEF160069AD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CD0B92207CEF160069AD9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84CD0B98207CEF160069AD9A /* TAOPAYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TAOPAYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD0B9C207CEF160069AD9A /* TAOPAYTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAOPAYTests.m; sourceTree = "<group>"; };
@@ -307,6 +506,24 @@
 		84CD0BA9207CEF160069AD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D1285520AB0D0B005178B4 /* TPRechargeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPRechargeModel.h; sourceTree = "<group>"; };
 		84D1285620AB0D0B005178B4 /* TPRechargeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPRechargeModel.m; sourceTree = "<group>"; };
+		84D5E79220CAD9DF00BBA8E5 /* TPAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAddressModel.h; sourceTree = "<group>"; };
+		84D5E79320CAD9DF00BBA8E5 /* TPAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAddressModel.m; sourceTree = "<group>"; };
+		84D5E79520CADB1400BBA8E5 /* TPAddressListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAddressListModel.h; sourceTree = "<group>"; };
+		84D5E79620CADB1400BBA8E5 /* TPAddressListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAddressListModel.m; sourceTree = "<group>"; };
+		84D5E79820CADB7500BBA8E5 /* TPAreaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAreaModel.h; sourceTree = "<group>"; };
+		84D5E79920CADB7500BBA8E5 /* TPAreaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAreaModel.m; sourceTree = "<group>"; };
+		84D5E79B20CADBD300BBA8E5 /* TPAreaListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAreaListModel.h; sourceTree = "<group>"; };
+		84D5E79C20CADBD300BBA8E5 /* TPAreaListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAreaListModel.m; sourceTree = "<group>"; };
+		84D5E79F20CADC8300BBA8E5 /* TPShoppingCartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingCartModel.h; sourceTree = "<group>"; };
+		84D5E7A020CADC8300BBA8E5 /* TPShoppingCartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingCartModel.m; sourceTree = "<group>"; };
+		84D5E7A220CADCCC00BBA8E5 /* TPShoppingCartGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPShoppingCartGoodsModel.h; sourceTree = "<group>"; };
+		84D5E7A320CADCCC00BBA8E5 /* TPShoppingCartGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPShoppingCartGoodsModel.m; sourceTree = "<group>"; };
+		84D5E7A620CB57D300BBA8E5 /* TPOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderListViewController.h; sourceTree = "<group>"; };
+		84D5E7A720CB57D300BBA8E5 /* TPOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderListViewController.m; sourceTree = "<group>"; };
+		84D5E7A920CB595500BBA8E5 /* NSString+YConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YConvert.h"; sourceTree = "<group>"; };
+		84D5E7AA20CB595500BBA8E5 /* NSString+YConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YConvert.m"; sourceTree = "<group>"; };
+		84D5E7AD20CB5CF100BBA8E5 /* TPSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSettingViewController.h; sourceTree = "<group>"; };
+		84D5E7AE20CB5CF100BBA8E5 /* TPSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSettingViewController.m; sourceTree = "<group>"; };
 		84D661132084D70F00DF0F73 /* TPWalletCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletCell.h; sourceTree = "<group>"; };
 		84D661142084D70F00DF0F73 /* TPWalletCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletCell.m; sourceTree = "<group>"; };
 		84D661152084D70F00DF0F73 /* TPWalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletCell.xib; sourceTree = "<group>"; };
@@ -365,6 +582,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840E9C9320C293BF002F8602 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				841DD6C720CB6BBA0018D27E /* PersonCenter */,
+				840E9C9420C293F0002F8602 /* Shopping */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		840E9C9420C293F0002F8602 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				840E9C9520C2940C002F8602 /* Shopping.storyboard */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		840E9C9720C2955F002F8602 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				840E9CAE20C29BFD002F8602 /* TPShoppingHomepageViewController.h */,
+				840E9CAF20C29BFD002F8602 /* TPShoppingHomepageViewController.m */,
+				840E9C9F20C29788002F8602 /* TPGoodsListViewController.h */,
+				840E9CA020C29788002F8602 /* TPGoodsListViewController.m */,
+				840E9CA220C297B1002F8602 /* TPShopListViewController.h */,
+				840E9CA320C297B1002F8602 /* TPShopListViewController.m */,
+				840E9CA520C2987A002F8602 /* TPGoodsDetailsViewController.h */,
+				840E9CA620C2987A002F8602 /* TPGoodsDetailsViewController.m */,
+				840E9CA820C29AE7002F8602 /* TPShoppingCartViewController.h */,
+				840E9CA920C29AE7002F8602 /* TPShoppingCartViewController.m */,
+				84797F9D20EB9A7100FC1C02 /* TPShoppingPayViewController.h */,
+				84797F9E20EB9A7100FC1C02 /* TPShoppingPayViewController.m */,
+				840E9CAB20C29B1F002F8602 /* TPPayViewController.h */,
+				840E9CAC20C29B1F002F8602 /* TPPayViewController.m */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		840E9C9B20C2968E002F8602 /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840E9C9C20C296DA002F8602 /* TPCollectionViewController.h */,
+				840E9C9D20C296DA002F8602 /* TPCollectionViewController.m */,
+			);
+			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		840E9CC020C2AF8D002F8602 /* PersonCenter */ = {
+			isa = PBXGroup;
+			children = (
+				840E9CC120C2AFEE002F8602 /* ShippingAddress */,
+			);
+			path = PersonCenter;
+			sourceTree = "<group>";
+		};
+		840E9CC120C2AFEE002F8602 /* ShippingAddress */ = {
+			isa = PBXGroup;
+			children = (
+				840E9CC220C2B01E002F8602 /* TPShippingAddressCell.h */,
+				840E9CC320C2B01E002F8602 /* TPShippingAddressCell.m */,
+				840E9CC420C2B01E002F8602 /* TPShippingAddressCell.xib */,
+				841DD6D320CB9BCC0018D27E /* TPShippingAddressTableFooterView.h */,
+				841DD6D420CB9BCC0018D27E /* TPShippingAddressTableFooterView.m */,
+				841DD6D620CB9BED0018D27E /* TPShippingAddressTableFooterView.xib */,
+				841DD6D820CBBDBB0018D27E /* TPAddNewAddressView.h */,
+				841DD6D920CBBDBB0018D27E /* TPAddNewAddressView.m */,
+				841DD6DB20CBBDD00018D27E /* TPAddNewAddressView.xib */,
+				841DD6DD20CBE3270018D27E /* TPAreaListView.h */,
+				841DD6DE20CBE3270018D27E /* TPAreaListView.m */,
+				841DD6E020CBE33D0018D27E /* TPAreaListView.xib */,
+				841DD6E220CBE3C00018D27E /* TPAreaListTableHeaderView.h */,
+				841DD6E320CBE3C00018D27E /* TPAreaListTableHeaderView.m */,
+				841DD6E520CBE3D60018D27E /* TPAreaListTableHeaderView.xib */,
+			);
+			path = ShippingAddress;
+			sourceTree = "<group>";
+		};
+		840E9CC720C2B1D4002F8602 /* PersonCenter */ = {
+			isa = PBXGroup;
+			children = (
+				841DD6CA20CB6CB90018D27E /* SafeCenter */,
+				84D5E7AC20CB5CDC00BBA8E5 /* Setting */,
+				84D5E7A520CB57A400BBA8E5 /* Order */,
+				840E9CCB20C2B319002F8602 /* ShippingAddress */,
+				840E9CC820C2B2AE002F8602 /* TPPersonCenterViewController.h */,
+				840E9CC920C2B2AE002F8602 /* TPPersonCenterViewController.m */,
+			);
+			path = PersonCenter;
+			sourceTree = "<group>";
+		};
+		840E9CCB20C2B319002F8602 /* ShippingAddress */ = {
+			isa = PBXGroup;
+			children = (
+				840E9CCC20C2B33D002F8602 /* TPShippingAddressListViewController.h */,
+				840E9CCD20C2B33D002F8602 /* TPShippingAddressListViewController.m */,
+				840E9CCF20C2B3B0002F8602 /* TPEditShippingAddressViewController.h */,
+				840E9CD020C2B3B0002F8602 /* TPEditShippingAddressViewController.m */,
+				840E9CD120C2B3B0002F8602 /* TPEditShippingAddressViewController.xib */,
+			);
+			path = ShippingAddress;
+			sourceTree = "<group>";
+		};
 		8418BF6120B2F72A00D057EB /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,9 +693,48 @@
 				8418BF6720B2FE9400D057EB /* TPShopCell.h */,
 				8418BF6820B2FE9400D057EB /* TPShopCell.m */,
 				8418BF6920B2FE9400D057EB /* TPShopCell.xib */,
+				840E9CB120C2A777002F8602 /* TPStoreCell.h */,
+				840E9CB220C2A777002F8602 /* TPStoreCell.m */,
+				840E9CB320C2A777002F8602 /* TPStoreCell.xib */,
 				8418BF6C20B3034F00D057EB /* TPGoodsCell.h */,
 				8418BF6D20B3034F00D057EB /* TPGoodsCell.m */,
 				8418BF6E20B3034F00D057EB /* TPGoodsCell.xib */,
+				8453D3DB20F381620002B955 /* TPShopHomepageCollectionReusableView.h */,
+				8453D3DC20F381620002B955 /* TPShopHomepageCollectionReusableView.m */,
+				8453D3DD20F381620002B955 /* TPShopHomepageCollectionReusableView.xib */,
+				840E9CB620C2AA61002F8602 /* TPGoodsDetailsCell.h */,
+				840E9CB720C2AA61002F8602 /* TPGoodsDetailsCell.m */,
+				840E9CB820C2AA61002F8602 /* TPGoodsDetailsCell.xib */,
+				84797F9820EA46A200FC1C02 /* TPGoodsDetailInfoCell.h */,
+				84797F9920EA46A200FC1C02 /* TPGoodsDetailInfoCell.m */,
+				84797F9A20EA46A200FC1C02 /* TPGoodsDetailInfoCell.xib */,
+				84797F8320DF308300FC1C02 /* TPGoodsDetailBottomView.h */,
+				84797F8420DF308300FC1C02 /* TPGoodsDetailBottomView.m */,
+				84797F8620DF309500FC1C02 /* TPGoodsDetailBottomView.xib */,
+				84797F8820DF35FC00FC1C02 /* TPGoodsDetailTopToolView.h */,
+				84797F8920DF35FC00FC1C02 /* TPGoodsDetailTopToolView.m */,
+				84797F8B20DF360D00FC1C02 /* TPGoodsDetailTopToolView.xib */,
+				84797F9320E8DFA300FC1C02 /* TPGoodsDetailTableHeaderView.h */,
+				84797F9420E8DFA300FC1C02 /* TPGoodsDetailTableHeaderView.m */,
+				84797F9620E8DFB700FC1C02 /* TPGoodsDetailTableHeaderView.xib */,
+				840E9CBB20C2AE7D002F8602 /* TPShoppingCartCell.h */,
+				840E9CBC20C2AE7D002F8602 /* TPShoppingCartCell.m */,
+				840E9CBD20C2AE7D002F8602 /* TPShoppingCartCell.xib */,
+				8453D3E420F4D8D30002B955 /* TPReceiveAddressView.h */,
+				8453D3E520F4D8D30002B955 /* TPReceiveAddressView.m */,
+				8453D3E720F4D8E10002B955 /* TPReceiveAddressView.xib */,
+				84797FA620EBA38600FC1C02 /* TPShoppingCartBottomView.h */,
+				84797FA720EBA38600FC1C02 /* TPShoppingCartBottomView.m */,
+				84797FA920EBA39B00FC1C02 /* TPShoppingCartBottomView.xib */,
+				84797FAB20EE67F500FC1C02 /* TPShoppingPayGoodsCell.h */,
+				84797FAC20EE67F500FC1C02 /* TPShoppingPayGoodsCell.m */,
+				84797FAD20EE67F500FC1C02 /* TPShoppingPayGoodsCell.xib */,
+				84797FB020F048B500FC1C02 /* TPPayWayCell.h */,
+				84797FB120F048B500FC1C02 /* TPPayWayCell.m */,
+				84797FB220F048B500FC1C02 /* TPPayWayCell.xib */,
+				84797FBA20F09BE000FC1C02 /* TPPayWayBottomView.h */,
+				84797FBB20F09BE000FC1C02 /* TPPayWayBottomView.m */,
+				84797FBD20F09C0100FC1C02 /* TPPayWayBottomView.xib */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";
@@ -384,6 +742,8 @@
 		8418BF7120B4501200D057EB /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				84D5E79E20CADC6600BBA8E5 /* ShoppingCart */,
+				8418BFA220BED73200D057EB /* GoodsDetails */,
 				8418BF9820B96CF300D057EB /* ShopList */,
 				8418BF8E20B7082700D057EB /* GoodsList */,
 				8418BF7D20B4574600D057EB /* Homepage */,
@@ -420,8 +780,22 @@
 			children = (
 				8418BF8820B45AF100D057EB /* TPShopMainViewModel.h */,
 				8418BF8920B45AF100D057EB /* TPShopMainViewModel.m */,
+				8499D4A920C4313E00927526 /* TPShopGoodsListViewModel.h */,
+				8499D4AA20C4313E00927526 /* TPShopGoodsListViewModel.m */,
+				84797F8D20E1164200FC1C02 /* TPShopListViewModel.h */,
+				84797F8E20E1164200FC1C02 /* TPShopListViewModel.m */,
 				8418BF8B20B5959C00D057EB /* TPGoodsViewModel.h */,
 				8418BF8C20B5959C00D057EB /* TPGoodsViewModel.m */,
+				8499D4A620C42EF900927526 /* TPShopGoodsViewModel.h */,
+				8499D4A720C42EF900927526 /* TPShopGoodsViewModel.m */,
+				84797F9020E8D3F700FC1C02 /* TPShopItemViewModel.h */,
+				84797F9120E8D3F700FC1C02 /* TPShopItemViewModel.m */,
+				8499D49E20C3F9F300927526 /* TPGoodsDetailsViewModel.h */,
+				8499D49F20C3F9F300927526 /* TPGoodsDetailsViewModel.m */,
+				84797FA020EB9B4C00FC1C02 /* TPShoppingCartViewModel.h */,
+				84797FA120EB9B4C00FC1C02 /* TPShoppingCartViewModel.m */,
+				84797FA320EB9FFB00FC1C02 /* TPCartGoodsViewModel.h */,
+				84797FA420EB9FFB00FC1C02 /* TPCartGoodsViewModel.m */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -429,8 +803,8 @@
 		8418BF8E20B7082700D057EB /* GoodsList */ = {
 			isa = PBXGroup;
 			children = (
-				8418BF8F20B7085A00D057EB /* TPGoodsList.h */,
-				8418BF9020B7085A00D057EB /* TPGoodsList.m */,
+				8499D4AC20C4321300927526 /* TPGoodsListModel.h */,
+				8499D4AD20C4321300927526 /* TPGoodsListModel.m */,
 				8418BF9220B7091800D057EB /* TPShopGoodsModel.h */,
 				8418BF9320B7091800D057EB /* TPShopGoodsModel.m */,
 				8418BF9520B709E700D057EB /* TPGoodsCategoryModel.h */,
@@ -442,12 +816,63 @@
 		8418BF9820B96CF300D057EB /* ShopList */ = {
 			isa = PBXGroup;
 			children = (
-				8418BF9920B96D0800D057EB /* TPShopList.h */,
-				8418BF9A20B96D0800D057EB /* TPShopList.m */,
+				8499D4AF20C4325D00927526 /* TPShopListModel.h */,
+				8499D4B020C4325D00927526 /* TPShopListModel.m */,
 				8418BF9C20B96D2C00D057EB /* TPShopModel.h */,
 				8418BF9D20B96D2C00D057EB /* TPShopModel.m */,
 			);
 			path = ShopList;
+			sourceTree = "<group>";
+		};
+		8418BFA220BED73200D057EB /* GoodsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8418BFA320BED75200D057EB /* TPGoodsInfoModel.h */,
+				8418BFA420BED75200D057EB /* TPGoodsInfoModel.m */,
+			);
+			path = GoodsDetails;
+			sourceTree = "<group>";
+		};
+		8418BFA620C039F400D057EB /* DLSlideView */ = {
+			isa = PBXGroup;
+			children = (
+				8418BFA720C039F400D057EB /* DLSlideView.h */,
+				8418BFA820C039F400D057EB /* DLSlideView.m */,
+			);
+			path = DLSlideView;
+			sourceTree = "<group>";
+		};
+		841DD6C720CB6BBA0018D27E /* PersonCenter */ = {
+			isa = PBXGroup;
+			children = (
+				841DD6C820CB6BD00018D27E /* PersonCenter.storyboard */,
+			);
+			path = PersonCenter;
+			sourceTree = "<group>";
+		};
+		841DD6CA20CB6CB90018D27E /* SafeCenter */ = {
+			isa = PBXGroup;
+			children = (
+				841DD6CB20CB6CCF0018D27E /* TPSafeCenterViewController.h */,
+				841DD6CC20CB6CD00018D27E /* TPSafeCenterViewController.m */,
+			);
+			path = SafeCenter;
+			sourceTree = "<group>";
+		};
+		841DD6E720D14CC50018D27E /* LocalizableString */ = {
+			isa = PBXGroup;
+			children = (
+				841DD6F020D14E860018D27E /* Localizable.strings */,
+			);
+			path = LocalizableString;
+			sourceTree = "<group>";
+		};
+		841DD70620D2A5DF0018D27E /* InfoPlistString */ = {
+			isa = PBXGroup;
+			children = (
+				841DD70B20D2A5FF0018D27E /* InfoPlist.strings */,
+			);
+			path = InfoPlistString;
 			sourceTree = "<group>";
 		};
 		84206B1B207F94A00099C8E6 /* Utils */ = {
@@ -468,6 +893,7 @@
 		84206B1C207F94A00099C8E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84797FB520F0630100FC1C02 /* Mine */,
 				846ECCF7209F067D006D6D23 /* Friend */,
 				84D6613C208C3B8C00DF0F73 /* Wallet */,
 				84206BA620818C430099C8E6 /* NewFeature */,
@@ -490,6 +916,7 @@
 				84206B27207F96480099C8E6 /* TPConstEnum.h */,
 				84206B28207F96810099C8E6 /* TPConstBlock.h */,
 				84206B712080DA4D0099C8E6 /* TPAppConfig.h */,
+				8499D49D20C3CEBE00927526 /* TPInline.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -497,6 +924,7 @@
 		84206B1E207F94A00099C8E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84D5E79020CAD96A00BBA8E5 /* PersonCenter */,
 				8418BF7120B4501200D057EB /* Shop */,
 				846ECCF3209F04F3006D6D23 /* Friend */,
 				84D661222088DEC500DF0F73 /* Wallet */,
@@ -509,6 +937,7 @@
 		84206B1F207F94A00099C8E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				840E9CC020C2AF8D002F8602 /* PersonCenter */,
 				846ECCE8209EF358006D6D23 /* Friend */,
 				849EFB1320839B7200C37AC9 /* Wallet */,
 				849EFB0E20831F7500C37AC9 /* Common */,
@@ -523,14 +952,15 @@
 		84206B20207F94A10099C8E6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8451DE10208C90330059E73A /* TabBar */,
-				849EFAFF20820F5500C37AC9 /* ScanCode */,
-				849EFAEC20820E7900C37AC9 /* Chat */,
-				849EFAED20820E7A00C37AC9 /* Friend */,
-				849EFAEF20820E7A00C37AC9 /* MainFrame */,
-				849EFAEE20820E7A00C37AC9 /* Wallet */,
 				84206B43207FA3980099C8E6 /* BaseClass */,
+				8451DE10208C90330059E73A /* TabBar */,
+				849EFAEF20820E7A00C37AC9 /* MainFrame */,
 				84206B2A207F96C60099C8E6 /* Homepage */,
+				849EFAED20820E7A00C37AC9 /* Friend */,
+				849EFAEC20820E7900C37AC9 /* Chat */,
+				849EFAEE20820E7A00C37AC9 /* Wallet */,
+				849EFAFF20820F5500C37AC9 /* ScanCode */,
+				840E9CC720C2B1D4002F8602 /* PersonCenter */,
 				84206B29207F96C60099C8E6 /* Login */,
 				84206B2B207F96C60099C8E6 /* Register */,
 			);
@@ -549,6 +979,7 @@
 		84206B2A207F96C60099C8E6 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				840E9C9720C2955F002F8602 /* Shopping */,
 				84206B57207FA5510099C8E6 /* HomepageViewController.h */,
 				84206B58207FA5510099C8E6 /* HomepageViewController.m */,
 			);
@@ -620,6 +1051,10 @@
 				84206B69207FA8510099C8E6 /* TPCollectionViewModel.h */,
 				84206B6A207FA8510099C8E6 /* TPCollectionViewModel.m */,
 				84206B70207FA8BC0099C8E6 /* TPNavigationProtocol.h */,
+				840E9CD820C39AD2002F8602 /* TPPublicViewModel.h */,
+				840E9CD920C39AD2002F8602 /* TPPublicViewModel.m */,
+				840E9CDB20C39B87002F8602 /* TPWebPublicViewModel.h */,
+				840E9CDC20C39B87002F8602 /* TPWebPublicViewModel.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -731,6 +1166,7 @@
 		84206B43207FA3980099C8E6 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				840E9C9B20C2968E002F8602 /* CollectionViewController */,
 				84D6612F208C1A1D00DF0F73 /* TableViewController */,
 				84206B44207FA3B40099C8E6 /* YBaseViewController.h */,
 				84206B45207FA3B40099C8E6 /* YBaseViewController.m */,
@@ -836,6 +1272,7 @@
 		8451DE142096AF4E0059E73A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8418BFA620C039F400D057EB /* DLSlideView */,
 				846ECCDF209E9215006D6D23 /* RSA */,
 				8451DE152096B1160059E73A /* UPPaymentControl */,
 			);
@@ -869,9 +1306,30 @@
 			path = libs;
 			sourceTree = "<group>";
 		};
+		8453D3D520F225650002B955 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				8453D3D620F225C10002B955 /* YSliderView.h */,
+				8453D3D720F225C10002B955 /* YSliderView.m */,
+				8453D3D920F226430002B955 /* YSliderView.xib */,
+			);
+			path = SliderView;
+			sourceTree = "<group>";
+		};
+		8453D3E020F4238A0002B955 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				8453D3E120F423CB0002B955 /* TPOrderInfoModel.h */,
+				8453D3E220F423CB0002B955 /* TPOrderInfoModel.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		846ECCCF209D4CBC006D6D23 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				841DD70620D2A5DF0018D27E /* InfoPlistString */,
+				841DD6E720D14CC50018D27E /* LocalizableString */,
 				846ECCE3209E92A8006D6D23 /* Keys */,
 				846ECCD0209D4CBC006D6D23 /* Images */,
 			);
@@ -889,8 +1347,8 @@
 		846ECCDF209E9215006D6D23 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
-				846ECCE0209E9215006D6D23 /* RSA.m */,
 				846ECCE1209E9215006D6D23 /* RSA.h */,
+				846ECCE0209E9215006D6D23 /* RSA.m */,
 			);
 			path = RSA;
 			sourceTree = "<group>";
@@ -930,6 +1388,23 @@
 				846ECCF9209F06C4006D6D23 /* TPFriendViewModel.m */,
 			);
 			path = Friend;
+			sourceTree = "<group>";
+		};
+		84797FB520F0630100FC1C02 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				84797FB620F0634900FC1C02 /* Address */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		84797FB620F0634900FC1C02 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				84797FB720F0638C00FC1C02 /* TPAddressListViewModel.h */,
+				84797FB820F0638C00FC1C02 /* TPAddressListViewModel.m */,
+			);
+			path = Address;
 			sourceTree = "<group>";
 		};
 		849EFAEC20820E7900C37AC9 /* Chat */ = {
@@ -995,6 +1470,8 @@
 			children = (
 				849EFB0B208242A100C37AC9 /* NSString+YValid.h */,
 				849EFB0C208242A100C37AC9 /* NSString+YValid.m */,
+				84D5E7A920CB595500BBA8E5 /* NSString+YConvert.h */,
+				84D5E7AA20CB595500BBA8E5 /* NSString+YConvert.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -1002,6 +1479,7 @@
 		849EFB0E20831F7500C37AC9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8453D3D520F225650002B955 /* SliderView */,
 				849EFB0F20831FA500C37AC9 /* NavigationBar */,
 			);
 			path = Common;
@@ -1066,6 +1544,7 @@
 		84CD0B82207CEF140069AD9A /* TAOPAY */ = {
 			isa = PBXGroup;
 			children = (
+				840E9C9320C293BF002F8602 /* Storyboards */,
 				8451DE142096AF4E0059E73A /* Vendor */,
 				84206B1E207F94A00099C8E6 /* Model */,
 				84206B1F207F94A00099C8E6 /* View */,
@@ -1079,8 +1558,8 @@
 				84CD0B89207CEF140069AD9A /* Main.storyboard */,
 				84CD0B8C207CEF160069AD9A /* Assets.xcassets */,
 				84CD0B8E207CEF160069AD9A /* LaunchScreen.storyboard */,
-				84CD0B91207CEF160069AD9A /* Info.plist */,
 				84CD0B92207CEF160069AD9A /* main.m */,
+				841DD6FB20D29B850018D27E /* Info.plist */,
 			);
 			path = TAOPAY;
 			sourceTree = "<group>";
@@ -1101,6 +1580,59 @@
 				84CD0BA9207CEF160069AD9A /* Info.plist */,
 			);
 			path = TAOPAYUITests;
+			sourceTree = "<group>";
+		};
+		84D5E79020CAD96A00BBA8E5 /* PersonCenter */ = {
+			isa = PBXGroup;
+			children = (
+				8453D3E020F4238A0002B955 /* Order */,
+				84D5E79120CAD9A200BBA8E5 /* Address */,
+			);
+			path = PersonCenter;
+			sourceTree = "<group>";
+		};
+		84D5E79120CAD9A200BBA8E5 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				84D5E79220CAD9DF00BBA8E5 /* TPAddressModel.h */,
+				84D5E79320CAD9DF00BBA8E5 /* TPAddressModel.m */,
+				84D5E79520CADB1400BBA8E5 /* TPAddressListModel.h */,
+				84D5E79620CADB1400BBA8E5 /* TPAddressListModel.m */,
+				84D5E79820CADB7500BBA8E5 /* TPAreaModel.h */,
+				84D5E79920CADB7500BBA8E5 /* TPAreaModel.m */,
+				84D5E79B20CADBD300BBA8E5 /* TPAreaListModel.h */,
+				84D5E79C20CADBD300BBA8E5 /* TPAreaListModel.m */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		84D5E79E20CADC6600BBA8E5 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				84D5E79F20CADC8300BBA8E5 /* TPShoppingCartModel.h */,
+				84D5E7A020CADC8300BBA8E5 /* TPShoppingCartModel.m */,
+				84D5E7A220CADCCC00BBA8E5 /* TPShoppingCartGoodsModel.h */,
+				84D5E7A320CADCCC00BBA8E5 /* TPShoppingCartGoodsModel.m */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		84D5E7A520CB57A400BBA8E5 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				84D5E7A620CB57D300BBA8E5 /* TPOrderListViewController.h */,
+				84D5E7A720CB57D300BBA8E5 /* TPOrderListViewController.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		84D5E7AC20CB5CDC00BBA8E5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				84D5E7AD20CB5CF100BBA8E5 /* TPSettingViewController.h */,
+				84D5E7AE20CB5CF100BBA8E5 /* TPSettingViewController.m */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		84D661222088DEC500DF0F73 /* Wallet */ = {
@@ -1264,6 +1796,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 84CD0B77207CEF140069AD9A;
 			productRefGroup = 84CD0B81207CEF140069AD9A /* Products */;
@@ -1283,21 +1816,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				8418BF7020B3034F00D057EB /* TPGoodsCell.xib in Resources */,
+				841DD70920D2A5FF0018D27E /* InfoPlist.strings in Resources */,
+				840E9CC620C2B01E002F8602 /* TPShippingAddressCell.xib in Resources */,
 				8418BF6620B2F7E300D057EB /* TPShoppingTableHeaderView.xib in Resources */,
 				84CD0B90207CEF160069AD9A /* LaunchScreen.storyboard in Resources */,
 				846ECCD7209DA7AD006D6D23 /* TPWalletTableFooterView.xib in Resources */,
+				841DD6C920CB6BD00018D27E /* PersonCenter.storyboard in Resources */,
 				846ECCD2209D4CDF006D6D23 /* bg_detour_ball@2x.gif in Resources */,
+				84797FAF20EE67F500FC1C02 /* TPShoppingPayGoodsCell.xib in Resources */,
+				841DD6DC20CBBDD00018D27E /* TPAddNewAddressView.xib in Resources */,
 				849EFB1820839C0700C37AC9 /* TPWalletTableHeaderView.xib in Resources */,
 				846ECCE7209E92A8006D6D23 /* public_product.key in Resources */,
+				8453D3DF20F381620002B955 /* TPShopHomepageCollectionReusableView.xib in Resources */,
+				840E9CBA20C2AA61002F8602 /* TPGoodsDetailsCell.xib in Resources */,
 				84D6613B208C283400DF0F73 /* TPLoginNavigationView.xib in Resources */,
+				84797FAA20EBA39B00FC1C02 /* TPShoppingCartBottomView.xib in Resources */,
+				84797F8C20DF360D00FC1C02 /* TPGoodsDetailTopToolView.xib in Resources */,
+				840E9CBF20C2AE7D002F8602 /* TPShoppingCartCell.xib in Resources */,
+				841DD6D720CB9BED0018D27E /* TPShippingAddressTableFooterView.xib in Resources */,
+				840E9C9620C2940C002F8602 /* Shopping.storyboard in Resources */,
 				84D661212086391500DF0F73 /* TPWalletTextNumberCell.xib in Resources */,
 				84CD0B8D207CEF160069AD9A /* Assets.xcassets in Resources */,
+				84797FBE20F09C0200FC1C02 /* TPPayWayBottomView.xib in Resources */,
+				8453D3E820F4D8E10002B955 /* TPReceiveAddressView.xib in Resources */,
 				8418BF6B20B2FE9400D057EB /* TPShopCell.xib in Resources */,
+				841DD6E620CBE3D60018D27E /* TPAreaListTableHeaderView.xib in Resources */,
+				841DD6E120CBE33D0018D27E /* TPAreaListView.xib in Resources */,
+				84797F9720E8DFB700FC1C02 /* TPGoodsDetailTableHeaderView.xib in Resources */,
 				846ECCE6209E92A8006D6D23 /* public_test.key in Resources */,
+				84797F9C20EA46A200FC1C02 /* TPGoodsDetailInfoCell.xib in Resources */,
+				840E9CB520C2A777002F8602 /* TPStoreCell.xib in Resources */,
 				846ECCF2209F03B3006D6D23 /* TPFriendCell.xib in Resources */,
+				841DD6EE20D14E860018D27E /* Localizable.strings in Resources */,
+				8453D3DA20F226430002B955 /* YSliderView.xib in Resources */,
 				84D6611C208636FC00DF0F73 /* TPWalletCommonCell.xib in Resources */,
+				84797FB420F048B500FC1C02 /* TPPayWayCell.xib in Resources */,
 				84D661172084D70F00DF0F73 /* TPWalletCell.xib in Resources */,
+				84797F8720DF309500FC1C02 /* TPGoodsDetailBottomView.xib in Resources */,
 				84CD0B8B207CEF140069AD9A /* Main.storyboard in Resources */,
+				840E9CD320C2B3B0002F8602 /* TPEditShippingAddressViewController.xib in Resources */,
+				841DD6FC20D29B870018D27E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1365,87 +1923,140 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8499D4A020C3F9F400927526 /* TPGoodsDetailsViewModel.m in Sources */,
 				84206B882080ECA60099C8E6 /* YReflection.m in Sources */,
 				846ECCF1209F03B3006D6D23 /* TPFriendCell.m in Sources */,
+				840E9CAA20C29AE7002F8602 /* TPShoppingCartViewController.m in Sources */,
+				84797F8F20E1164300FC1C02 /* TPShopListViewModel.m in Sources */,
+				84D5E79420CAD9DF00BBA8E5 /* TPAddressModel.m in Sources */,
 				8418BF7920B4512C00D057EB /* YLocationManager.m in Sources */,
 				84D661162084D70F00DF0F73 /* TPWalletCell.m in Sources */,
-				8418BF9120B7085A00D057EB /* TPGoodsList.m in Sources */,
+				841DD6D520CB9BCC0018D27E /* TPShippingAddressTableFooterView.m in Sources */,
+				8453D3E320F423CC0002B955 /* TPOrderInfoModel.m in Sources */,
+				840E9C9E20C296DA002F8602 /* TPCollectionViewController.m in Sources */,
 				84206B852080E4980099C8E6 /* YObject.m in Sources */,
 				84206B7F2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m in Sources */,
 				8418BF8020B4576D00D057EB /* TPShopHomepageModel.m in Sources */,
 				84206B912080F3080099C8E6 /* YHTTPRequest.m in Sources */,
 				846ECCFD209F18D4006D6D23 /* TPHomepageViewModel.m in Sources */,
 				84206B6B207FA8510099C8E6 /* TPCollectionViewModel.m in Sources */,
-				8418BF9B20B96D0800D057EB /* TPShopList.m in Sources */,
+				840E9CDA20C39AD2002F8602 /* TPPublicViewModel.m in Sources */,
+				84797FB920F0638C00FC1C02 /* TPAddressListViewModel.m in Sources */,
+				840E9CA420C297B1002F8602 /* TPShopListViewController.m in Sources */,
 				846ECCE2209E9215006D6D23 /* RSA.m in Sources */,
+				841DD6E420CBE3C00018D27E /* TPAreaListTableHeaderView.m in Sources */,
+				84D5E7A820CB57D300BBA8E5 /* TPOrderListViewController.m in Sources */,
 				8418BF6A20B2FE9400D057EB /* TPShopCell.m in Sources */,
 				84206B61207FA5640099C8E6 /* RegisterViewController.m in Sources */,
+				8453D3D820F225C10002B955 /* YSliderView.m in Sources */,
 				84206B68207FA82A0099C8E6 /* TPTableViewModel.m in Sources */,
+				84797FBC20F09BE000FC1C02 /* TPPayWayBottomView.m in Sources */,
 				84D6613F208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m in Sources */,
 				84206B5A207FA5510099C8E6 /* HomepageViewController.m in Sources */,
 				849EFB0D208242A100C37AC9 /* NSString+YValid.m in Sources */,
 				84206BAD2081960E0099C8E6 /* UIView+YExtension.m in Sources */,
 				849EFAF220820EA400C37AC9 /* MainFrameViewController.m in Sources */,
 				849EFAFB20820F1200C37AC9 /* TPFriendViewController.m in Sources */,
+				84D5E7AF20CB5CF100BBA8E5 /* TPSettingViewController.m in Sources */,
 				84206B9B2080FA200099C8E6 /* YHTTPResponse.m in Sources */,
 				846ECCDA209E8EDC006D6D23 /* TPUPPayManager.m in Sources */,
 				84206BA5208189C40099C8E6 /* SAMKeychain+YUtil.m in Sources */,
 				84D661282088E1BB00DF0F73 /* TPWalletCommonModel.m in Sources */,
 				84CD0B93207CEF160069AD9A /* main.m in Sources */,
+				84D5E79D20CADBD300BBA8E5 /* TPAreaListModel.m in Sources */,
 				84206B49207FA3FB0099C8E6 /* YBaseNavigationController.m in Sources */,
 				84D6611B208636FC00DF0F73 /* TPWalletCommonCell.m in Sources */,
+				84797F9520E8DFA300FC1C02 /* TPGoodsDetailTableHeaderView.m in Sources */,
 				84206B942080F37C0099C8E6 /* YURLParameters.m in Sources */,
 				849EFAF820820EFF00C37AC9 /* TPWalletViewController.m in Sources */,
+				840E9CB420C2A777002F8602 /* TPStoreCell.m in Sources */,
 				84CD0B85207CEF140069AD9A /* AppDelegate.m in Sources */,
 				84206BA2208109630099C8E6 /* TPLoginViewModel.m in Sources */,
 				84D661252088DF3000DF0F73 /* TPWalletModel.m in Sources */,
 				849EFB1220831FC500C37AC9 /* YNavigationBar.m in Sources */,
+				8499D4AE20C4321300927526 /* TPGoodsListModel.m in Sources */,
+				840E9CCE20C2B33D002F8602 /* TPShippingAddressListViewController.m in Sources */,
 				8451DE13208C90630059E73A /* TPTabBarViewController.m in Sources */,
+				8453D3DE20F381620002B955 /* TPShopHomepageCollectionReusableView.m in Sources */,
 				84D66132208C1A5A00DF0F73 /* TPTableViewController.m in Sources */,
 				84B12A2F20A32E7D00ECC925 /* TPBalanceDetailModel.m in Sources */,
+				84797FA220EB9B4C00FC1C02 /* TPShoppingCartViewModel.m in Sources */,
 				84D66139208C281700DF0F73 /* TPLoginNavigationView.m in Sources */,
+				840E9CA120C29788002F8602 /* TPGoodsListViewController.m in Sources */,
 				84206B8E2080F1F20099C8E6 /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				84206B822080E3AD0099C8E6 /* RACSignal+HTTPServiceAdditions.m in Sources */,
 				84206B5E207FA55B0099C8E6 /* LoginViewController.m in Sources */,
+				84D5E7A420CADCCC00BBA8E5 /* TPShoppingCartGoodsModel.m in Sources */,
+				840E9CB920C2AA61002F8602 /* TPGoodsDetailsCell.m in Sources */,
 				84206B3F207FA3100099C8E6 /* YBaseTableViewCell.m in Sources */,
+				84797FAE20EE67F500FC1C02 /* TPShoppingPayGoodsCell.m in Sources */,
 				84206BB320819C480099C8E6 /* TPRegisterViewModel.m in Sources */,
 				849EFAFE20820F2400C37AC9 /* TPChatViewController.m in Sources */,
+				84797F8A20DF35FC00FC1C02 /* TPGoodsDetailTopToolView.m in Sources */,
+				8453D3E620F4D8D30002B955 /* TPReceiveAddressView.m in Sources */,
 				849EFB0220820FA500C37AC9 /* YScanCodeViewController.m in Sources */,
 				84206B8B2080EDB60099C8E6 /* YEXTRuntimeExtensions.m in Sources */,
+				84D5E79720CADB1400BBA8E5 /* TPAddressListModel.m in Sources */,
+				8418BFA920C039F500D057EB /* DLSlideView.m in Sources */,
+				84797F8520DF308300FC1C02 /* TPGoodsDetailBottomView.m in Sources */,
+				84797FB320F048B500FC1C02 /* TPPayWayCell.m in Sources */,
 				846ECCD5209DA78E006D6D23 /* TPWalletTableFooterView.m in Sources */,
 				849EFB1620839BE900C37AC9 /* TPWalletTableHeaderView.m in Sources */,
 				84D661202086391500DF0F73 /* TPWalletTextNumberCell.m in Sources */,
+				8418BFA520BED75200D057EB /* TPGoodsInfoModel.m in Sources */,
 				84206B742080DCB80099C8E6 /* YNavigationControllerStack.m in Sources */,
 				84D6612E208C181300DF0F73 /* TPBaseViewController.m in Sources */,
+				840E9CD220C2B3B0002F8602 /* TPEditShippingAddressViewController.m in Sources */,
 				84206B782080E09F0099C8E6 /* YHTTPService.m in Sources */,
 				8418BF8320B457AD00D057EB /* TPBannerModel.m in Sources */,
+				840E9CC520C2B01E002F8602 /* TPShippingAddressCell.m in Sources */,
 				84D66146208C415100DF0F73 /* UITableView+YExtension.m in Sources */,
 				84206B972080F3DD0099C8E6 /* YKeyedSubscript.m in Sources */,
+				84D5E7AB20CB595500BBA8E5 /* NSString+YConvert.m in Sources */,
 				84D1285720AB0D0B005178B4 /* TPRechargeModel.m in Sources */,
 				8418BF9E20B96D2C00D057EB /* TPShopModel.m in Sources */,
+				840E9CBE20C2AE7D002F8602 /* TPShoppingCartCell.m in Sources */,
+				84797FA520EB9FFB00FC1C02 /* TPCartGoodsViewModel.m in Sources */,
 				84D6612B2088E2AA00DF0F73 /* TPWalletKeyValueModel.m in Sources */,
 				8451DE2F2096CACB0059E73A /* TPCardOperateViewModel.m in Sources */,
 				84206B65207FA8050099C8E6 /* TPViewModel.m in Sources */,
+				84797FA820EBA38600FC1C02 /* TPShoppingCartBottomView.m in Sources */,
 				84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */,
 				8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.mm in Sources */,
 				84206B24207F95E10099C8E6 /* TPConstant.m in Sources */,
+				841DD6CD20CB6CD00018D27E /* TPSafeCenterViewController.m in Sources */,
 				849EFB092082412B00C37AC9 /* FBKVOController+YExtension.m in Sources */,
+				8499D4AB20C4313E00927526 /* TPShopGoodsListViewModel.m in Sources */,
 				8418BF6420B2F7D000D057EB /* TPShoppingTableHeaderView.m in Sources */,
+				840E9CA720C2987A002F8602 /* TPGoodsDetailsViewController.m in Sources */,
 				8418BF9720B709E800D057EB /* TPGoodsCategoryModel.m in Sources */,
 				8418BF8A20B45AF100D057EB /* TPShopMainViewModel.m in Sources */,
+				84797F9B20EA46A200FC1C02 /* TPGoodsDetailInfoCell.m in Sources */,
+				84D5E79A20CADB7500BBA8E5 /* TPAreaModel.m in Sources */,
+				84797F9F20EB9A7100FC1C02 /* TPShoppingPayViewController.m in Sources */,
 				8418BF8620B4588000D057EB /* TPGoodsModel.m in Sources */,
 				8418BF8D20B5959C00D057EB /* TPGoodsViewModel.m in Sources */,
 				84D66136208C1B2800DF0F73 /* UIScrollView+YRefresh.m in Sources */,
+				840E9CDD20C39B87002F8602 /* TPWebPublicViewModel.m in Sources */,
 				849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */,
+				841DD6DF20CBE3270018D27E /* TPAreaListView.m in Sources */,
 				8418BFA120BADEDC00D057EB /* UINavigationController+TPExtend.m in Sources */,
+				8499D4A820C42EF900927526 /* TPShopGoodsViewModel.m in Sources */,
 				8418BF6F20B3034F00D057EB /* TPGoodsCell.m in Sources */,
 				846ECCF6209F051C006D6D23 /* TPFriendModel.m in Sources */,
+				84797F9220E8D3F700FC1C02 /* TPShopItemViewModel.m in Sources */,
 				84206BA920818C6A0099C8E6 /* YNewFeatureViewModel.m in Sources */,
 				846ECCFA209F06C4006D6D23 /* TPFriendViewModel.m in Sources */,
+				840E9CAD20C29B1F002F8602 /* TPPayViewController.m in Sources */,
 				84206B9F2080FC6D0099C8E6 /* TPUser.m in Sources */,
+				840E9CCA20C2B2AE002F8602 /* TPPersonCenterViewController.m in Sources */,
 				84206B46207FA3B40099C8E6 /* YBaseViewController.m in Sources */,
+				841DD6DA20CBBDBB0018D27E /* TPAddNewAddressView.m in Sources */,
+				84D5E7A120CADC8300BBA8E5 /* TPShoppingCartModel.m in Sources */,
+				8499D4B120C4325D00927526 /* TPShopListModel.m in Sources */,
 				849EFB0520821AA500C37AC9 /* YUtil.m in Sources */,
 				8418BF7C20B4522800D057EB /* YLocationModel.m in Sources */,
+				840E9CB020C29BFD002F8602 /* TPShoppingHomepageViewController.m in Sources */,
 				84B12A3220A32F0100ECC925 /* TPBalanceDetailItemModel.m in Sources */,
 				8418BF9420B7091800D057EB /* TPShopGoodsModel.m in Sources */,
 			);
@@ -1483,10 +2094,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		841DD6F020D14E860018D27E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841DD6EF20D14E860018D27E /* zh-Hans */,
+				841DD6F120D14E8A0018D27E /* ko */,
+				841DD70420D2A2B00018D27E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		841DD70B20D2A5FF0018D27E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841DD70A20D2A5FF0018D27E /* zh-Hans */,
+				841DD70C20D2A6010018D27E /* en */,
+				841DD70D20D2A6040018D27E /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		84CD0B89207CEF140069AD9A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				84CD0B8A207CEF140069AD9A /* Base */,
+				841DD6EA20D14E5E0018D27E /* zh-Hans */,
+				841DD6EC20D14E6A0018D27E /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1495,6 +2128,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				84CD0B8F207CEF160069AD9A /* Base */,
+				841DD6EB20D14E5F0018D27E /* zh-Hans */,
+				841DD6ED20D14E6A0018D27E /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1506,6 +2141,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1564,6 +2200,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1619,7 +2256,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7K57RY5M6B;
+				DEVELOPMENT_TEAM = UQ5K6APW36;
 				INFOPLIST_FILE = TAOPAY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1630,8 +2267,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TAOPAY/Vendor/UPPaymentControl/libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TAOPAY;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easypay.taopay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1644,7 +2282,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7K57RY5M6B;
+				DEVELOPMENT_TEAM = UQ5K6APW36;
 				INFOPLIST_FILE = TAOPAY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1655,7 +2293,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TAOPAY/Vendor/UPPaymentControl/libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.TAOPAY;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easypay.taopay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

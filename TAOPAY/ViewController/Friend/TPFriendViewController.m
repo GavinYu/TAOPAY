@@ -15,7 +15,7 @@
 @interface TPFriendViewController ()
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
-@property (nonatomic, strong) TPFriendViewModel *viewModel;
+@property (nonatomic, strong) TPFriendViewModel *friendViewModel;
 
 @end
 
@@ -28,8 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view bringSubviewToFront:self.navigationView];
-    self.navigationView.title = @"好友";
+    self.navigationType = TPNavigationTypeWhite;
+    self.navigationItem.title = @"好友";
+    self.isShowBackButton = NO;
     
     [self setupSubViews];
     // bind viewModel

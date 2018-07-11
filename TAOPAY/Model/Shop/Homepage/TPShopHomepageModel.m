@@ -10,4 +10,11 @@
 
 @implementation TPShopHomepageModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    // value should be Class or Class name.
+    return @{@"banner":@"TPBannerModel",
+             @"event" :@"TPBannerModel",
+             @"lsit"  :@"TPGoodsModel"};
+}
+
 @end

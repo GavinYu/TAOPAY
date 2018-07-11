@@ -19,6 +19,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *bgCardImageView;
 @property (weak, nonatomic) IBOutlet UILabel *checkCodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accountMoneyLabel;
+@property (weak, nonatomic) IBOutlet UIButton *detailButton;
+@property (weak, nonatomic) IBOutlet UIButton *vipButton;
+@property (weak, nonatomic) IBOutlet UIButton *unionpayButton;
+@property (weak, nonatomic) IBOutlet UIButton *addCardButton;
 
 @end
 
@@ -43,6 +48,13 @@
 //MARK: -- Setup subView
 - (void)setupSubViews {
     self.balanceLabel.text = self.viewModel.balance;
+    self.accountMoneyLabel.text = TPLocalizedString(@"wallet_account_balance");
+    [self.detailButton setTitle:TPLocalizedString(@"wallet_detail") forState:UIControlStateNormal];
+    self.tipsLabel.text = TPLocalizedString(@"wallet_write_tips");
+    [self.writeButton setTitle:TPLocalizedString(@"wallet_write_username") forState:UIControlStateNormal];
+    [self.vipButton setTitle:TPLocalizedString(@"wallet_club_card") forState:UIControlStateNormal];
+    [self.unionpayButton setTitle:TPLocalizedString(@"wallet_union_card") forState:UIControlStateNormal];
+    [self.addCardButton setTitle:TPLocalizedString(@"wallet_add_bank_card") forState:UIControlStateNormal];
 }
 //MARK: --  余额明细按钮事件
 - (IBAction)clickdetailButton:(UIButton *)sender {
@@ -81,8 +93,10 @@
         TPUser *tmpUser = change[NSKeyValueChangeNewKey];
         dispatch_async(dispatch_get_main_queue(), ^{
             self.balanceLabel.text = tmpUser.balance;
-            self.tipsLabel.text = [NSString stringWithFormat:@"户名：%@", tmpUser.nick];
-            [self.writeButton setTitle:@"修改户名" forState:UIControlStateNormal];
+            if (YStringIsNotEmpty(tmpUser.nick)) {
+                self.tipsLabel.text = [NSString stringWithFormat:@"户名：%@", tmpUser.nick];
+                [self.writeButton setTitle:@"修改户名" forState:UIControlStateNormal];
+            }
             self.cardNumberLabel.text = tmpUser.cardNum;
             self.dateLabel.text = tmpUser.created_at;
         });

@@ -1,0 +1,101 @@
+/* 
+  Localizable.strings
+  TAOPAY
+
+  Created by admin on 2018/6/13.
+  Copyright © 2018年 TAOPAY. All rights reserved.
+*/
+
+//chinese
+"app_name" = "TAOPAY";
+
+//注册、登录、个人中心
+"person_center_register" = "회원가입";
+"person_center_login" = "로그인";
+"person_center_phone" = "핸드폰 번호";
+"person_center_phone_format_wrong" = "핸드폰 번호를 입력혹은격식이 틀렸습니다.";
+"person_center_input_phone" = "핸드폰 번호를 입렵하세요";
+"person_center_password" = "비밀번호";
+"person_center_password_empty" = "비밀번호";
+"person_center_input_password" = "비밀번호를 입력하세요";
+"person_center_find_password" = "비밀번호 찾기";
+"person_center_login_tips" = "'로그인'클릭시, 당신은 동의한것과 같습니다";
+"person_center_user_protocol_login" = "소프트웨어 서비스 협의";
+"person_center_free_apply" = "————————————무료 회원가입————————————";
+"person_center_free_register_message" = "무료 회원가입";
+"person_center_code" = "인증번호";
+"person_center_input_code" = "인증번호를 입력하세요";
+"person_center_get_code" = "인증번호";
+"person_center_code_empty" = "인증번호를 입력하세요";
+"person_center_enter" = "로그인";
+"person_center_enter_tips" = "'로그인'클릭시, 당신은 동의한것과 같습니다";
+"person_center_other_login" = "————————————기타 로그인 방식————————————";
+"person_center_password_login" = "비밀번호로 로그인";
+"person_center_resend" = "재발송";
+"person_center_resend_after" = "후 재발송";
+"person_center_modify_nickname" = "닉네임 수정";
+"person_center_input_nickname" = "닉네임을 입력하세요";
+"person_center_nickname_input_error" = "입력하신 닉네임은 격식에 맞지 않습니다";
+"person_center_nickname_limit" = "2-40개문자, 한글영문,숫자,'_'로 구성 가능";
+"person_center_modify_succeed" = "수정성공";
+
+//导航栏
+"navigation_title" = "동방";
+"tabbar_homepage" = "메인";
+"tabbar_homepage" = "친구";
+"tabbar_homepage" = "채팅";
+"tabbar_homepage" = "지갑";
+
+//首页
+"homepage_integral" = "포인트";
+"homepage_apply" = "신청";
+"homepage_shopping" = "정품구매";
+"homepage_near_shop" = "주변상점";
+"homepage_addressbook" = "주소록";
+"homepage_free_tax" = "국경 간 면세"; 
+"homepage_scan_tips" = "QR/바코드를 상자안에 넣으세요";
+
+//钱包
+"wallet_recharge" = "충전";
+"wallet_withdraw" = "출금";
+"wallet_transfer" = "계좌이체";
+"wallet_account_balance" = "계정잔액(원)";
+"wallet_write_tips" = "당신은 이미 회원적립 카드를 개통했으니, 사용할수 있도록 닉네임을 기입해 주십시오.";
+"wallet_write_username" = "닉네임 입력";
+"wallet_club_card" = "회원카드";
+"wallet_union_card" = "UnionPay 카드";
+"wallet_add_bank_card" = "은행카드 추가";
+"wallet_recharge_tips" = "이 카드는 하루에 최대 5000원 충전 가능합니다";
+"wallet_money" = "금액";
+"wallet_input_money" = "충전하실 금액을 입력하세요";
+"wallet_carnumber" = "카드번호:";
+"wallet_xinhan_bank" = "신한은행";
+"wallet_end_number" = "뒷자리숫자 8972";
+"wallet_enable_limit" = "사용가능한도 500원";
+"wallet_input_withdraw_money" = "출금하실 금액을 입력하세요";
+"wallet_input_recharge_money" = "충전하실 금액을 입력하세요";
+"wallet_input_transfer_cardnumber" = "계좌이체하실 회원카드번호를 입력하세요";
+"wallet_input_transfer_money" = "계좌이체하실 금액을 입력하세요";
+"wallet_transfer_succeed" = "계좌이체 성공";
+"wallet_taoyifu_club_card" = "TAOPAY 회원카드번호";
+"wallet_integral_transfer_tips" = "포인트가 상대의 계좌로 바로 적립됩니다, 반환할수 없습니다.";
+"wallet_other_carnumber" = "상대방 카드번호";
+"wallet_input_other_cardnumber" = "상대방 회원카드번호를 입렵하세요";
+"wallet_next_step" = "다음";
+"wallet_transfer_money" = "이체하실 금액";
+"wallet_create_order_failed" = "주문실패";
+"wallet_tips" = "힌트";
+"wallet_install_pay_control_tips" = "구매 완료하려면 UnionPay 소프트웨어 제어를 설치하셔야 됩니다, 설치 하시겠습니까?";
+"wallet_sure" = "확인";
+"wallet_cancel" = "취소";
+"wallet_pay_result" = "지불 결과 통지";
+"wallet_pay_successed" = "지불 성공";
+"wallet_pay_failed" = "지불 실패";
+"wallet_cancel_pay" = "사용자가 지불을 취소";
+"wallet_back" = "이전";
+"wallet_save" = "저장";
+"wallet_detail" = "상세";
+"wallet_operate_type" = "작업형식:";
+"wallet_operate_time" = "작업시간:";
+"wallet_detail_money" = "금액:";
+"wallet_detail_describe" = "묘사:";

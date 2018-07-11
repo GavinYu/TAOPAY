@@ -6,8 +6,8 @@
 //  Copyright © 2018年 TAOPAY. All rights reserved.
 //
 
-#import "YBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface MainFrameViewController : YBaseViewController
+@interface MainFrameViewController : UIViewController
 
 @end

@@ -11,7 +11,7 @@
 @interface TPGoodsCategoryModel : YObject
 
 //分类ID
-@property (copy, nonatomic) NSString *id;
+@property (copy, nonatomic) NSString *categoryID;
 //分类名
 @property (copy, nonatomic) NSString *name;
 

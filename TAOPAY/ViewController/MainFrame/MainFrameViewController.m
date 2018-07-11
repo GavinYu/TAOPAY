@@ -8,6 +8,11 @@
 
 #import "MainFrameViewController.h"
 
+//#import "RootViewController.h"
+#import "TPTabBarViewController.h"
+#import "TPAppConfig.h"
+#import "YBaseNavigationController.h"
+
 @interface MainFrameViewController ()
 
 @end
@@ -17,6 +22,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configNavigationRootController];
+}
+
+- (void)configNavigationRootController {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *rootViewController;
+    NSString *controllerIdentifier;
+    NSString *token = [YUtil getUserDefaultInfo:YHTTPRequestTokenKey];
+    if (!YObjectIsNil(token) && !YStringIsEmpty(token)){
+        controllerIdentifier = NSStringFromClass([TPTabBarViewController class]);
+    } else {
+        controllerIdentifier = NSStringFromClass([YBaseNavigationController class]);
+    }
+    
+    rootViewController = [storyboard instantiateViewControllerWithIdentifier:controllerIdentifier];
+    
+    [self addChildViewController:rootViewController];
+    [self.view addSubview:rootViewController.view];
+//    self.navigationController.viewControllers = @[rootViewController];
+    
 }
 
 - (void)didReceiveMemoryWarning {

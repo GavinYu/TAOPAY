@@ -17,6 +17,9 @@
 #import "TPConstant.h"
 #import "UITableView+YExtension.h"
 #import "YLocationManager.h"
+#import "TPInline.h"
+#import "TPConstEnum.h"
+#import "NSString+YConvert.h"
 
 //第三方库头文件
 #import <ReactiveCocoa/ReactiveCocoa.h>
@@ -28,6 +31,7 @@
 #import <SDWebImage/UIImage+GIF.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <SDCycleScrollView/SDCycleScrollView.h>
+#import <RDVTabBarController/RDVTabBarController.h>
 
 
 #endif /* TPAppConfig_h */

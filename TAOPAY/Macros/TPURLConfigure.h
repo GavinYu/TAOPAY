@@ -24,6 +24,25 @@
 //商城相关的接口
 #define ShopMainRequst @"api/shop/main"
 #define ShopGoodsRequst @"api/shop/goods"
+#define ShopGoodsInfoRequst @"api/shop/goodsInfo"
+#define ShopCompanyRequst @"api/shop/company"
+#define ShopGoodsCollectionRequst @"api/shop/collection"
+#define ShopCartRequst @"api/shop/cart"
+#define ShopAddCartRequst @"api/shop/addCart"
+#define ShopModifyCartRequst @"api/shop/modifyCart"
+#define ShopDelCartRequst @"api/shop/delCart"
+#define ShopAddressRequst @"api/shop/address"
+#define ShopAddAddressRequst @"api/shop/addAddress"
+#define ShopModifyAddressRequst @"api/shop/modifyAddress"
+#define ShopDelAddressRequst @"api/shop/delAddress"
+#define ShopAreaRequst @"api/shop/area"
+#define ShopOrderAddRequest  @"api/shop/orderAdd"
+#define ShopOrderInfoRequest  @"api/shop/orderInfo"
+#define ShopOrderListRequest  @"api/shop/order"
+#define UnionpayRnRequest  @"api/unionpay/rn"
+#define UnionpayQueryRequest  @"api/unionpay/query"
+
+
 
 
 //请求相关的常量

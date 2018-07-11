@@ -31,7 +31,8 @@
                    failure:(void (^)(NSString *error))failure {
     [[YHTTPService sharedInstance] requestGetUserInfoSuccess:^(YHTTPResponse *response) {
         if (response.code == YHTTPResponseCodeSuccess) {
-            [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult];
+            [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult[@"info"]];
+            self.user = [TPUser modelWithDictionary:response.parsedResult[@"info"]];
             success(@YES);
         } else {
             [YUtil removeUserDefaultInfo:YHTTPRequestTokenKey];

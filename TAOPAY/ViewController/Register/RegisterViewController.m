@@ -14,6 +14,13 @@
 #import "LoginViewController.h"
 
 @interface RegisterViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *codeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *enterTipLabel;
+@property (weak, nonatomic) IBOutlet UIButton *serviceProtocolButton;
+@property (weak, nonatomic) IBOutlet UILabel *otherLoginLabel;
+@property (weak, nonatomic) IBOutlet UIButton *pwdLoginButton;
+@property (weak, nonatomic) IBOutlet UILabel *pwdLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *enterButton;
 @property (weak, nonatomic) IBOutlet UIButton *getAuthCodeButton;
@@ -45,12 +52,29 @@
 }
 #pragma mark 设置导航栏
 - (void)addNavigationBar {
-    self.navigationItem.title =  @"注册";
-    self.navigationType = TPNavigationTypeBlack;
+    self.navigationView.title =  TPLocalizedString(@"person_center_register");
+    self.navigationView.navigationType = TPNavigationTypeBlack;
+    self.navigationView.isShowBackButton = YES;
+    self.navigationView.isShowNavRightButtons = NO;
+    [self.view addSubview:self.navigationView];
 }
 //MARK: -- 初始化子视图
 - (void)initSubView {
     [self addNavigationBar];
+    
+    self.phoneLabel.text = TPLocalizedString(@"person_center_phone");
+    self.phoneNumberTextField.placeholder = TPLocalizedString(@"person_center_input_phone");
+    self.codeLabel.text = TPLocalizedString(@"person_center_code");
+    self.authCodeTextField.placeholder = TPLocalizedString(@"person_center_input_code");
+    [self.getAuthCodeButton setTitle:TPLocalizedString(@"person_center_get_code") forState:UIControlStateNormal];
+    self.pwdLabel.text = TPLocalizedString(@"person_center_password");
+    self.passwordTextField.placeholder = TPLocalizedString(@"person_center_input_password");
+    [self.enterButton setTitle:TPLocalizedString(@"person_center_enter") forState:UIControlStateNormal];
+    self.enterTipLabel.text = TPLocalizedString(@"person_center_enter_tips");
+    [self.serviceProtocolButton setTitle:TPLocalizedString(@"person_center_user_protocol_login") forState:UIControlStateNormal];
+    self.otherLoginLabel.text = TPLocalizedString(@"person_center_other_login");
+    [self.pwdLoginButton setTitle:TPLocalizedString(@"person_center_password_login") forState:UIControlStateNormal];
+    
     /// 添加事件
     [self.phoneNumberTextField addTarget:self action:@selector(textFieldValueDidChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.authCodeTextField addTarget:self action:@selector(textFieldValueDidChanged:) forControlEvents:UIControlEventEditingChanged];
@@ -71,7 +95,7 @@
     /// 数据验证的在Controller中处理 否则的话 viewModel 中就引用了 view了
     /// 验证手机号码 正确的手机号码
     if (![NSString y_isValidMobile:self.phoneNumberTextField.text]){
-        [SVProgressHUD showInfoWithStatus:@"请输入正确的手机号码"];
+        [SVProgressHUD showInfoWithStatus:TPLocalizedString(@"person_center_phone_format_wrong")];
         return;
     }
     /// 验证验证码 6位数字

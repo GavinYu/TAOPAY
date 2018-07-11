@@ -35,9 +35,6 @@
 #define SCREENWIDTH ([[UIScreen mainScreen] bounds].size.width < [[UIScreen mainScreen] bounds].size.height?[[UIScreen mainScreen] bounds].size.height:[[UIScreen mainScreen] bounds].size.width)
 #endif
 
-// 坐标快捷
-#define APPFRAME(x,y,width,height)     CGRectMake((x),(y),(width),(height))
-
 //屏幕宽度(正常情况下)
 #define APPWIDTH [UIScreen mainScreen].bounds.size.width
 
@@ -202,15 +199,18 @@
 
 /// 整个应用的视图的背景色 BackgroundColor
 #define TP_MAIN_BACKGROUNDCOLOR UICOLOR_FROM_HEXRGB(0xf5f4f9)
-/// 整个应用的分割线颜色
-#define TP_MAIN_LINE_COLOR_1 UICOLOR_FROM_HEXRGB(0xD9D8D9)
+/// 整个应用的Cell的分割线颜色
+#define TP_CELL_LINE_COLOR UICOLOR_FROM_HEXRGB(0xeaeaea)
 /// 整个应用的边框颜色
 #define TP_MAIN_BORDER_COLOR UICOLOR_FROM_HEXRGB(0x6fc5e3)
 /// 文字颜色
-/// #56585f
-#define TP_MAIN_BACKGROUND_COLOR_1 UICOLOR_FROM_HEXRGB(0xc30d23)
+/// 红色
+#define TP_BG_RED_COLOR UICOLOR_FROM_HEXRGB(0xc30d23)
 /// TableView HeaderView title color
 #define TP_TABLE_HEADER_TITLE_COLOR UICOLOR_FROM_HEXRGB(0xa4a4a4)
+
+/// TableView FooterView title color
+#define TP_TABLE_FOOTER_TITLE_COLOR UICOLOR_FROM_HEXRGB(0x878787)
 
 /// ---- YYWebImage Option
 /// 手动设置image
@@ -223,6 +223,10 @@
 #define TPRECHARGEMAX   500.00
 //可用额度
 #define TPUSELIMITMAX   500.00
+
+#define LanguageToolLocalizedString(string) NSLocalizedString((NSString *)string, nil)
+
+#define TPLocalizedString(key)  NSLocalizedString(key, nil)
 
 /*--------------------------- Add by GavinYu End ----------------------------*/
 

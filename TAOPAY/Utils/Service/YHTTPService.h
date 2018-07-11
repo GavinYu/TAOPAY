@@ -13,6 +13,12 @@
 #import "YHTTPResponse.h"
 #import "TPUser.h"
 
+typedef NS_ENUM(NSInteger, TPShoppingCartModifyType) {
+    TPShoppingCartModifyTypeAdd = 0,
+    TPShoppingCartModifyTypeSub,
+    TPShoppingCartModifyTypeNumber
+};
+
 typedef void (^requstSuccessBlock) (id success);
 typedef void (^faliueBlock) (id error);
 
@@ -69,7 +75,7 @@ typedef void (^faliueBlock) (id error);
                                         success:(void (^)(YHTTPResponse *response))success
                                         failure:(void (^)(NSString *msg))failure;
 /***************--------商城相关接口------------*************************************/
-//商城首页/商家列表的接口
+//商城首页的接口
 - (NSURLSessionDataTask *)requestShopMainWithLatitude:(NSString *)lat
                                             longitude:(NSString *)lon
                                                  page:(NSString *)page
@@ -89,6 +95,88 @@ typedef void (^faliueBlock) (id error);
                                              page:(NSString *)page
                                           success:(void (^)(YHTTPResponse *response))success
                                           failure:(void (^)(NSString *msg))failure;
+//商品详情接口
+- (NSURLSessionDataTask *)requestShopGoodsInfo:(NSString *)goodsId
+                                       success:(void (^)(YHTTPResponse *response))success
+                                       failure:(void (^)(NSString *msg))failure;
+//商品收藏接口
+- (NSURLSessionDataTask *)requestGoodsCollection:(NSString *)goodsId
+                                         success:(void (^)(YHTTPResponse *response))success
+                                         failure:(void (^)(NSString *msg))failure;
+//购物车列表接口
+- (NSURLSessionDataTask *)requestShoppingCartSuccess:(void (^)(YHTTPResponse *response))success
+                                             failure:(void (^)(NSString *msg))failure;
+//购物车添加接口
+- (NSURLSessionDataTask *)requestAddShoppingCart:(NSString *)goodsId
+                                         success:(void (^)(YHTTPResponse *response))success
+                                         failure:(void (^)(NSString *msg))failure;
+//购物车修改接口
+- (NSURLSessionDataTask *)requestModifyShoppingCart:(NSString *)goodsId
+                                               type:(NSString *)type
+                                              count:(NSString *)count
+                                            success:(void (^)(YHTTPResponse *response))success
+                                            failure:(void (^)(NSString *msg))failure;
+//购物车删除接口
+- (NSURLSessionDataTask *)requestDeleteShoppingCart:(NSString *)goodsId
+                                            success:(void (^)(YHTTPResponse *response))success
+                                            failure:(void (^)(NSString *msg))failure;
+//收货地址接口
+- (NSURLSessionDataTask *)requestAddressSuccess:(void (^)(YHTTPResponse *response))success
+                                                 failure:(void (^)(NSString *msg))failure;
+//添加收货地址接口
+- (NSURLSessionDataTask *)requestAddAddress:(NSString *)address
+                                       name:(NSString *)name
+                                      phone:(NSString *)phone
+                                     areaID:(NSString *)areaId
+                                    success:(void (^)(YHTTPResponse *response))success
+                                    failure:(void (^)(NSString *msg))failure;
+//修改收货地址接口
+
+//type-分类，0:设为默认地址 1:置顶 2:编辑收货地址
+//areaId地区ID，type=2时 必填
+//name-收货人名称，type=2时 必填
+//phone-收货人手机号，type=2时 必填
+//address-收货人详细地址，type=2时 必填
+- (NSURLSessionDataTask *)requestModifyAddress:(NSString *)receivingId
+                                          type:(NSString *)type
+                                        areaID:(NSString *)areaId
+                                       address:(NSString *)address
+                                          name:(NSString *)name
+                                         phone:(NSString *)phone
+                                       success:(void (^)(YHTTPResponse *response))success
+                                       failure:(void (^)(NSString *msg))failure;
+//删除收货地址接口
+- (NSURLSessionDataTask *)requestDeleteAddress:(NSString *)addressId
+                                       success:(void (^)(YHTTPResponse *response))success
+                                       failure:(void (^)(NSString *msg))failure;
+//省份城市地区列表接口
+- (NSURLSessionDataTask *)requestAreaList:(NSString *)areaId
+                                       success:(void (^)(YHTTPResponse *response))success
+                                       failure:(void (^)(NSString *msg))failure;
+//创建订单接口
+- (NSURLSessionDataTask *)requestShopOrderAdd:(NSString *)goodsId
+                              withGoodsNumber:(NSString *)goodsNum
+                                withAddressId:(NSString *)addressId
+                                      success:(void (^)(YHTTPResponse *response))success
+                                      failure:(void (^)(NSString *msg))failure;
+//订单详情接口
+- (NSURLSessionDataTask *)requestOrderInfo:(NSString *)orderId
+                                   success:(void (^)(YHTTPResponse *response))success
+                                   failure:(void (^)(NSString *msg))failure;
+//订单列表接口
+- (NSURLSessionDataTask *)requestOrderListSuccess:(void (^)(YHTTPResponse *response))success
+                                          failure:(void (^)(NSString *msg))failure;
+//订单银联支付交易流水号接口
+//type: 分类，1:充值余额 2:商品购买
+- (NSURLSessionDataTask *)requestOrderUnionpayRN:(NSString *)orderId
+                                            type:(NSString *)type
+                                         success:(void (^)(YHTTPResponse *response))success
+                                         failure:(void (^)(NSString *msg))failure;
+//订单查询支付结果
+- (NSURLSessionDataTask *)requestOrderUnionpayQuery:(NSString *)orderId
+                                            success:(void (^)(YHTTPResponse *response))success
+                                            failure:(void (^)(NSString *msg))failure;
+
 /***************--------商城相关接口------------*************************************/
 
 @end

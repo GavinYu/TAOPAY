@@ -17,24 +17,31 @@
 @property (strong, nonatomic)  UIButton *personCenterButton;
 @property (strong, nonatomic)  UIButton *homepageButton;
 
+@property (strong, nonatomic) NSArray *navBarRightButtons;
+
+@property (readwrite, nonatomic, strong) TPViewModel *viewModel;
+
 @end
 
 @implementation TPBaseViewController
 
-//- (instancetype)initWithViewModel:(TPViewModel *)viewModel {
-//    self = [super init];
-//    if (self) {
-//        self.viewModel = viewModel;
-//    }
-//    return self;
-//}
+- (instancetype)initWithViewModel:(TPViewModel *)viewModel {
+    self = [super init];
+    if (self) {
+        self.viewModel = viewModel;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = self.viewModel.title;
+    
     self.view.backgroundColor = TP_MAIN_BACKGROUNDCOLOR;
 
+    [self setupNavigationBar];
     //设置导航栏
-    [self configMyNavigationBar];
+//    [self configMyNavigationBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,13 +51,13 @@
 
 //MARK: -- 设置导航栏
 - (void)setupNavigationBar {
-    self.navigationView = [TPLoginNavigationView instanceLoginNavigationView];
-    self.navigationView.navigationType = TPNavigationTypeBlack;
-    [self.view addSubview:self.navigationView];
-    [self.navigationView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(APPWIDTH, NAVGATIONBARHEIGHT));
-    }];
+    self.fd_prefersNavigationBarHidden = YES;
+    self.navigationView.frame = CGRectMake(0, 0, APPWIDTH, NAVGATIONBARHEIGHT);
+//    [self.view addSubview:self.navigationView];
+//    [self.navigationView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.equalTo(self.view);
+//        make.size.mas_equalTo(CGSizeMake(APPWIDTH, NAVGATIONBARHEIGHT));
+//    }];
     
     @weakify(self);
     [self.navigationView setClickBackHandler:^(UIButton *sender) {
@@ -64,29 +71,16 @@
     self.navigationItem.hidesBackButton = YES;
     
     self.navigationController.navigationBar.translucent = NO;//设置导航栏透明度 NO表示不透明
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     
-    self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.backButton.frame = CGRectMake(20, 0, 26, 44);
-    [self.backButton addTarget:self action:@selector(clickBackButton:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backButton];
+    //改变导航栏的背景颜色，注意使用.backgroundColor去设置背景颜色，只会有淡淡的一层，跟没效果一样
+    self.navigationController.navigationBar.barTintColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1;
     
-    self.logoImageView = UIImageView.new;
-    [self.navigationController.view addSubview:self.logoImageView];
-    
-    self.homepageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.homepageButton.frame = CGRectMake(APPWIDTH-45, 7, 30, 30);
-    [self.homepageButton setImage:[UIImage imageNamed:@"icon_loginNavbar_home"] forState:UIControlStateNormal];
-    [self.homepageButton addTarget:self action:@selector(clickHomeButton:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightHomeItem = [[UIBarButtonItem alloc] initWithCustomView:self.homepageButton];
-    
-    self.personCenterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.personCenterButton.frame = CGRectMake(CGRectGetMinX(self.homepageButton.frame)-40, 7, 30, 34);
-    [self.personCenterButton setImage:[UIImage imageNamed:@"icon_loginNavbar_me"] forState:UIControlStateNormal];
-    [self.personCenterButton addTarget:self action:@selector(clickPersonButton:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightPersonItem = [[UIBarButtonItem alloc] initWithCustomView:self.personCenterButton];
-    
-    self.navigationItem.rightBarButtonItems = @[rightHomeItem,rightPersonItem];
-
+   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backButton];
+}
+//MARK: -- 配置导航栏右边按钮
+- (void)configRightBarButtonItems {
+    self.navigationItem.rightBarButtonItems = self.navBarRightButtons;
 }
 //MARK: -- 返回按钮事件
 - (void)clickBackButton:(UIButton *)sender {
@@ -105,20 +99,26 @@
 
 - (void)setNavigationType:(TPNavigationType)navigationType {
     if (navigationType == TPNavigationTypeBlack) {
-        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
         [self.backButton setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
+        
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+        
         //改变导航栏的背景颜色，注意使用.backgroundColor去设置背景颜色，只会有淡淡的一层，跟没效果一样
         self.navigationController.navigationBar.barTintColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1;
-        self.logoImageView.hidden = YES;
-        self.homepageButton.hidden = YES;
-        self.personCenterButton.hidden = YES;
+//        self.navigationView.hidden = YES;
+//        self.navigationController.navigationBarHidden = NO;
     } else {
-        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1};
+        [self configRightBarButtonItems];
+        
         [self.backButton setImage:[UIImage imageNamed:@"icon_loginNavbar_back"] forState:UIControlStateNormal];
+        
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1};
+        
+        //改变导航栏的背景颜色，注意使用.backgroundColor去设置背景颜色，只会有淡淡的一层，跟没效果一样
         self.navigationController.navigationBar.barTintColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_2;
-        self.logoImageView.hidden = NO;
-        self.homepageButton.hidden = NO;
-        self.personCenterButton.hidden = NO;
+        
+//        self.navigationView.hidden = NO;
+//        self.navigationController.navigationBarHidden = YES;
     }
 }
 
@@ -127,22 +127,78 @@
     
     self.backButton.hidden = !_isShowBackButton;
     if (isShowBackButton) {
+        self.logoImageView.frame = CGRectMake(CGRectGetMaxX(self.backButton.frame)+10, CGRectGetMinY(self.backButton.frame), 51, 10);
         [self.logoImageView setImage:[UIImage imageNamed:@"icon_loginNavbar_detail_logo"]];
-        [self.logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.backButton.mas_right).offset(10);
-            make.centerY.equalTo(self.backButton);
-            make.size.mas_equalTo(CGSizeMake(51, 10));
-        }];
+        
+//        [self.logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(self.backButton.mas_right).offset(10);
+//            make.centerY.equalTo(self.backButton);
+//            make.size.mas_equalTo(CGSizeMake(51, 10));
+//        }];
     } else {
+        self.logoImageView.frame = CGRectMake(15, 31, 80, 23);
         [self.logoImageView setImage:[UIImage imageNamed:@"icon_loginNavbar_logo"]];
-        [self.logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(15);
-            make.top.equalTo(self).offset(31);
-            make.size.mas_equalTo(CGSizeMake(80, 23));
-        }];
+//
+//        [self.logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.equalTo(self).offset(15);
+//            make.top.equalTo(self).offset(31);
+//            make.size.mas_equalTo(CGSizeMake(80, 23));
+//        }];
     }
 }
 
+//MARK: -- lazyload area
+//MARK: -- lazyload navBarRightButtons
+- (NSArray *)navBarRightButtons {
+    if (!_navBarRightButtons) {
+        self.homepageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.homepageButton.frame = CGRectMake(15, 7, 30, 30);
+        [self.homepageButton setImage:[UIImage imageNamed:@"icon_loginNavbar_home"] forState:UIControlStateNormal];
+        [self.homepageButton addTarget:self action:@selector(clickHomeButton:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *rightHomeItem = [[UIBarButtonItem alloc] initWithCustomView:self.homepageButton];
+        
+        self.personCenterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.personCenterButton.frame = CGRectMake(CGRectGetMaxX(self.homepageButton.frame)+10, 7, 30, 34);
+        [self.personCenterButton setImage:[UIImage imageNamed:@"icon_loginNavbar_me"] forState:UIControlStateNormal];
+        [self.personCenterButton addTarget:self action:@selector(clickPersonButton:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *rightPersonItem = [[UIBarButtonItem alloc] initWithCustomView:self.personCenterButton];
+        
+        _navBarRightButtons = @[rightHomeItem,rightPersonItem];
+    }
+    
+    return _navBarRightButtons;
+}
+//MARK: -- lazyload backButton
+- (UIButton *)backButton {
+    if (!_backButton) {
+        _backButton =  [UIButton buttonWithType:UIButtonTypeCustom];
+        [_backButton setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
+        _backButton.frame = CGRectMake(20, 0, 26, 44);
+        [_backButton addTarget:self action:@selector(clickBackButton:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _backButton;
+}
+//MARK: -- lazyload logoImageView
+- (UIImageView *)logoImageView {
+    if (!_logoImageView) {
+        _logoImageView = UIImageView.new;
+        
+        [self.navigationController.view addSubview:_logoImageView];
+    }
+    
+    return _logoImageView;
+}
+
+//MARK: -- lazyload navigationView
+- (TPLoginNavigationView *)navigationView {
+    if (!_navigationView) {
+        _navigationView = [TPLoginNavigationView instanceLoginNavigationView];
+        _navigationView.navigationType = TPNavigationTypeWhite;
+    }
+    
+    return _navigationView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -1,0 +1,105 @@
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "0Q0-gL-NiD"; */
+"0Q0-gL-NiD.normalTitle" = "登录";
+
+/* Class = "UIButton"; normalTitle = "找回密码"; ObjectID = "76E-7y-JuS"; */
+"76E-7y-JuS.normalTitle" = "找回密码";
+
+/* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "8nN-Nr-cgv"; */
+"8nN-Nr-cgv.placeholder" = "请输入密码";
+
+/* Class = "UIButton"; normalTitle = "精品购物"; ObjectID = "9gU-lM-4JQ"; */
+"9gU-lM-4JQ.normalTitle" = "精品购物";
+
+/* Class = "UITextField"; placeholder = "请输入验证码"; ObjectID = "9jT-G6-vgF"; */
+"9jT-G6-vgF.placeholder" = "请输入验证码";
+
+/* Class = "UIViewController"; title = "HomepageViewController"; ObjectID = "ASR-zM-Aez"; */
+"ASR-zM-Aez.title" = "HomepageViewController";
+
+/* Class = "UIViewController"; title = "TPFriendViewController"; ObjectID = "B0h-b3-AFG"; */
+"B0h-b3-AFG.title" = "TPFriendViewController";
+
+/* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "COm-7y-TF9"; */
+"COm-7y-TF9.placeholder" = "请输入密码";
+
+/* Class = "UIButton"; normalTitle = "进入"; ObjectID = "Cg3-Di-a4x"; */
+"Cg3-Di-a4x.normalTitle" = "进入";
+
+/* Class = "UILabel"; text = "账   号"; ObjectID = "Cx1-IE-Gzi"; */
+"Cx1-IE-Gzi.text" = "账   号";
+
+/* Class = "UILabel"; text = "点击“进入”代表您已同意"; ObjectID = "GWw-p7-zQG"; */
+"GWw-p7-zQG.text" = "点击“进入”代表您已同意";
+
+/* Class = "UILabel"; text = "积分"; ObjectID = "Lmz-Zr-kSI"; */
+"Lmz-Zr-kSI.text" = "积分";
+
+/* Class = "UILabel"; text = "密   码"; ObjectID = "Nv8-9A-eNx"; */
+"Nv8-9A-eNx.text" = "密   码";
+
+/* Class = "UILabel"; text = "手机号"; ObjectID = "QD8-MD-X2Y"; */
+"QD8-MD-X2Y.text" = "手机号";
+
+/* Class = "UILabel"; text = "————————————其他登录方式————————————"; ObjectID = "Rjy-X7-S0d"; */
+"Rjy-X7-S0d.text" = "————————————其他登录方式————————————";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "ULq-Br-Nul"; */
+"ULq-Br-Nul.normalTitle" = "登录";
+
+/* Class = "UIButton"; normalTitle = "通讯录"; ObjectID = "Upi-Af-Fhy"; */
+"Upi-Af-Fhy.normalTitle" = "通讯录";
+
+/* Class = "UIViewController"; title = "TPWalletViewController"; ObjectID = "VCX-xq-yjQ"; */
+"VCX-xq-yjQ.title" = "TPWalletViewController";
+
+/* Class = "UIViewController"; title = "TPChatViewController"; ObjectID = "VKl-YG-fMc"; */
+"VKl-YG-fMc.title" = "TPChatViewController";
+
+/* Class = "UIButton"; normalTitle = "《软件服务协议》"; ObjectID = "aZ3-Ub-1Eo"; */
+"aZ3-Ub-1Eo.normalTitle" = "《软件服务协议》";
+
+/* Class = "UILabel"; text = "密   码"; ObjectID = "bvh-iv-zb6"; */
+"bvh-iv-zb6.text" = "密   码";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "czN-QT-fFW"; */
+"czN-QT-fFW.normalTitle" = "注册";
+
+/* Class = "UITextField"; placeholder = "请输入手机号"; ObjectID = "dds-cG-KoH"; */
+"dds-cG-KoH.placeholder" = "请输入手机号";
+
+/* Class = "UILabel"; text = "80"; ObjectID = "eC0-5E-Xh9"; */
+"eC0-5E-Xh9.text" = "80";
+
+/* Class = "UIButton"; normalTitle = "获取验证码"; ObjectID = "gLm-qV-9vv"; */
+"gLm-qV-9vv.normalTitle" = "获取验证码";
+
+/* Class = "UILabel"; text = "验证码"; ObjectID = "hN7-5g-BYL"; */
+"hN7-5g-BYL.text" = "验证码";
+
+/* Class = "UILabel"; text = "————————————免费申请注册————————————"; ObjectID = "kCV-uR-RZF"; */
+"kCV-uR-RZF.text" = "————————————免费申请注册————————————";
+
+/* Class = "UITextField"; placeholder = "请输入账号"; ObjectID = "koi-TC-k2E"; */
+"koi-TC-k2E.placeholder" = "请输入账号";
+
+/* Class = "UIButton"; normalTitle = "密码登录"; ObjectID = "mgY-pe-QYG"; */
+"mgY-pe-QYG.normalTitle" = "密码登录";
+
+/* Class = "UIButton"; normalTitle = "免费注册"; ObjectID = "nKA-b5-Fga"; */
+"nKA-b5-Fga.normalTitle" = "免费注册";
+
+/* Class = "UIButton"; normalTitle = "附近商店"; ObjectID = "nw1-sZ-fjs"; */
+"nw1-sZ-fjs.normalTitle" = "附近商店";
+
+/* Class = "UIButton"; normalTitle = "《软件服务协议》"; ObjectID = "r2T-o9-T9e"; */
+"r2T-o9-T9e.normalTitle" = "《软件服务协议》";
+
+/* Class = "UIButton"; normalTitle = "申请"; ObjectID = "wja-Bb-oUA"; */
+"wja-Bb-oUA.normalTitle" = "申请";
+
+/* Class = "UIButton"; normalTitle = "跨境免税"; ObjectID = "wuy-mx-rBr"; */
+"wuy-mx-rBr.normalTitle" = "跨境免税";
+
+/* Class = "UILabel"; text = "点击“登录”代表您已同意"; ObjectID = "yMs-mX-gkh"; */
+"yMs-mX-gkh.text" = "点击“登录”代表您已同意";

@@ -34,7 +34,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configNavigationBar];
     [self setupSubView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
+    
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,12 +73,17 @@
     return _cardOperateViewModel;
 }
 
+//MARK: -- 设置导航栏
+- (void)configNavigationBar {
+    self.navigationView.title = self.cardOperateViewModel.title;
+    self.navigationView.isShowBackButton = YES;
+    self.navigationView.isShowNavRightButtons = YES;
+    self.navigationView.isShowDownArrowImage = NO;
+    [self.view addSubview:self.navigationView];
+}
+
 //MARK: -- 初始化子视图
 - (void)setupSubView {
-    
-    [self.view bringSubviewToFront:self.navigationView];
-    self.navigationItem.title = self.cardOperateViewModel.title;
-    self.navigationView.isShowBackButton = YES;
     //tableView 注册cell 和 headerview
     [self.tableView y_registerNibCell:[TPWalletCommonCell class]];
     [self.tableView y_registerNibCell:[TPWalletTextNumberCell class]];
@@ -85,7 +103,6 @@
                     @strongify(self);
                     dispatch_async(dispatch_get_main_queue(), ^{
                         NSString *tn = (NSString *)json;
-                        
                         BOOL tmpPayStatus = [[UPPaymentControl defaultControl] startPay:tn fromScheme:@"UPPayDemo" mode:kMode_Development viewController:self];
                         if (tmpPayStatus) {
                             [self.cardOperateViewModel balanceQuerySuccess:^(id json) {

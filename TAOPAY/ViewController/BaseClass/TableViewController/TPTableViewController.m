@@ -41,9 +41,9 @@
 - (void)_su_setupSubViews
 {
     // set up tableView
-    UITableView *tableView = [[UITableView alloc] initWithFrame:MainScreenBounds style:self.viewModel.style];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, APPWIDTH, APPHEIGHT-TPTABBARHEIGHT) style:self.viewModel.style];
     tableView.backgroundColor = self.view.backgroundColor;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // set delegate and dataSource
     tableView.delegate = self;
     tableView.dataSource = self;

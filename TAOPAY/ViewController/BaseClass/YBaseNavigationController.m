@@ -21,8 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self configNavigationRootController];
+//    [self configNavigationRootController];
 }
+
 
 - (void)configNavigationRootController {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

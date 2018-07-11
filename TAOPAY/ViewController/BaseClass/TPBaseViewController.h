@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) TPNavigationType navigationType;
 
 /// The `viewModel` parameter in `-initWithViewModel:` method.
-@property (nonatomic, strong) TPViewModel *viewModel;
+@property (nonatomic, strong, readonly, nonnull) TPViewModel *viewModel;
 
 @property (nonatomic, strong) TPLoginNavigationView *navigationView;
 
@@ -34,8 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// viewModel - corresponding view model
 ///
-///// Returns a new view.
-//- (nullable instancetype)initWithViewModel:(TPViewModel *__nonnull)viewModel;
+/// Returns a new view.
+- (nullable instancetype)initWithViewModel:(TPViewModel *__nonnull)viewModel;
 
 @end
 

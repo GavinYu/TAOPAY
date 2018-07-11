@@ -17,11 +17,48 @@ typedef NS_ENUM(NSUInteger, TPTabBarItemTagType) {
   TPTabBarItemTagTypeWallet,          /// 钱包
 };
 
+//支付方式
+typedef NS_ENUM(NSInteger, TPPayType) {
+    TPPayTypeVIP = 0,          //会员卡
+    TPPayTypeUnionpay,         //银联
+    TPPayTypeWeChat,           //微信
+    TPPayTypeAlipay,            //支付宝
+    TPPayTypeOther
+};
+
+//购物车修改的方式
+typedef NS_ENUM(NSInteger, TPCartModifyType) {
+    TPCartModifyTypeAdd = 0,
+    TPCartModifyTypeSub,
+    TPCartModifyTypeCount
+};
+
 //导航栏类型
 typedef NS_ENUM(NSInteger, TPNavigationType) {
     TPNavigationTypeBlack,
     TPNavigationTypeWhite
 };
+//订单分类
+typedef NS_ENUM(NSInteger, TPOrderType) {
+    TPOrderTypeObligation = 0,    /// 待付款
+    TPOrderTypeWaitDispatch,         /// 待发货
+    TPOrderTypeWaitReceiving,         ///待收货
+    TPOrderTypeWaitEvaluate          /// 待评价
+};
+
+////订单分类
+//typedef NS_ENUM(NSInteger, TPPersonCenterFunctionType) {
+//    TPPersonCenterFunctionTypeOrder = 0,    /// 订单
+//    TPPersonCenterFunctionTypeIntegral,         /// 待发货
+//    TPPersonCenterFunctionTypeInviteFriendGetIntegral,  //邀请好友领积分
+//    TPPersonCenterFunctionTypeReceivingAddress,     /// 待评价
+//    TPPersonCenterFunctionTypeSetting,         /// 待发货
+//    TPPersonCenterFunctionTypeInviteFriendGetIntegral,  //邀请好友领积分
+//    TPPersonCenterFunctionType,          /// 待评价
+//    TPPersonCenterFunctionTypeIntegral,         /// 待发货
+//    TPPersonCenterFunctionTypeInviteFriendGetIntegral,  //邀请好友领积分
+//    TPPersonCenterFunctionType          /// 待评价
+//};
 
 
 /// 切换根控制器类型

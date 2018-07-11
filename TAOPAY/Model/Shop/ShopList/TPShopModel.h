@@ -11,7 +11,7 @@
 @interface TPShopModel : YObject
 
 //商家ID
-@property (copy, nonatomic) NSString *id;
+@property (copy, nonatomic) NSString *shopID;
 //商家名称
 @property (copy, nonatomic) NSString *name;
 //商家封面图片

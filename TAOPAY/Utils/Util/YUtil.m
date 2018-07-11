@@ -173,6 +173,15 @@
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [pre evaluateWithObject:inputString];
 }
+//MARK: -- 根据系统语言转换成传给后台的语言对应的字符串
++ (NSString *)getAppLanguage {
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    if ([language hasPrefix:@"zh-Hans"]) {
+        return @"cn";
+    } else {
+        return @"ko";
+    }
+}
 
 /*--------------------------- Add by GavinYu End ----------------------------*/
 @end

@@ -8,6 +8,13 @@
 
 #import "TPWalletTableFooterView.h"
 
+#import "TPMacros.h"
+
+@interface TPWalletTableFooterView ()
+@property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
+
+@end
+
 @implementation TPWalletTableFooterView
 
 /*
@@ -22,6 +29,16 @@
 + (TPWalletTableFooterView *)instanceWalletTableFooterView {
 NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"TPWalletTableFooterView" owner:nil options:nil];
     return [nibView objectAtIndex:0];
+}
+//MARK: -- awakeFromNib
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self configSubViews];
+}
+//MARK: -- 配置子视图
+- (void)configSubViews {
+    [self.nextStepButton setTitle:TPLocalizedString(@"wallet_next_step") forState:UIControlStateNormal];
 }
 //MARK: -- 按钮事件
 - (IBAction)clickNextButton:(UIButton *)sender {

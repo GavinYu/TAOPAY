@@ -21,19 +21,21 @@
     switch (_cardOperateType) {
         case TPCardOperateTypeRecharge:
             {
-                tmpStr = [NSString stringWithFormat:@"该卡本次最多充值%.2f元", TPRECHARGEMAX];
+                tmpStr = TPLocalizedString(@"wallet_recharge_tips");
+//                [NSString stringWithFormat:@"该卡本次最多充值%.2f元", TPRECHARGEMAX];
             }
             break;
             
         case TPCardOperateTypeWithdraw:
         {
-            tmpStr = [NSString stringWithFormat:@"可用额度%.2f元", TPRECHARGEMAX];
+            tmpStr =  TPLocalizedString(@"wallet_enable_limit");
+//            [NSString stringWithFormat:@"可用额度%.2f元", TPRECHARGEMAX];
         }
             break;
             
         case TPCardOperateTypeTransfer:
         {
-            tmpStr = @"积分实时转入对方账户，无法退回";
+            tmpStr =TPLocalizedString(@"wallet_integral_transfer_tips");
         }
             break;
             
@@ -60,50 +62,53 @@
     switch (_cardOperateType) {
         case TPCardOperateTypeRecharge:
         {
-            self.title = @"充值";
-            _walletTips = [NSString stringWithFormat:@"该卡本次最多充值%.2f元", TPRECHARGEMAX];
+            self.title = TPLocalizedString(@"wallet_recharge");
+//            _walletTips = [NSString stringWithFormat:@"该卡本次最多充值%.2f元", TPRECHARGEMAX];
+            _walletTips = TPLocalizedString(@"wallet_recharge_tips");
             _sectionNumber = 2;
             self.rechargeType = @"1";
             
-            self.walletKeyValueModel.textFieldPlaceholder = @"请输入充值金额";
+            self.walletKeyValueModel.textFieldPlaceholder =TPLocalizedString(@"wallet_input_recharge_money");
             
             //FIXME:TODO ---- TEST
             self.walletCommonModel.icon = @"icon_logo_small";
-            self.walletCommonModel.mainTitle = @"淘易付会员卡";
-            self.walletCommonModel.subTitle = @"卡号123456789987654321";
-            self.walletKeyValueModel.key = @"金额";
+            self.walletCommonModel.mainTitle = TPLocalizedString(@"wallet_taoyifu_club_card");
+            self.walletCommonModel.subTitle = [NSString stringWithFormat:@"%@%@", TPLocalizedString(@"wallet_carnumber"), [YHTTPService sharedInstance].currentUser.cardNum];
+            self.walletKeyValueModel.key =TPLocalizedString(@"wallet_money");
         }
             break;
             
         case TPCardOperateTypeWithdraw:
         {
-            self.title = @"提现";
-            _walletTips = [NSString stringWithFormat:@"可用额度%.2f元", TPRECHARGEMAX];
-            self.walletKeyValueModel.textFieldPlaceholder = @"请输入提现金额";
+            self.title = TPLocalizedString(@"wallet_withdraw");
+            _walletTips = TPLocalizedString(@"wallet_enable_limit");
+//            [NSString stringWithFormat:@"可用额度%.2f元", TPRECHARGEMAX];
+            
+            self.walletKeyValueModel.textFieldPlaceholder = TPLocalizedString(@"wallet_input_withdraw_money");
             _sectionNumber = 2;
             //FIXME:TODO ---- TEST
             self.walletCommonModel.icon = @"icon_logo_small";
-            self.walletCommonModel.mainTitle = @"新韩银行";
-            self.walletCommonModel.subTitle = @"尾号4321";
-            self.walletKeyValueModel.key = @"金额";
+            self.walletCommonModel.mainTitle = TPLocalizedString(@"wallet_xinhan_bank");
+            self.walletCommonModel.subTitle = TPLocalizedString(@"wallet_end_number");
+            self.walletKeyValueModel.key =  TPLocalizedString(@"wallet_money");
         }
             break;
             
         case TPCardOperateTypeTransfer:
         {
-            self.title = @"转账";
-            _walletTips = @"积分实时转入对方账户，无法退回";
-            self.walletKeyValueModel.textFieldPlaceholder = @"请输入对方会员卡号";
-            self.cardKeyValueModel.textFieldPlaceholder = @"请输入转账金额";
+            self.title = TPLocalizedString(@"wallet_transfer");
+            _walletTips = TPLocalizedString(@"wallet_integral_transfer_tips");
+            self.walletKeyValueModel.textFieldPlaceholder =TPLocalizedString(@"wallet_input_other_cardnumber");
+            self.cardKeyValueModel.textFieldPlaceholder = TPLocalizedString(@"wallet_input_transfer_money");
             self.cardKeyValueModel.isHaveImage = YES;
             _sectionNumber = 3;
             //FIXME:TODO ---- TEST
             self.walletCommonModel.icon = @"icon_logo_small";
-            self.walletCommonModel.mainTitle = @"淘易付会员卡";
-            self.walletCommonModel.subTitle = @"卡号123456789987654321";
-            self.walletKeyValueModel.key = @"对方卡号";
+            self.walletCommonModel.mainTitle = TPLocalizedString(@"wallet_taoyifu_club_card");
+            self.walletCommonModel.subTitle = [NSString stringWithFormat:@"%@%@", TPLocalizedString(@"wallet_carnumber"), [YHTTPService sharedInstance].currentUser.cardNum] ;
+            self.walletKeyValueModel.key = TPLocalizedString(@"wallet_other_carnumber");
             
-            self.cardKeyValueModel.key = @"转账金额";
+            self.cardKeyValueModel.key =TPLocalizedString(@"wallet_transfer_money");
         }
             break;
             
@@ -138,6 +143,16 @@
     
     return _cardKeyValueModel;
 }
+
+//MARK: -- lazyload walletKeyValueModel
+- (TPRechargeModel *)rechargeModel {
+    if (!_rechargeModel) {
+        _rechargeModel = TPRechargeModel.new;
+    }
+    
+    return _rechargeModel;
+}
+
 //MARK: -- 充值接口
 - (void)balanceRechargeSuccess:(void (^)(id json))success failure:(void (^)(NSError *))failure {
     @weakify(self);
@@ -145,7 +160,7 @@
         @strongify(self);
         if (response.code == YHTTPResponseCodeSuccess) {
             self.rechargeModel = [TPRechargeModel modelWithDictionary:response.parsedResult];
-            success(self.rechargeModel);
+            success(self.rechargeModel.tn);
         } else {
             [SVProgressHUD showErrorWithStatus:response.message];
         }

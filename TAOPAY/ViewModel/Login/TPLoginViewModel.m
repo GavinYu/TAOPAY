@@ -60,6 +60,7 @@
             [YUtil saveUserDefaultInfo:self.mobilePhone forKey:TPLoginPhoneKey];
             [YUtil saveUserDefaultInfo:self.token forKey:YHTTPRequestTokenKey];
             [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult];
+            self.user = [TPUser modelWithDictionary:response.parsedResult];
             success(@YES);
         } else {
             [SVProgressHUD showErrorWithStatus:response.message];

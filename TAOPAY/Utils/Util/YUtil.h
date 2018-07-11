@@ -45,5 +45,7 @@
 #pragma mark 获取资源图片
 +(UIImage *)imagJPGPathName:(NSString *)name;
 +(UIImage *)imagPNGPathName:(NSString *)name;
+//根据系统语言转换成传给后台的语言对应的字符串
++ (NSString *)getAppLanguage;
 /*--------------------------- Add by GavinYu End ----------------------------*/
 @end
