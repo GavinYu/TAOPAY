@@ -19,4 +19,6 @@ typedef void(^TPClickSliderButtonHandler)(UIButton *sender);
 
 + (YSliderView *)instanceSliderView;
 
+- (void)reloadSliderView;
+
 @end

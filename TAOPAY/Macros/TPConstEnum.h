@@ -33,11 +33,27 @@ typedef NS_ENUM(NSInteger, TPCartModifyType) {
     TPCartModifyTypeCount
 };
 
+//收货地址修改的方式
+typedef NS_ENUM(NSInteger, TPAddressModifyType) {
+    TPAddressModifyTypeDefault = 0,
+    TPAddressModifyTypeTop,
+    TPAddressModifyTypeEdit
+};
+
 //导航栏类型
 typedef NS_ENUM(NSInteger, TPNavigationType) {
     TPNavigationTypeBlack,
     TPNavigationTypeWhite
 };
+
+//订单分类
+typedef NS_ENUM(NSInteger, TPOrderStatus) {
+    TPOrderStatusUnpay = 0,    /// 待付款
+    TPOrderStatusPaid,         /// 待发货
+    TPOrderStatusCancel,         ///待收货
+    TPOrderStatusDrawout          /// 待评价
+};
+
 //订单分类
 typedef NS_ENUM(NSInteger, TPOrderType) {
     TPOrderTypeObligation = 0,    /// 待付款

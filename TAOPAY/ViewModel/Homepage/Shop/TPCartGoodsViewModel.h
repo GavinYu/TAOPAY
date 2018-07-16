@@ -17,6 +17,10 @@
 //@property (assign, nonatomic) TPCartModifyType modifyType;
 ////商品数量，type=2时指定的商品数量
 @property (copy, nonatomic) NSString *goodsCount;
+////商品总价
+@property (copy, nonatomic) NSString *goodsTotalPrice;
+//商品是否勾选
+@property (assign, nonatomic) BOOL isSelected;
 /// 购物车的商品模型
 @property (nonatomic, readonly, strong) TPShoppingCartGoodsModel *goods;
 

@@ -38,5 +38,9 @@ FOUNDATION_EXTERN NSString *const TPAppEverLaunchKey;
 //表示是否是第一次运行App
 FOUNDATION_EXTERN NSString *const TPAppFirstLaunchKey;
 
+//相关的通知key
+//表示支付结果的通知
+FOUNDATION_EXTERN NSString *const TPPayResultNotificationKey;
+
 
 @end

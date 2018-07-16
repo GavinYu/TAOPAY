@@ -88,13 +88,12 @@
             /// 转化数据
             NSArray *dataSource = [self viewModelsWithShopData:tmpModel];
             /// 添加数据
-            //FIXME:TODO -- 测试看效果，后续改
-            for (int i = 0; i < 4; ++i) {
-                /// 添加数据
-                [self.dataSource addObjectsFromArray:dataSource];
+            if (self.page == 1) {
+                [self.dataSource removeAllObjects];
             }
             
-//            self.catArray = [self handleCatStrings:tmpModel.category];
+            [self.dataSource addObjectsFromArray:dataSource];
+
             self.catArray = tmpModel.category;
             
             success(@YES);

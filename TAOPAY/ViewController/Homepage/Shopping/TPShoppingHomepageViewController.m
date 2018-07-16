@@ -22,6 +22,8 @@
 
 #import "TPGoodsDetailsViewModel.h"
 
+#import "TPPersonCenterViewController.h"
+
 @interface TPShoppingHomepageViewController ()
 
 @property (nonatomic, strong) TPShoppingTableHeaderView *myTableHeaderView;
@@ -45,17 +47,7 @@
     [self setupSubViews];
     [self bindViewModel];
 }
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-}
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
-}
 //MARK: -- config NavigationBar
 - (void)configNavigationBar {
     self.navigationView.title = TPLocalizedString(@"homepage_shopping");
@@ -63,6 +55,19 @@
     self.navigationView.isShowNavRightButtons = YES;
     self.navigationView.isShowDownArrowImage = NO;
     [self.view addSubview:self.navigationView];
+    
+    @weakify(self);
+    self.navigationView.clickMeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        UIStoryboard *toStoryboard = [UIStoryboard storyboardWithName:@"PersonCenter" bundle:nil];
+        UIViewController *toController=[toStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPPersonCenterViewController class])];
+        [self.navigationController pushViewController:toController animated:YES];
+    };
+    
+    self.navigationView.clickHomeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    };
 }
 
 //MARK: -- 初始化子控件

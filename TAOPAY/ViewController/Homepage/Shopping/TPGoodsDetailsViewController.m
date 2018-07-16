@@ -48,17 +48,6 @@
     
     [self bindViewModel];
 }
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
-}
 
 /// 文本内容区域
 - (UIEdgeInsets)contentInset
@@ -104,7 +93,8 @@
             if (tmp) {
                 [self turnToShoppingCart];
             }
-        } failure:nil];
+        } failure:^(NSString *error) {
+        }];
     };
     
     self.bottomToolView.serviceBlock = ^(UIButton *sender) {
@@ -112,15 +102,29 @@
     };
     
     self.bottomToolView.intagralBuyBlock = ^(UIButton *sender) {
-        //跳转到购物支付页
         @strongify(self);
-        [self turnToShoppingPay];
+        [self.viewModel addGoodsToShoppingCartSuccess:^(id json) {
+            @strongify(self);
+            BOOL tmp = [json boolValue];
+            if (tmp) {
+                //跳转到购物支付页
+                [self turnToShoppingPay];
+            }
+        } failure:^(NSString *error) {
+        }];
     };
     
     self.bottomToolView.buyBlock = ^(UIButton *sender) {
-        //跳转到购物支付页
         @strongify(self);
-        [self turnToShoppingPay];
+        [self.viewModel addGoodsToShoppingCartSuccess:^(id json) {
+            @strongify(self);
+            BOOL tmp = [json boolValue];
+            if (tmp) {
+                //跳转到购物支付页
+                [self turnToShoppingPay];
+            }
+        } failure:^(NSString *error) {
+        }];
     };
 }
 
@@ -150,7 +154,7 @@
 //MARK: -- 跳转到购物支付页
 - (void)turnToShoppingPay {
     TPShoppingCartViewModel *viewModel = [[TPShoppingCartViewModel alloc] initWithParams:@{YViewModelTitleKey:TPLocalizedString(@"navigation_title")}];
-    
+    viewModel.isPayPage = YES;
     TPShoppingPayViewController *shopPayController = [[TPShoppingPayViewController alloc] initWithViewModel:viewModel];
     [self.navigationController pushViewController:shopPayController animated:YES];
 }
@@ -158,7 +162,6 @@
 //MARK: -- 跳转到购物车页
 - (void)turnToShoppingCart {
     TPShoppingCartViewModel *viewModel = [[TPShoppingCartViewModel alloc] initWithParams:@{YViewModelTitleKey:@"购物车"}];
-    
     TPShoppingCartViewController *toyController = [[TPShoppingCartViewController alloc] initWithViewModel:viewModel];
     [self.navigationController pushViewController:toyController animated:YES];
 }
@@ -179,6 +182,7 @@
             @strongify(self);
             [self.tableView reloadData];
             self.myTableHeaderView.imageArray = self.viewModel.goodsImageArray;
+            [self.bottomToolView configData:self.viewModel.goodsInfoModel];
         });
     } failure:^(NSString *error) {
         @strongify(self);
@@ -213,9 +217,9 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 180;
+        return 221;
     } else {
-        return 300;
+        return 392;
     }
 }
 

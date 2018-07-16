@@ -9,10 +9,13 @@
 #import "TPPersonCenterViewController.h"
 
 #import "TPAppConfig.h"
+
 #import "TPOrderListViewController.h"
 #import "TPShippingAddressListViewController.h"
 #import "TPSettingViewController.h"
 #import "TPSafeCenterViewController.h"
+
+#import "TPOrderListViewModel.h"
 
 @interface TPPersonCenterViewController ()
 @property (nonatomic, strong) UIView *myTableFooterView;
@@ -30,15 +33,28 @@
     // Do any additional setup after loading the view.
     [self configDataSource];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"个人中心";
-    self.navigationType = TPNavigationTypeWhite;
-    self.isShowBackButton = NO;
+    [self configNavigationBar];
     // create subViews
     [self setupSubViews];
     
     
     // bind viewModel
     [self bindViewModel];
+}
+
+//MARK: -- config NavigationBar
+- (void)configNavigationBar {
+    self.navigationView.title = @"个人中心";
+    self.navigationView.isShowBackButton = YES;
+    self.navigationView.isShowNavRightButtons = YES;
+    self.navigationView.isShowDownArrowImage = NO;
+    [self.view addSubview:self.navigationView];
+    
+    @weakify(self);
+    self.navigationView.clickHomeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    };
 }
 
 //MARK: -- config datasource
@@ -84,6 +100,7 @@
 
 #pragma mark - 初始化子控件
 - (void)setupSubViews {
+    self.tableView.frame = CGRectMake(0, 0, APPWIDTH, APPHEIGHT);
     [self setupTableFooterView];
     self.tableView.tableFooterView = self.myTableFooterView;
     self.tableView.backgroundColor = TP_MAIN_BACKGROUNDCOLOR;
@@ -146,10 +163,42 @@
     
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-    NSDictionary *rowDic = self.dataArray[section][row];
-    UIStoryboard *mainBoard = [UIStoryboard storyboardWithName:@"PersonCenter" bundle:nil];
+    
+     NSDictionary *rowDic = self.dataArray[section][row];
+    
+    switch (section) {
+        case 0:
+        {
+            if (row == [self.dataArray[section] count] -1) {
+                //FIXME:TODO -- 跳转到我的积分
+                [self turnToNextViewController:rowDic[@"index"]];
+            } else {
+                [self pushToNextViewController];
+            }
+        }
+            break;
+            
+        default:
+        {
+           
+            [self turnToNextViewController:rowDic[@"index"]];
+        }
+            break;
+    }
+   
+}
 
-    UIViewController *tmpController = [mainBoard instantiateViewControllerWithIdentifier:rowDic[@"index"]];
+//MARK: --  跳转界面
+- (void)pushToNextViewController {
+    TPOrderListViewModel *viewModel = [[TPOrderListViewModel alloc] initWithParams:@{YViewModelTitleKey:@"我的订单"}];
+    TPOrderListViewController *publicVC = [[TPOrderListViewController alloc] initWithViewModel:viewModel];
+    [self.navigationController pushViewController:publicVC animated:YES];
+}
+
+- (void)turnToNextViewController:(NSString *)controllerIdentifier {
+    UIStoryboard *mainBoard = [UIStoryboard storyboardWithName:@"PersonCenter" bundle:nil];
+    
+    UIViewController *tmpController = [mainBoard instantiateViewControllerWithIdentifier:controllerIdentifier];
     [self.navigationController pushViewController:tmpController animated:YES];
 }
 

@@ -21,9 +21,12 @@
 
 #import "TPGoodsListViewController.h"
 
+#import "TPPersonCenterViewController.h"
+
 @interface TPShopListViewController ()
 @property (nonatomic, strong) TPShopListViewModel *viewModel;
 @property (strong, nonatomic) YSliderView *myCollectionHeaderView;
+@property (assign, nonatomic) BOOL isLoadData;
 @end
 
 @implementation TPShopListViewController
@@ -40,19 +43,7 @@
     [self configNavigationBar];
     [self setupSubViews];
     [self bindViewModel];
-    [self requestShopHomepageData];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
+    [self startLocation];
 }
 
 //MARK: -- config NavigationBar
@@ -62,6 +53,19 @@
     self.navigationView.isShowNavRightButtons = YES;
     self.navigationView.isShowDownArrowImage = YES;
     [self.view addSubview:self.navigationView];
+    
+    @weakify(self);
+    self.navigationView.clickMeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        UIStoryboard *toStoryboard = [UIStoryboard storyboardWithName:@"PersonCenter" bundle:nil];
+        UIViewController *toController=[toStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPPersonCenterViewController class])];
+        [self.navigationController pushViewController:toController animated:YES];
+    };
+    
+    self.navigationView.clickHomeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    };
 }
 
 //MARK: -- 初始化子控件
@@ -101,18 +105,17 @@
     }];
 }
 
-//MARK: -- 请求网络数据
-//MARK: -- 加载商家列表数据
-- (void)requestShopHomepageData {
+//MARK: -- 开始定位
+- (void)startLocation {
     @weakify(self);
-    
     [[YLocationManager sharedLocationManager] startLocation];
     [[YLocationManager sharedLocationManager] setStartLocationBlock:^(YLocationModel * _Nullable locationDataModel) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-            @strongify(self);
-            self.viewModel.currentLocationModel = locationDataModel;
-            [self collectionViewDidTriggerHeaderRefresh];
-        });
+        @strongify(self);
+        self.viewModel.currentLocationModel = locationDataModel;
+        if (!self.isLoadData) {
+             [self collectionViewDidTriggerHeaderRefresh];
+            self.isLoadData = YES;
+        }
     }];
 }
 

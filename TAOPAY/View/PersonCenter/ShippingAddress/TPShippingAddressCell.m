@@ -59,6 +59,7 @@
     if (dataSources) {
         TPAddressModel *tmpDataModel = (TPAddressModel *)dataSources;
         self.addressModel = tmpDataModel;
+        
         self.namePhoneLabel.text = [NSString stringWithFormat:@"%@, %@", tmpDataModel.name, tmpDataModel.phone];
         self.addressLabel.text = tmpDataModel.address;
         [self.setDefaultButton setSelected:[tmpDataModel.defaultAddress integerValue]==0?YES:NO];

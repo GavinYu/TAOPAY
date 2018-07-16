@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^TPClickSelectAreaButtonsHandler)(UIButton *sender);
-typedef void(^TPClickSaveButtonsHandler)(UIButton *sender);
+typedef void(^TPClickSaveButtonsHandler)(BOOL success);
 
 @interface TPAddNewAddressView : UIView <UITextFieldDelegate>
 
 @property (copy, nonatomic) TPClickSelectAreaButtonsHandler selectAreaBlock;
 @property (copy, nonatomic) TPClickSaveButtonsHandler saveNewAddressBlock;
 @property (copy, nonatomic) NSString *selectAreaId;
+
+@property (copy, nonatomic) NSString *areaString;
 
 //MARK: -- instance AddNewAddressView
 + (TPAddNewAddressView *)instanceAddNewAddressView;

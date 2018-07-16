@@ -16,10 +16,10 @@
 #import "RootViewController.h"
 #import "TPAppConfig.h"
 
-#import "UPPaymentControl.h"
+#import "TPUPPayManager.h"
 #import "RSA.h"
 #import <CommonCrypto/CommonDigest.h>
-
+#import "YHTTPService.h"
 
 @interface AppDelegate ()
 
@@ -67,37 +67,37 @@
 }
 
 // NOTE: 9.0以后使用新API接口
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
-{
-    [[UPPaymentControl defaultControl] handlePaymentResult:url completeBlock:^(NSString *code, NSDictionary *data) {
-        
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options {
+    [[TPUPPayManager sharedUPPayManager] handleUnionPayMentResult:url completeBlock:^(NSString *code, NSDictionary *data) {
+        BOOL tmpResult = NO;
         if([code isEqualToString:@"success"]) {
-            
+            tmpResult = YES;
             //如果想对结果数据验签，可使用下面这段代码，但建议不验签，直接去商户后台查询交易结果
-            if(data != nil){
-                //数据从NSDictionary转换为NSString
-                NSData *signData = [NSJSONSerialization dataWithJSONObject:data
-                                                                   options:0
-                                                                     error:nil];
-                NSString *sign = [[NSString alloc] initWithData:signData encoding:NSUTF8StringEncoding];
-                
-                //此处的verify建议送去商户后台做验签，如要放在手机端验，则代码必须支持更新证书
-                if([self verify:sign]) {
-                    //验签成功
-                }
-                else {
-                    //验签失败
-                }
-            }
+//            if(data != nil){
+//                //数据从NSDictionary转换为NSString
+//                NSData *signData = [NSJSONSerialization dataWithJSONObject:data
+//                                                                   options:0
+//                                                                     error:nil];
+//                NSString *sign = [[NSString alloc] initWithData:signData encoding:NSUTF8StringEncoding];
+//
+//                //此处的verify建议送去商户后台做验签，如要放在手机端验，则代码必须支持更新证书
+//                if([self verify:sign]) {
+//                    //验签成功
+//                }
+//                else {
+//                    //验签失败
+//                }
+//            }
             
             //结果code为成功时，去商户后台查询一下确保交易是成功的再展示成功
-        }
-        else if([code isEqualToString:@"fail"]) {
+            
+        } else if([code isEqualToString:@"fail"]) {
             //交易失败
-        }
-        else if([code isEqualToString:@"cancel"]) {
+        } else if([code isEqualToString:@"cancel"]) {
             //交易取消
         }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:TPPayResultNotificationKey object:[NSNumber numberWithBool:tmpResult] userInfo:data];
     }];
     
     return YES;

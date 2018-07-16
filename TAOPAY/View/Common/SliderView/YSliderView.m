@@ -11,6 +11,8 @@
 #import "TPMacros.h"
 
 #import "TPGoodsCategoryModel.h"
+#import "TPAreaModel.h"
+
 #import <Masonry/Masonry.h>
 
 #define YMoiety 8
@@ -61,9 +63,22 @@
                 [itemBtn setTitleColor:TP_BG_RED_COLOR forState:UIControlStateSelected];
                 [itemBtn setTitleColor:TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1 forState:UIControlStateNormal];
                 [itemBtn addTarget:self action:@selector(clickItemButton:) forControlEvents:UIControlEventTouchUpInside];
-                TPGoodsCategoryModel *tmpModel = dataSource[i];
-                [itemBtn setTitle:tmpModel.name forState:UIControlStateNormal];
-                itemBtn.tag = [tmpModel.categoryID integerValue];
+                //分情况
+                id tmpObj = dataSource[i];
+                if ([tmpObj isKindOfClass:[TPGoodsCategoryModel class]]) {
+                    //产品分类
+                    
+                    TPGoodsCategoryModel *tmpModel = (TPGoodsCategoryModel *)tmpObj;
+                    [itemBtn setTitle:tmpModel.name forState:UIControlStateNormal];
+                    itemBtn.tag = [tmpModel.categoryID integerValue];
+                } else if ([tmpObj isKindOfClass:[TPAreaModel class]]){
+                    //省、市、区/县
+                    
+                    TPAreaModel *tmpModel = (TPAreaModel *)tmpObj;
+                    [itemBtn setTitle:tmpModel.name forState:UIControlStateNormal];
+                    itemBtn.tag = [tmpModel.areaID integerValue];
+                }
+                
                 [_sliderScrollView addSubview:itemBtn];
                 
                 if (i == 0) {
@@ -99,6 +114,10 @@
     if (_clickSliderBlock) {
         _clickSliderBlock(sender);
     }
+}
+
+- (void)reloadSliderView {
+    
 }
 
 - (void)setTitleFont:(UIFont *)titleFont {

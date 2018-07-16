@@ -44,7 +44,7 @@
 //FIXME:TODO: -- 没有积分的值暂时使用价格值
 - (void)configData:(TPGoodsInfoModel *)goodsInfo {
     _integralValueLabel.text = [NSString stringWithFormat:@"P%@", goodsInfo.price];
-    _priceLabel.text = [NSString stringWithFormat:@"P%@", goodsInfo.price];
+    _priceLabel.text = [NSString stringWithFormat:@"￥%@", goodsInfo.price];
     
 }
 //MARK: -- Setup subView

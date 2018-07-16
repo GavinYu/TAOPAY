@@ -17,7 +17,7 @@ typedef void(^TPClickCellSetDefaultButtonsHandler)(TPAddressModel *addressModel)
 
 @interface TPShippingAddressCell : YBaseTableViewCell
 
-@property (copy, nonatomic) TPAddressModel *addressModel;
+@property (strong, nonatomic) TPAddressModel *addressModel;
 @property (nonatomic, copy) TPClickCellDeleteButtonsHandler deleteBlock;
 @property (nonatomic, copy) TPClickCellEditButtonsHandler editBlock;
 @property (nonatomic, copy) TPClickCellSetTopButtonsHandler setTopBlock;

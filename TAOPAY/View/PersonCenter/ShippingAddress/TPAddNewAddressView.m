@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (strong, nonatomic) YYTextView *addressTextView;
 @property (strong, nonatomic) UIView *backView;
+@property (weak, nonatomic) IBOutlet UIButton *areaButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end
 
@@ -30,6 +32,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.areaString = @"";
     self.layer.cornerRadius = 2.0;
     [self.layer setMasksToBounds:YES];
     
@@ -40,7 +43,7 @@
 - (void)initSubView {
     [self addSubview:self.addressTextView];
     [self.addressTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self);
+        make.top.equalTo(self.areaButton.mas_bottom).offset(20);
         make.left.equalTo(self).offset(10);
         make.size.mas_equalTo(CGSizeMake(APPWIDTH-68, 63));
     }];
@@ -76,15 +79,42 @@
 }
 //MARK: 选择地区按钮事件
 - (IBAction)clickSelectAreaButton:(UIButton *)sender {
+    [self endEditing:YES];
+    
     if (_selectAreaBlock) {
         _selectAreaBlock(sender);
     }
 }
 //MARK: 保存按钮事件
 - (IBAction)clickSaveButton:(UIButton *)sender {
-    if (!_saveNewAddressBlock) {
-        _saveNewAddressBlock(sender);
+    if (self.nameTextField.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入真实姓名"];
+        return;
     }
+    
+    if (self.phoneTextField.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入有效的手机号码"];
+        return;
+    }
+    
+    if (self.areaButton.titleLabel.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请选择地区"];
+        return;
+    }
+    
+    @weakify(self);
+    [self addShippingAddressSuccess:^(id json) {
+        NSString *msg = (NSString *)json;
+        [SVProgressHUD showSuccessWithStatus:msg];
+        @strongify(self);
+        [self close];
+        
+        if (!self.saveNewAddressBlock) {
+            self.saveNewAddressBlock(YES);
+        }
+        
+    } failure:^(NSString *error) {
+    }];
 }
 //MARK: 定位按钮事件
 - (IBAction)clickLocationButton:(UIButton *)sender {
@@ -94,10 +124,21 @@
         [[YLocationManager sharedLocationManager] setStartLocationBlock:^(YLocationModel * _Nullable locationDataModel) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 @strongify(self);
-                self.addressTextView.text = [NSString stringWithFormat:@"%@%@%@",locationDataModel.currentPlacemark.thoroughfare?:@"",locationDataModel.currentPlacemark.subThoroughfare?:@"",locationDataModel.currentPlacemark.name?:@""] ;
+//                self.addressTextView.text = [NSString stringWithFormat:@"%@%@%@",locationDataModel.currentPlacemark.thoroughfare?:@"",locationDataModel.currentPlacemark.subThoroughfare?:@"",locationDataModel.currentPlacemark.name?:@""];
+                self.addressTextView.text = locationDataModel.currentPlacemark.name?:@"";
             });
         }];
     });
+}
+
+- (void)textViewDidChange:(YYTextView *)textView {
+    if (textView.text.length > 0) {
+        self.saveButton.enabled = YES;
+        self.saveButton.backgroundColor = TP_BG_RED_COLOR;
+    } else {
+        self.saveButton.enabled = NO;
+        self.saveButton.backgroundColor = UICOLOR_FROM_HEXRGB(0xdfe01e);
+    }
 }
 //MARK: -- 懒加载区域
 //MARK: -- lazyload backView
@@ -136,6 +177,20 @@
     } failure:^(NSString *msg) {
         failure(msg);
     }];
+}
+
+- (void)setSelectAreaId:(NSString *)selectAreaId {
+    if (_selectAreaId != selectAreaId) {
+        _selectAreaId = selectAreaId;
+    }
+}
+
+- (void)setAreaString:(NSString *)areaString {
+    if (![_areaString isEqualToString:areaString]) {
+        _areaString = areaString;
+        
+        [_areaButton setTitle:_areaString forState:UIControlStateNormal];
+    }
 }
 
 /*

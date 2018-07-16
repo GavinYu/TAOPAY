@@ -33,7 +33,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
+    [self initSubViews];
     [self _addActionDealForMVCOrMVVMWithoutRAC];
     /// 添加事件
     [self.goodsCountTextField addTarget:self action:@selector(textFieldValueDidChanged:) forControlEvents:UIControlEventEditingChanged];
@@ -45,6 +45,11 @@
     // Configure the view for the selected state
 }
 
+//MARK: -- initSubViews
+- (void)initSubViews {
+    [self.selectImageView setImage:[UIImage imageNamed:@"icon_address_normal"] forState:UIControlStateNormal];
+    [self.selectImageView setImage:[UIImage imageNamed:@"icon_shoppingCart_selected"] forState:UIControlStateSelected];
+}
 // 以下 MVVM使用的场景，如果使用MVC的请自行ignore
 #pragma mark - bind data
 - (void)bindViewModel:(TPCartGoodsViewModel *)viewModel {
@@ -58,7 +63,7 @@
     self.goodsPriceLabel.text = [NSString stringWithFormat:@"￥%@", viewModel.goods.price];
     ///商品数量
     self.goodsCountTextField.text =  viewModel.goods.count;
-    
+    [self.selectImageView setSelected:viewModel.isSelected];
 }
 
 #pragma mark - 事件处理
@@ -70,26 +75,29 @@
     @weakify(self);
     [self.selectImageView bk_addEventHandler:^(id sender) {
         @strongify(self);
+        UIButton *tmpBtn = (UIButton *)sender;
+        [tmpBtn setSelected:!tmpBtn.isSelected];
+        self.viewModel.isSelected = tmpBtn.isSelected;
         !self.selectBlock?:self.selectBlock(self);
-    } forControlEvents:UIControlEventTouchUpOutside];
+    } forControlEvents:UIControlEventTouchUpInside];
     
     /// 增加按钮被点击
     [self.addButton bk_addEventHandler:^(id sender) {
         @strongify(self);
         !self.addBlock?:self.addBlock(self);
-    } forControlEvents:UIControlEventTouchUpOutside];
+    } forControlEvents:UIControlEventTouchUpInside];
     
     /// 减少按钮被点击
     [self.subButton bk_addEventHandler:^(id sender) {
         @strongify(self);
         !self.subBlock?:self.subBlock(self);
-    } forControlEvents:UIControlEventTouchUpOutside];
+    } forControlEvents:UIControlEventTouchUpInside];
     
     /// 删除按钮被点击
     [self.deleteButton bk_addEventHandler:^(id sender) {
         @strongify(self);
         !self.deleteBlock?:self.deleteBlock(self);
-    } forControlEvents:UIControlEventTouchUpOutside];
+    } forControlEvents:UIControlEventTouchUpInside];
     
 }
 

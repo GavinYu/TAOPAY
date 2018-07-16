@@ -15,6 +15,8 @@ typedef void(^TPShoppingCartAccountHandler)(UIButton *sender);
 
 @property (copy, nonatomic) TPShoppingCartAllSelectHandler allSelectBlock;
 @property (copy, nonatomic) TPShoppingCartAccountHandler accounttBlock;
+@property (copy, nonatomic) NSString *totalMoney;
+@property (assign, nonatomic) BOOL isAllSelected;
 
 + (TPShoppingCartBottomView *)instanceShoppingCartBottomView;
 

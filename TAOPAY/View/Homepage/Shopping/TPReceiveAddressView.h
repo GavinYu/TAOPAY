@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class TPAddressModel;
+@class TPReceiveAddressView;
 
-typedef void(^TPModifyAddressHandler)(NSString *addressId);
+typedef void(^TPModifyAddressHandler)(TPReceiveAddressView *sender);
 typedef void(^TPAddressTapEventHandler)(UIButton *sender);
 
 @interface TPReceiveAddressView : UIView

@@ -52,9 +52,9 @@
     if (dataSources) {
         TPGoodsInfoModel *infoModel = (TPGoodsInfoModel *)dataSources;
         _titleLabel.text = infoModel.name;
-        _infoLabel.text = infoModel.sinfo;
+        _infoLabel.text = infoModel.info;
         _priceLabel.text = [NSString stringWithFormat:@"￥%@", infoModel.price];
-        CGFloat priceWidth = [YUtil getTextWidthWithContent:_priceLabel.text withContentSizeOfHeight:_priceLabel.bounds.size.height withAttribute:@{NSFontAttributeName:_priceLabel.font}];
+        CGFloat priceWidth = [YUtil getTextWidthWithContent:_priceLabel.text withContentSizeOfHeight:_priceLabel.bounds.size.height withAttribute:@{NSFontAttributeName:_priceLabel.font}] + 5;
         [_priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(15);
             make.top.equalTo(self).offset(11);

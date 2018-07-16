@@ -19,6 +19,11 @@ typedef NS_ENUM(NSInteger, TPShoppingCartModifyType) {
     TPShoppingCartModifyTypeNumber
 };
 
+typedef NS_ENUM(NSUInteger, TPPayTNType) {
+    TPPayTNTypeRecharge = 1,
+    TPPayTNTypeShopping
+};
+
 typedef void (^requstSuccessBlock) (id success);
 typedef void (^faliueBlock) (id error);
 
@@ -26,6 +31,7 @@ typedef void (^faliueBlock) (id error);
 
 /// currentLoginUser
 @property (nonatomic, readwrite, strong) TPUser *currentUser;
+@property (nonatomic, readonly, assign) TPPayTNType tnType;
 
 /// 单例
 +(instancetype) sharedInstance;
@@ -154,8 +160,8 @@ typedef void (^faliueBlock) (id error);
                                        success:(void (^)(YHTTPResponse *response))success
                                        failure:(void (^)(NSString *msg))failure;
 //创建订单接口
-- (NSURLSessionDataTask *)requestShopOrderAdd:(NSString *)goodsId
-                              withGoodsNumber:(NSString *)goodsNum
+- (NSURLSessionDataTask *)requestShopOrderAdd:(NSArray *)goodsId
+                              withGoodsNumber:(NSArray *)goodsNum
                                 withAddressId:(NSString *)addressId
                                       success:(void (^)(YHTTPResponse *response))success
                                       failure:(void (^)(NSString *msg))failure;
@@ -169,7 +175,7 @@ typedef void (^faliueBlock) (id error);
 //订单银联支付交易流水号接口
 //type: 分类，1:充值余额 2:商品购买
 - (NSURLSessionDataTask *)requestOrderUnionpayRN:(NSString *)orderId
-                                            type:(NSString *)type
+                                            type:(TPPayTNType)type
                                          success:(void (^)(YHTTPResponse *response))success
                                          failure:(void (^)(NSString *msg))failure;
 //订单查询支付结果

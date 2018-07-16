@@ -69,7 +69,7 @@ YSingletonM(LocationManager)
                    completionHandler:^(NSArray *placemarks, NSError *error){
                        @strongify(self);
                        if (placemarks.count > 0) {
-                           _currentPlacemark = [placemarks firstObject];
+                           self.currentPlacemark = [placemarks firstObject];
                            
 //                                                      for (CLPlacemark *place in placemarks) {
 //                                                          DLog(@"name,%@",place.name);                       // 位置名

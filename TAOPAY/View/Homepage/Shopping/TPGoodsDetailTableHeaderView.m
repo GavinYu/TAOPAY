@@ -30,7 +30,7 @@
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
 }
 
-//MARK: --
+//MARK: -- Setter imageArray
 - (void)setImageArray:(NSArray *)imageArray {
     _imageArray = imageArray;
     
@@ -38,6 +38,7 @@
 }
 
 - (void)configSubView:(NSArray *)imageArr {
+    self.mainScrollView.contentSize = CGSizeMake(APPWIDTH*imageArr.count, self.mainScrollView.bounds.size.height);
     if (imageArr.count > 0) {
         _numberLabel.text = [NSString stringWithFormat:@"1/%li", imageArr.count];
         for (int i = 0; i < imageArr.count; ++i) {

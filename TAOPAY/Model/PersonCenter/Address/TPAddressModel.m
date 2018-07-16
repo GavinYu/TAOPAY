@@ -9,6 +9,7 @@
 #import "TPAddressModel.h"
 
 @implementation TPAddressModel
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"addressID":@"id",
              @"name":@"name",

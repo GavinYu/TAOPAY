@@ -16,11 +16,7 @@
 #import "TPURLConfigure.h"
 
 //UPPay
-#include <sys/socket.h> // Per msqr
-#include <sys/sysctl.h>
-#include <net/if.h>
-#include <net/if_dl.h>
-#import "UPPaymentControl.h"
+#import "TPUPPayManager.h"
 
 
 @interface TPCardOperateViewController ()
@@ -31,23 +27,44 @@
 
 @implementation TPCardOperateViewController
 
+- (void)dealloc {
+    [self removeNotifications];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configNavigationBar];
     [self setupSubView];
+    
+    [self addNotifications];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+//MARK: -- 添加通知
+- (void)addNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePayResultNotification:) name:TPPayResultNotificationKey object:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
+//MARK: -- 移除通知
+- (void)removeNotifications {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TPPayResultNotificationKey object:nil];
+}
+
+//MARK: -- 处理支付结果的通知
+- (void)handlePayResultNotification:(NSNotification *)notification {
+    //FIXME:TODO --
+    DLog(@"支付结果：%@，and 信息：%@", notification.object, notification.userInfo);
+    BOOL result = [notification.object boolValue];
+    if (result) {
+        //FIXME:TODO: -- 暂时不调用
+        [self.cardOperateViewModel balanceQuerySuccess:^(id json) {
+            NSString *tmpSuccessMsg = (NSString *)json;
+            [SVProgressHUD showSuccessWithStatus:tmpSuccessMsg];
+        } failure:^(NSError *errorMsg) {
+        }];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"支付失败！"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,17 +120,12 @@
                     @strongify(self);
                     dispatch_async(dispatch_get_main_queue(), ^{
                         NSString *tn = (NSString *)json;
-                        BOOL tmpPayStatus = [[UPPaymentControl defaultControl] startPay:tn fromScheme:@"UPPayDemo" mode:kMode_Development viewController:self];
-                        if (tmpPayStatus) {
-                            [self.cardOperateViewModel balanceQuerySuccess:^(id json) {
-                                NSString *tmpSuccessMsg = (NSString *)json;
-                                [SVProgressHUD showSuccessWithStatus:tmpSuccessMsg];
-                            } failure:nil];
-                        } else {
-                            [SVProgressHUD showSuccessWithStatus:@"支付失败！"];
-                        }
+                        DLog(@"充值的tn:%@", tn);
+                        [[TPUPPayManager sharedUPPayManager] startPay:tn viewController:self completeBlock:^(BOOL result) {
+                        }];
                     });
-                } failure:nil];
+                } failure:^(NSError *errorMsg) {
+                }];
             }
                 break;
                 
@@ -129,7 +141,8 @@
                         }
                         [self.navigationController popViewControllerAnimated:YES];
                     });
-                } failure:nil];
+                } failure:^(NSError *errorMsg) {
+                }];
             }
                 break;
                 

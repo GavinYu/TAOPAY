@@ -35,4 +35,8 @@ NSString *const TPIsHaveRegisterKey = @"TPIsHaveRegisterKey";
 NSString *const TPAppEverLaunchKey = @"TPAppEverLaunchKey";
 NSString *const TPAppFirstLaunchKey = @"TPAppFirstLaunchKey";
 
+//相关的通知key
+//表示支付结果的通知
+NSString *const TPPayResultNotificationKey = @"TPPayResultNotificationKey";
+
 @end

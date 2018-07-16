@@ -18,12 +18,15 @@
 
 #import "TPShopHomepageCollectionReusableView.h"
 #import "TPGoodsCell.h"
+#import "YSliderView.h"
 
 #import "TPGoodsDetailsViewController.h"
 
+#import "TPPersonCenterViewController.h"
+
 @interface TPGoodsListViewController ()
 @property (nonatomic, strong) TPShopGoodsListViewModel *viewModel;
-@property (strong, nonatomic) TPShopHomepageCollectionReusableView *myCollectionHeaderView;
+@property (strong, nonatomic) YSliderView *myCollectionHeaderView;
 @end
 
 @implementation TPGoodsListViewController
@@ -44,17 +47,6 @@
     [self bindViewModel];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
-}
 
 //MARK: -- config NavigationBar
 - (void)configNavigationBar {
@@ -63,13 +55,26 @@
     self.navigationView.isShowNavRightButtons = YES;
     self.navigationView.isShowDownArrowImage = YES;
     [self.view addSubview:self.navigationView];
+    
+    @weakify(self);
+    self.navigationView.clickMeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        UIStoryboard *toStoryboard = [UIStoryboard storyboardWithName:@"PersonCenter" bundle:nil];
+        UIViewController *toController=[toStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPPersonCenterViewController class])];
+        [self.navigationController pushViewController:toController animated:YES];
+    };
+    
+    self.navigationView.clickHomeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    };
 }
 
 //MARK: -- 初始化子控件
 - (void)setupSubViews {
     self.collectionView.frame = CGRectMake(0, NAVGATIONBARHEIGHT, APPWIDTH, APPHEIGHT-NAVGATIONBARHEIGHT);
     
-    self.myCollectionHeaderView = [TPShopHomepageCollectionReusableView instanceShopHomepageCollectionHeaderView];
+    self.myCollectionHeaderView = [YSliderView instanceSliderView];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -78,7 +83,7 @@
     
     //注册xib
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TPGoodsCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([TPGoodsCell class])];
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TPShopHomepageCollectionReusableView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([TPShopHomepageCollectionReusableView class])];
+     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
 }
 
 #pragma mark - BindModel
@@ -92,7 +97,7 @@
         if (!YArrayIsEmpty(tmp)) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 @strongify(self);
-                self.myCollectionHeaderView.catArray = tmp;
+                self.myCollectionHeaderView.dataSource = tmp;
                 [self.myCollectionHeaderView layoutIfNeeded];
             });
         }
@@ -164,13 +169,29 @@
 }
 
 //设置sectionHeader | sectionFoot
+//设置sectionHeader | sectionFoot
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        UICollectionReusableView* view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([TPShopHomepageCollectionReusableView class]) forIndexPath:indexPath];
-        return view;
-    } else {
-        return nil;
-    }
+    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+    headerView.backgroundColor =[UIColor clearColor];
+    
+    UIImageView *shopBgImageView = UIImageView.new;
+    [shopBgImageView setImageWithURL:[NSURL URLWithString:self.viewModel.shopImage] placeholder:nil];
+    [headerView addSubview:shopBgImageView];
+    [shopBgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(headerView);
+        make.size.mas_equalTo(CGSizeMake(APPWIDTH, 265));
+    }];
+    
+    [headerView addSubview:self.myCollectionHeaderView];
+    [self.myCollectionHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(shopBgImageView.mas_bottom);
+        make.left.equalTo(headerView);
+        make.size.mas_equalTo(CGSizeMake(APPWIDTH, 38));
+    }];
+    
+    [headerView layoutIfNeeded];
+    
+    return headerView;
 }
 
 //MARK: - UICollectionViewDelegate Methods

@@ -55,10 +55,30 @@
     }];
 }
 
+/// 删除收货地址
+- (void)deleteAddress:(NSString *)addressId
+              success:(void(^)(id json))success
+              failure:(void (^)(NSString *error))failure {
+    @weakify(self);
+    [[YHTTPService sharedInstance] requestDeleteAddress:addressId success:^(YHTTPResponse *response) {
+        @strongify(self);
+        if (response.code == YHTTPResponseCodeSuccess) {
+            [self.dataSource removeObject:self.selectedAddressModel];
+            success(@YES);
+        } else {
+            [SVProgressHUD showErrorWithStatus:response.message];
+            failure(response.message);
+        }
+    } failure:^(NSString *msg) {
+        [SVProgressHUD showErrorWithStatus:msg];
+        failure(msg);
+    }];
+}
+
 //MARK: -- 处理goodsData
-- (NSArray *)viewModelsWithGoodsData:(TPAddressListModel *)addressListData
-{
+- (NSArray *)viewModelsWithGoodsData:(TPAddressListModel *)addressListData {
     return addressListData.list;
 }
+
 
 @end

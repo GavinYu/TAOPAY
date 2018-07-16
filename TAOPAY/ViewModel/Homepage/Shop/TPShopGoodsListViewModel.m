@@ -13,6 +13,7 @@
 
 #import "TPGoodsListModel.h"
 #import "TPGoodsCategoryModel.h"
+#import "TPShopGoodsModel.h"
 
 #import "TPShopGoodsViewModel.h"
 
@@ -77,6 +78,8 @@
     for (TPShopGoodsModel *goods in goodsListData.list) {
         TPShopGoodsViewModel *itemViewModel = [[TPShopGoodsViewModel alloc] initWithGoods:goods];
         [viewModels addObject:itemViewModel];
+        
+        self.shopImage = goods.image;
     }
     
     return viewModels;

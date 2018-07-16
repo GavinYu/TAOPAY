@@ -12,7 +12,7 @@
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
     // value should be Class or Class name.
-    return @{@"list"  : @"TPGoodsModel"
+    return @{@"list"  : @"TPShoppingCartGoodsModel"
              };
 }
 

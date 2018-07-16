@@ -42,14 +42,20 @@
     ///商铺名称
     self.shopNameLabel.text = viewModel.shop.name;
     ///距离
-    self.distanceLabel.text = [NSString stringWithFormat:@"%@", viewModel.shop.distance];
+    self.distanceLabel.text = [self getDistanceString:viewModel.shop.distance];
     ///已售数量
     self.sellNumberLabel.text = [NSString stringWithFormat:@"%@", viewModel.shop.orderCount];
     /// 总量
     self.totalNumberLabel.text = [NSString stringWithFormat:@"共%@件宝贝", viewModel.shop.goodsCount];
     /// 星级
     self.starImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",viewModel.shop.star]];
-    
+}
+
+//MARK: -- 将米(m)转换成千米（km）
+- (NSString *)getDistanceString:(NSString *)distance {
+    CGFloat dis = [distance floatValue];
+    CGFloat result = dis / 1000.0;
+    return [NSString stringWithFormat:@"%.1fkm", result];
 }
 
 @end

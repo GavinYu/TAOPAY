@@ -10,4 +10,13 @@
 
 @implementation TPShoppingCartGoodsModel
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"goodsID":@"id",
+             @"name":@"name",
+             @"price":@"price",
+             @"image":@"image",
+             @"count":@"count"
+             };
+}
+
 @end

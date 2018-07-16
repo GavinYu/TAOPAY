@@ -16,10 +16,11 @@
 
 #import "TPAddressListViewModel.h"
 #import "TPShoppingCartViewModel.h"
-#
+#import "TPCartGoodsViewModel.h"
 
 #import "TPShippingAddressListViewController.h"
 #import "TPShoppingPayViewController.h"
+#import "TPPersonCenterViewController.h"
 
 @interface TPShoppingCartViewController ()
 
@@ -46,17 +47,6 @@
     [self bindViewModel];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
-}
 //MARK: -- config NavigationBar
 - (void)configNavigationBar {
     self.navigationView.title = self.viewModel.title;
@@ -64,6 +54,19 @@
     self.navigationView.isShowNavRightButtons = YES;
     self.navigationView.isShowDownArrowImage = NO;
     [self.view addSubview:self.navigationView];
+    
+    @weakify(self);
+    self.navigationView.clickMeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        UIStoryboard *toStoryboard = [UIStoryboard storyboardWithName:@"PersonCenter" bundle:nil];
+        UIViewController *toController=[toStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPPersonCenterViewController class])];
+        [self.navigationController pushViewController:toController animated:YES];
+    };
+    
+    self.navigationView.clickHomeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    };
 }
 
 //MARK: -- 创建底部工具栏
@@ -84,13 +87,16 @@
     };
     
     self.bottomToolView.allSelectBlock = ^(UIButton *sender) {
-        //FIXME:TODO: -- 需要跳转到客服页面
+        @strongify(self);
+        [self handleBottomToolViewAllSelectedEvent:sender.isSelected];
+        [self.tableView reloadData];
     };
 }
 
 //MARK: -- 初始化子控件
 - (void)setupSubViews {
     self.tableView.frame = CGRectMake(0, NAVGATIONBARHEIGHT, APPWIDTH, APPHEIGHT-NAVGATIONBARHEIGHT);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.myTableHeaderView = [TPReceiveAddressView instanceReceiveAddressView];
     @weakify(self);
     self.myTableHeaderView.tapBlock = ^(UIButton *sender) {
@@ -104,23 +110,29 @@
     [self.tableView y_registerNibCell:[TPShoppingCartCell class]];
 }
 
+//MARK: -- 处理下方工具栏的全选事件
+- (void)handleBottomToolViewAllSelectedEvent:(BOOL)isSelected {
+    CGFloat tmpGoodsTotal = 0;
+    
+    for (TPCartGoodsViewModel *obj in self.viewModel.dataSource) {
+        obj.isSelected = isSelected;
+        
+        tmpGoodsTotal += [obj.goodsTotalPrice floatValue];
+    }
+    
+    if (isSelected) {
+        self.bottomToolView.totalMoney = [NSString stringWithFormat:@"%.2f", tmpGoodsTotal];
+    } else {
+        self.bottomToolView.totalMoney = @"0";
+    }
+    
+}
+
 #pragma mark - BindModel
 - (void)bindViewModel{
     /// kvo
     _KVOController = [FBKVOController controllerWithObserver:self];
     
-    @weakify(self);
-    [_KVOController y_observe:self.viewModel keyPath:@"selectAddressModel" block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
-        @strongify(self);
-        id tmp = change[NSKeyValueChangeNewKey];
-        if (tmp) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                @strongify(self);
-                //FIXME:TODO -- 更新选择的地址
-            });
-        }
-        
-    }];
 }
 //MARK: -- 请求网络数据
 #pragma mark - Override
@@ -138,6 +150,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             @strongify(self);
             [self.tableView reloadData];
+            self.myTableHeaderView.addressModel = self.viewModel.selectAddressModel;
+            self.bottomToolView.totalMoney = self.viewModel.totalPayMoney;
         });
     } failure:^(NSString *error) {
         @strongify(self);
@@ -158,48 +172,50 @@
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
-        TPShoppingCartCell *cartCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TPShoppingCartCell class]) forIndexPath:indexPath];
-        /// 处理事件
-        @weakify(self);
-        //选中处理
-        cartCell.selectBlock = ^(TPShoppingCartCell *cell) {
-            //FIXME:TODO -- 选中处理
-            
-        };
+    TPShoppingCartCell *cartCell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TPShoppingCartCell class]) forIndexPath:indexPath];
+    /// 处理事件
+    @weakify(self);
+    //选中处理
+    cartCell.selectBlock = ^(TPShoppingCartCell *cell) {
+        //是否选中处理
+        @strongify(self);
+        [self handleCellSelectEvent:cell];
+    };
+    
+    //添加商品处理
+    cartCell.addBlock = ^(TPShoppingCartCell *cell) {
+        //FIXME:TODO -- 添加商品处理
+        @strongify(self);
+        self.viewModel.modifyType = TPCartModifyTypeAdd;
         
-        //添加商品处理
-        cartCell.addBlock = ^(TPShoppingCartCell *cell) {
-            //FIXME:TODO -- 添加商品处理
-            @strongify(self);
-            self.viewModel.modifyType = TPCartModifyTypeAdd;
-            [self handleCellModifyEventWithCell:cell];
-        };
-        
-        //减去商品处理
-        cartCell.subBlock = ^(TPShoppingCartCell *cell) {
-            //FIXME:TODO -- 减去商品处理
-            @strongify(self);
-            self.viewModel.modifyType = TPCartModifyTypeSub;
-            [self handleCellModifyEventWithCell:cell];
-        };
-        
-        //修改商品数量处理
-        cartCell.countBlock = ^(TPShoppingCartCell *cell) {
-            //FIXME:TODO -- 修改商品数量处理
-            @strongify(self);
-            self.viewModel.modifyType = TPCartModifyTypeCount;
-            [self handleCellModifyEventWithCell:cell];
-        };
-        
-        //删除商品处理
-        cartCell.deleteBlock = ^(TPShoppingCartCell *cell) {
-            //FIXME:TODO -- 删除商品处理
-            @strongify(self);
-            self.viewModel.modifyType = TPCartModifyTypeCount;
-            [self handleCellModifyEventWithCell:cell];
-        };
-        
-        return cartCell;
+        [self handleCellModifyEventWithCell:cell];
+    };
+    
+    //减去商品处理
+    cartCell.subBlock = ^(TPShoppingCartCell *cell) {
+        //FIXME:TODO -- 减去商品处理
+        @strongify(self);
+        self.viewModel.modifyType = TPCartModifyTypeSub;
+        [self handleCellModifyEventWithCell:cell];
+    };
+    
+    //修改商品数量处理
+    cartCell.countBlock = ^(TPShoppingCartCell *cell) {
+        //FIXME:TODO -- 修改商品数量处理
+        @strongify(self);
+        self.viewModel.modifyType = TPCartModifyTypeCount;
+        [self handleCellModifyEventWithCell:cell];
+    };
+    
+    //删除商品处理
+    cartCell.deleteBlock = ^(TPShoppingCartCell *cell) {
+        //FIXME:TODO -- 删除商品处理
+        @strongify(self);
+        self.viewModel.modifyType = TPCartModifyTypeCount;
+        [self handleCellModifyEventWithCell:cell];
+    };
+    
+    return cartCell;
 }
 
 /// config  data
@@ -210,23 +226,45 @@
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSInteger section = indexPath.section;
-    if (section == 0) {
-        return 90;
-    } else {
-        return 110;
-    }
+    return 110;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
 }
 
 //MARK: -- Cell 中的按钮事件处理
 //MARK: -- 选中事件
-- (void)handleCellSelectEvent {
+- (void)handleCellSelectEvent:(TPShoppingCartCell *)cell {
+    if (cell.viewModel.isSelected) {
+        if (![self.viewModel.selectedArray containsObject:cell.viewModel]) {
+            [self.viewModel.selectedArray addObject:cell.viewModel];
+        }
+    } else {
+        if ([self.viewModel.selectedArray containsObject:cell.viewModel]) {
+            [self.viewModel.selectedArray removeObject:cell.viewModel];
+        }
+    }
     
+    BOOL tmpValue = self.viewModel.selectedArray.count == self.viewModel.dataSource.count;
+    self.bottomToolView.isAllSelected = tmpValue == YES ? YES:NO;
+    [self handleTotalPriceCalculate:cell.viewModel withIsSelected:cell.viewModel.isSelected];
+}
+
+//MARK: -- 处理总价的计算
+- (void)handleTotalPriceCalculate:(TPCartGoodsViewModel *)goodsViewModel withIsSelected:(BOOL)isSelected {
+    CGFloat tmpTotal = [self.viewModel.totalPayMoney floatValue];
+    CGFloat tmpGoodsTotal = [goodsViewModel.goodsTotalPrice floatValue];
+    
+    if (isSelected) {
+        tmpTotal += tmpGoodsTotal;
+    } else {
+        tmpTotal -= tmpGoodsTotal;
+    }
+    
+    self.viewModel.totalPayMoney = [NSString stringWithFormat:@"%.2f", tmpTotal];
+    self.bottomToolView.totalMoney = self.viewModel.totalPayMoney;
 }
 //MARK: -- 购物车修改事件
 - (void)handleCellModifyEventWithCell:(TPShoppingCartCell *)cell {
@@ -253,7 +291,7 @@
         if (tmp) {
             [self tableViewDidTriggerHeaderRefresh];
         }
-       
+        
     } failure:^(NSString *error) {
         //FIXME:TODO
     }];
@@ -278,6 +316,7 @@
 ///MARK: --  跳转界面   跳转到购物车支付页
 - (void)pushToShoppingPayViewController {
     TPShoppingCartViewModel *viewModel = [[TPShoppingCartViewModel alloc] initWithParams:@{YViewModelTitleKey:TPLocalizedString(@"navigation_title")}];
+    viewModel.isPayPage = YES;
     TPShoppingPayViewController *shoppingPayController = [[TPShoppingPayViewController alloc] initWithViewModel:viewModel];
     [self.navigationController pushViewController:shoppingPayController animated:YES];
 }
@@ -288,13 +327,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

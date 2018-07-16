@@ -16,8 +16,10 @@
 #import "YUtil.h"
 #import "NSString+YConvert.h"
 
+
 @interface YHTTPService ()
 
+@property (nonatomic, assign) TPPayTNType tnType;
 
 @end
 
@@ -193,6 +195,7 @@ static id service_ = nil;
 - (NSURLSessionDataTask *)requestBalanceRechargeWithAmount:(NSString *)amount
                                                    success:(void (^)(YHTTPResponse *response))success
                                                    failure:(void (^)(NSString *msg))failure {
+    self.tnType = TPPayTNTypeRecharge;
     NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"amount":amount};
     NSURLSessionDataTask *task =  [self POST:BalanceRechargeRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -511,8 +514,8 @@ static id service_ = nil;
     return task;
 }
 //MARK: -- 创建订单接口
-- (NSURLSessionDataTask *)requestShopOrderAdd:(NSString *)goodsId
-                              withGoodsNumber:(NSString *)goodsNum
+- (NSURLSessionDataTask *)requestShopOrderAdd:(NSArray *)goodsId
+                              withGoodsNumber:(NSArray *)goodsNum
                                 withAddressId:(NSString *)addressId
                                       success:(void (^)(YHTTPResponse *response))success
                                       failure:(void (^)(NSString *msg))failure {
@@ -562,10 +565,12 @@ static id service_ = nil;
 //MARK: -- 订单银联支付交易流水号接口
 //type: 分类，1:充值余额 2:商品购买
 - (NSURLSessionDataTask *)requestOrderUnionpayRN:(NSString *)orderId
-                                            type:(NSString *)type
+                                            type:(TPPayTNType)type
                                          success:(void (^)(YHTTPResponse *response))success
                                          failure:(void (^)(NSString *msg))failure {
-    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey],@"orderId":orderId,@"type":type};
+    self.tnType = TPPayTNTypeShopping;
+    
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey],@"orderId":orderId,@"type":[NSString integerToString:type]};
     NSURLSessionDataTask *task =  [self POST:UnionpayRnRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];

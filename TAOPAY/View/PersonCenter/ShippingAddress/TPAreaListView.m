@@ -39,6 +39,14 @@
 - (void)initSubView {
     self.areaID = @"0";
     self.myTableView.tableHeaderView = self.myTableHeaderView;
+    
+    @weakify(self);
+    self.myTableHeaderView.sliderClickEventBlock = ^(TPAreaModel *areaModel) {
+        //FIXME: TODO --
+        @strongify(self);
+        self.areaID = areaModel.areaID;
+        [self requestAreaListData];
+    };
     [self requestAreaListData];
 }
 
@@ -59,7 +67,7 @@
     [self.backView addGestureRecognizer:tap];
     
     @weakify(self);
-    [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{
         @strongify(self);
         self.layer.transform = CATransform3DMakeScale(0.95f, 0.95f, 1.0);
     } completion:^(BOOL finished) {
@@ -104,8 +112,26 @@
     
     NSInteger row = indexPath.row;
     TPAreaModel *tmpModel = self.areaListModel.list[row];
+    
+    self.areaID = tmpModel.areaID;
+    
+    self.myTableHeaderView.selectedAreaModel = tmpModel;
+    
     if (_selectedAreaBlock) {
         _selectedAreaBlock(tmpModel);
+    }
+    
+    if (row == self.areaListModel.list.count - 1) {
+        [self close];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat sectionHeaderHeight = self.myTableHeaderView.bounds.size.height;
+    if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
     }
 }
 
@@ -167,6 +193,7 @@
         failure(msg);
     }];
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

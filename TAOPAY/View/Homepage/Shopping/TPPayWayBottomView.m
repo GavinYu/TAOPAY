@@ -46,6 +46,25 @@
 //    [_freeLabel setText:TPLocalizedString(<#key#>)];
 }
 
+- (void)updateSubViews:(NSString *)totalMoney {
+    _moneyLabel.text = [NSString stringWithFormat:@"￥%@", _totalMoney];
+    
+    CGFloat tmpWidth = [YUtil getTextWidthWithContent:_moneyLabel.text withContentSizeOfHeight:CGRectGetHeight(_moneyLabel.frame) withAttribute:@{NSFontAttributeName:_moneyLabel.font}] + 10;
+    [_moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.freeLabel.mas_left).offset(-3);
+        make.centerY.equalTo(self);
+        make.size.mas_equalTo(CGSizeMake(tmpWidth, 20));
+    }];
+    
+    [_payTipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.moneyLabel.mas_left).offset(-3);
+        make.centerY.equalTo(self);
+        make.size.mas_equalTo(CGSizeMake(52, 16));
+    }];
+    
+
+}
+
 - (IBAction)clickPayButton:(UIButton *)sender {
     if (_payBlock) {
         _payBlock(sender);
@@ -57,8 +76,7 @@
 - (void)setTotalMoney:(NSString *)totalMoney {
     if (_totalMoney != totalMoney) {
         _totalMoney = totalMoney;
-        
-        _moneyLabel.text = totalMoney;
+        [self updateSubViews:_totalMoney];
     }
 }
 

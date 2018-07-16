@@ -78,7 +78,6 @@
                               failure:(void (^)(NSString *error))failure {
     [[YHTTPService sharedInstance] requestAddShoppingCart:self.goodsID success:^(YHTTPResponse *response) {
         if (response.code == YHTTPResponseCodeSuccess) {
-            [SVProgressHUD showSuccessWithStatus:response.message];
             success(@YES);
         } else {
             [SVProgressHUD showErrorWithStatus:response.message];

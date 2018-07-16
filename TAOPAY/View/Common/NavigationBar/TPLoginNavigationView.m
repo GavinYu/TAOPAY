@@ -9,6 +9,9 @@
 #import "TPLoginNavigationView.h"
 
 #import "TPAppConfig.h"
+#import "AppDelegate.h"
+
+#import "TPPersonCenterViewController.h"
 
 @interface TPLoginNavigationView ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;

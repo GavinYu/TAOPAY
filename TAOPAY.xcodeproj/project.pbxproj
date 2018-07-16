@@ -60,7 +60,6 @@
 		841DD6E420CBE3C00018D27E /* TPAreaListTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841DD6E320CBE3C00018D27E /* TPAreaListTableHeaderView.m */; };
 		841DD6E620CBE3D60018D27E /* TPAreaListTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6E520CBE3D60018D27E /* TPAreaListTableHeaderView.xib */; };
 		841DD6EE20D14E860018D27E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6F020D14E860018D27E /* Localizable.strings */; };
-		841DD6FC20D29B870018D27E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6FB20D29B850018D27E /* Info.plist */; };
 		841DD70920D2A5FF0018D27E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841DD70B20D2A5FF0018D27E /* InfoPlist.strings */; };
 		84206B24207F95E10099C8E6 /* TPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B23207F95E10099C8E6 /* TPConstant.m */; };
 		84206B3F207FA3100099C8E6 /* YBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B3E207FA3100099C8E6 /* YBaseTableViewCell.m */; };
@@ -91,7 +90,27 @@
 		84206BA920818C6A0099C8E6 /* YNewFeatureViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BA820818C6A0099C8E6 /* YNewFeatureViewModel.m */; };
 		84206BAD2081960E0099C8E6 /* UIView+YExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BAC2081960E0099C8E6 /* UIView+YExtension.m */; };
 		84206BB320819C480099C8E6 /* TPRegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206BB220819C480099C8E6 /* TPRegisterViewModel.m */; };
-		8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.mm */; };
+		843FDF6B20F9717600B03F09 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843FDF6A20F9717500B03F09 /* CFNetwork.framework */; };
+		843FDF6D20F9718500B03F09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843FDF6C20F9718500B03F09 /* SystemConfiguration.framework */; };
+		843FDF6F20F9719500B03F09 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 843FDF6E20F9719500B03F09 /* libz.tbd */; };
+		843FDF7620F9D7AA00B03F09 /* TPOrderGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF7420F9D7AA00B03F09 /* TPOrderGoodsCell.m */; };
+		843FDF7720F9D7AA00B03F09 /* TPOrderGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FDF7520F9D7AA00B03F09 /* TPOrderGoodsCell.xib */; };
+		843FDF7A20F9DB8300B03F09 /* TPOrderTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF7920F9DB8300B03F09 /* TPOrderTableHeaderView.m */; };
+		843FDF7C20F9DB9400B03F09 /* TPOrderTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FDF7B20F9DB9400B03F09 /* TPOrderTableHeaderView.xib */; };
+		843FDF7F20F9DE5400B03F09 /* TPOrderTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF7E20F9DE5400B03F09 /* TPOrderTableFooterView.m */; };
+		843FDF8120F9DE6800B03F09 /* TPOrderTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FDF8020F9DE6800B03F09 /* TPOrderTableFooterView.xib */; };
+		843FDF8420F9E1DA00B03F09 /* TPOrderDetailTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF8320F9E1DA00B03F09 /* TPOrderDetailTableFooterView.m */; };
+		843FDF8620F9E1EA00B03F09 /* TPOrderDetailTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FDF8520F9E1EA00B03F09 /* TPOrderDetailTableFooterView.xib */; };
+		843FDF8920F9E5B500B03F09 /* TPOrderDetailSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF8820F9E5B500B03F09 /* TPOrderDetailSectionFooterView.m */; };
+		843FDF8B20F9E5C600B03F09 /* TPOrderDetailSectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FDF8A20F9E5C600B03F09 /* TPOrderDetailSectionFooterView.xib */; };
+		843FDF8F20F9F55700B03F09 /* TPOrderListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF8E20F9F55700B03F09 /* TPOrderListViewModel.m */; };
+		843FDF9220F9F70D00B03F09 /* TPOrderListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF9120F9F70D00B03F09 /* TPOrderListModel.m */; };
+		843FDF9520F9FA5700B03F09 /* TPOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF9420F9FA5700B03F09 /* TPOrderDetailViewController.m */; };
+		843FDF9B20FA0BFE00B03F09 /* TPOrderPayTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF9A20FA0BFE00B03F09 /* TPOrderPayTableFooterView.m */; };
+		843FDF9D20FA0C1000B03F09 /* TPOrderPayTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FDF9C20FA0C1000B03F09 /* TPOrderPayTableFooterView.xib */; };
+		843FDFA020FA277C00B03F09 /* TPOrderPayViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDF9F20FA277C00B03F09 /* TPOrderPayViewModel.m */; };
+		843FDFA320FA2E1000B03F09 /* TPOrderDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FDFA220FA2E1000B03F09 /* TPOrderDetailViewModel.m */; };
+		8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.m */; };
 		8451DE13208C90630059E73A /* TPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE12208C90630059E73A /* TPTabBarViewController.m */; };
 		8451DE1C2096B1280059E73A /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8451DE1B2096B1280059E73A /* libPaymentControl.a */; };
 		8451DE2F2096CACB0059E73A /* TPCardOperateViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451DE2E2096CACB0059E73A /* TPCardOperateViewModel.m */; };
@@ -105,7 +124,7 @@
 		846ECCD2209D4CDF006D6D23 /* bg_detour_ball@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCD1209D4CDE006D6D23 /* bg_detour_ball@2x.gif */; };
 		846ECCD5209DA78E006D6D23 /* TPWalletTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCD4209DA78E006D6D23 /* TPWalletTableFooterView.m */; };
 		846ECCD7209DA7AD006D6D23 /* TPWalletTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCD6209DA7AC006D6D23 /* TPWalletTableFooterView.xib */; };
-		846ECCDA209E8EDC006D6D23 /* TPUPPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCD9209E8EDC006D6D23 /* TPUPPayManager.m */; };
+		846ECCDA209E8EDC006D6D23 /* TPUPPayManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCD9209E8EDC006D6D23 /* TPUPPayManager.mm */; };
 		846ECCE2209E9215006D6D23 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 846ECCE0209E9215006D6D23 /* RSA.m */; };
 		846ECCE6209E92A8006D6D23 /* public_test.key in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCE4209E92A8006D6D23 /* public_test.key */; };
 		846ECCE7209E92A8006D6D23 /* public_product.key in Resources */ = {isa = PBXBuildFile; fileRef = 846ECCE5209E92A8006D6D23 /* public_product.key */; };
@@ -153,6 +172,11 @@
 		849EFB1220831FC500C37AC9 /* YNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB1120831FC500C37AC9 /* YNavigationBar.m */; };
 		849EFB1620839BE900C37AC9 /* TPWalletTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EFB1520839BE900C37AC9 /* TPWalletTableHeaderView.m */; };
 		849EFB1820839C0700C37AC9 /* TPWalletTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849EFB1720839C0700C37AC9 /* TPWalletTableHeaderView.xib */; };
+		849F4F1D20FAD0080071C473 /* TPOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F4F1C20FAD0080071C473 /* TPOrderModel.m */; };
+		849F4F2020FB22130071C473 /* TPCompanyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F4F1F20FB22130071C473 /* TPCompanyModel.m */; };
+		849F4F2320FB22C30071C473 /* TPOrderGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F4F2220FB22C30071C473 /* TPOrderGoodsModel.m */; };
+		849F4F2720FB3F480071C473 /* TPOrderCompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F4F2520FB3F480071C473 /* TPOrderCompanyCell.m */; };
+		849F4F2820FB3F480071C473 /* TPOrderCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849F4F2620FB3F480071C473 /* TPOrderCompanyCell.xib */; };
 		84B12A2F20A32E7D00ECC925 /* TPBalanceDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B12A2E20A32E7D00ECC925 /* TPBalanceDetailModel.m */; };
 		84B12A3220A32F0100ECC925 /* TPBalanceDetailItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B12A3120A32F0100ECC925 /* TPBalanceDetailItemModel.m */; };
 		84CD0B85207CEF140069AD9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0B84207CEF140069AD9A /* AppDelegate.m */; };
@@ -376,9 +400,40 @@
 		84206BAC2081960E0099C8E6 /* UIView+YExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YExtension.m"; sourceTree = "<group>"; };
 		84206BB120819C480099C8E6 /* TPRegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPRegisterViewModel.h; sourceTree = "<group>"; };
 		84206BB220819C480099C8E6 /* TPRegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPRegisterViewModel.m; sourceTree = "<group>"; };
+		843FDF6A20F9717500B03F09 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		843FDF6C20F9718500B03F09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		843FDF6E20F9719500B03F09 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		843FDF7320F9D7AA00B03F09 /* TPOrderGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderGoodsCell.h; sourceTree = "<group>"; };
+		843FDF7420F9D7AA00B03F09 /* TPOrderGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderGoodsCell.m; sourceTree = "<group>"; };
+		843FDF7520F9D7AA00B03F09 /* TPOrderGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPOrderGoodsCell.xib; sourceTree = "<group>"; };
+		843FDF7820F9DB8300B03F09 /* TPOrderTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderTableHeaderView.h; sourceTree = "<group>"; };
+		843FDF7920F9DB8300B03F09 /* TPOrderTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderTableHeaderView.m; sourceTree = "<group>"; };
+		843FDF7B20F9DB9400B03F09 /* TPOrderTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPOrderTableHeaderView.xib; sourceTree = "<group>"; };
+		843FDF7D20F9DE5400B03F09 /* TPOrderTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderTableFooterView.h; sourceTree = "<group>"; };
+		843FDF7E20F9DE5400B03F09 /* TPOrderTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderTableFooterView.m; sourceTree = "<group>"; };
+		843FDF8020F9DE6800B03F09 /* TPOrderTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPOrderTableFooterView.xib; sourceTree = "<group>"; };
+		843FDF8220F9E1DA00B03F09 /* TPOrderDetailTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderDetailTableFooterView.h; sourceTree = "<group>"; };
+		843FDF8320F9E1DA00B03F09 /* TPOrderDetailTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderDetailTableFooterView.m; sourceTree = "<group>"; };
+		843FDF8520F9E1EA00B03F09 /* TPOrderDetailTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPOrderDetailTableFooterView.xib; sourceTree = "<group>"; };
+		843FDF8720F9E5B500B03F09 /* TPOrderDetailSectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderDetailSectionFooterView.h; sourceTree = "<group>"; };
+		843FDF8820F9E5B500B03F09 /* TPOrderDetailSectionFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderDetailSectionFooterView.m; sourceTree = "<group>"; };
+		843FDF8A20F9E5C600B03F09 /* TPOrderDetailSectionFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPOrderDetailSectionFooterView.xib; sourceTree = "<group>"; };
+		843FDF8D20F9F55700B03F09 /* TPOrderListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderListViewModel.h; sourceTree = "<group>"; };
+		843FDF8E20F9F55700B03F09 /* TPOrderListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderListViewModel.m; sourceTree = "<group>"; };
+		843FDF9020F9F70D00B03F09 /* TPOrderListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderListModel.h; sourceTree = "<group>"; };
+		843FDF9120F9F70D00B03F09 /* TPOrderListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderListModel.m; sourceTree = "<group>"; };
+		843FDF9320F9FA5700B03F09 /* TPOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderDetailViewController.h; sourceTree = "<group>"; };
+		843FDF9420F9FA5700B03F09 /* TPOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderDetailViewController.m; sourceTree = "<group>"; };
+		843FDF9920FA0BFE00B03F09 /* TPOrderPayTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderPayTableFooterView.h; sourceTree = "<group>"; };
+		843FDF9A20FA0BFE00B03F09 /* TPOrderPayTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderPayTableFooterView.m; sourceTree = "<group>"; };
+		843FDF9C20FA0C1000B03F09 /* TPOrderPayTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPOrderPayTableFooterView.xib; sourceTree = "<group>"; };
+		843FDF9E20FA277C00B03F09 /* TPOrderPayViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderPayViewModel.h; sourceTree = "<group>"; };
+		843FDF9F20FA277C00B03F09 /* TPOrderPayViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderPayViewModel.m; sourceTree = "<group>"; };
+		843FDFA120FA2E1000B03F09 /* TPOrderDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderDetailViewModel.h; sourceTree = "<group>"; };
+		843FDFA220FA2E1000B03F09 /* TPOrderDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderDetailViewModel.m; sourceTree = "<group>"; };
 		8451DE0C208C693D0059E73A /* YReactiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YReactiveView.h; sourceTree = "<group>"; };
 		8451DE0D208C8ECB0059E73A /* TPCardOperateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCardOperateViewController.h; sourceTree = "<group>"; };
-		8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TPCardOperateViewController.mm; sourceTree = "<group>"; };
+		8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCardOperateViewController.m; sourceTree = "<group>"; };
 		8451DE11208C90630059E73A /* TPTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPTabBarViewController.h; sourceTree = "<group>"; };
 		8451DE12208C90630059E73A /* TPTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPTabBarViewController.m; sourceTree = "<group>"; };
 		8451DE172096B1270059E73A /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
@@ -403,7 +458,7 @@
 		846ECCD4209DA78E006D6D23 /* TPWalletTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTableFooterView.m; sourceTree = "<group>"; };
 		846ECCD6209DA7AC006D6D23 /* TPWalletTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletTableFooterView.xib; sourceTree = "<group>"; };
 		846ECCD8209E8EDC006D6D23 /* TPUPPayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPUPPayManager.h; sourceTree = "<group>"; };
-		846ECCD9209E8EDC006D6D23 /* TPUPPayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPUPPayManager.m; sourceTree = "<group>"; };
+		846ECCD9209E8EDC006D6D23 /* TPUPPayManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TPUPPayManager.mm; sourceTree = "<group>"; };
 		846ECCE0209E9215006D6D23 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		846ECCE1209E9215006D6D23 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		846ECCE4209E92A8006D6D23 /* public_test.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_test.key; sourceTree = "<group>"; };
@@ -487,6 +542,15 @@
 		849EFB1420839BE900C37AC9 /* TPWalletTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPWalletTableHeaderView.h; sourceTree = "<group>"; };
 		849EFB1520839BE900C37AC9 /* TPWalletTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPWalletTableHeaderView.m; sourceTree = "<group>"; };
 		849EFB1720839C0700C37AC9 /* TPWalletTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPWalletTableHeaderView.xib; sourceTree = "<group>"; };
+		849F4F1B20FAD0080071C473 /* TPOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderModel.h; sourceTree = "<group>"; };
+		849F4F1C20FAD0080071C473 /* TPOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderModel.m; sourceTree = "<group>"; };
+		849F4F1E20FB22130071C473 /* TPCompanyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCompanyModel.h; sourceTree = "<group>"; };
+		849F4F1F20FB22130071C473 /* TPCompanyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPCompanyModel.m; sourceTree = "<group>"; };
+		849F4F2120FB22C30071C473 /* TPOrderGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderGoodsModel.h; sourceTree = "<group>"; };
+		849F4F2220FB22C30071C473 /* TPOrderGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderGoodsModel.m; sourceTree = "<group>"; };
+		849F4F2420FB3F480071C473 /* TPOrderCompanyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOrderCompanyCell.h; sourceTree = "<group>"; };
+		849F4F2520FB3F480071C473 /* TPOrderCompanyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPOrderCompanyCell.m; sourceTree = "<group>"; };
+		849F4F2620FB3F480071C473 /* TPOrderCompanyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPOrderCompanyCell.xib; sourceTree = "<group>"; };
 		84B12A2D20A32E7D00ECC925 /* TPBalanceDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPBalanceDetailModel.h; sourceTree = "<group>"; };
 		84B12A2E20A32E7D00ECC925 /* TPBalanceDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPBalanceDetailModel.m; sourceTree = "<group>"; };
 		84B12A3020A32F0100ECC925 /* TPBalanceDetailItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPBalanceDetailItemModel.h; sourceTree = "<group>"; };
@@ -560,6 +624,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843FDF6F20F9719500B03F09 /* libz.tbd in Frameworks */,
+				843FDF6D20F9718500B03F09 /* SystemConfiguration.framework in Frameworks */,
+				843FDF6B20F9717600B03F09 /* CFNetwork.framework in Frameworks */,
 				8451DE1C2096B1280059E73A /* libPaymentControl.a in Frameworks */,
 				4FA02A3F02DFC74195D2B3DE /* libPods-TAOPAY.a in Frameworks */,
 			);
@@ -632,6 +699,7 @@
 		840E9CC020C2AF8D002F8602 /* PersonCenter */ = {
 			isa = PBXGroup;
 			children = (
+				843FDF7220F9D6C100B03F09 /* Order */,
 				840E9CC120C2AFEE002F8602 /* ShippingAddress */,
 			);
 			path = PersonCenter;
@@ -1139,7 +1207,7 @@
 			children = (
 				8418BF7620B4510900D057EB /* Location */,
 				846ECCD8209E8EDC006D6D23 /* TPUPPayManager.h */,
-				846ECCD9209E8EDC006D6D23 /* TPUPPayManager.m */,
+				846ECCD9209E8EDC006D6D23 /* TPUPPayManager.mm */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1252,6 +1320,47 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		843FDF7220F9D6C100B03F09 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				843FDF7320F9D7AA00B03F09 /* TPOrderGoodsCell.h */,
+				843FDF7420F9D7AA00B03F09 /* TPOrderGoodsCell.m */,
+				843FDF7520F9D7AA00B03F09 /* TPOrderGoodsCell.xib */,
+				843FDF7820F9DB8300B03F09 /* TPOrderTableHeaderView.h */,
+				843FDF7920F9DB8300B03F09 /* TPOrderTableHeaderView.m */,
+				843FDF7B20F9DB9400B03F09 /* TPOrderTableHeaderView.xib */,
+				843FDF7D20F9DE5400B03F09 /* TPOrderTableFooterView.h */,
+				843FDF7E20F9DE5400B03F09 /* TPOrderTableFooterView.m */,
+				843FDF8020F9DE6800B03F09 /* TPOrderTableFooterView.xib */,
+				843FDF8220F9E1DA00B03F09 /* TPOrderDetailTableFooterView.h */,
+				843FDF8320F9E1DA00B03F09 /* TPOrderDetailTableFooterView.m */,
+				843FDF8520F9E1EA00B03F09 /* TPOrderDetailTableFooterView.xib */,
+				843FDF8720F9E5B500B03F09 /* TPOrderDetailSectionFooterView.h */,
+				843FDF8820F9E5B500B03F09 /* TPOrderDetailSectionFooterView.m */,
+				843FDF8A20F9E5C600B03F09 /* TPOrderDetailSectionFooterView.xib */,
+				843FDF9920FA0BFE00B03F09 /* TPOrderPayTableFooterView.h */,
+				843FDF9A20FA0BFE00B03F09 /* TPOrderPayTableFooterView.m */,
+				843FDF9C20FA0C1000B03F09 /* TPOrderPayTableFooterView.xib */,
+				849F4F2420FB3F480071C473 /* TPOrderCompanyCell.h */,
+				849F4F2520FB3F480071C473 /* TPOrderCompanyCell.m */,
+				849F4F2620FB3F480071C473 /* TPOrderCompanyCell.xib */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		843FDF8C20F9F51C00B03F09 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				843FDF8D20F9F55700B03F09 /* TPOrderListViewModel.h */,
+				843FDF8E20F9F55700B03F09 /* TPOrderListViewModel.m */,
+				843FDF9E20FA277C00B03F09 /* TPOrderPayViewModel.h */,
+				843FDF9F20FA277C00B03F09 /* TPOrderPayViewModel.m */,
+				843FDFA120FA2E1000B03F09 /* TPOrderDetailViewModel.h */,
+				843FDFA220FA2E1000B03F09 /* TPOrderDetailViewModel.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		8451DE0B208C69080059E73A /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -1321,6 +1430,14 @@
 			children = (
 				8453D3E120F423CB0002B955 /* TPOrderInfoModel.h */,
 				8453D3E220F423CB0002B955 /* TPOrderInfoModel.m */,
+				843FDF9020F9F70D00B03F09 /* TPOrderListModel.h */,
+				843FDF9120F9F70D00B03F09 /* TPOrderListModel.m */,
+				849F4F1B20FAD0080071C473 /* TPOrderModel.h */,
+				849F4F1C20FAD0080071C473 /* TPOrderModel.m */,
+				849F4F1E20FB22130071C473 /* TPCompanyModel.h */,
+				849F4F1F20FB22130071C473 /* TPCompanyModel.m */,
+				849F4F2120FB22C30071C473 /* TPOrderGoodsModel.h */,
+				849F4F2220FB22C30071C473 /* TPOrderGoodsModel.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1393,6 +1510,7 @@
 		84797FB520F0630100FC1C02 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				843FDF8C20F9F51C00B03F09 /* Order */,
 				84797FB620F0634900FC1C02 /* Address */,
 			);
 			path = Mine;
@@ -1431,7 +1549,7 @@
 				849EFAF620820EFF00C37AC9 /* TPWalletViewController.h */,
 				849EFAF720820EFF00C37AC9 /* TPWalletViewController.m */,
 				8451DE0D208C8ECB0059E73A /* TPCardOperateViewController.h */,
-				8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.mm */,
+				8451DE0E208C8ECB0059E73A /* TPCardOperateViewController.m */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1622,6 +1740,8 @@
 			children = (
 				84D5E7A620CB57D300BBA8E5 /* TPOrderListViewController.h */,
 				84D5E7A720CB57D300BBA8E5 /* TPOrderListViewController.m */,
+				843FDF9320F9FA5700B03F09 /* TPOrderDetailViewController.h */,
+				843FDF9420F9FA5700B03F09 /* TPOrderDetailViewController.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1695,6 +1815,9 @@
 		95457B523949C418A0C6393D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				843FDF6E20F9719500B03F09 /* libz.tbd */,
+				843FDF6C20F9718500B03F09 /* SystemConfiguration.framework */,
+				843FDF6A20F9717500B03F09 /* CFNetwork.framework */,
 				FA233F00CEB95194F194ECE4 /* libPods-TAOPAY.a */,
 			);
 			name = Frameworks;
@@ -1773,7 +1896,7 @@
 		84CD0B78207CEF140069AD9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = TAOPAY;
 				TargetAttributes = {
 					84CD0B7F207CEF140069AD9A = {
@@ -1816,9 +1939,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8418BF7020B3034F00D057EB /* TPGoodsCell.xib in Resources */,
+				843FDF8120F9DE6800B03F09 /* TPOrderTableFooterView.xib in Resources */,
 				841DD70920D2A5FF0018D27E /* InfoPlist.strings in Resources */,
 				840E9CC620C2B01E002F8602 /* TPShippingAddressCell.xib in Resources */,
 				8418BF6620B2F7E300D057EB /* TPShoppingTableHeaderView.xib in Resources */,
+				843FDF8620F9E1EA00B03F09 /* TPOrderDetailTableFooterView.xib in Resources */,
 				84CD0B90207CEF160069AD9A /* LaunchScreen.storyboard in Resources */,
 				846ECCD7209DA7AD006D6D23 /* TPWalletTableFooterView.xib in Resources */,
 				841DD6C920CB6BD00018D27E /* PersonCenter.storyboard in Resources */,
@@ -1830,21 +1955,26 @@
 				8453D3DF20F381620002B955 /* TPShopHomepageCollectionReusableView.xib in Resources */,
 				840E9CBA20C2AA61002F8602 /* TPGoodsDetailsCell.xib in Resources */,
 				84D6613B208C283400DF0F73 /* TPLoginNavigationView.xib in Resources */,
+				843FDF8B20F9E5C600B03F09 /* TPOrderDetailSectionFooterView.xib in Resources */,
 				84797FAA20EBA39B00FC1C02 /* TPShoppingCartBottomView.xib in Resources */,
 				84797F8C20DF360D00FC1C02 /* TPGoodsDetailTopToolView.xib in Resources */,
 				840E9CBF20C2AE7D002F8602 /* TPShoppingCartCell.xib in Resources */,
 				841DD6D720CB9BED0018D27E /* TPShippingAddressTableFooterView.xib in Resources */,
 				840E9C9620C2940C002F8602 /* Shopping.storyboard in Resources */,
 				84D661212086391500DF0F73 /* TPWalletTextNumberCell.xib in Resources */,
+				843FDF7720F9D7AA00B03F09 /* TPOrderGoodsCell.xib in Resources */,
 				84CD0B8D207CEF160069AD9A /* Assets.xcassets in Resources */,
 				84797FBE20F09C0200FC1C02 /* TPPayWayBottomView.xib in Resources */,
 				8453D3E820F4D8E10002B955 /* TPReceiveAddressView.xib in Resources */,
+				843FDF7C20F9DB9400B03F09 /* TPOrderTableHeaderView.xib in Resources */,
 				8418BF6B20B2FE9400D057EB /* TPShopCell.xib in Resources */,
+				849F4F2820FB3F480071C473 /* TPOrderCompanyCell.xib in Resources */,
 				841DD6E620CBE3D60018D27E /* TPAreaListTableHeaderView.xib in Resources */,
 				841DD6E120CBE33D0018D27E /* TPAreaListView.xib in Resources */,
 				84797F9720E8DFB700FC1C02 /* TPGoodsDetailTableHeaderView.xib in Resources */,
 				846ECCE6209E92A8006D6D23 /* public_test.key in Resources */,
 				84797F9C20EA46A200FC1C02 /* TPGoodsDetailInfoCell.xib in Resources */,
+				843FDF9D20FA0C1000B03F09 /* TPOrderPayTableFooterView.xib in Resources */,
 				840E9CB520C2A777002F8602 /* TPStoreCell.xib in Resources */,
 				846ECCF2209F03B3006D6D23 /* TPFriendCell.xib in Resources */,
 				841DD6EE20D14E860018D27E /* Localizable.strings in Resources */,
@@ -1855,7 +1985,6 @@
 				84797F8720DF309500FC1C02 /* TPGoodsDetailBottomView.xib in Resources */,
 				84CD0B8B207CEF140069AD9A /* Main.storyboard in Resources */,
 				840E9CD320C2B3B0002F8602 /* TPEditShippingAddressViewController.xib in Resources */,
-				841DD6FC20D29B870018D27E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1928,6 +2057,7 @@
 				846ECCF1209F03B3006D6D23 /* TPFriendCell.m in Sources */,
 				840E9CAA20C29AE7002F8602 /* TPShoppingCartViewController.m in Sources */,
 				84797F8F20E1164300FC1C02 /* TPShopListViewModel.m in Sources */,
+				843FDFA020FA277C00B03F09 /* TPOrderPayViewModel.m in Sources */,
 				84D5E79420CAD9DF00BBA8E5 /* TPAddressModel.m in Sources */,
 				8418BF7920B4512C00D057EB /* YLocationManager.m in Sources */,
 				84D661162084D70F00DF0F73 /* TPWalletCell.m in Sources */,
@@ -1949,6 +2079,7 @@
 				8418BF6A20B2FE9400D057EB /* TPShopCell.m in Sources */,
 				84206B61207FA5640099C8E6 /* RegisterViewController.m in Sources */,
 				8453D3D820F225C10002B955 /* YSliderView.m in Sources */,
+				843FDF9520F9FA5700B03F09 /* TPOrderDetailViewController.m in Sources */,
 				84206B68207FA82A0099C8E6 /* TPTableViewModel.m in Sources */,
 				84797FBC20F09BE000FC1C02 /* TPPayWayBottomView.m in Sources */,
 				84D6613F208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m in Sources */,
@@ -1959,7 +2090,7 @@
 				849EFAFB20820F1200C37AC9 /* TPFriendViewController.m in Sources */,
 				84D5E7AF20CB5CF100BBA8E5 /* TPSettingViewController.m in Sources */,
 				84206B9B2080FA200099C8E6 /* YHTTPResponse.m in Sources */,
-				846ECCDA209E8EDC006D6D23 /* TPUPPayManager.m in Sources */,
+				846ECCDA209E8EDC006D6D23 /* TPUPPayManager.mm in Sources */,
 				84206BA5208189C40099C8E6 /* SAMKeychain+YUtil.m in Sources */,
 				84D661282088E1BB00DF0F73 /* TPWalletCommonModel.m in Sources */,
 				84CD0B93207CEF160069AD9A /* main.m in Sources */,
@@ -1971,6 +2102,7 @@
 				849EFAF820820EFF00C37AC9 /* TPWalletViewController.m in Sources */,
 				840E9CB420C2A777002F8602 /* TPStoreCell.m in Sources */,
 				84CD0B85207CEF140069AD9A /* AppDelegate.m in Sources */,
+				843FDFA320FA2E1000B03F09 /* TPOrderDetailViewModel.m in Sources */,
 				84206BA2208109630099C8E6 /* TPLoginViewModel.m in Sources */,
 				84D661252088DF3000DF0F73 /* TPWalletModel.m in Sources */,
 				849EFB1220831FC500C37AC9 /* YNavigationBar.m in Sources */,
@@ -1994,6 +2126,7 @@
 				849EFAFE20820F2400C37AC9 /* TPChatViewController.m in Sources */,
 				84797F8A20DF35FC00FC1C02 /* TPGoodsDetailTopToolView.m in Sources */,
 				8453D3E620F4D8D30002B955 /* TPReceiveAddressView.m in Sources */,
+				843FDF9B20FA0BFE00B03F09 /* TPOrderPayTableFooterView.m in Sources */,
 				849EFB0220820FA500C37AC9 /* YScanCodeViewController.m in Sources */,
 				84206B8B2080EDB60099C8E6 /* YEXTRuntimeExtensions.m in Sources */,
 				84D5E79720CADB1400BBA8E5 /* TPAddressListModel.m in Sources */,
@@ -2005,11 +2138,16 @@
 				84D661202086391500DF0F73 /* TPWalletTextNumberCell.m in Sources */,
 				8418BFA520BED75200D057EB /* TPGoodsInfoModel.m in Sources */,
 				84206B742080DCB80099C8E6 /* YNavigationControllerStack.m in Sources */,
+				849F4F1D20FAD0080071C473 /* TPOrderModel.m in Sources */,
+				843FDF8920F9E5B500B03F09 /* TPOrderDetailSectionFooterView.m in Sources */,
+				843FDF8420F9E1DA00B03F09 /* TPOrderDetailTableFooterView.m in Sources */,
 				84D6612E208C181300DF0F73 /* TPBaseViewController.m in Sources */,
 				840E9CD220C2B3B0002F8602 /* TPEditShippingAddressViewController.m in Sources */,
 				84206B782080E09F0099C8E6 /* YHTTPService.m in Sources */,
+				843FDF8F20F9F55700B03F09 /* TPOrderListViewModel.m in Sources */,
 				8418BF8320B457AD00D057EB /* TPBannerModel.m in Sources */,
 				840E9CC520C2B01E002F8602 /* TPShippingAddressCell.m in Sources */,
+				849F4F2720FB3F480071C473 /* TPOrderCompanyCell.m in Sources */,
 				84D66146208C415100DF0F73 /* UITableView+YExtension.m in Sources */,
 				84206B972080F3DD0099C8E6 /* YKeyedSubscript.m in Sources */,
 				84D5E7AB20CB595500BBA8E5 /* NSString+YConvert.m in Sources */,
@@ -2022,10 +2160,11 @@
 				84206B65207FA8050099C8E6 /* TPViewModel.m in Sources */,
 				84797FA820EBA38600FC1C02 /* TPShoppingCartBottomView.m in Sources */,
 				84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */,
-				8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.mm in Sources */,
+				8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.m in Sources */,
 				84206B24207F95E10099C8E6 /* TPConstant.m in Sources */,
 				841DD6CD20CB6CD00018D27E /* TPSafeCenterViewController.m in Sources */,
 				849EFB092082412B00C37AC9 /* FBKVOController+YExtension.m in Sources */,
+				843FDF7A20F9DB8300B03F09 /* TPOrderTableHeaderView.m in Sources */,
 				8499D4AB20C4313E00927526 /* TPShopGoodsListViewModel.m in Sources */,
 				8418BF6420B2F7D000D057EB /* TPShoppingTableHeaderView.m in Sources */,
 				840E9CA720C2987A002F8602 /* TPGoodsDetailsViewController.m in Sources */,
@@ -2035,10 +2174,12 @@
 				84D5E79A20CADB7500BBA8E5 /* TPAreaModel.m in Sources */,
 				84797F9F20EB9A7100FC1C02 /* TPShoppingPayViewController.m in Sources */,
 				8418BF8620B4588000D057EB /* TPGoodsModel.m in Sources */,
+				843FDF7620F9D7AA00B03F09 /* TPOrderGoodsCell.m in Sources */,
 				8418BF8D20B5959C00D057EB /* TPGoodsViewModel.m in Sources */,
 				84D66136208C1B2800DF0F73 /* UIScrollView+YRefresh.m in Sources */,
 				840E9CDD20C39B87002F8602 /* TPWebPublicViewModel.m in Sources */,
 				849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */,
+				843FDF9220F9F70D00B03F09 /* TPOrderListModel.m in Sources */,
 				841DD6DF20CBE3270018D27E /* TPAreaListView.m in Sources */,
 				8418BFA120BADEDC00D057EB /* UINavigationController+TPExtend.m in Sources */,
 				8499D4A820C42EF900927526 /* TPShopGoodsViewModel.m in Sources */,
@@ -2053,8 +2194,11 @@
 				84206B46207FA3B40099C8E6 /* YBaseViewController.m in Sources */,
 				841DD6DA20CBBDBB0018D27E /* TPAddNewAddressView.m in Sources */,
 				84D5E7A120CADC8300BBA8E5 /* TPShoppingCartModel.m in Sources */,
+				849F4F2320FB22C30071C473 /* TPOrderGoodsModel.m in Sources */,
 				8499D4B120C4325D00927526 /* TPShopListModel.m in Sources */,
+				849F4F2020FB22130071C473 /* TPCompanyModel.m in Sources */,
 				849EFB0520821AA500C37AC9 /* YUtil.m in Sources */,
+				843FDF7F20F9DE5400B03F09 /* TPOrderTableFooterView.m in Sources */,
 				8418BF7C20B4522800D057EB /* YLocationModel.m in Sources */,
 				840E9CB020C29BFD002F8602 /* TPShoppingHomepageViewController.m in Sources */,
 				84B12A3220A32F0100ECC925 /* TPBalanceDetailItemModel.m in Sources */,

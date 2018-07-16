@@ -8,7 +8,7 @@
 
 #import "YObject.h"
 
-@class TPGoodsModel;
+@class TPShoppingCartGoodsModel;
 @class TPAddressModel;
 
 @interface TPShoppingCartModel : YObject
@@ -16,6 +16,6 @@
 //地址
 @property (strong, nonatomic) TPAddressModel *address;
 //购物车商品列表
-@property (strong, nonatomic) NSArray <TPGoodsModel *>*list;
+@property (strong, nonatomic) NSArray <TPShoppingCartGoodsModel *>*list;
 
 @end

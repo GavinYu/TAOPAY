@@ -24,13 +24,32 @@
 
 - (instancetype)initWithGoods:(TPShoppingCartGoodsModel *)goods {
     if (self = [super init]) {
+        self.isSelected = YES;
+        self.goodsCount = goods.count;
         self.goods = goods;
         self.goodId = goods.goodsID;
+        self.goodsTotalPrice = [self accountGoodsTotalPrice:goods];
     }
     
     return self;
 }
+//MARK: -- 计算某件商品的总价
+- (NSString *)accountGoodsTotalPrice:(TPShoppingCartGoodsModel *)goods {
+    CGFloat price = [goods.price floatValue];
+    NSInteger count = [goods.count integerValue];
+    
+    CGFloat total = price * count;
+    
+    return [NSString stringWithFormat:@"%.2f", total];
+}
 
-
+//MARK: -- Setter isSelected
+- (void)setIsSelected:(BOOL)isSelected {
+    if (_isSelected != isSelected) {
+        _isSelected = isSelected;
+        
+        self.goodsTotalPrice = [self accountGoodsTotalPrice:self.goods];
+    }
+}
 
 @end

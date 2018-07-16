@@ -55,9 +55,9 @@
     if (addressModel) {
         _nameLabel.text = addressModel.name;
         
-        CGFloat nameWidth = [YUtil getTextWidthWithContent:_nameLabel.text withContentSizeOfHeight:_nameLabel.bounds.size.height withAttribute:@{NSFontAttributeName:_nameLabel.font}];
+        CGFloat nameWidth = [YUtil getTextWidthWithContent:_nameLabel.text withContentSizeOfHeight:_nameLabel.bounds.size.height withAttribute:@{NSFontAttributeName:_nameLabel.font}] + 5;
         [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.addressIconImageView).offset(12);
+            make.left.equalTo(self.addressIconImageView.mas_right).offset(12);
             make.top.equalTo(self).offset(18);
             make.size.mas_equalTo(CGSizeMake(nameWidth, self.nameLabel.bounds.size.height));
         }];
@@ -74,7 +74,7 @@
 //MARK: -- 修改按钮事件
 - (IBAction)clickModifyButton:(UIButton *)sender {
     if (_modifyAddressBlock) {
-        _modifyAddressBlock(self.addressModel.addressID);
+        _modifyAddressBlock(self);
     }
 }
 //MARK: -- 点击整个地址栏事件
@@ -91,13 +91,14 @@
         
         _addressIconImageView.image = [UIImage imageNamed:_isShowModifyButton?@"icon_order_address":@"icon_addressLocation"];
         _modifyButton.hidden = !_isShowModifyButton;
+        _rightArrowImageView.hidden = !_modifyButton.hidden;
     }
 }
 //MARK: -- Setter addressModel
 - (void)setAddressModel:(TPAddressModel *)addressModel {
     if (_addressModel != addressModel) {
         _addressModel = addressModel;
-        
+    
         [self updateSubView:_addressModel];
     }
 }

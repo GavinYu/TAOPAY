@@ -45,6 +45,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
+    
+    [self configNavigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+    
+    [super viewWillDisappear:animated];
 }
 
 //MARK: -- 设置导航栏
@@ -99,7 +109,8 @@
 //            //TODO: --
 //            [self tableViewDidTriggerHeaderRefresh];
 //            
-//        } failure:nil];
+//        } failure:^(NSString *error) {
+//        }];
 //    }];
 }
 //MARK: -- 设置tableview headerview
@@ -130,7 +141,8 @@
                         if ([json boolValue]) {
                             [SVProgressHUD showSuccessWithStatus:TPLocalizedString(@"person_center_modify_succeed")];
                         }
-                    } failure:nil];
+                    } failure:^(NSError *errorMsg) {
+                    }];
                     
                 }]];
                 //取消按钮

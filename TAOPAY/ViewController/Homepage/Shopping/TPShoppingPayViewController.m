@@ -10,6 +10,7 @@
 
 #import "TPAppConfig.h"
 
+#import "TPPayWayBottomView.h"
 #import "TPReceiveAddressView.h"
 #import "TPShoppingPayGoodsCell.h"
 #import "TPPayWayCell.h"
@@ -18,12 +19,19 @@
 #import "TPShoppingCartViewModel.h"
 
 #import "TPShippingAddressListViewController.h"
+#import "TPPersonCenterViewController.h"
+
+#import "TPRechargeModel.h"
+
+//UPPay
+#import "TPUPPayManager.h"
 
 @interface TPShoppingPayViewController ()
 
 @property (nonatomic, strong) TPShoppingCartViewModel *viewModel;
 @property (strong, nonatomic) NSIndexPath *lastSelectedIndexPath;
 @property (nonatomic, strong) TPReceiveAddressView *myTableHeaderView;
+@property (nonatomic, strong) TPPayWayBottomView *bottomToolView;
 
 @end
 
@@ -35,25 +43,53 @@
 
 @dynamic viewModel;
 
+- (void)dealloc {
+    [self removeNotifications];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configNavigationBar];
     [self setupSubViews];
+    [self creatBottomToolView];
+    
     [self bindViewModel];
+    
+    [self addNotifications];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+//MARK: -- 添加通知
+- (void)addNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePayResultNotification:) name:TPPayResultNotificationKey object:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
+//MARK: -- 移除通知
+- (void)removeNotifications {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TPPayResultNotificationKey object:nil];
 }
+
+//MARK: -- 处理支付结果的通知
+- (void)handlePayResultNotification:(NSNotification *)notification {
+    //FIXME:TODO --
+    DLog(@"支付结果：%@，and 信息：%@", notification.object, notification.userInfo);
+    BOOL result = [notification.object boolValue];
+    if (result) {
+        [self.viewModel queryOrderPayResult:self.viewModel.currentTNModel.orderId success:^(id json) {
+            NSString *tmpSuccessMsg = (NSString *)json;
+            [SVProgressHUD showSuccessWithStatus:tmpSuccessMsg];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            });
+        } failure:^(NSString *error) {
+        }];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"支付失败！"];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
+
 //MARK: -- config NavigationBar
 - (void)configNavigationBar {
     self.navigationView.title = self.viewModel.title;
@@ -61,6 +97,52 @@
     self.navigationView.isShowNavRightButtons = YES;
     self.navigationView.isShowDownArrowImage = YES;
     [self.view addSubview:self.navigationView];
+    
+    @weakify(self);
+    self.navigationView.clickMeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        UIStoryboard *toStoryboard = [UIStoryboard storyboardWithName:@"PersonCenter" bundle:nil];
+        UIViewController *toController=[toStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPPersonCenterViewController class])];
+        [self.navigationController pushViewController:toController animated:YES];
+    };
+    
+    self.navigationView.clickHomeHandler = ^(UIButton *sender) {
+        @strongify(self);
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    };
+}
+
+//MARK: -- 创建底部工具栏
+- (void)creatBottomToolView {
+    self.bottomToolView = [TPPayWayBottomView instancePayWayBottomView];
+    [self.view addSubview:self.bottomToolView];
+    [self.bottomToolView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(APPWIDTH, TABBARHEIGHT));
+    }];
+    
+    @weakify(self);
+    self.bottomToolView.payBlock = ^(UIButton *sender) {
+        //FIXME: -- TODO: 支付
+        @strongify(self);
+        [self.viewModel createOrder:self.viewModel.goodsIds withGoodsNum:self.viewModel.goodsNumbers withAddressId:self.viewModel.addressId success:^(id json) {
+            BOOL tmp = [json boolValue];
+            if (tmp) {
+                [self.viewModel createUnionpay:self.viewModel.currentOrderId withType:@"2" success:^(id json) {
+                    BOOL tmp1 = [json boolValue];
+                    if (tmp1) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            DLog(@"参数tn:%@", self.viewModel.currentTNModel.tn);
+                            [[TPUPPayManager sharedUPPayManager] startPay:self.viewModel.currentTNModel.tn viewController:self completeBlock:^(BOOL result) {
+                            }];
+                        });
+                    }
+                } failure:^(NSString *error) {
+                }];
+            }
+        } failure:^(NSString *error) {
+        }];
+    };
 }
 
 //MARK: -- 初始化子控件
@@ -85,18 +167,6 @@
     /// kvo
     _KVOController = [FBKVOController controllerWithObserver:self];
     
-    @weakify(self);
-    [_KVOController y_observe:self.viewModel keyPath:@"selectAddressModel" block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
-        @strongify(self);
-       id tmp = change[NSKeyValueChangeNewKey];
-        if (tmp) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                @strongify(self);
-                //FIXME:TODO -- 更新选择的地址
-            });
-        }
-        
-    }];
 }
 //MARK: -- 请求网络数据
 #pragma mark - Override
@@ -114,6 +184,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             @strongify(self);
             [self.tableView reloadData];
+            self.myTableHeaderView.addressModel = self.viewModel.selectAddressModel;
+            self.bottomToolView.totalMoney = self.viewModel.totalPayMoney;
         });
     } failure:^(NSString *error) {
         @strongify(self);
@@ -167,40 +239,39 @@
         return 0;
     }
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (section == self.viewModel.dataSource.count - 1) {
-        return 34;
-    } else {
-        return 0;
-    }
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+//    if (section == self.viewModel.dataSource.count - 1) {
+//        return 34;
+//    } else {
+//        return 0;
+//    }
+//}
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    if (section == self.viewModel.dataSource.count - 1) {
-        UIButton *footerView = [UIButton buttonWithType:UIButtonTypeCustom];
-        footerView.backgroundColor = [UIColor whiteColor];
-        footerView.frame = CGRectMake(0, 0, APPWIDTH, 34);
-        [footerView setTitle:@"更多支付方式 ∨" forState:UIControlStateNormal];
-        [footerView setTitleColor:TP_TABLE_FOOTER_TITLE_COLOR forState:UIControlStateNormal];
-        footerView.titleLabel.font = UIFONTSYSTEM(16);
-        [footerView addTarget:self action:@selector(clickTableViewFooterViewButton:) forControlEvents:UIControlEventTouchUpOutside];
-        
-        return footerView;
-    } else {
-        return nil;
-    }
-}
+//- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+//    if (section == self.viewModel.dataSource.count - 1) {
+//        UIButton *footerView = [UIButton buttonWithType:UIButtonTypeCustom];
+//        footerView.backgroundColor = [UIColor whiteColor];
+//        footerView.frame = CGRectMake(0, 0, APPWIDTH, 34);
+//        [footerView setTitle:@"更多支付方式 ∨" forState:UIControlStateNormal];
+//        [footerView setTitleColor:TP_TABLE_FOOTER_TITLE_COLOR forState:UIControlStateNormal];
+//        footerView.titleLabel.font = UIFONTSYSTEM(16);
+//        [footerView addTarget:self action:@selector(clickTableViewFooterViewButton:) forControlEvents:UIControlEventTouchUpOutside];
+//
+//        return footerView;
+//    } else {
+//        return nil;
+//    }
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-
+    
     if (section == 0) {
-        //FIXME:TODO-- 跳转到收货地址页面
-        [self pushToAddressListViewController];
-    } else if (section == 2){
+        //FIXME:TODO-- 跳转
+    } else if (section == self.viewModel.dataSource.count - 1){
         TPPayWayCell *tmpLastCell = [tableView cellForRowAtIndexPath:_lastSelectedIndexPath];
         tmpLastCell.isSelect = NO;
         
@@ -240,13 +311,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

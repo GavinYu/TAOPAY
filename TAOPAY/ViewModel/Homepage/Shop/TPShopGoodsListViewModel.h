@@ -18,6 +18,8 @@
 @property (copy, nonatomic) NSString *cat2;
 @property (strong, nonatomic) NSArray *catArray;
 
+@property (copy, nonatomic) NSString *shopImage;
+
 
 /// 获取商家的商品列表信息 为了减少View对viewModel的状态的监听 这里采用block回调来减少状态的处理
 - (void)getShopGoodsListSuccess:(void(^)(id json))success

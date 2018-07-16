@@ -39,7 +39,7 @@
 #define ShopOrderAddRequest  @"api/shop/orderAdd"
 #define ShopOrderInfoRequest  @"api/shop/orderInfo"
 #define ShopOrderListRequest  @"api/shop/order"
-#define UnionpayRnRequest  @"api/unionpay/rn"
+#define UnionpayRnRequest  @"api/unionpay/tn"
 #define UnionpayQueryRequest  @"api/unionpay/query"
 
 
@@ -49,7 +49,9 @@
 #define TPRequestPageSize @"10"
 
 //MARK: -- 银联支付配置
+#define kUNIONPAY_SCHEME              @"UPTAOPAY"
 #define kMode_Development             @"01"
+#define kMode_Release                 @"00"
 #define kURL_TN_Normal                @"http://101.231.204.84:8091/sim/getacptn"
 #define kURL_TN_Configure             @"http://101.231.204.84:8091/sim/app.jsp?user=123456789"
 

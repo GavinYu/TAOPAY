@@ -110,7 +110,8 @@
             }
             
         }
-    } failure:nil];
+    } failure:^(NSError *error) {
+    }];
 }
 
 //MARK: -- textField的数据改变

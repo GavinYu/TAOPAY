@@ -16,13 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQh-jE-KVw" customClass="DLSlideView">
-                    <rect key="frame" x="0.0" y="0.0" width="329" height="41"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaQ-A1-Z5j">
-                    <rect key="frame" x="337" y="0.0" width="40" height="41"/>
+                    <rect key="frame" x="335" y="0.0" width="40" height="41"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="取消">
                         <color key="titleColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,14 +26,55 @@
                         <action selector="clickCancelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="gJr-JS-rjS"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xj-rj-e6i">
+                    <rect key="frame" x="0.0" y="0.0" width="111" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="请选择">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickSelectButtons:" destination="iN0-l3-epB" eventType="touchUpInside" id="qXt-5s-6HX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYE-Km-6ag">
+                    <rect key="frame" x="112" y="-1" width="111" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="请选择">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickSelectButtons:" destination="iN0-l3-epB" eventType="touchUpInside" id="F5z-xp-9L1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-sf-gxZ">
+                    <rect key="frame" x="224" y="-1" width="111" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="请选择">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickSelectButtons:" destination="iN0-l3-epB" eventType="touchUpInside" id="V4a-HJ-Elt"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQT-1r-Qkw">
+                    <rect key="frame" x="30" y="40" width="51" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.76470588240000004" green="0.050980392159999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="areaSlideView" destination="nQh-jE-KVw" id="oiR-3o-wej"/>
+                <outlet property="cityButton" destination="rYE-Km-6ag" id="ILM-bi-jb4"/>
+                <outlet property="provinceButton" destination="0Xj-rj-e6i" id="1ye-dz-HDN"/>
+                <outlet property="redLineView" destination="XQT-1r-Qkw" id="2ZD-aa-8I2"/>
+                <outlet property="regionButton" destination="ai4-sf-gxZ" id="7Gh-pq-18y"/>
             </connections>
-            <point key="canvasLocation" x="-10.5" y="177"/>
+            <point key="canvasLocation" x="-153" y="159"/>
         </view>
     </objects>
 </document>

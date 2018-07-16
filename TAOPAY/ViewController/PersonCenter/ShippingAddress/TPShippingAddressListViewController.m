@@ -13,11 +13,21 @@
 #import "YHTTPService.h"
 #import "TPAddressListModel.h"
 #import "TPAddressModel.h"
-#import "TPShippingAddressTableFooterView.h"
+#import "TPAreaModel.h"
 
-@interface TPShippingAddressListViewController ()
+#import "TPShippingAddressTableFooterView.h"
+#import "TPAddNewAddressView.h"
+#import "TPAreaListView.h"
+
+#import "TPAddressListViewModel.h"
+
+@interface TPShippingAddressListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) TPShippingAddressTableFooterView *myTableFooterView;
+@property (nonatomic, strong) TPAddNewAddressView *addNewAddressView;
+@property (nonatomic, strong) TPAreaListView *areaListView;
+
 @property (nonatomic, strong) TPAddressListModel *addressList;
+@property (strong, nonatomic) TPAddressListViewModel *viewModel;
 
 @end
 
@@ -27,6 +37,8 @@
     FBKVOController *_KVOController;
 }
 
+@dynamic viewModel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -35,23 +47,11 @@
     [self configNavigationBar];
     // create subViews
     [self setupSubViews];
-    //获取地址列表
-    [self requestAddressList];
+
     // bind viewModel
     [self bindViewModel];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [super viewWillDisappear:animated];
-}
 //MARK: -- config NavigationBar
 - (void)configNavigationBar {
     self.navigationView.title = self.viewModel.title;
@@ -73,9 +73,43 @@
 //MARK: -- 设置tableview FooterView
 - (void)setupTableFooterView {
     self.myTableFooterView = [TPShippingAddressTableFooterView instanceShippingAddressTableFooterView];
+    
+    @weakify(self);
     [self.myTableFooterView setClickAddBlock:^(UIButton *sender) {
-        //FIXME:TODO:
+        @strongify(self);
+        [self showAddNewAddressView];
     }];
+}
+
+//MARK: -- 显示添加地址视图
+- (void)showAddNewAddressView {
+    [self.addNewAddressView show];
+    @weakify(self);
+    
+    self.addNewAddressView.saveNewAddressBlock = ^(BOOL success) {
+        @strongify(self);
+        if (success) {
+            [self tableViewDidTriggerHeaderRefresh];
+        }
+    };
+    
+    self.addNewAddressView.selectAreaBlock = ^(UIButton *sender) {
+        @strongify(self);
+        [self popAreaListView];
+    };
+}
+
+//MARK: -- 弹出省、市、区/县 选择视图
+- (void)popAreaListView {
+    [self.areaListView show];
+    
+    @weakify(self);
+    self.areaListView.selectedAreaBlock = ^(TPAreaModel *selectedArea) {
+        @strongify(self);
+        //FIXME: TODO --
+        self.addNewAddressView.selectAreaId = selectedArea.areaID;
+        self.addNewAddressView.areaString = [NSString stringWithFormat:@"%@  %@", self.addNewAddressView.areaString, selectedArea.name];
+    };
 }
 
 #pragma mark - BindModel
@@ -86,20 +120,38 @@
 }
 
 #pragma mark - Override
-//MARK: - UITableViewDataSource Methods
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.addressList.list.count;
+//MARK: -- 下拉刷新
+- (void)tableViewDidTriggerHeaderRefresh {
+    /// 先调用父类的加载数据
+    [super tableViewDidTriggerHeaderRefresh];
+    /// 加载banners data
+    @weakify(self);
+    [self.viewModel getAddressListSuccess:^(id json) {
+        //TODO: --
+        @strongify(self);
+        [self tableViewDidFinishTriggerHeader:YES reload:YES];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            @strongify(self);
+            [self.tableView reloadData];
+        });
+    } failure:^(NSString *error) {
+        @strongify(self);
+        [self tableViewDidFinishTriggerHeader:YES reload:NO];
+    }];
 }
 
+#pragma mark - Override
+//MARK: - UITableViewDataSource Methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSInteger row = indexPath.row;
     
     TPShippingAddressCell *addressCell = [TPShippingAddressCell cellForTableView:tableView];
     
-    if (self.addressList.list.count > 0) {
-        [addressCell displayCellByDataSources:self.addressList.list[row] rowAtIndexPath:indexPath];
-        
+    if (self.viewModel.dataSource.count > 0) {
+        [addressCell displayCellByDataSources:self.viewModel.dataSource[row] rowAtIndexPath:indexPath];
+
         @weakify(self);
         addressCell.setDefaultBlock = ^(TPAddressModel *addressModel) {
             //
@@ -112,7 +164,16 @@
         
         addressCell.deleteBlock = ^(TPAddressModel *addressModel) {
             @strongify(self);
-            [self requestDeleteAddress:addressModel];
+            [self.viewModel deleteAddress:addressModel.addressID success:^(id json) {
+                BOOL tmp = [json boolValue];
+                if (tmp) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        @strongify(self);
+                        [self.tableView reloadData];
+                    });
+                }
+            } failure:^(NSString *error) {
+        }];
         };
         
         addressCell.editBlock = ^(TPAddressModel *addressModel) {
@@ -123,40 +184,18 @@
     return addressCell;
 }
 
-//MARK: -- 请求网络
-//MARK: -- 获取地址列表
-- (void)requestAddressList {
-    @weakify(self);
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[YHTTPService sharedInstance] requestAddressSuccess:^(YHTTPResponse *response) {
-            @strongify(self);
-            self.addressList = TPAddressListModel.new;
-            self.addressList.list = NSMutableArray.new;
-            self.addressList = [TPAddressListModel modelWithDictionary:response.parsedResult];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-            });
-        } failure:^(NSString *msg) {
-            
-        }];
-    });
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 125;
 }
 
-//MARK: -- 删除地址
-- (void)requestDeleteAddress:(TPAddressModel *)addressModel {
-    @weakify(self);
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [[YHTTPService sharedInstance] requestDeleteAddress:addressModel.addressID success:^(YHTTPResponse *response) {
-            @strongify(self);
-            [self.addressList.list removeObject:addressModel];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-            });
-        } failure:^(NSString *msg) {
-            
-        }];
-    });
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (_selectAddressBlock) {
+        _selectAddressBlock(self.viewModel.dataSource[indexPath.row]);
+    }
 }
+//MARK: -- 请求网络
 
 //MARK: -- 设置 置顶地址
 - (void)requestSetAddressTop {
@@ -166,6 +205,27 @@
 //MARK: -- 设置默认收货地址
 - (void)requestSetDefaultAddress {
     //FIXME:TODO--
+}
+
+//MARK: -- lazyload area
+//MARK: -- lazyload addNewAddressView
+- (TPAddNewAddressView *)addNewAddressView {
+    if (!_addNewAddressView) {
+        _addNewAddressView = [TPAddNewAddressView instanceAddNewAddressView];
+        _addNewAddressView.frame = CGRectMake(15, NAVGATIONBARHEIGHT + 38, APPWIDTH-30, 267);
+    }
+    
+    return _addNewAddressView;
+}
+
+//MARK: -- lazyload areaListView
+- (TPAreaListView *)areaListView {
+    if (!_areaListView) {
+        _areaListView = [TPAreaListView instanceAreaListView];
+        _areaListView.frame = CGRectMake(0, NAVGATIONBARHEIGHT + 200, APPWIDTH-30, APPHEIGHT-NAVGATIONBARHEIGHT-200);
+    }
+    
+    return _areaListView;
 }
 
 - (void)didReceiveMemoryWarning {
