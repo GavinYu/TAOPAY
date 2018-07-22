@@ -229,6 +229,9 @@
 
 #define TPLocalizedString(key)  NSLocalizedString(key, nil)
 
+//环信SDK
+#define EasyMobSDKAppKey   @"1113180712253091"
+
 /*--------------------------- Add by GavinYu End ----------------------------*/
 
 

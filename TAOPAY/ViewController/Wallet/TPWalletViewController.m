@@ -37,24 +37,9 @@
     [self configNavigationBar];
     // create subViews
     [self setupSubViews];
-    
-    
+
     // bind viewModel
     [self bindViewModel];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [self configNavigationBar];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-    
-    [super viewWillDisappear:animated];
 }
 
 //MARK: -- 设置导航栏

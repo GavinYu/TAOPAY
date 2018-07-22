@@ -6,12 +6,14 @@
 //  Copyright © 2018年 TAOPAY. All rights reserved.
 //
 
-#import "TPViewModel.h"
+#import "TPTableViewModel.h"
 
-@class TPFriendModel;
+@interface TPFriendViewModel : TPTableViewModel
 
-@interface TPFriendViewModel : TPViewModel
-
-@property (nonatomic, strong) TPFriendModel *friendModel;
-
+- (void)requestAuthorizationForAddressBook;
+// 添加好友
+- (void)addFriendWithFriendId:(NSString *)friendId
+                    withPhone:(NSString *)phone
+                      success:(void(^)(id json))success
+                      failure:(void (^)(NSString *error))failure;
 @end

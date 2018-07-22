@@ -40,12 +40,31 @@
 
 @dynamic viewModel;
 
+- (void)dealloc {
+    DLog(@"Dealloc:--%@", NSStringFromClass([self class]));
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configNavigationBar];
     [self setupSubViews];
     [self bindViewModel];
+    
+    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    
+    [super viewWillDisappear:animated];
 }
 
 //MARK: -- config NavigationBar

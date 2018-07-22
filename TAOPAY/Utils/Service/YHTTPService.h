@@ -185,4 +185,28 @@ typedef void (^faliueBlock) (id error);
 
 /***************--------商城相关接口------------*************************************/
 
+/***************--------好友相关接口------------*************************************/
+//获取好友列表
+- (NSURLSessionDataTask *)requestFriendListSuccess:(void (^)(YHTTPResponse *response))success
+                                           failure:(void (^)(NSString *msg))failure;
+//添加好友
+- (NSURLSessionDataTask *)requestAddFriend:(NSString *)friendId
+                                     phone:(NSString *)phoneNumber
+                                   success:(void (^)(YHTTPResponse *response))success
+                                   failure:(void (^)(NSString *msg))failure;
+//发布朋友圈
+- (NSURLSessionDataTask *)requestAddFriendArticle:(NSString *)content
+                                            phone:(NSArray *)FriendArticleFiles
+                                          success:(void (^)(YHTTPResponse *response))success
+                                          failure:(void (^)(NSString *msg))failure;
+//获取朋友圈列表
+- (NSURLSessionDataTask *)requestFriendArticle:(NSString *)page
+                                      pageSize:(NSString *)size
+                                       success:(void (^)(YHTTPResponse *response))success
+                                       failure:(void (^)(NSString *msg))failure;
+/***************--------好友相关接口------------*************************************/
+
+
+
+
 @end

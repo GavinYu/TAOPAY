@@ -10,8 +10,11 @@
 
 @interface TPFriendModel : YObject
 
+@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, copy) NSString *nick;
+@property (nonatomic, copy) NSString *info;
 @property (nonatomic, copy) NSString *avatar;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, assign) BOOL isAttention;
+@property (nonatomic, copy) NSString *count;
+@property (nonatomic, copy) NSString *time;
 
 @end

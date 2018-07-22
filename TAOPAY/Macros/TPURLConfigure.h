@@ -42,6 +42,14 @@
 #define UnionpayRnRequest  @"api/unionpay/tn"
 #define UnionpayQueryRequest  @"api/unionpay/query"
 
+//好友相关接口
+#define FriendListRequest  @"api/friend/list"
+#define FriendAddRequest  @"api/friend/add"
+#define FriendAddArticleRequest  @"api/friend/addArticle"
+#define FriendArticleRequest  @"api/friend/article"
+
+
+
 
 
 

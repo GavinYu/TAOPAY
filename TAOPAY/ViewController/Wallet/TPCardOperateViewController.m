@@ -28,11 +28,14 @@
 @implementation TPCardOperateViewController
 
 - (void)dealloc {
+    DLog(@"Dealloc:--%@", NSStringFromClass([self class]));
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
     [self removeNotifications];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
     // Do any additional setup after loading the view.
     [self configNavigationBar];
     [self setupSubView];

@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *attentionButton;
 
+@property (readwrite, copy, nonatomic) NSString *phoneNumber;
+
 @end
 
 @implementation TPFriendCell
@@ -28,6 +30,8 @@
 
 //MARK: -- 配置子视图
 - (void)setupSubView {
+    self.phoneNumber = @"";
+    
     [_attentionButton setBackgroundImage:[UIImage imageNamed:@"bg_btn_attention_normal"] forState:UIControlStateNormal];
     [_attentionButton setBackgroundImage:[UIImage imageNamed:@"bg_btn_attention_highlight"] forState:UIControlStateHighlighted];
     [self addActionDealForMVCOrMVVMWithoutRAC];
@@ -59,7 +63,9 @@
     if (dataSources) {
         TPFriendModel *itemModel = (TPFriendModel *)dataSources;
         _avatarImageView.image = [UIImage imageNamed:itemModel.avatar];
-        _nameLabel.text = itemModel.name;
+        _nameLabel.text = itemModel.nick;
+        self.tag = [itemModel.userId integerValue];
+        
     }
 }
 

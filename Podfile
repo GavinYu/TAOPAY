@@ -2,7 +2,7 @@ target "TAOPAY" do
 platform :ios, ‘10.0’
 
 #加载GIF图片
-pod 'SDWebImage'
+pod 'SDWebImage' , '~> 4.4.2'
 #网络请求
 pod 'AFNetworking'
 #适配

@@ -35,25 +35,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configNavigationBar];
     [self initSubView];
     
     if (![YHTTPService sharedInstance].currentUser.username) {
         [self requestGetUserInfo];
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [self configNavigationBar];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-    
-    [super viewWillDisappear:animated];
 }
 
 //MARK: -- 设置导航栏
@@ -150,6 +137,23 @@
 - (IBAction)clickCrossTaxExemptionButton:(UIButton *)sender {
 }
 - (IBAction)clickAddressBookButton:(UIButton *)sender {
+}
+
+//MARK: -- 暂停GIF动画
+-(void)pauseLayer:(CALayer*)layer {
+    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    layer.speed = 0.0;
+    layer.timeOffset = pausedTime;
+}
+
+//MARK: -- 继续GIF动画
+-(void)resumeLayer:(CALayer*)layer {
+    CFTimeInterval pausedTime = [layer timeOffset];
+    layer.speed = 1.0;
+    layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] -  pausedTime;
+    layer.beginTime = timeSincePause;
 }
 
 - (void)didReceiveMemoryWarning {

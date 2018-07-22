@@ -37,6 +37,9 @@
         [YUtil saveUserDefaultInfo:[NSNumber numberWithBool:NO] forKey:TPAppFirstLaunchKey];
     }
     
+    //初始化环信SDK
+    [self initEasyMobSDK];
+    
     return YES;
 }
 
@@ -45,17 +48,20 @@
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
-
+//MARK: -- App 进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    //环信SDK
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
 }
 
-
+//MARK: -- App 将要进入前台
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    //环信SDK
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -219,6 +225,14 @@
 //    return NO;
 //}
 
+//MARK: -- 环信sdk
+//MARK: -- 初始化环信SDK
+- (void)initEasyMobSDK {
+    //AppKey:注册的AppKey，详细见下面注释。
+    //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
+    EMOptions *options = [EMOptions optionsWithAppkey:EasyMobSDKAppKey];
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
+}
 
 #pragma mark- 获取appDelegate
 + (AppDelegate *)sharedDelegate{

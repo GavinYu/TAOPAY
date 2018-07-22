@@ -18,4 +18,6 @@ typedef void(^TPFriendCellAttentionClickedHandler)(TPFriendCell *friendCell);
 
 @property (nonatomic, copy) TPFriendCellAttentionClickedHandler attentionClickedHandler;
 
+@property (readonly, copy, nonatomic) NSString *phoneNumber;
+
 @end

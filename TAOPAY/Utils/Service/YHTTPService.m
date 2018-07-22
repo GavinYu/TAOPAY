@@ -600,6 +600,78 @@ static id service_ = nil;
 }
 /***************--------商城相关接口------------*************************************/
 
+
+/***************--------好友相关接口------------*************************************/
+//获取好友列表
+- (NSURLSessionDataTask *)requestFriendListSuccess:(void (^)(YHTTPResponse *response))success
+                                           failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey]};
+    NSURLSessionDataTask *task =  [self POST:FriendListRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+//添加好友
+- (NSURLSessionDataTask *)requestAddFriend:(NSString *)friendId
+                                     phone:(NSString *)phoneNumber
+                                   success:(void (^)(YHTTPResponse *response))success
+                                   failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"userId":friendId, @"phone":phoneNumber};
+    NSURLSessionDataTask *task =  [self POST:FriendAddRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//MARK: -- 发布朋友圈
+- (NSURLSessionDataTask *)requestAddFriendArticle:(NSString *)content
+                                            phone:(NSArray *)FriendArticleFiles
+                                          success:(void (^)(YHTTPResponse *response))success
+                                          failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"content":content, @"FriendArticleFiles":FriendArticleFiles};
+    NSURLSessionDataTask *task =  [self POST:FriendAddArticleRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
+//MARK: -- 获取朋友圈列表
+- (NSURLSessionDataTask *)requestFriendArticle:(NSString *)page
+                                      pageSize:(NSString *)size
+                                       success:(void (^)(YHTTPResponse *response))success
+                                       failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"page":page, @"size":size};
+    NSURLSessionDataTask *task =  [self POST:FriendArticleRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+/***************--------好友相关接口------------*************************************/
+
 //MARK: -- lazyload area
 //MARK: -- lazyload
 - (TPUser *)currentUser {

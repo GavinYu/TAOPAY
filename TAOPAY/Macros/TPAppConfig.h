@@ -32,6 +32,8 @@
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import <RDVTabBarController/RDVTabBarController.h>
+//环信SDK
+#import <HyphenateLite/HyphenateLite.h>
 
 
 #endif /* TPAppConfig_h */

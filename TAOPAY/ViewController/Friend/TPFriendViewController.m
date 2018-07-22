@@ -16,8 +16,7 @@
 
 @interface TPFriendViewController ()
 
-@property (nonatomic, strong) NSMutableArray *dataArray;
-@property (nonatomic, strong) TPFriendViewModel *friendViewModel;
+@property (nonatomic, strong) TPFriendViewModel *viewModel;
 
 @end
 
@@ -27,51 +26,28 @@
     FBKVOController *_KVOController;
 }
 
+@dynamic viewModel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationType = TPNavigationTypeWhite;
-    self.navigationItem.title = @"好友";
-    self.isShowBackButton = NO;
+    [self configNavigationBar];
     
     [self setupSubViews];
     // bind viewModel
     [self bindViewModel];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
-    
-    [self configNavigationBar];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-    
-    [super viewWillDisappear:animated];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//MARK: -- lazyload
-- (NSMutableArray *)dataArray {
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray arrayWithCapacity:0];
-    }
-    
-    return _dataArray;
-}
-
 //MARK: -- 设置导航栏
 - (void)configNavigationBar {
-    self.navigationView.title = TPLocalizedString(@"navigation_title");
+    self.navigationView.title = TPLocalizedString(@"homepage_addressbook");
     self.navigationView.isShowBackButton = NO;
     self.navigationView.isShowNavRightButtons = YES;
+    self.navigationView.isShowDownArrowImage = NO;
     [self.view addSubview:self.navigationView];
     
     @weakify(self);
@@ -105,26 +81,28 @@
 }
 #pragma mark - Override
 //MARK: - UITableViewDataSource Methods
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.dataArray.count;
-    return 20;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSInteger row = indexPath.row;
     
     TPFriendCell *cell = [TPFriendCell cellForTableView:tableView];
     
-//    if (self.dataArray.count > 0) {
-//        [cell displayCellByDataSources:self.dataArray[row] rowAtIndexPath:indexPath];
-//    }
+    if (self.viewModel.dataSource.count > 0) {
+        [cell displayCellByDataSources:self.viewModel.dataSource[row] rowAtIndexPath:indexPath];
+    }
     
-    ///关注按钮事件
+    //关注按钮事件
     @weakify(self);
     cell.attentionClickedHandler = ^(TPFriendCell *friendCell) {
         @strongify(self);
-        
+        [self.viewModel addFriendWithFriendId:[NSString integerToString:friendCell.tag] withPhone:friendCell.phoneNumber success:^(id json) {
+            if ([json boolValue]) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [tableView reloadRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationNone];
+                });
+            }
+        } failure:^(NSString *error) {
+        }];
     };
     
     return cell;
