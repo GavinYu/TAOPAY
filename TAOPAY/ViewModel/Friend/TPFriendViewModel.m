@@ -15,12 +15,17 @@
 
 #import <Contacts/Contacts.h>
 
+@interface TPFriendViewModel ()
+@property (readwrite, assign, nonatomic) BOOL isFinished;
+@end
+
 @implementation TPFriendViewModel
 
 - (instancetype)initWithParams:(NSDictionary *)params
 {
     self = [super initWithParams:params];
     if (self) {
+        self.isFinished = NO;
     }
     return self;
 }
@@ -100,7 +105,8 @@
                 *stop = YES;
             }
         }];
-        
+        phone = [[phone componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] componentsJoinedByString:@""];
+
         DLog(@"phone=%@", phone);
         
         [myDict setValue:nameStr forKey:@"name"];
@@ -111,6 +117,10 @@
         TPAddressBookModel *tmpModel = TPAddressBookModel.new;
         tmpModel = [TPAddressBookModel modelWithDictionary:myDict];
         [self.dataSource addObject:tmpModel];
+        
+        if (*stop == YES) {
+            self.isFinished = YES;
+        }
     }];
 }
 

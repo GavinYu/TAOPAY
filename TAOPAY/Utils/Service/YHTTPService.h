@@ -55,8 +55,10 @@ typedef void (^faliueBlock) (id error);
                                                  failure:(void (^)(NSString *msg))failure;
 
 //获取个人信息接口
-- (NSURLSessionDataTask *)requestGetUserInfoSuccess:(void (^)(YHTTPResponse *response))success
-                                            failure:(void (^)(NSString *msg))failure;
+//phones: 以“，”分隔
+- (NSURLSessionDataTask *)requestGetUserInfoWithPhones:(NSString *)phones
+                                               success:(void (^)(YHTTPResponse *response))success
+                                               failure:(void (^)(NSString *msg))failure;
 //获取明细列表接口
 - (NSURLSessionDataTask *)requestBalanceDetailSuccess:(void (^)(YHTTPResponse *response))success
                                               failure:(void (^)(NSString *msg))failure;
@@ -70,6 +72,14 @@ typedef void (^faliueBlock) (id error);
                                               transferType:(NSString *)type
                                                    success:(void (^)(YHTTPResponse *response))success
                                                    failure:(void (^)(NSString *msg))failure;
+
+//聊天发红包（积分转账）接口
+//分类 0:会员之间转账
+- (NSURLSessionDataTask *)requestBalanceTransferByMessage:(NSString *)username
+                                               withAmount:(NSString *)amount
+                                                     type:(NSString *)type
+                                                  success:(void (^)(YHTTPResponse *response))success
+                                                  failure:(void (^)(NSString *msg))failure;
 
 //查询支付结果接口
 - (NSURLSessionDataTask *)requestBalanceQueryWithOrderId:(NSString *)orderId
@@ -179,7 +189,9 @@ typedef void (^faliueBlock) (id error);
                                          success:(void (^)(YHTTPResponse *response))success
                                          failure:(void (^)(NSString *msg))failure;
 //订单查询支付结果
+//type:分类，1:钱包充值 2:购物支付
 - (NSURLSessionDataTask *)requestOrderUnionpayQuery:(NSString *)orderId
+                                               type:(TPPayTNType)type
                                             success:(void (^)(YHTTPResponse *response))success
                                             failure:(void (^)(NSString *msg))failure;
 
@@ -196,12 +208,11 @@ typedef void (^faliueBlock) (id error);
                                    failure:(void (^)(NSString *msg))failure;
 //发布朋友圈
 - (NSURLSessionDataTask *)requestAddFriendArticle:(NSString *)content
-                                            phone:(NSArray *)FriendArticleFiles
+                                       imageFiles:(NSArray *)imageFiles
                                           success:(void (^)(YHTTPResponse *response))success
                                           failure:(void (^)(NSString *msg))failure;
 //获取朋友圈列表
 - (NSURLSessionDataTask *)requestFriendArticle:(NSString *)page
-                                      pageSize:(NSString *)size
                                        success:(void (^)(YHTTPResponse *response))success
                                        failure:(void (^)(NSString *msg))failure;
 /***************--------好友相关接口------------*************************************/

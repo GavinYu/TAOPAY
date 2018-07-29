@@ -8,6 +8,10 @@
 
 #import "TPTableViewController.h"
 
+typedef void(^TPSelectedFriendHandler)(NSString *username);
+
 @interface TPPersonalHomepageViewController : TPTableViewController
+
+@property (copy, nonatomic) TPSelectedFriendHandler selectedFriendBlock;
 
 @end

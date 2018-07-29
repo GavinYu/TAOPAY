@@ -161,6 +161,7 @@ typedef enum : NSUInteger {
     
     NSUserDefaults *uDefaults = [NSUserDefaults standardUserDefaults];
     self.isTyping = [uDefaults boolForKey:@"MessageShowTyping"];
+    self.isTyping = YES;
 }
 
 /*!
@@ -1407,7 +1408,9 @@ typedef enum : NSUInteger {
         EMCmdMessageBody *body = [[EMCmdMessageBody alloc] initWithAction:@"TypingEnd"];
         body.isDeliverOnlineOnly = YES;
         EMMessage *msg = [[EMMessage alloc] initWithConversationID:self.conversation.conversationId from:from to:self.conversation.conversationId body:body ext:nil];
-        [[EMClient sharedClient].chatManager sendMessage:msg progress:nil completion:nil];
+        [[EMClient sharedClient].chatManager sendMessage:msg progress:nil completion:^(EMMessage *message, EMError *error) {
+            NSLog(@"发送失败的原因：code:%i, msg:%@", error.code, error.errorDescription);
+        }];
     }
 }
 

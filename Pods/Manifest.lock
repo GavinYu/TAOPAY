@@ -38,6 +38,7 @@ PODS:
   - MJRefresh (3.1.15.3)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - QBImagePickerController (3.4.0)
   - RDVTabBarController (1.1.9)
   - ReactiveCocoa (2.5.2):
     - ReactiveCocoa/UI (= 2.5.2)
@@ -67,6 +68,7 @@ DEPENDENCIES:
   - MGJRouter
   - MJRefresh
   - MLeaksFinder
+  - QBImagePickerController
   - RDVTabBarController
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
   - SAMKeychain
@@ -87,6 +89,7 @@ SPEC REPOS:
     - MGJRouter
     - MJRefresh
     - MLeaksFinder
+    - QBImagePickerController
     - RDVTabBarController
     - SAMKeychain
     - SDCycleScrollView
@@ -115,6 +118,7 @@ SPEC CHECKSUMS:
   MGJRouter: 15d94541eb2cc81eff7d577337288feb7ae9575f
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
@@ -123,6 +127,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: d2a885e28d1f37fe8ca3d60c83cab5b0ee0bffe6
+PODFILE CHECKSUM: 1d1912feaf87f4e6e574db4f3b79fec62dee9410
 
 COCOAPODS: 1.5.0

@@ -34,5 +34,7 @@ pod 'CocoaSecurity'
 pod 'BlocksKit'
 # 轮播图
 pod 'SDCycleScrollView'
+#相册选择
+pod 'QBImagePickerController'
 
 end

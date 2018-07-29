@@ -16,18 +16,24 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCp-Y9-3fz">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCp-Y9-3fz">
                     <rect key="frame" x="18" y="24" width="36" height="36"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="Hxb-dU-TUF"/>
+                        <constraint firstAttribute="height" constant="36" id="lRU-Bz-Piq"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="1"/>
                     <state key="normal" image="btn_goodsDetails_back"/>
                     <connections>
                         <action selector="clickBackButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rna-b5-fJE"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjX-VE-WTm">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjX-VE-WTm">
                     <rect key="frame" x="321" y="24" width="36" height="36"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="VJQ-bD-qLI"/>
+                        <constraint firstAttribute="width" constant="36" id="hEk-ek-Sug"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="1"/>
                     <state key="normal" image="btn_goodsDetails_share"/>
                     <connections>
@@ -36,6 +42,12 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GCp-Y9-3fz" secondAttribute="bottom" constant="4" id="If1-hX-EAh"/>
+                <constraint firstItem="GCp-Y9-3fz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="18" id="Yhf-7c-yu1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AjX-VE-WTm" secondAttribute="trailing" constant="18" id="ZWL-uh-Yle"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AjX-VE-WTm" secondAttribute="bottom" constant="4" id="tmd-7U-wMu"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="86" y="86"/>

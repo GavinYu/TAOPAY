@@ -190,6 +190,8 @@
     if (moreButton && [moreButton isKindOfClass:[UIButton class]]) {
         [(UIButton*)moreButton setImage:image forState:UIControlStateNormal];
         [(UIButton*)moreButton setImage:highLightedImage forState:UIControlStateHighlighted];
+        //FIXME: new add
+        [(UIButton*)moreButton setTitle:title forState:UIControlStateNormal];
     }
 }
 

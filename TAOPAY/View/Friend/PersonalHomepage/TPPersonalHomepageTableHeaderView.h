@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, TPTableHeaderViewType) {
+    TPTableHeaderViewTypePersonal = 0,
+    TPTableHeaderViewTypeFriendCircle
+};
+
 @class TPPersonalHomepageTableHeaderView;
+
+@class TPUserInfoModel;
 
 typedef void(^TPClickMenuHandler)(UIButton *sender);
 typedef void(^TPClickSearchHandler)(UIButton *sender);
@@ -19,6 +26,10 @@ typedef void(^TPClickAvatarHandler)(TPPersonalHomepageTableHeaderView *sender);
 @property (copy, nonatomic) TPClickMenuHandler clickMenuBlock;
 @property (copy, nonatomic) TPClickSearchHandler clickSearchBlock;
 @property (copy, nonatomic) TPClickAvatarHandler clickAvatarBlock;
+
+@property (strong, nonatomic) TPUserInfoModel *userInfoModel;
+
+@property (assign, nonatomic) TPTableHeaderViewType tableHeaderViewType;
 
 //MARK: -- instance view
 + (TPPersonalHomepageTableHeaderView *)instanceView;

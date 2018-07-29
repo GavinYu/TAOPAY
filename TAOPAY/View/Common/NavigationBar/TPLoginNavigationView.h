@@ -28,6 +28,10 @@ typedef void(^TPClickBackButtonHandler)(UIButton *sender);
 @property (nonatomic, assign) BOOL isShowNavRightButtons;
 @property (nonatomic, assign) BOOL isShowDownArrowImage;
 
+@property (copy, nonatomic) NSString *updateMeImageName;
+@property (nonatomic, assign) BOOL isHiddenSearchButton;
+@property (nonatomic, assign) BOOL isHiddenHomepageButton;
+
 
 + (TPLoginNavigationView *)instanceLoginNavigationView;
 

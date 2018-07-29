@@ -29,7 +29,7 @@
 //MARK: --  获取用户信息
 - (void)getUserInfoSuccess:(void(^)(id json))success
                    failure:(void (^)(NSString *error))failure {
-    [[YHTTPService sharedInstance] requestGetUserInfoSuccess:^(YHTTPResponse *response) {
+    [[YHTTPService sharedInstance] requestGetUserInfoWithPhones:nil success:^(YHTTPResponse *response) {
         if (response.code == YHTTPResponseCodeSuccess) {
             [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult[@"info"]];
             self.user = [TPUser modelWithDictionary:response.parsedResult[@"info"]];

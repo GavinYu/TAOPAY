@@ -19,16 +19,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="对方卡号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM3-2H-Pd4">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="对方卡号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM3-2H-Pd4">
                         <rect key="frame" x="20" y="15" width="66" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="NfW-rF-N40"/>
+                            <constraint firstAttribute="width" constant="66" id="mQ2-jq-zE7"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.16862745100000001" green="0.18039215689999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入对方会员卡号 " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-td-dY7">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入对方会员卡号 " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-td-dY7">
                         <rect key="frame" x="96" y="11" width="147" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Ubk-aA-ygX"/>
+                        </constraints>
                         <color key="textColor" red="0.18039215689999999" green="0.16862745100000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -36,42 +41,69 @@
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="HTI-jX-aPv"/>
                         </connections>
                     </textField>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpB-Oq-mw6">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpB-Oq-mw6">
                         <rect key="frame" x="335" y="10" width="31" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="Bqv-qk-NW3"/>
+                            <constraint firstAttribute="width" constant="31" id="kYf-5g-6mc"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" image="btn_dollar"/>
                         <connections>
                             <action selector="clickCellButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="okQ-v2-9hc"/>
                         </connections>
                     </button>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-lC-avG">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-lC-avG">
                         <rect key="frame" x="303" y="10" width="31" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="1fE-35-BDi"/>
+                            <constraint firstAttribute="width" constant="31" id="MzA-tu-Ygp"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" image="btn_Ndollar"/>
                         <connections>
                             <action selector="clickCellButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PyY-hm-fLw"/>
                         </connections>
                     </button>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDJ-Tm-skr">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDJ-Tm-skr">
                         <rect key="frame" x="271" y="10" width="31" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="4Gn-g3-NBL"/>
+                            <constraint firstAttribute="width" constant="31" id="X96-B9-NAk"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" image="btn_Wdollar"/>
                         <connections>
                             <action selector="clickCellButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gsB-4e-aBf"/>
                         </connections>
                     </button>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp2-bd-bkC">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp2-bd-bkC">
                         <rect key="frame" x="239" y="10" width="31" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="A2S-qP-RNm"/>
+                            <constraint firstAttribute="width" constant="31" id="R84-W8-Dij"/>
+                        </constraints>
                         <state key="normal" image="btn_RMB"/>
                         <connections>
                             <action selector="clickCellButtons:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Lw-hJ-EA4"/>
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="OpB-Oq-mw6" firstAttribute="leading" secondItem="p9N-lC-avG" secondAttribute="trailing" constant="1" id="0uT-cB-NU1"/>
+                    <constraint firstItem="TM3-2H-Pd4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="2C4-Nz-Uoe"/>
+                    <constraint firstItem="iDJ-Tm-skr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2HH-4V-FDN"/>
+                    <constraint firstItem="iDJ-Tm-skr" firstAttribute="leading" secondItem="Vp2-bd-bkC" secondAttribute="trailing" constant="1" id="6d8-53-9iJ"/>
+                    <constraint firstAttribute="trailing" secondItem="VWz-td-dY7" secondAttribute="trailing" constant="132" id="Akw-Qv-ZUt"/>
+                    <constraint firstItem="Vp2-bd-bkC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CIa-qM-YkW"/>
+                    <constraint firstItem="p9N-lC-avG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Lcp-Rf-all"/>
+                    <constraint firstItem="VWz-td-dY7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="QQG-p0-Bpv"/>
+                    <constraint firstAttribute="trailing" secondItem="OpB-Oq-mw6" secondAttribute="trailing" constant="9" id="bpg-eW-INI"/>
+                    <constraint firstItem="OpB-Oq-mw6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="h5Z-rh-jCI"/>
+                    <constraint firstItem="TM3-2H-Pd4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="lJg-tI-psv"/>
+                    <constraint firstItem="p9N-lC-avG" firstAttribute="leading" secondItem="iDJ-Tm-skr" secondAttribute="trailing" constant="1" id="oLH-Ji-mNA"/>
+                    <constraint firstItem="VWz-td-dY7" firstAttribute="leading" secondItem="TM3-2H-Pd4" secondAttribute="trailing" constant="10" id="ztc-Fr-pSc"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>

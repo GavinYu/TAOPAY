@@ -16,10 +16,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0V-yT-iNF">
-                    <rect key="frame" x="230" y="-1" width="145" height="49"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0V-yT-iNF">
+                    <rect key="frame" x="230" y="0.0" width="145" height="49"/>
                     <color key="backgroundColor" red="0.76470588240000004" green="0.050980392159999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="145" id="cwL-bu-lVi"/>
+                        <constraint firstAttribute="height" constant="49" id="hWR-nh-e3c"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <state key="normal" title="立即支付">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,9 +31,12 @@
                         <action selector="clickPayButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="vQI-aK-7BH"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="免运费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-EQ-QL1">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免运费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-EQ-QL1">
                     <rect key="frame" x="171" y="17" width="43" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="43" id="MzU-4T-uDe"/>
+                        <constraint firstAttribute="height" constant="16" id="T3g-V8-mtb"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.76470588240000004" green="0.050980392159999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -51,6 +57,12 @@
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="n0V-yT-iNF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0qi-DV-c18"/>
+                <constraint firstItem="n0V-yT-iNF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4Uz-l8-TC6"/>
+                <constraint firstItem="fvp-EQ-QL1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="e9G-Ua-bJV"/>
+                <constraint firstItem="n0V-yT-iNF" firstAttribute="leading" secondItem="fvp-EQ-QL1" secondAttribute="trailing" constant="16" id="gdW-fY-2ja"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

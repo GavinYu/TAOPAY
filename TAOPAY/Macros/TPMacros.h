@@ -232,6 +232,9 @@
 //环信SDK
 #define EasyMobSDKAppKey   @"1113180712253091"
 
+//二维码的格式
+#define QRCodeFormat @"taopay://productId=1"
+
 /*--------------------------- Add by GavinYu End ----------------------------*/
 
 

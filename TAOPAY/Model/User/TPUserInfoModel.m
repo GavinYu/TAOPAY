@@ -10,4 +10,13 @@
 
 @implementation TPUserInfoModel
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"userId":@"id",
+             @"username":@"username",
+             @"nick":@"nick",
+             @"info":@"info",
+             @"avatar":@"avatar"
+             };
+}
+
 @end

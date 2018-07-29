@@ -21,6 +21,8 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "YHTTPService.h"
 
+#import "EaseUI.h"
+
 @interface AppDelegate ()
 
 @end
@@ -39,6 +41,13 @@
     
     //初始化环信SDK
     [self initEasyMobSDK];
+    
+    [[EaseSDKHelper shareHelper] hyphenateApplication:application
+                        didFinishLaunchingWithOptions:launchOptions
+                                               appkey:EasyMobSDKAppKey
+                                         apnsCertName:@""
+                                          otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES]}];
+
     
     return YES;
 }

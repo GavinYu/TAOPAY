@@ -16,26 +16,43 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4T-Wh-MAr">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4T-Wh-MAr">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.7725490196" green="0.77647058820000003" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="sne-Rq-B7P"/>
+                    </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gha-ml-tYM">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gha-ml-tYM">
                     <rect key="frame" x="0.0" y="1" width="375" height="36"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="GHy-T8-8CX"/>
+                    </constraints>
                     <connections>
                         <outlet property="delegate" destination="iN0-l3-epB" id="FoY-Rb-aXn"/>
                     </connections>
                 </scrollView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOV-hq-qCZ">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOV-hq-qCZ">
                     <rect key="frame" x="0.0" y="37" width="375" height="1"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.7725490196" green="0.77647058820000003" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="b61-Lh-Owh"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gha-ml-tYM" firstAttribute="top" secondItem="j4T-Wh-MAr" secondAttribute="bottom" id="6bR-SH-38f"/>
+                <constraint firstAttribute="trailing" secondItem="j4T-Wh-MAr" secondAttribute="trailing" id="8fF-br-jFC"/>
+                <constraint firstItem="ZOV-hq-qCZ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="IH3-dM-u4l"/>
+                <constraint firstItem="j4T-Wh-MAr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YPB-9G-UKS"/>
+                <constraint firstItem="j4T-Wh-MAr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="f2j-6r-aod"/>
+                <constraint firstItem="gha-ml-tYM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gFk-VE-Tja"/>
+                <constraint firstItem="gha-ml-tYM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ky5-EU-4wS"/>
+                <constraint firstAttribute="trailing" secondItem="ZOV-hq-qCZ" secondAttribute="trailing" id="lxY-tf-na6"/>
+                <constraint firstItem="ZOV-hq-qCZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qJH-6z-0O9"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

@@ -16,22 +16,32 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="373"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxg-cB-iXs">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxg-cB-iXs">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="373"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
                         <outlet property="delegate" destination="iN0-l3-epB" id="Vhw-15-tgA"/>
                     </connections>
                 </scrollView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O75-uo-NAB">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O75-uo-NAB">
                     <rect key="frame" x="342" y="346" width="26" height="14"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="Efy-ji-W1v"/>
+                        <constraint firstAttribute="width" constant="26" id="PDW-OY-0ea"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.59607843140000005" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="O75-uo-NAB" secondAttribute="bottom" constant="13" id="7uQ-eL-gR2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="O75-uo-NAB" secondAttribute="trailing" constant="7" id="EaI-1F-OAK"/>
+                <constraint firstItem="cxg-cB-iXs" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="F5M-Mp-Qf0"/>
+                <constraint firstItem="cxg-cB-iXs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="FnD-1Z-L2v"/>
+                <constraint firstItem="cxg-cB-iXs" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="fdm-hB-IpL"/>
+                <constraint firstItem="cxg-cB-iXs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="us8-Be-VgN"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

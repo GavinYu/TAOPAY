@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPChatNavigationBarView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svt-E5-exp">
+                    <rect key="frame" x="15" y="20" width="30" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Wsw-Vi-osA"/>
+                        <constraint firstAttribute="height" constant="38" id="zrG-aX-u4l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                    <state key="normal" image="icon_loginNavbar_back">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBackButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vdp-Cp-xiE"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbW-QE-vLl">
+                    <rect key="frame" x="113" y="29" width="210" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="QbX-rA-0N2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.16862745100000001" green="0.18039215689999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNn-j3-Bb0">
+                    <rect key="frame" x="330" y="24" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0Yg-3x-V6r"/>
+                        <constraint firstAttribute="width" constant="30" id="aUh-Gi-ccN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" image="btn_nav_personalHomepage"/>
+                    <connections>
+                        <action selector="clcikMeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="gTg-jv-lwJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB6-sl-STd">
+                    <rect key="frame" x="0.0" y="61" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.87450980389999999" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="fSv-9k-33z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_loginNavbar_detail_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vZR-7Z-H0U">
+                    <rect key="frame" x="55" y="34" width="50" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="TLb-R9-CXX"/>
+                        <constraint firstAttribute="width" constant="50" id="baC-yf-Nmx"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zNn-j3-Bb0" secondAttribute="trailing" constant="15" id="4FN-LN-W9W"/>
+                <constraint firstItem="zNn-j3-Bb0" firstAttribute="leading" secondItem="TbW-QE-vLl" secondAttribute="trailing" constant="7" id="8Ic-Og-76y"/>
+                <constraint firstItem="svt-E5-exp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="AVF-fp-lTS"/>
+                <constraint firstItem="TbW-QE-vLl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="29" id="Bc1-IF-Rd7"/>
+                <constraint firstItem="TbW-QE-vLl" firstAttribute="leading" secondItem="vZR-7Z-H0U" secondAttribute="trailing" constant="8" id="D5H-bA-Dya"/>
+                <constraint firstItem="zNn-j3-Bb0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="Oyu-FW-yP5"/>
+                <constraint firstItem="fB6-sl-STd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zlh-VQ-8WV"/>
+                <constraint firstItem="vZR-7Z-H0U" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="34" id="g9z-c3-H5R"/>
+                <constraint firstItem="vZR-7Z-H0U" firstAttribute="leading" secondItem="svt-E5-exp" secondAttribute="trailing" constant="10" id="nml-48-pnS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fB6-sl-STd" secondAttribute="bottom" constant="2.5" id="pBC-mZ-mBF"/>
+                <constraint firstItem="svt-E5-exp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="pcs-z7-eIl"/>
+                <constraint firstAttribute="trailing" secondItem="fB6-sl-STd" secondAttribute="trailing" id="zfr-a5-0uZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="titleLabel" destination="TbW-QE-vLl" id="FzS-ys-5MF"/>
+            </connections>
+            <point key="canvasLocation" x="-126.5" y="295"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_nav_personalHomepage" width="15" height="17"/>
+        <image name="icon_loginNavbar_back" width="13" height="22"/>
+        <image name="icon_loginNavbar_detail_logo" width="51" height="9"/>
+    </resources>
+</document>

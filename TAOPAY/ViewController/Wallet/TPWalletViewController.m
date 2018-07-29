@@ -42,6 +42,12 @@
     [self bindViewModel];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
+}
+
 //MARK: -- 设置导航栏
 - (void)configNavigationBar {
     self.navigationView.title = TPLocalizedString(@"tabbar_wallet");

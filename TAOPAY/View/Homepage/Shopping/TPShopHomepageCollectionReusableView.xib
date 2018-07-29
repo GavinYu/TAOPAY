@@ -16,11 +16,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qM-oF-YQg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9qM-oF-YQg">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="265" id="fco-kB-v7C"/>
+                    </constraints>
                 </imageView>
             </subviews>
+            <constraints>
+                <constraint firstItem="9qM-oF-YQg" firstAttribute="trailing" secondItem="9Gg-ye-v9C" secondAttribute="trailing" id="NAx-SL-E6Z"/>
+                <constraint firstItem="9qM-oF-YQg" firstAttribute="top" secondItem="9Gg-ye-v9C" secondAttribute="top" id="fUd-CX-mBH"/>
+                <constraint firstItem="9qM-oF-YQg" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="jD8-5K-O3n"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
             <connections>
                 <outlet property="shopImageView" destination="9qM-oF-YQg" id="HDH-W8-3Xj"/>

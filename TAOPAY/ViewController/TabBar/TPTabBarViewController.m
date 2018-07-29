@@ -12,9 +12,11 @@
 #import "HomepageViewController.h"
 #import "TPFriendViewController.h"
 #import "TPWalletViewController.h"
-#import "TPChatViewController.h"
+//#import "TPChatViewController.h"
 #import "TPAppConfig.h"
 #import "YScanCodeViewController.h"
+//#import "TPConversationListControllerViewController.h"
+#import "TPChatRootViewController.h"
 
 #import <RDVTabBarController/RDVTabBarItem.h>
 
@@ -48,7 +50,8 @@
     YBaseNavigationController *friendNavController = [[YBaseNavigationController alloc] initWithRootViewController:friendViewController];
     
     //聊天
-    UIViewController *chatViewController=[mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPChatViewController class])];
+//    UIViewController *chatViewController=[mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPChatViewController class])];
+    UIViewController *chatViewController=[mainStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([TPChatRootViewController class])];
     
     YBaseNavigationController *chatNavController = [[YBaseNavigationController alloc] initWithRootViewController:chatViewController];
     
@@ -156,6 +159,12 @@
 - (void)tabBarController:(RDVTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     selectedTabBarIiemTag = tabBarController.selectedIndex;
 //    [[NSNotificationCenter defaultCenter] postNotificationName:<#(nonnull NSNotificationName)#> object:<#(nullable id)#>]
+    //为了解决调到 环信SDK 的聊天页面 隐藏下方的tabbar
+    if (selectedTabBarIiemTag == 2) {
+        [self setTabBarHidden:YES];
+    }else {
+        [self setTabBarHidden:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

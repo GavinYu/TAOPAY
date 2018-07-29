@@ -11,6 +11,7 @@
 @interface TPFriendModel : YObject
 
 @property (nonatomic, copy) NSString *userId;
+@property (nonatomic, copy) NSString *username;
 @property (nonatomic, copy) NSString *nick;
 @property (nonatomic, copy) NSString *info;
 @property (nonatomic, copy) NSString *avatar;

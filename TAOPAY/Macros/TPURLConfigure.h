@@ -9,7 +9,7 @@
 #ifndef TPURLConfigure_h
 #define TPURLConfigure_h
 
-#define TAOPAY_BASE_URL  @"http://hanshanghai.net"
+#define TAOPAY_BASE_URL     @"http://hanshanghai.net"
 
 #define RegisterRequst  @"api/register"
 #define LoginRequst  @"api/login"
@@ -20,6 +20,7 @@
 #define BalanceTransferRequst @"api/balance/transfer"
 #define BalanceQueryRequst @"api/balance/query"
 #define UserUpdateNickRequst @"api/user/updateNick"
+#define BalanceTransferByMessage    @"api/balance/transferByMessage"
 
 //商城相关的接口
 #define ShopMainRequst @"api/shop/main"

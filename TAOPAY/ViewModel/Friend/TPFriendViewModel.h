@@ -10,6 +10,8 @@
 
 @interface TPFriendViewModel : TPTableViewModel
 
+@property (readonly, assign, nonatomic) BOOL isFinished;
+
 - (void)requestAuthorizationForAddressBook;
 // 添加好友
 - (void)addFriendWithFriendId:(NSString *)friendId

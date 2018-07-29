@@ -200,7 +200,7 @@
 - (void)queryOrderPayResult:(NSString *)orderId
                     success:(void(^)(id json))success
                     failure:(void (^)(NSString *error))failure {
-    [[YHTTPService sharedInstance] requestOrderUnionpayQuery:orderId success:^(YHTTPResponse *response) {
+    [[YHTTPService sharedInstance] requestOrderUnionpayQuery:orderId type:TPPayTNTypeShopping success:^(YHTTPResponse *response) {
         if (response.code == YHTTPResponseCodeSuccess) {
             [SVProgressHUD showSuccessWithStatus:response.parsedResult];
             success(@YES);

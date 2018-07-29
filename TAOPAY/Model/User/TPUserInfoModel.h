@@ -10,11 +10,15 @@
 
 @interface TPUserInfoModel : YObject
 
+// 用户ID
+@property (nonatomic, copy) NSString *userId;
+/// 用户名
+@property (nonatomic, copy) NSString *username;
 //昵称
 @property (nonatomic, copy) NSString *nick;
 // 简介
 @property (nonatomic, copy) NSString *info;
 // avatar 头像 50x50
-@property (nonatomic, strong) NSString *avatar;
+@property (nonatomic, copy) NSString *avatar;
 
 @end

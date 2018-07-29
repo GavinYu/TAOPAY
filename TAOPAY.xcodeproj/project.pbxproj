@@ -61,6 +61,9 @@
 		841DD6E620CBE3D60018D27E /* TPAreaListTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6E520CBE3D60018D27E /* TPAreaListTableHeaderView.xib */; };
 		841DD6EE20D14E860018D27E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841DD6F020D14E860018D27E /* Localizable.strings */; };
 		841DD70920D2A5FF0018D27E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841DD70B20D2A5FF0018D27E /* InfoPlist.strings */; };
+		841E760F210C7EB300661C32 /* TPConversationListControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E760E210C7EB300661C32 /* TPConversationListControllerViewController.m */; };
+		841E7612210C866600661C32 /* TPChatFriendListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E7611210C866600661C32 /* TPChatFriendListView.m */; };
+		841E7614210C868600661C32 /* TPChatFriendListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841E7613210C868600661C32 /* TPChatFriendListView.xib */; };
 		84206B24207F95E10099C8E6 /* TPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B23207F95E10099C8E6 /* TPConstant.m */; };
 		84206B3F207FA3100099C8E6 /* YBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B3E207FA3100099C8E6 /* YBaseTableViewCell.m */; };
 		84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84206B41207FA3630099C8E6 /* YBaseCollectionViewCell.m */; };
@@ -161,7 +164,6 @@
 		84984E782100AF160012DA2C /* TPUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84984E772100AF160012DA2C /* TPUserInfoModel.m */; };
 		84984E7C2100BC3C0012DA2C /* FriendCircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84984E7A2100BC3C0012DA2C /* FriendCircleCell.m */; };
 		84984E7D2100BC3C0012DA2C /* FriendCircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84984E7B2100BC3C0012DA2C /* FriendCircleCell.xib */; };
-		84984E802102BD8E0012DA2C /* HyphenateLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84984E7F2102BD8E0012DA2C /* HyphenateLite.framework */; };
 		84984FAA2102BE310012DA2C /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84984E882102BE300012DA2C /* UIViewController+HUD.m */; };
 		84984FAB2102BE310012DA2C /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 84984E892102BE300012DA2C /* NSDate+Category.m */; };
 		84984FAC2102BE310012DA2C /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = 84984E8A2102BE300012DA2C /* NSString+Valid.m */; };
@@ -282,6 +284,22 @@
 		84C9A5C021040CF0005C9A43 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9A5BF21040CF0005C9A43 /* libsqlite3.tbd */; };
 		84C9A5C121040D71005C9A43 /* HyphenateLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84984E7F2102BD8E0012DA2C /* HyphenateLite.framework */; };
 		84C9A5C221040D71005C9A43 /* HyphenateLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84984E7F2102BD8E0012DA2C /* HyphenateLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84C9A5C7210474FE005C9A43 /* TPChatNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5C6210474FE005C9A43 /* TPChatNavigationBarView.m */; };
+		84C9A5C921047513005C9A43 /* TPChatNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C9A5C821047513005C9A43 /* TPChatNavigationBarView.xib */; };
+		84C9A5CD2106B094005C9A43 /* TPPublishFriendCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5CC2106B094005C9A43 /* TPPublishFriendCircleViewController.m */; };
+		84C9A5D12106B100005C9A43 /* TPPublishHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5CF2106B100005C9A43 /* TPPublishHeaderCollectionReusableView.m */; };
+		84C9A5D22106B100005C9A43 /* TPPublishHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C9A5D02106B100005C9A43 /* TPPublishHeaderCollectionReusableView.xib */; };
+		84C9A5D62106BF41005C9A43 /* TPFriendCircleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5D42106BF40005C9A43 /* TPFriendCircleImageCell.m */; };
+		84C9A5D72106BF41005C9A43 /* TPFriendCircleImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C9A5D52106BF40005C9A43 /* TPFriendCircleImageCell.xib */; };
+		84C9A5DA210705EF005C9A43 /* TPUserInfoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5D9210705EF005C9A43 /* TPUserInfoListModel.m */; };
+		84C9A5DD21071195005C9A43 /* TPChatRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5DC21071195005C9A43 /* TPChatRootViewController.m */; };
+		84C9A5E12107225C005C9A43 /* EaseChatToolbar+TPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5E02107225C005C9A43 /* EaseChatToolbar+TPExtend.m */; };
+		84C9A5E421073329005C9A43 /* EaseChatBarMoreView+TPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5E321073329005C9A43 /* EaseChatBarMoreView+TPExtend.m */; };
+		84C9A5E821082935005C9A43 /* TPChatMsgListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5E621082935005C9A43 /* TPChatMsgListCell.m */; };
+		84C9A5E921082935005C9A43 /* TPChatMsgListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C9A5E721082935005C9A43 /* TPChatMsgListCell.xib */; };
+		84C9A5ED210C4E0B005C9A43 /* TPFriendCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5EC210C4E0B005C9A43 /* TPFriendCircleViewController.m */; };
+		84C9A5F0210C4E9F005C9A43 /* TPFriendCircleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5EF210C4E9F005C9A43 /* TPFriendCircleViewModel.m */; };
+		84C9A5F3210C502A005C9A43 /* TPFriendCircleItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9A5F2210C502A005C9A43 /* TPFriendCircleItemViewModel.m */; };
 		84CA819E20FE0A62001CE110 /* TPPersonalHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CA819D20FE0A62001CE110 /* TPPersonalHomepageViewController.m */; };
 		84CA81A320FE0BD0001CE110 /* TPPersonalHomepageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CA81A120FE0BD0001CE110 /* TPPersonalHomepageCell.m */; };
 		84CA81A420FE0BD0001CE110 /* TPPersonalHomepageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CA81A220FE0BD0001CE110 /* TPPersonalHomepageCell.xib */; };
@@ -459,6 +477,11 @@
 		841DD70A20D2A5FF0018D27E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		841DD70C20D2A6010018D27E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		841DD70D20D2A6040018D27E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		841E760D210C7EB300661C32 /* TPConversationListControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConversationListControllerViewController.h; sourceTree = "<group>"; };
+		841E760E210C7EB300661C32 /* TPConversationListControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPConversationListControllerViewController.m; sourceTree = "<group>"; };
+		841E7610210C866600661C32 /* TPChatFriendListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPChatFriendListView.h; sourceTree = "<group>"; };
+		841E7611210C866600661C32 /* TPChatFriendListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPChatFriendListView.m; sourceTree = "<group>"; };
+		841E7613210C868600661C32 /* TPChatFriendListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPChatFriendListView.xib; sourceTree = "<group>"; };
 		84206B21207F956A0099C8E6 /* TPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPMacros.h; sourceTree = "<group>"; };
 		84206B22207F95E10099C8E6 /* TPConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPConstant.h; sourceTree = "<group>"; };
 		84206B23207F95E10099C8E6 /* TPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPConstant.m; sourceTree = "<group>"; };
@@ -888,6 +911,34 @@
 		84C9A5BB21040CBC005C9A43 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		84C9A5BD21040CE2005C9A43 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		84C9A5BF21040CF0005C9A43 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		84C9A5C5210474FE005C9A43 /* TPChatNavigationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPChatNavigationBarView.h; sourceTree = "<group>"; };
+		84C9A5C6210474FE005C9A43 /* TPChatNavigationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPChatNavigationBarView.m; sourceTree = "<group>"; };
+		84C9A5C821047513005C9A43 /* TPChatNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPChatNavigationBarView.xib; sourceTree = "<group>"; };
+		84C9A5CB2106B094005C9A43 /* TPPublishFriendCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPublishFriendCircleViewController.h; sourceTree = "<group>"; };
+		84C9A5CC2106B094005C9A43 /* TPPublishFriendCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPublishFriendCircleViewController.m; sourceTree = "<group>"; };
+		84C9A5CE2106B100005C9A43 /* TPPublishHeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPublishHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		84C9A5CF2106B100005C9A43 /* TPPublishHeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPublishHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		84C9A5D02106B100005C9A43 /* TPPublishHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPPublishHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		84C9A5D32106BF40005C9A43 /* TPFriendCircleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendCircleImageCell.h; sourceTree = "<group>"; };
+		84C9A5D42106BF40005C9A43 /* TPFriendCircleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendCircleImageCell.m; sourceTree = "<group>"; };
+		84C9A5D52106BF40005C9A43 /* TPFriendCircleImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPFriendCircleImageCell.xib; sourceTree = "<group>"; };
+		84C9A5D8210705EF005C9A43 /* TPUserInfoListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPUserInfoListModel.h; sourceTree = "<group>"; };
+		84C9A5D9210705EF005C9A43 /* TPUserInfoListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPUserInfoListModel.m; sourceTree = "<group>"; };
+		84C9A5DB21071195005C9A43 /* TPChatRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPChatRootViewController.h; sourceTree = "<group>"; };
+		84C9A5DC21071195005C9A43 /* TPChatRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPChatRootViewController.m; sourceTree = "<group>"; };
+		84C9A5DF2107225C005C9A43 /* EaseChatToolbar+TPExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EaseChatToolbar+TPExtend.h"; sourceTree = "<group>"; };
+		84C9A5E02107225C005C9A43 /* EaseChatToolbar+TPExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EaseChatToolbar+TPExtend.m"; sourceTree = "<group>"; };
+		84C9A5E221073329005C9A43 /* EaseChatBarMoreView+TPExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EaseChatBarMoreView+TPExtend.h"; sourceTree = "<group>"; };
+		84C9A5E321073329005C9A43 /* EaseChatBarMoreView+TPExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EaseChatBarMoreView+TPExtend.m"; sourceTree = "<group>"; };
+		84C9A5E521082935005C9A43 /* TPChatMsgListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPChatMsgListCell.h; sourceTree = "<group>"; };
+		84C9A5E621082935005C9A43 /* TPChatMsgListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPChatMsgListCell.m; sourceTree = "<group>"; };
+		84C9A5E721082935005C9A43 /* TPChatMsgListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TPChatMsgListCell.xib; sourceTree = "<group>"; };
+		84C9A5EB210C4E0B005C9A43 /* TPFriendCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendCircleViewController.h; sourceTree = "<group>"; };
+		84C9A5EC210C4E0B005C9A43 /* TPFriendCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendCircleViewController.m; sourceTree = "<group>"; };
+		84C9A5EE210C4E9F005C9A43 /* TPFriendCircleViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendCircleViewModel.h; sourceTree = "<group>"; };
+		84C9A5EF210C4E9F005C9A43 /* TPFriendCircleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendCircleViewModel.m; sourceTree = "<group>"; };
+		84C9A5F1210C502A005C9A43 /* TPFriendCircleItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFriendCircleItemViewModel.h; sourceTree = "<group>"; };
+		84C9A5F2210C502A005C9A43 /* TPFriendCircleItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFriendCircleItemViewModel.m; sourceTree = "<group>"; };
 		84CA819C20FE0A62001CE110 /* TPPersonalHomepageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPersonalHomepageViewController.h; sourceTree = "<group>"; };
 		84CA819D20FE0A62001CE110 /* TPPersonalHomepageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPPersonalHomepageViewController.m; sourceTree = "<group>"; };
 		84CA81A020FE0BD0001CE110 /* TPPersonalHomepageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPPersonalHomepageCell.h; sourceTree = "<group>"; };
@@ -986,7 +1037,6 @@
 				84C9A5B021040C6F005C9A43 /* CoreMedia.framework in Frameworks */,
 				84984FCE2102BE310012DA2C /* libopencore-amrnb.a in Frameworks */,
 				843FDF6B20F9717600B03F09 /* CFNetwork.framework in Frameworks */,
-				84984E802102BD8E0012DA2C /* HyphenateLite.framework in Frameworks */,
 				8451DE1C2096B1280059E73A /* libPaymentControl.a in Frameworks */,
 				84984FCD2102BE310012DA2C /* libopencore-amrwb.a in Frameworks */,
 				4FA02A3F02DFC74195D2B3DE /* libPods-TAOPAY.a in Frameworks */,
@@ -1366,6 +1416,7 @@
 		84206B1F207F94A00099C8E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84C9A5C4210474B6005C9A43 /* Chat */,
 				840E9CC020C2AF8D002F8602 /* PersonCenter */,
 				846ECCE8209EF358006D6D23 /* Friend */,
 				849EFB1320839B7200C37AC9 /* Wallet */,
@@ -1566,6 +1617,7 @@
 		84206B3A207F988C0099C8E6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				84C9A5EA210BF653005C9A43 /* HuanXinSDK */,
 				8418BF7620B4510900D057EB /* Location */,
 				846ECCD8209E8EDC006D6D23 /* TPUPPayManager.h */,
 				846ECCD9209E8EDC006D6D23 /* TPUPPayManager.mm */,
@@ -1583,6 +1635,7 @@
 		84206B3C207F988C0099C8E6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				84C9A5DE210721A2005C9A43 /* HuanXinSDK */,
 				84D66140208C403100DF0F73 /* UITableView */,
 				84D66133208C1B0000DF0F73 /* UIScrollView */,
 				849EFB0A2082428100C37AC9 /* NSString */,
@@ -1661,6 +1714,8 @@
 				84206B9E2080FC6D0099C8E6 /* TPUser.m */,
 				84984E762100AF160012DA2C /* TPUserInfoModel.h */,
 				84984E772100AF160012DA2C /* TPUserInfoModel.m */,
+				84C9A5D8210705EF005C9A43 /* TPUserInfoListModel.h */,
+				84C9A5D9210705EF005C9A43 /* TPUserInfoListModel.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -2370,6 +2425,10 @@
 			children = (
 				849EFAFC20820F2400C37AC9 /* TPChatViewController.h */,
 				849EFAFD20820F2400C37AC9 /* TPChatViewController.m */,
+				84C9A5DB21071195005C9A43 /* TPChatRootViewController.h */,
+				84C9A5DC21071195005C9A43 /* TPChatRootViewController.m */,
+				841E760D210C7EB300661C32 /* TPConversationListControllerViewController.h */,
+				841E760E210C7EB300661C32 /* TPConversationListControllerViewController.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -2377,6 +2436,7 @@
 		849EFAED20820E7A00C37AC9 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				84C9A5CA2106B051005C9A43 /* FriendCircle */,
 				84CA819B20FE0A3B001CE110 /* PersonalHomeage */,
 				849EFAF920820F1200C37AC9 /* TPFriendViewController.h */,
 				849EFAFA20820F1200C37AC9 /* TPFriendViewController.m */,
@@ -2478,12 +2538,63 @@
 			path = Wallet;
 			sourceTree = "<group>";
 		};
+		84C9A5C4210474B6005C9A43 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				84C9A5C5210474FE005C9A43 /* TPChatNavigationBarView.h */,
+				84C9A5C6210474FE005C9A43 /* TPChatNavigationBarView.m */,
+				84C9A5C821047513005C9A43 /* TPChatNavigationBarView.xib */,
+				84C9A5E521082935005C9A43 /* TPChatMsgListCell.h */,
+				84C9A5E621082935005C9A43 /* TPChatMsgListCell.m */,
+				84C9A5E721082935005C9A43 /* TPChatMsgListCell.xib */,
+				841E7610210C866600661C32 /* TPChatFriendListView.h */,
+				841E7611210C866600661C32 /* TPChatFriendListView.m */,
+				841E7613210C868600661C32 /* TPChatFriendListView.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		84C9A5CA2106B051005C9A43 /* FriendCircle */ = {
+			isa = PBXGroup;
+			children = (
+				84C9A5CB2106B094005C9A43 /* TPPublishFriendCircleViewController.h */,
+				84C9A5CC2106B094005C9A43 /* TPPublishFriendCircleViewController.m */,
+				84C9A5EB210C4E0B005C9A43 /* TPFriendCircleViewController.h */,
+				84C9A5EC210C4E0B005C9A43 /* TPFriendCircleViewController.m */,
+			);
+			path = FriendCircle;
+			sourceTree = "<group>";
+		};
+		84C9A5DE210721A2005C9A43 /* HuanXinSDK */ = {
+			isa = PBXGroup;
+			children = (
+				84C9A5DF2107225C005C9A43 /* EaseChatToolbar+TPExtend.h */,
+				84C9A5E02107225C005C9A43 /* EaseChatToolbar+TPExtend.m */,
+				84C9A5E221073329005C9A43 /* EaseChatBarMoreView+TPExtend.h */,
+				84C9A5E321073329005C9A43 /* EaseChatBarMoreView+TPExtend.m */,
+			);
+			path = HuanXinSDK;
+			sourceTree = "<group>";
+		};
+		84C9A5EA210BF653005C9A43 /* HuanXinSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HuanXinSDK;
+			sourceTree = "<group>";
+		};
 		84CA819A20FCEF12001CE110 /* FriendCircle */ = {
 			isa = PBXGroup;
 			children = (
 				84984E792100BC3C0012DA2C /* FriendCircleCell.h */,
 				84984E7A2100BC3C0012DA2C /* FriendCircleCell.m */,
 				84984E7B2100BC3C0012DA2C /* FriendCircleCell.xib */,
+				84C9A5CE2106B100005C9A43 /* TPPublishHeaderCollectionReusableView.h */,
+				84C9A5CF2106B100005C9A43 /* TPPublishHeaderCollectionReusableView.m */,
+				84C9A5D02106B100005C9A43 /* TPPublishHeaderCollectionReusableView.xib */,
+				84C9A5D32106BF40005C9A43 /* TPFriendCircleImageCell.h */,
+				84C9A5D42106BF40005C9A43 /* TPFriendCircleImageCell.m */,
+				84C9A5D52106BF40005C9A43 /* TPFriendCircleImageCell.xib */,
 			);
 			path = FriendCircle;
 			sourceTree = "<group>";
@@ -2518,6 +2629,10 @@
 			children = (
 				84CA81A620FE0C39001CE110 /* TPPersonalHomepageViewModel.h */,
 				84CA81A720FE0C39001CE110 /* TPPersonalHomepageViewModel.m */,
+				84C9A5EE210C4E9F005C9A43 /* TPFriendCircleViewModel.h */,
+				84C9A5EF210C4E9F005C9A43 /* TPFriendCircleViewModel.m */,
+				84C9A5F1210C502A005C9A43 /* TPFriendCircleItemViewModel.h */,
+				84C9A5F2210C502A005C9A43 /* TPFriendCircleItemViewModel.m */,
 			);
 			path = PersonalHomepage;
 			sourceTree = "<group>";
@@ -2839,6 +2954,7 @@
 				843FDF8120F9DE6800B03F09 /* TPOrderTableFooterView.xib in Resources */,
 				841DD70920D2A5FF0018D27E /* InfoPlist.strings in Resources */,
 				840E9CC620C2B01E002F8602 /* TPShippingAddressCell.xib in Resources */,
+				84C9A5D22106B100005C9A43 /* TPPublishHeaderCollectionReusableView.xib in Resources */,
 				8418BF6620B2F7E300D057EB /* TPShoppingTableHeaderView.xib in Resources */,
 				843FDF8620F9E1EA00B03F09 /* TPOrderDetailTableFooterView.xib in Resources */,
 				849850202102BE320012DA2C /* EaseUIResource.bundle in Resources */,
@@ -2854,14 +2970,17 @@
 				8453D3DF20F381620002B955 /* TPShopHomepageCollectionReusableView.xib in Resources */,
 				840E9CBA20C2AA61002F8602 /* TPGoodsDetailsCell.xib in Resources */,
 				84D6613B208C283400DF0F73 /* TPLoginNavigationView.xib in Resources */,
+				84C9A5E921082935005C9A43 /* TPChatMsgListCell.xib in Resources */,
 				843FDF8B20F9E5C600B03F09 /* TPOrderDetailSectionFooterView.xib in Resources */,
 				84797FAA20EBA39B00FC1C02 /* TPShoppingCartBottomView.xib in Resources */,
 				84797F8C20DF360D00FC1C02 /* TPGoodsDetailTopToolView.xib in Resources */,
 				840E9CBF20C2AE7D002F8602 /* TPShoppingCartCell.xib in Resources */,
 				841DD6D720CB9BED0018D27E /* TPShippingAddressTableFooterView.xib in Resources */,
 				840E9C9620C2940C002F8602 /* Shopping.storyboard in Resources */,
+				841E7614210C868600661C32 /* TPChatFriendListView.xib in Resources */,
 				84D661212086391500DF0F73 /* TPWalletTextNumberCell.xib in Resources */,
 				843FDF7720F9D7AA00B03F09 /* TPOrderGoodsCell.xib in Resources */,
+				84C9A5D72106BF41005C9A43 /* TPFriendCircleImageCell.xib in Resources */,
 				84CA81A420FE0BD0001CE110 /* TPPersonalHomepageCell.xib in Resources */,
 				84CD0B8D207CEF160069AD9A /* Assets.xcassets in Resources */,
 				84797FBE20F09C0200FC1C02 /* TPPayWayBottomView.xib in Resources */,
@@ -2876,6 +2995,7 @@
 				846ECCE6209E92A8006D6D23 /* public_test.key in Resources */,
 				84797F9C20EA46A200FC1C02 /* TPGoodsDetailInfoCell.xib in Resources */,
 				843FDF9D20FA0C1000B03F09 /* TPOrderPayTableFooterView.xib in Resources */,
+				84C9A5C921047513005C9A43 /* TPChatNavigationBarView.xib in Resources */,
 				840E9CB520C2A777002F8602 /* TPStoreCell.xib in Resources */,
 				846ECCF2209F03B3006D6D23 /* TPFriendCell.xib in Resources */,
 				841DD6EE20D14E860018D27E /* Localizable.strings in Resources */,
@@ -2933,12 +3053,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TAOPAY/Pods-TAOPAY-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/QBImagePickerController/QBImagePicker.bundle",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
@@ -2966,6 +3088,7 @@
 				84797F8F20E1164300FC1C02 /* TPShopListViewModel.m in Sources */,
 				846B83BA21033F10001E3C2C /* TPFriendArticleListModel.m in Sources */,
 				843FDFA020FA277C00B03F09 /* TPOrderPayViewModel.m in Sources */,
+				84C9A5C7210474FE005C9A43 /* TPChatNavigationBarView.m in Sources */,
 				84984FB32102BE310012DA2C /* EaseEmoji.m in Sources */,
 				84984FEC2102BE310012DA2C /* PSTCollectionView.m in Sources */,
 				84D5E79420CAD9DF00BBA8E5 /* TPAddressModel.m in Sources */,
@@ -2979,6 +3102,8 @@
 				8453D3E320F423CC0002B955 /* TPOrderInfoModel.m in Sources */,
 				840E9C9E20C296DA002F8602 /* TPCollectionViewController.m in Sources */,
 				84206B852080E4980099C8E6 /* YObject.m in Sources */,
+				84C9A5D62106BF41005C9A43 /* TPFriendCircleImageCell.m in Sources */,
+				84C9A5F3210C502A005C9A43 /* TPFriendCircleItemViewModel.m in Sources */,
 				84984FEB2102BE310012DA2C /* PSTCollectionViewItemKey.m in Sources */,
 				84206B7F2080E1870099C8E6 /* AFHTTPSessionManager+RACSupport.m in Sources */,
 				84984FEA2102BE310012DA2C /* PSTGridLayoutSection.m in Sources */,
@@ -3004,6 +3129,7 @@
 				8453D3D820F225C10002B955 /* YSliderView.m in Sources */,
 				843FDF9520F9FA5700B03F09 /* TPOrderDetailViewController.m in Sources */,
 				84206B68207FA82A0099C8E6 /* TPTableViewModel.m in Sources */,
+				84C9A5DD21071195005C9A43 /* TPChatRootViewController.m in Sources */,
 				84797FBC20F09BE000FC1C02 /* TPPayWayBottomView.m in Sources */,
 				84D6613F208C3BD100DF0F73 /* TPWalletTableHeaderViewModel.m in Sources */,
 				84984FB92102BE310012DA2C /* EaseUserModel.m in Sources */,
@@ -3064,6 +3190,7 @@
 				84CA81AB20FE0FFB001CE110 /* TPFriendListModel.m in Sources */,
 				849EFAFE20820F2400C37AC9 /* TPChatViewController.m in Sources */,
 				8498501B2102BE320012DA2C /* EaseBubbleView+Video.m in Sources */,
+				84C9A5E821082935005C9A43 /* TPChatMsgListCell.m in Sources */,
 				84797F8A20DF35FC00FC1C02 /* TPGoodsDetailTopToolView.m in Sources */,
 				8453D3E620F4D8D30002B955 /* TPReceiveAddressView.m in Sources */,
 				84984FB82102BE310012DA2C /* EaseConversationModel.m in Sources */,
@@ -3078,6 +3205,7 @@
 				84797FB320F048B500FC1C02 /* TPPayWayCell.m in Sources */,
 				846ECCD5209DA78E006D6D23 /* TPWalletTableFooterView.m in Sources */,
 				849EFB1620839BE900C37AC9 /* TPWalletTableHeaderView.m in Sources */,
+				84C9A5F0210C4E9F005C9A43 /* TPFriendCircleViewModel.m in Sources */,
 				84D661202086391500DF0F73 /* TPWalletTextNumberCell.m in Sources */,
 				84984FAA2102BE310012DA2C /* UIViewController+HUD.m in Sources */,
 				849850212102BE320012DA2C /* EaseUI.m in Sources */,
@@ -3105,6 +3233,7 @@
 				8418BF8320B457AD00D057EB /* TPBannerModel.m in Sources */,
 				840E9CC520C2B01E002F8602 /* TPShippingAddressCell.m in Sources */,
 				849F4F2720FB3F480071C473 /* TPOrderCompanyCell.m in Sources */,
+				84C9A5E421073329005C9A43 /* EaseChatBarMoreView+TPExtend.m in Sources */,
 				84D66146208C415100DF0F73 /* UITableView+YExtension.m in Sources */,
 				84206B972080F3DD0099C8E6 /* YKeyedSubscript.m in Sources */,
 				84984FAC2102BE310012DA2C /* NSString+Valid.m in Sources */,
@@ -3124,6 +3253,7 @@
 				84797FA820EBA38600FC1C02 /* TPShoppingCartBottomView.m in Sources */,
 				84206B42207FA3630099C8E6 /* YBaseCollectionViewCell.m in Sources */,
 				8451DE0F208C8ECB0059E73A /* TPCardOperateViewController.m in Sources */,
+				84C9A5E12107225C005C9A43 /* EaseChatToolbar+TPExtend.m in Sources */,
 				84206B24207F95E10099C8E6 /* TPConstant.m in Sources */,
 				841DD6CD20CB6CD00018D27E /* TPSafeCenterViewController.m in Sources */,
 				84984FDA2102BE310012DA2C /* MWCaptionView.m in Sources */,
@@ -3137,8 +3267,10 @@
 				84984FE32102BE310012DA2C /* PSTCollectionViewController.m in Sources */,
 				8418BF9720B709E800D057EB /* TPGoodsCategoryModel.m in Sources */,
 				849850042102BE310012DA2C /* EaseConversationListViewController.m in Sources */,
+				84C9A5ED210C4E0B005C9A43 /* TPFriendCircleViewController.m in Sources */,
 				8418BF8A20B45AF100D057EB /* TPShopMainViewModel.m in Sources */,
 				84984FD62102BE310012DA2C /* EMAudioRecorderUtil.m in Sources */,
+				841E7612210C866600661C32 /* TPChatFriendListView.m in Sources */,
 				84797F9B20EA46A200FC1C02 /* TPGoodsDetailInfoCell.m in Sources */,
 				8498501C2102BE320012DA2C /* EaseBubbleView+Voice.m in Sources */,
 				84D5E79A20CADB7500BBA8E5 /* TPAreaModel.m in Sources */,
@@ -3146,6 +3278,7 @@
 				849850152102BE320012DA2C /* EaseRecordView.m in Sources */,
 				84797F9F20EB9A7100FC1C02 /* TPShoppingPayViewController.m in Sources */,
 				8418BF8620B4588000D057EB /* TPGoodsModel.m in Sources */,
+				84C9A5CD2106B094005C9A43 /* TPPublishFriendCircleViewController.m in Sources */,
 				843FDF7620F9D7AA00B03F09 /* TPOrderGoodsCell.m in Sources */,
 				8418BF8D20B5959C00D057EB /* TPGoodsViewModel.m in Sources */,
 				84D66136208C1B2800DF0F73 /* UIScrollView+YRefresh.m in Sources */,
@@ -3155,9 +3288,11 @@
 				849EFAF520820ED500C37AC9 /* RootViewController.m in Sources */,
 				843FDF9220F9F70D00B03F09 /* TPOrderListModel.m in Sources */,
 				841DD6DF20CBE3270018D27E /* TPAreaListView.m in Sources */,
+				84C9A5DA210705EF005C9A43 /* TPUserInfoListModel.m in Sources */,
 				84CA81A820FE0C39001CE110 /* TPPersonalHomepageViewModel.m in Sources */,
 				84984FCF2102BE310012DA2C /* wav.mm in Sources */,
 				8498501F2102BE320012DA2C /* EaseSDKHelper.m in Sources */,
+				84C9A5D12106B100005C9A43 /* TPPublishHeaderCollectionReusableView.m in Sources */,
 				8418BFA120BADEDC00D057EB /* UINavigationController+TPExtend.m in Sources */,
 				84984FDE2102BE310012DA2C /* MWPhoto.m in Sources */,
 				846B83BD21033F55001E3C2C /* TPFriendArticleModel.m in Sources */,
@@ -3171,6 +3306,7 @@
 				846ECCFA209F06C4006D6D23 /* TPFriendViewModel.m in Sources */,
 				84984FD02102BE310012DA2C /* amrFileCodec.mm in Sources */,
 				840E9CAD20C29B1F002F8602 /* TPPayViewController.m in Sources */,
+				841E760F210C7EB300661C32 /* TPConversationListControllerViewController.m in Sources */,
 				849850032102BE310012DA2C /* EaseLocationViewController.m in Sources */,
 				84984FE62102BE310012DA2C /* PSTGridLayoutInfo.m in Sources */,
 				84206B9F2080FC6D0099C8E6 /* TPUser.m in Sources */,
@@ -3406,10 +3542,7 @@
 				);
 				INFOPLIST_FILE = TAOPAY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TAOPAY/Vendor/UPPaymentControl/libs",
@@ -3443,10 +3576,7 @@
 				);
 				INFOPLIST_FILE = TAOPAY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TAOPAY/Vendor/UPPaymentControl/libs",
@@ -3467,11 +3597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RH8E9398Q9;
 				INFOPLIST_FILE = TAOPAYTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3486,11 +3612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RH8E9398Q9;
 				INFOPLIST_FILE = TAOPAYTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3504,11 +3626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RH8E9398Q9;
 				INFOPLIST_FILE = TAOPAYUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3522,11 +3640,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RH8E9398Q9;
 				INFOPLIST_FILE = TAOPAYUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taopay.TAOPAYUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

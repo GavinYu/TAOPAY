@@ -8,7 +8,7 @@
 
 #import "TPFriendCell.h"
 
-#import "TPFriendModel.h"
+#import "TPAddressBookModel.h"
 #import "TPAppConfig.h"
 
 @interface TPFriendCell ()
@@ -61,11 +61,10 @@
     [super displayCellByDataSources:dataSources rowAtIndexPath:indexPath];
     
     if (dataSources) {
-        TPFriendModel *itemModel = (TPFriendModel *)dataSources;
-        _avatarImageView.image = [UIImage imageNamed:itemModel.avatar];
-        _nameLabel.text = itemModel.nick;
-        self.tag = [itemModel.userId integerValue];
-        
+        TPAddressBookModel *itemModel = (TPAddressBookModel *)dataSources;
+        _avatarImageView.image = [UIImage imageWithData:itemModel.avatar];
+        _nameLabel.text = itemModel.name;
+        self.phoneNumber = itemModel.phone;
     }
 }
 

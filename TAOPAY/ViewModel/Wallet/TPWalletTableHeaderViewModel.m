@@ -32,7 +32,7 @@
 //MARK: -- 加载用户信息
 - (void)loadUserInfoSuccess:(void (^)(id json))success failure:(void (^)(NSError *errorMsg))failure {
     // 子类重载
-    [[YHTTPService sharedInstance] requestGetUserInfoSuccess:^(YHTTPResponse *response) {
+    [[YHTTPService sharedInstance] requestGetUserInfoWithPhones:nil success:^(YHTTPResponse *response) {
         if (response.code == YHTTPResponseCodeSuccess) {
             [YHTTPService sharedInstance].currentUser = [TPUser modelWithDictionary:response.parsedResult[@"info"]];
             self.user = [TPUser modelWithDictionary:response.parsedResult[@"info"]];

@@ -8,6 +8,8 @@
 
 #import "TPPersonalHomepageViewController.h"
 
+#import "TPPublishFriendCircleViewController.h"
+#import "TPPersonCenterViewController.h"
 
 #import "TPAppConfig.h"
 
@@ -17,12 +19,17 @@
 
 #import "TPPersonalHomepageViewModel.h"
 
+#import "TPFriendListModel.h"
+#import "TPFriendModel.h"
+
 @interface TPPersonalHomepageViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) TPPersonalHomepageTableHeaderView *myTableHeaderView;
 @property (nonatomic, strong) TPMenuView *menuView;
 
 @property (strong, nonatomic) TPPersonalHomepageViewModel *viewModel;
+
+@property (assign, nonatomic) BOOL isHaveInitMenuView;
 
 @end
 
@@ -37,9 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //设置导航栏
-    [self configNavigationBar];
+
     // create subViews
     [self setupSubViews];
     
@@ -47,43 +52,120 @@
     [self bindViewModel];
 }
 
-//MARK: -- config NavigationBar
-- (void)configNavigationBar {
-    self.navigationView.title = self.viewModel.title;
-    self.navigationView.isShowBackButton = YES;
-    self.navigationView.isShowNavRightButtons = YES;
-    self.navigationView.isShowDownArrowImage = NO;
-    [self.view addSubview:self.navigationView];
+//MARK: -- Tableview 文本内容区域
+- (UIEdgeInsets)contentInset {
+    return UIEdgeInsetsZero;
 }
 
 #pragma mark - 初始化子控件
 - (void)setupSubViews {
+//    self.tableView.frame = CGRectMake(0, 0, APPWIDTH, APPHEIGHT);
     [self setupTableHeaderView];
     self.tableView.tableHeaderView = self.myTableHeaderView;
-    self.tableView.backgroundColor = TP_MAIN_BACKGROUNDCOLOR;
+    self.tableView.backgroundColor = TP_MAIN_NAVIGATIONBAR_BACKGROUNDCOLOR_1;
     //tableView 注册cell 和 headerview
     [self.tableView y_registerNibCell:[TPPersonalHomepageCell class]];
 }
 
-//MARK: -- 设置tableview FooterView
+//MARK: -- 设置tableview HeaderView
 - (void)setupTableHeaderView {
     self.myTableHeaderView = [TPPersonalHomepageTableHeaderView instanceView];
+    self.myTableHeaderView.tableHeaderViewType = TPTableHeaderViewTypePersonal;
     
     @weakify(self);
     [self.myTableHeaderView setClickMenuBlock:^(UIButton *sender) {
         @strongify(self);
+        if (!self.isHaveInitMenuView) {
+            [self createMenuView];
+        }
         [self showMenuView:sender.isSelected];
     }];
 }
 
+//MARK: -- 创建menu视图
+- (void)createMenuView {
+    [self.view addSubview:self.menuView];
+    
+    @weakify(self);
+    self.menuView.clickMenuEventBlock = ^(UIButton *sender) {
+        @strongify(self);
+        //隐藏menuview
+        [self showMenuView:NO];
+        
+        switch (sender.tag) {
+            case TPMenuEventTypeMoment:
+            {
+                TPPublishFriendCircleViewController *tmpPublishFriendCircleController = [[TPPublishFriendCircleViewController alloc] init];
+                tmpPublishFriendCircleController.currentUserInfoModel = self.viewModel.userInfoModel;
+                [self.navigationController pushViewController:tmpPublishFriendCircleController animated:YES];
+//                tmpPublishFriendCircleController.view.frame = CGRectMake(0, APPHEIGHT, APPWIDTH, APPHEIGHT-CGRectGetMaxY(self.myTableHeaderView.frame));
+//                [self.view addSubview:tmpPublishFriendCircleController.view];
+//
+//                __block CGSize weakViewSize = tmpPublishFriendCircleController.view.bounds.size;
+//                //发布朋友圈成功后的回调
+//                __block TPPublishFriendCircleViewController *weakTmpController = tmpPublishFriendCircleController;
+//                tmpPublishFriendCircleController.publishFriendCircleCompletionBlock = ^(BOOL result) {
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        @strongify(self);
+//                        [self destroyPublishFriendCircleView:weakTmpController];
+//                        if (result) {
+//                            [self.tableView reloadData];
+//                        }
+//                    });
+//                };
+//
+//                //动画：从下往上push出来
+//                [UIView animateWithDuration:.3 animations:^{
+//                    tmpPublishFriendCircleController.view.frame = CGRectMake(0, CGRectGetMaxY(self.myTableHeaderView.frame), weakViewSize.width,weakViewSize.height);
+//                }];
+                
+            }
+                break;
+                
+            case TPMenuEventTypeMine:
+            {
+                
+            }
+                break;
+                
+            case TPMenuEventTypeSetting:
+            {
+                
+            }
+                break;
+                
+            default:
+                break;
+        }
+    };
+    
+    self.isHaveInitMenuView = YES;
+}
+
 //MARK: -- 显示/隐藏 Menu视图
 - (void)showMenuView:(BOOL)isShow {
-    [UIView animateWithDuration:.8 animations:^{
+    @weakify(self);
+    
+    [UIView animateWithDuration:.3 animations:^{
+        @strongify(self);
         if (isShow) {
             self.menuView.frame = CGRectMake(0, self.menuView.frame.origin.y, self.menuView.bounds.size.width, self.menuView.bounds.size.height);
         } else {
             self.menuView.frame = CGRectMake(-self.menuView.bounds.size.width, self.menuView.frame.origin.y, self.menuView.bounds.size.width, self.menuView.bounds.size.height);
         }
+    }];
+}
+
+//MARK: -- 销毁发布朋友圈的视图
+- (void)destroyPublishFriendCircleView:(TPPublishFriendCircleViewController *)controller {
+    __block CGSize tmpViewSize = controller.view.bounds.size;
+    __block TPPublishFriendCircleViewController *weakTmpController = controller;
+    
+    [UIView animateWithDuration:.3 animations:^{
+        weakTmpController.view.frame = CGRectMake(0, APPHEIGHT, tmpViewSize.width, tmpViewSize.height);
+    } completion:^(BOOL finished) {
+        [weakTmpController.view removeFromSuperview];
+        weakTmpController = nil;
     }];
 }
 
@@ -109,6 +191,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             @strongify(self);
             [self.tableView reloadData];
+            self.myTableHeaderView.userInfoModel = self.viewModel.userInfoModel;
         });
     } failure:^(NSString *error) {
         @strongify(self);
@@ -144,6 +227,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    TPFriendModel *rowModel = self.viewModel.dataSource[indexPath.row];
+    
+    if (_selectedFriendBlock) {
+        _selectedFriendBlock(rowModel.username);
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //MARK: -- lazyload area
@@ -151,7 +241,7 @@
 - (TPMenuView *)menuView {
     if (!_menuView) {
         _menuView = [TPMenuView instanceView];
-        _menuView.frame = CGRectMake(-CGRectGetWidth(_menuView.bounds), 53, 60, 90);
+        _menuView.frame = CGRectMake(-CGRectGetWidth(_menuView.bounds), NAVGATIONBARHEIGHT+15, 60, 90);
     }
     
     return _menuView;

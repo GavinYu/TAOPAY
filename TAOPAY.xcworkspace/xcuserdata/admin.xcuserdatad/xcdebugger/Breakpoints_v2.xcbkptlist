@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.303921"
+            timestampString = "554461382.4357671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "310"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.304965"
+            timestampString = "554461382.436273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.305447"
+            timestampString = "554461382.43633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "275"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.305746"
+            timestampString = "554461382.436378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "206"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.306029"
+            timestampString = "554461382.436428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "214"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.306312"
+            timestampString = "554461382.436474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "189"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewModel/Homepage/Shop/TPShoppingCartViewModel.m"
-            timestampString = "553362086.306592"
+            timestampString = "554461382.436522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.307037"
+            timestampString = "554461382.43674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "240"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.307313"
+            timestampString = "554461382.436792"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "251"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.307574"
+            timestampString = "554461382.436839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/ViewController/Homepage/Shopping/TPShoppingCartViewController.m"
-            timestampString = "553362086.307838"
+            timestampString = "554461382.436885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "257"
@@ -266,7 +266,7 @@
                   moduleName = "TAOPAY"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/View/Homepage/Shopping/TPShoppingCartBottomView.m"
-                  timestampString = "553913747.4364851"
+                  timestampString = "554537729.65712"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -281,7 +281,7 @@
                   moduleName = "TAOPAY"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/View/Homepage/Shopping/TPShoppingCartBottomView.m"
-                  timestampString = "553913747.438215"
+                  timestampString = "554537729.659095"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -296,7 +296,7 @@
                   moduleName = "TAOPAY"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/View/Homepage/Shopping/TPShoppingCartBottomView.m"
-                  timestampString = "553913747.439906"
+                  timestampString = "554537729.661046"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -345,11 +345,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/Utils/Service/YHTTPService.m"
-            timestampString = "553913131.237951"
+            timestampString = "554461382.437476"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "556"
-            endingLineNumber = "556"
+            startingLineNumber = "581"
+            endingLineNumber = "581"
             landmarkName = "-requestOrderListSuccess:failure:"
             landmarkType = "7">
          </BreakpointContent>
@@ -425,11 +425,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TAOPAY/Utils/Service/YHTTPService.m"
-            timestampString = "553913131.238238"
+            timestampString = "554461382.438081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "554"
-            endingLineNumber = "554"
+            startingLineNumber = "579"
+            endingLineNumber = "579"
             landmarkName = "-requestOrderListSuccess:failure:"
             landmarkType = "7">
             <Locations>
@@ -441,11 +441,11 @@
                   moduleName = "TAOPAY"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/Utils/Service/YHTTPService.m"
-                  timestampString = "553913747.47084"
+                  timestampString = "554537729.68985"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "554"
-                  endingLineNumber = "554"
+                  startingLineNumber = "579"
+                  endingLineNumber = "579"
                   offsetFromSymbolStart = "292">
                </Location>
                <Location
@@ -456,12 +456,331 @@
                   moduleName = "TAOPAY"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/Utils/Service/YHTTPService.m"
-                  timestampString = "553913747.472532"
+                  timestampString = "554537729.691535"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "555"
-                  endingLineNumber = "555"
+                  startingLineNumber = "580"
+                  endingLineNumber = "580"
                   offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewModel/Wallet/TPWalletTableHeaderViewModel.m"
+            timestampString = "554461382.438403"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-loadUserInfoSuccess:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Homepage/HomepageViewController.m"
+            timestampString = "554537729.151917"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-showErrorAlertView:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Login/LoginViewController.m"
+            timestampString = "554107272.3512551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-addNavigationBar"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Chat/TPChatViewController.m"
+            timestampString = "554537729.152038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "509"
+            endingLineNumber = "509"
+            landmarkName = "-exitChat"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Chat/TPConversationListControllerViewController.m"
+            timestampString = "554537729.152107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Chat/TPConversationListControllerViewController.m"
+            timestampString = "554537729.152158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-refresh"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Chat/TPConversationListControllerViewController.m"
+            timestampString = "554537729.152205"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-refreshDataSource"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/Vendor/HuanXinSDK/EaseUI/EMUIKit/ViewController/EaseConversationListViewController.m"
+            timestampString = "554471954.5552911"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "-refreshAndSortView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/Vendor/HuanXinSDK/EaseUI/EMUIKit/ViewController/EaseConversationListViewController.m"
+            timestampString = "554471954.555338"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "-tableViewDidTriggerHeaderRefresh"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Chat/TPChatViewController.m"
+            timestampString = "554537729.1523679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "452"
+            endingLineNumber = "452"
+            landmarkName = "-keyBoardWillHide:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Chat/TPChatViewController.m"
+            timestampString = "554537729.152428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "458"
+            endingLineNumber = "458"
+            landmarkName = "-keyBoardWillHide:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/Vendor/HuanXinSDK/EaseUI/EMUIKit/ViewController/EaseMessageViewController.m"
+            timestampString = "554537729.1524841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1408"
+            endingLineNumber = "1408"
+            landmarkName = "-didSendText:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/Vendor/HuanXinSDK/EaseUI/EMUIKit/ViewController/EaseMessageViewController.m"
+            timestampString = "554537729.152539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1412"
+            endingLineNumber = "1412"
+            landmarkName = "-didSendText:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/Vendor/HuanXinSDK/EaseUI/EMUIKit/ViewController/EaseMessageViewController.m"
+            timestampString = "554537729.152589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1406"
+            endingLineNumber = "1406"
+            landmarkName = "-didSendText:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Chat/TPChatViewController.m"
+            timestampString = "554537729.152638"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Friend/TPFriendViewController.m"
+            timestampString = "554481432.628189"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-bindViewModel"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TAOPAY/ViewController/Friend/TPFriendViewController.m"
+            timestampString = "554481432.628507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-bindViewModel"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__39-[TPFriendViewController bindViewModel]_block_invoke"
+                  moduleName = "TAOPAY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/ViewController/Friend/TPFriendViewController.m"
+                  timestampString = "554537729.825981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__39-[TPFriendViewController bindViewModel]_block_invoke_2"
+                  moduleName = "TAOPAY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/ViewController/Friend/TPFriendViewController.m"
+                  timestampString = "554537729.827805"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.93"
+                  moduleName = "TAOPAY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/%E5%A4%96%E5%8C%85TAOPAY/TAOPAY/TAOPAY/ViewController/Friend/TPFriendViewController.m"
+                  timestampString = "554537729.830721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>

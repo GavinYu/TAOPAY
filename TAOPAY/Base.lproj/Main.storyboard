@@ -357,7 +357,7 @@
         <!--TPChatViewController-->
         <scene sceneID="poP-MH-dxu">
             <objects>
-                <viewController storyboardIdentifier="TPChatViewController" title="TPChatViewController" id="VKl-YG-fMc" customClass="TPChatViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TPChatRootViewController" title="TPChatViewController" id="VKl-YG-fMc" customClass="TPChatRootViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="twn-N6-97D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -28,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *nearShopButton;
 @property (weak, nonatomic) IBOutlet UIButton *shippingButton;
 
+@property (strong, nonatomic) CALayer *gifLayer;
+
 @end
 
 @implementation HomepageViewController
@@ -41,6 +43,12 @@
     if (![YHTTPService sharedInstance].currentUser.username) {
         [self requestGetUserInfo];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
 }
 
 //MARK: -- 设置导航栏
@@ -90,7 +98,14 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bg_detour_ball@2x" ofType:@"gif"];
     UIImage *bgImage = [UIImage sd_animatedGIFWithData:[NSData dataWithContentsOfFile:filePath]];
     _bgImageView.image = bgImage;
+    
+    self.gifLayer = _bgImageView.layer;
+    //FIXME:TODO: -- 需要确定停在哪个位置
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self pauseLayer:self.gifLayer];
+    });
 }
+
 
 - (void)requestGetUserInfo {
     @weakify(self);

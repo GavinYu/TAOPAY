@@ -19,26 +19,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="391.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商品详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-Nk-9cF">
-                        <rect key="frame" x="15" y="11" width="58" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-Nk-9cF">
+                        <rect key="frame" x="15" y="11" width="344" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="PD8-fK-m9Q"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.16862745098039217" green="0.1803921568627451" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs8-lS-ekc">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs8-lS-ekc">
                         <rect key="frame" x="15" y="33" width="345" height="1"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.87450980389999999" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="xK3-ml-YrJ"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                         <color key="textColor" red="0.87450980389999999" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR0-JF-5Iv">
-                        <rect key="frame" x="0.0" y="42" width="375" height="350"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nR0-JF-5Iv">
+                        <rect key="frame" x="0.0" y="42" width="375" height="349.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="349.5" id="Zxi-JO-eYp"/>
+                        </constraints>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="fs8-lS-ekc" firstAttribute="top" secondItem="gjc-Nk-9cF" secondAttribute="bottom" constant="8" id="MFa-a2-2hx"/>
+                    <constraint firstItem="gjc-Nk-9cF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="NfK-4p-Qba"/>
+                    <constraint firstItem="fs8-lS-ekc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="QKm-j7-5u8"/>
+                    <constraint firstAttribute="bottom" secondItem="nR0-JF-5Iv" secondAttribute="bottom" id="cK7-u3-Yq3"/>
+                    <constraint firstAttribute="trailing" secondItem="fs8-lS-ekc" secondAttribute="trailing" constant="15" id="eog-0m-NTR"/>
+                    <constraint firstAttribute="trailing" secondItem="gjc-Nk-9cF" secondAttribute="trailing" constant="16" id="iuJ-CS-gW4"/>
+                    <constraint firstAttribute="trailing" secondItem="nR0-JF-5Iv" secondAttribute="trailing" id="lAH-vM-VXa"/>
+                    <constraint firstItem="nR0-JF-5Iv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="otM-Qj-HQd"/>
+                    <constraint firstItem="gjc-Nk-9cF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="xvI-CK-dvY"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>

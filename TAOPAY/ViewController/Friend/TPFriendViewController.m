@@ -31,11 +31,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.viewModel = TPFriendViewModel.new;
+    
+    
     [self configNavigationBar];
     
     [self setupSubViews];
     // bind viewModel
     [self bindViewModel];
+    [self.viewModel requestAuthorizationForAddressBook];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,10 +70,7 @@
 
 #pragma mark - 初始化子控件
 - (void)setupSubViews {
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(APPWIDTH, APPHEIGHT-TPTABBARHEIGHT));
-    }];
+    self.tableView.frame = CGRectMake(0, NAVGATIONBARHEIGHT, APPWIDTH, APPHEIGHT-TPTABBARHEIGHT-NAVGATIONBARHEIGHT);
     //tableView 注册cell 和 headerview
     [self.tableView y_registerNibCell:[TPFriendCell class]];
 }
@@ -78,6 +79,17 @@
 - (void)bindViewModel{
     /// kvo
     _KVOController = [FBKVOController controllerWithObserver:self];
+    
+    @weakify(self);
+    [_KVOController y_observe:self.viewModel keyPath:@"isFinished" block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
+        BOOL tmp = [change[NSKeyValueChangeNewKey] boolValue];
+        if (tmp) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                @strongify(self);
+                [self.tableView reloadData];
+            });
+        }
+    }];
 }
 #pragma mark - Override
 //MARK: - UITableViewDataSource Methods
@@ -95,12 +107,13 @@
     @weakify(self);
     cell.attentionClickedHandler = ^(TPFriendCell *friendCell) {
         @strongify(self);
-        [self.viewModel addFriendWithFriendId:[NSString integerToString:friendCell.tag] withPhone:friendCell.phoneNumber success:^(id json) {
-            if ([json boolValue]) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [tableView reloadRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationNone];
-                });
-            }
+        //FIXME:TODO -- 因为通讯录里没有userID
+        [self.viewModel addFriendWithFriendId:@"" withPhone:friendCell.phoneNumber success:^(id json) {
+//            if ([json boolValue]) {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [tableView reloadRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationNone];
+//                });
+//            }
         } failure:^(NSString *error) {
         }];
     };
@@ -113,7 +126,12 @@
     return 52;
 }
 
+//MARK: -- 文本内容区域
+- (UIEdgeInsets)contentInset {
+    return UIEdgeInsetsZero;
+}
 
+//MARK: -- lazyload area
 /*
 #pragma mark - Navigation
 

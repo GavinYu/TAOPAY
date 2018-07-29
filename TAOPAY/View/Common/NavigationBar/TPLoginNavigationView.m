@@ -125,4 +125,28 @@
     }
 }
 
+- (void)setIsHiddenSearchButton:(BOOL)isHiddenSearchButton{
+    if (_isHiddenSearchButton != isHiddenSearchButton) {
+        _isHiddenSearchButton = isHiddenSearchButton;
+        
+        self.searchButton.hidden = isHiddenSearchButton;
+    }
+}
+
+- (void)setIsHiddenHomepageButton:(BOOL)isHiddenHomepageButton {
+    if (_isHiddenHomepageButton != isHiddenHomepageButton) {
+        _isHiddenHomepageButton = isHiddenHomepageButton;
+        
+        self.homeButton.hidden = _isHiddenHomepageButton;
+    }
+}
+
+- (void)setUpdateMeImageName:(NSString *)updateMeImageName {
+    if (_updateMeImageName != updateMeImageName) {
+        _updateMeImageName = updateMeImageName;
+        
+        [self.personCenterButton setImage:[UIImage imageNamed:updateMeImageName] forState:UIControlStateNormal];
+    }
+}
+
 @end

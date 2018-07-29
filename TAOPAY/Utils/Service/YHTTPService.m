@@ -161,9 +161,15 @@ static id service_ = nil;
 }
 
 //MARK: -- 获取个人信息接口
-- (NSURLSessionDataTask *)requestGetUserInfoSuccess:(void (^)(YHTTPResponse *response))success
-                                            failure:(void (^)(NSString *msg))failure {
-    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey]};
+- (NSURLSessionDataTask *)requestGetUserInfoWithPhones:(NSString *)phones
+                                               success:(void (^)(YHTTPResponse *response))success
+                                               failure:(void (^)(NSString *msg))failure {
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    [dic setValue:[YUtil getUserDefaultInfo:YHTTPRequestTokenKey] forKey:@"token"];
+    if (phones.length > 0) {
+        [dic setValue:phones forKey:@"phone"];
+    }
+    
     NSURLSessionDataTask *task =  [self POST:UserInfoRequst parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
@@ -228,6 +234,25 @@ static id service_ = nil;
     return task;
 }
 
+//MARK: -- 聊天发红包（积分转账）接口
+- (NSURLSessionDataTask *)requestBalanceTransferByMessage:(NSString *)username
+                                               withAmount:(NSString *)amount
+                                                     type:(NSString *)type
+                                                  success:(void (^)(YHTTPResponse *response))success
+                                                  failure:(void (^)(NSString *msg))failure {
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"amount":amount, @"username":username, @"type":type};
+    NSURLSessionDataTask *task =  [self POST:BalanceTransferByMessage parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
+        success(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"%@",error.localizedDescription);
+        failure(error.localizedDescription);
+    }];
+    
+    return task;
+}
+
 //MARK: -- 查询支付结果接口
 - (NSURLSessionDataTask *)requestBalanceQueryWithOrderId:(NSString *)orderId
                                                     type:(NSString *)type
@@ -246,7 +271,7 @@ static id service_ = nil;
     return task;
 }
 
-//修改用户昵称接口
+//MARK: -- 修改用户昵称接口
 - (NSURLSessionDataTask *)requestUserUpdateNick:(NSString *)nickName
                                         success:(void (^)(YHTTPResponse *response))success
                                         failure:(void (^)(NSString *msg))failure {
@@ -584,9 +609,10 @@ static id service_ = nil;
 }
 //MARKA: -- 订单查询支付结果
 - (NSURLSessionDataTask *)requestOrderUnionpayQuery:(NSString *)orderId
+                                               type:(TPPayTNType)type
                                             success:(void (^)(YHTTPResponse *response))success
                                             failure:(void (^)(NSString *msg))failure {
-    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey],@"orderId":orderId};
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey],@"orderId":orderId,@"type":[NSString integerToString:type]};
     NSURLSessionDataTask *task =  [self POST:UnionpayQueryRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
@@ -602,7 +628,7 @@ static id service_ = nil;
 
 
 /***************--------好友相关接口------------*************************************/
-//获取好友列表
+//MARK: -- 获取好友列表
 - (NSURLSessionDataTask *)requestFriendListSuccess:(void (^)(YHTTPResponse *response))success
                                            failure:(void (^)(NSString *msg))failure {
     NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey]};
@@ -617,12 +643,20 @@ static id service_ = nil;
     
     return task;
 }
-//添加好友
+//MARK: -- 添加好友
 - (NSURLSessionDataTask *)requestAddFriend:(NSString *)friendId
                                      phone:(NSString *)phoneNumber
                                    success:(void (^)(YHTTPResponse *response))success
                                    failure:(void (^)(NSString *msg))failure {
-    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"userId":friendId, @"phone":phoneNumber};
+    NSMutableDictionary *dic = NSMutableDictionary.new;
+    
+    if (friendId.length > 0) {
+        [dic setValue:friendId forKey:@"userId"];
+    }
+    
+    [dic setValue:phoneNumber forKey:@"phone"];
+    [dic setValue:[YUtil getUserDefaultInfo:YHTTPRequestTokenKey] forKey:@"token"];
+
     NSURLSessionDataTask *task =  [self POST:FriendAddRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
@@ -637,10 +671,10 @@ static id service_ = nil;
 
 //MARK: -- 发布朋友圈
 - (NSURLSessionDataTask *)requestAddFriendArticle:(NSString *)content
-                                            phone:(NSArray *)FriendArticleFiles
+                                       imageFiles:(NSArray *)imageFiles
                                           success:(void (^)(YHTTPResponse *response))success
                                           failure:(void (^)(NSString *msg))failure {
-    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"content":content, @"FriendArticleFiles":FriendArticleFiles};
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"content":content, @"FriendArticleFiles[file][]":imageFiles};
     NSURLSessionDataTask *task =  [self POST:FriendAddArticleRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];
@@ -655,10 +689,9 @@ static id service_ = nil;
 
 //MARK: -- 获取朋友圈列表
 - (NSURLSessionDataTask *)requestFriendArticle:(NSString *)page
-                                      pageSize:(NSString *)size
                                        success:(void (^)(YHTTPResponse *response))success
                                        failure:(void (^)(NSString *msg))failure {
-    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"page":page, @"size":size};
+    NSDictionary *dic = @{@"token":[YUtil getUserDefaultInfo:YHTTPRequestTokenKey], @"page":page, @"size":TPRequestPageSize};
     NSURLSessionDataTask *task =  [self POST:FriendArticleRequest parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         YHTTPResponse *response = [[YHTTPResponse alloc] initWithResponseObject:responseObject parsedResult:responseObject[@"data"]];

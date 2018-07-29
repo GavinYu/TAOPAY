@@ -17,7 +17,4 @@
 @property (nonatomic, copy) NSString *time;
 @property (nonatomic, strong) NSArray <NSString *> *files;
 
-
-
-
 @end

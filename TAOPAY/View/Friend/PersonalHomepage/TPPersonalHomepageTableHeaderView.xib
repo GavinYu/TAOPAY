@@ -90,10 +90,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="avatarButton" destination="4Nz-kn-Bib" id="uKw-Q2-Fr6"/>
+                <outlet property="menuButton" destination="iVm-uK-wM7" id="Nuz-Ka-bFe"/>
                 <outlet property="nickNameLabel" destination="Yxn-FO-1RT" id="mdK-jq-Zlj"/>
+                <outlet property="searchButton" destination="cfb-LU-wVQ" id="sIX-ae-uWd"/>
                 <outlet property="signatureLabel" destination="9Bc-NE-KiG" id="LLa-pK-uJI"/>
             </connections>
-            <point key="canvasLocation" x="50" y="331"/>
+            <point key="canvasLocation" x="-192" y="45"/>
         </view>
     </objects>
     <resources>
